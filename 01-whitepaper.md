@@ -1,5 +1,16 @@
 # Why Are They Spending Trillions on AI?
 
+### The numbers and economics behind the AI working-capacity revolution—from electricity and infrastructure to tokens, robots, value, ownership, and agency.
+
+**Author:** Valto Loikkanen
+**Status:** v1.0 research package
+**Research initiated:** August 12, 2026
+**Factual source cut-off:** 2026-08-12
+**Licence:** CC BY 4.0 — Attribution 4.0 International. Readers may copy, redistribute, remix, adapt, and build upon this material for any purpose, including commercially, with attribution.
+**Suggested attribution:** "Research synthesis and modelling by Valto Loikkanen, assisted by AI."
+
+---
+
 ## Table of Contents
 
 - Front Matter (sections 1-5)
@@ -11,21 +22,6 @@
 - Part VI — Scale scenarios and tangible examples (sections 31-36)
 - Part VII — What this can mean for different readers (sections 37-42)
 - Closing (sections 43-45)
-
-
-
----
-
-# Why Are They Spending Trillions on AI?
-
-### The numbers and economics behind the AI working-capacity revolution—from electricity and infrastructure to tokens, robots, value, ownership, and agency.
-
-**Author:** Valto Loikkanen
-**Status:** v1.0 research package
-**Research initiated:** August 12, 2026
-**Factual source cut-off:** 2026-08-12
-**Licence:** CC BY 4.0 — Attribution 4.0 International. Readers may copy, redistribute, remix, adapt, and build upon this material for any purpose, including commercially, with attribution.
-**Suggested attribution:** "Research synthesis and modelling by Valto Loikkanen, assisted by AI."
 
 ---
 

@@ -1,0 +1,183 @@
+@page {
+  size: A4;
+  margin: 2.2cm 2cm 2.4cm 2cm;
+  @bottom-center {
+    content: counter(page);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 9pt;
+    color: #888;
+  }
+}
+
+@page :first {
+  @bottom-center { content: none; }
+}
+
+html {
+  font-size: 11pt;
+}
+
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  line-height: 1.55;
+  color: #1a1a1a;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #0d1b2a;
+  font-weight: 700;
+  line-height: 1.25;
+  page-break-after: avoid;
+}
+
+h1 {
+  font-size: 22pt;
+  border-bottom: 2.5pt solid #1b4965;
+  padding-bottom: 0.25cm;
+  margin-top: 1.2cm;
+}
+
+body > h1:first-of-type {
+  margin-top: 0;
+  text-align: center;
+  border-bottom: none;
+  font-size: 26pt;
+}
+
+body > h3:first-of-type {
+  text-align: center;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  color: #444;
+  font-size: 13pt;
+  margin-top: 0.2cm;
+  page-break-after: auto;
+}
+
+h2 {
+  font-size: 16pt;
+  margin-top: 0.9cm;
+  border-left: 5pt solid #1b4965;
+  padding-left: 0.3cm;
+}
+
+h3 {
+  font-size: 13pt;
+  color: #1b4965;
+  margin-top: 0.6cm;
+}
+
+h4 {
+  font-size: 11.5pt;
+  color: #3a3a3a;
+}
+
+p {
+  margin: 0.35cm 0;
+  text-align: justify;
+  orphans: 3;
+  widows: 3;
+}
+
+a {
+  color: #1b4965;
+  text-decoration: none;
+}
+
+strong {
+  color: #0d1b2a;
+}
+
+code, pre {
+  font-family: 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 9pt;
+  background: #f4f6f7;
+  border-radius: 3px;
+}
+
+code {
+  padding: 0.05em 0.3em;
+}
+
+pre {
+  padding: 0.3cm;
+  overflow-x: auto;
+  border-left: 3pt solid #1b4965;
+  page-break-inside: avoid;
+  white-space: pre-wrap;
+}
+
+blockquote {
+  border-left: 3pt solid #ccc;
+  margin: 0.4cm 0 0.4cm 0.2cm;
+  padding-left: 0.4cm;
+  color: #444;
+  font-style: italic;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0.5cm 0;
+  font-size: 9pt;
+  page-break-inside: avoid;
+}
+
+th, td {
+  border: 0.75pt solid #ccc;
+  padding: 0.18cm 0.28cm;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: #1b4965;
+  color: #fff;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 8.5pt;
+}
+
+tr:nth-child(even) td {
+  background: #f7f9fa;
+}
+
+hr {
+  border: none;
+  border-top: 1pt solid #ddd;
+  margin: 0.9cm 0;
+}
+
+ul, ol {
+  margin: 0.3cm 0;
+  padding-left: 0.7cm;
+}
+
+li {
+  margin: 0.12cm 0;
+}
+
+/* Table of contents list styling */
+body > ul:first-of-type {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 11pt;
+  list-style: none;
+  padding-left: 0;
+}
+body > ul:first-of-type li {
+  padding: 0.15cm 0;
+  border-bottom: 0.5pt dotted #ccc;
+}
+
+.title-block {
+  text-align: center;
+}
+
+/* The document's own front matter already renders the title/author/date;
+   suppress pandoc's auto-generated title-block header to avoid duplication,
+   while still keeping title/author/date in the PDF's document metadata. */
+#title-block-header {
+  display: none;
+}
