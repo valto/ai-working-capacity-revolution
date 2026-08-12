@@ -1,0 +1,15 @@
+Who Owns Your AI? The Grid Analogy Behind the Ownership Question
+
+Trillions of dollars are being committed to AI infrastructure, but capital doesn't just buy capability — it buys control. Part V of the whitepaper "Why Are They Spending Trillions on AI?" separates AI's "ownership stack" into distinct layers — energy, hardware, compute access, models, information, agents, identity, and governance — and finds concentration varies sharply by layer: hardware manufacturing is extremely concentrated in one dominant vendor, while compute access ranges from a single owned device to hyperscale cloud contracts [OBSERVED FACT/INTERPRETATION, Part V §26].
+
+One recurring way to make this legible is an electricity-grid analogy: home solar panels map to a personally-owned AI device; an energy cooperative maps to pooled community compute; a commercial power producer maps to a contracted inference provider (e.g., IBM Cloud's dedicated cluster deal with Together AI); and a utility-scale plant maps to a hyperscale AI factory. The weakest link in the analogy is the grid/exchange itself — electricity has a mature, frictionless market for trading surplus capacity; AI compute does not yet have an equivalent, and platforms like OpenRouter are only a partial approximation [INTERPRETATION, Part V §28].
+
+The whitepaper models real numbers for a compute cooperative — roughly €19.50–23 per member/month in one recomputation, versus a previously published figure of about €42/member/month by the same author, with the gap left openly unreconciled rather than papered over [DERIVED CALCULATION / ATTRIBUTED STATEMENT, Part V §27]. No ownership model — centralized platform, enterprise contract, open-weight self-hosting, private ownership, cooperative, or local/regional capacity — is shown to dominate on every dimension of cost, control, resilience, and convenience [Part V §30].
+
+Disclosure, stated in the whitepaper itself: the author, Valto Loikkanen, has commercial and advocacy interests in cooperative and personal-ownership AI models through Prifina, Digiole, and the peecos/PIOS framework. The cooperative/ownership architecture described here is presented as one candidate model among several, evaluated on its own numbers — not asserted as superior, and not investment or policy advice.
+
+Licensed under CC BY 4.0. Suggested attribution: Research synthesis and modelling by Valto Loikkanen, assisted by AI.
+
+---
+
+Word count: approximately 340 words. This deliverable is a standalone short-form explainer text (no file was written, per task instructions against creating report files) — return the text above as the final asset. Source basis: Part V ("Ownership, access, and possible market architectures"), sections 26–30, of the finalized whitepaper "Why Are They Spending Trillions on AI?" by Valto Loikkanen.

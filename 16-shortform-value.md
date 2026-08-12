@@ -1,0 +1,13 @@
+# Why Cheap Tokens Don't Mean Cheap Value
+
+A recurring theme running through this whitepaper's Part II and Part III is that AI working capacity — tokens, agent-hours, orchestrated fleets of agents — has been getting dramatically cheaper to produce. Part IV takes the next, harder step: working capacity is not value. As the paper states plainly, value can be positive, zero, or negative, and no amount of cheap compute changes that [INTERPRETATION, drawing on Part IV's framework].
+
+One of the human analogies Part IV uses to make this concrete: the brilliant professor versus the street-smart entrepreneur. Both can have exceptional raw capability — one in analytical depth, one in practical judgment under uncertainty. But swap either into the other's actual task and the output can be worthless or worse: the professor's rigor can stall a fast-moving deal that needed a quick, good-enough call; the entrepreneur's instinct-driven shortcuts can be flatly wrong on a problem that actually required careful analysis. Raw capability and fit-to-task are not the same thing — and that gap doesn't close just because the capability got cheaper to generate [INTERPRETATION, Part IV, Section 25].
+
+The same logic applies once AI agents, not people, are doing the work. Part IV argues that orchestration — running many AI agents in parallel — multiplies *capacity*, not *value*: bad judgment or bad information embedded in an agent's instructions scales at machine speed across a whole agent fleet exactly as easily as good judgment does. A hyperscale-tier facility that drives cost-per-token toward zero says nothing about whether the resulting output is worth anything. As the paper's own workbook note puts it, "a cheap, fast, wrong answer scaled across a multi-agent team is still cheap and wrong at scale" [INTERPRETATION, Release Asset #10, cited in Part IV].
+
+The practical upshot, stated in Part IV rather than invented here: abundant, cheap AI working capacity increases — not decreases — the importance of human leadership, direction, and judgment about *what* that capacity should be pointed at. Cost curves are the easy arithmetic; deciding what's worth doing is not, and this paper does not claim otherwise.
+
+This is educational research synthesis, not investment, procurement, or policy advice.
+
+Licensed under CC BY 4.0. Suggested attribution: Research synthesis and modelling by Valto Loikkanen, assisted by AI.
