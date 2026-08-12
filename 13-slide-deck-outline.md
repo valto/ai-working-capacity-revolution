@@ -118,10 +118,10 @@
 - Speaker note: Use this to reframe "who owns AI" as a bad question — it's really six or seven different questions.
 
 **Slide 19 — Six Coexisting Access Models**
-- Table: Centralized platform · Enterprise dedicated (e.g., IBM Cloud/Together AI $240M deal [FACT]) · Open models on owned hardware · Private/individual ownership · Cooperative (€19.50–42/member/month, unresolved gap between two of this paper's own sources [CALC/FACT]) · Local/regional capacity.
+- Table: Centralized platform · Enterprise dedicated (e.g., IBM Cloud/Together AI $240M deal [FACT]) · Open models on owned hardware · Private/individual ownership · Cooperative (€19.50–23/member/month for a DGX Spark pool, or €42/member/month for a shared workstation-class machine — two hardware tiers, not one contested figure [CALC/FACT]) · Local/regional capacity.
 - None asserted as universally superior — trade-offs differ across scale, cost, privacy, resilience, convenience, control [INTERP].
 - Ownership models only make arithmetic sense once usage sits consistently at copilot-band intensity or above [CALC-supported break-even].
-- Speaker note: The cooperative cost discrepancy is preserved deliberately as a teaching example of assumption transparency, not hidden.
+- Speaker note: The two cooperative figures describe two different hardware tiers (a DGX Spark pool vs. a shared workstation-class machine), not a discrepancy in one estimate — shown explicitly as a worked example of assumption transparency.
 
 **Slide 20 — Electricity-Grid Analogy and Digital Sovereignty Beyond Geography**
 - Analogy: home solar → cooperative → commercial producer → utility-scale plant → grid exchange, mapped onto AI compute tiers [INTERP, author's own commentary, not independently sourced verbatim].

@@ -8,36 +8,47 @@
 
 ---
 
-## 1. FIRST: Reconciling the €42 vs €19.50–23 per-member/month cooperative figures
+## 1. CORRECTED: the €42 vs €19.50–23 per-member/month figures were never comparable — resolved, not merely reconciled
 
-Two figures exist for a similarly-sized (~50-member, ~10-machine) AI compute cooperative:
+An earlier draft of this workbook treated €42/member/month and €19.50–23/member/month as two competing estimates of the *same* cooperative scenario with an unexplained ~2x gap. On 2026-08-13, the author checked his own original assumptions and clarified the actual situation, which resolves the gap rather than requiring further speculation about it:
 
-- **€42/member/month** — the author's own published figure for a 50-member cooperative, stated in "So, the majority agrees: the time for digital sovereignty has come, now what?" (LinkedIn, published 2026-08-05). This is **[FACT]**: the article states verbatim "50 members: approximately €42 per member/month" (alongside €105 at 20 members and €21 at 100 members), independently confirmed against the live article on 2026-08-12.
-- **~€19.50–23/member/month** — a later, more detailed recomputation for a 50-member/10-machine cooperative built explicitly around NVIDIA DGX Spark unit economics (10 units × current $4,699 price ≈ $46,990 capital; 5yr@8% financing ≈ $11,770/yr; electricity ≈ $2,000–4,000/yr; total ≈ $14,000–15,770/yr **before admin/networking**). This is **[CALC]**, carried forward from the background research thread rather than re-derived from scratch here, per this task's brief.
+1. **€42/member/month was never a hardware-quote-based figure.** It was built on the author's own **illustrative €100,000 excluding-VAT capital assumption** for a shared workstation-class machine — explicitly a scenario assumption, not a verified purchase price for any specific product. The original published article did not disclose this base, which is why the earlier draft of this workbook incorrectly treated €42 as an opaque, unauditable "published fact" to be reverse-engineered. It is not opaque once the €100,000 basis is stated; it is a normal **[ASSUMPTION]**-driven scenario output, fully auditable once the base is given (see the worked recomputation below).
+2. **€19.50–23/member/month is a different hardware tier, not a competing estimate of the same one.** That figure was built around 10× NVIDIA **DGX Spark** units at the verified current price of $4,699 each (**[FACT]**) — a much smaller, cheaper, single-GPU-class desktop device, not a workstation-class or rack-scale machine. The two figures were describing different equipment from the start.
 
-**The published article does not show its own underlying formula** — it states only the three output tiers (20/50/100 members), with no visible per-machine cost, utilization, financing term, or electricity price. That means a full line-by-line audit of the €42 figure is not possible from public material; the reconciliation below is therefore an **[INTERP]**-level exercise in identifying *plausible* differing assumptions, not a proof that any one of them is the actual cause.
+**There is therefore no discrepancy to reconcile between two measurements of one thing — there are two different hardware-tier scenarios, each internally consistent, that were mistakenly presented as if they should agree.** The corrected treatment below keeps them explicitly separate.
 
-Five categories plausibly explain most of the gap:
+### 1a. The DGX Station-class scenario, corrected (illustrative €100,000 capital base)
 
-1. **Hardware/cost assumption.** The €42 figure may assume a costlier or differently-sized machine (or more machines, or a margin buffer per machine) than 10× DGX Spark at $4,699. Any higher per-unit capital figure raises the per-member cost roughly proportionally.
-2. **Utilization rate.** The DGX Spark recomputation assumes near-continuous (~70%+) utilization at full throughput. A more conservative utilization assumption in the earlier published figure (e.g., accounting for downtime, contention among 50 members sharing 10 machines, or scheduling overhead) would raise the effective cost per member without changing hardware cost at all.
-3. **Financing terms.** Different interest rate, term length, or a cash-purchase (no financing) assumption changes annual capital cost materially — the recomputation's 5yr@8% annuity factor (≈3.99) is one specific, editable choice among many plausible ones.
-4. **Electricity price.** The recomputation uses an illustrative electricity price; a higher European retail electricity assumption (commonly €0.25–0.35/kWh vs. the ~$0.20/kWh used in the recomputation) would raise the electricity line, though this alone is a small share of total cost at DGX-Spark power levels.
-5. **Overhead/admin inclusion — most likely single largest factor.** The recomputation is explicitly labeled "before admin/networking" — i.e., it excludes cooperative governance/legal setup, shared networking/switch gear, redundancy/spare-capacity margin, support labor, insurance, and software/subscription costs. The published €42 figure may simply be a more complete, real-world all-in number that folds in exactly these excluded categories.
+NVIDIA's current DGX Station (GB300-based) is a real, named reference point for the *type* of machine such a cooperative could plausibly share: **748 GB of coherent memory and up to 20 petaFLOPS of FP4 AI compute** (**[FACT]** — nvidia.com/en-us/products/workstations/dgx-station/, checked 2026-08-13), positioned by NVIDIA for running models up to 1 trillion parameters and long-running local AI agents. **NVIDIA does not publish a retail or list price for this system** (**[FACT]** — same source; the page directs buyers to "contact a partner" and a marketplace listing rather than showing a price) — so any purchase price used here is a **quotation-level illustrative assumption**, not an official price, and must not be cited as one.
 
-**Reconciliation table (illustrative attribution of the gap, not an audited breakdown):**
+For illustration only, assume a cooperative acquires a suitable system for **€100,000 excluding VAT** (**[ASSUMPTION]** — explicitly not a DGX Station list price, since none exists), financed over 5 years at 6.5% (**[ASSUMPTION]**):
 
-| Assumption category | Recomputation (~€19.50–23/member/mo) | Plausible published-figure difference | Evidence class |
+| Cost line | Formula | Result | Class |
 |---|---|---|---|
-| Hardware/unit cost | 10× DGX Spark @ $4,699 = ~$46,990 capital | Possibly higher per-unit cost or more units assumed | ASSUMPTION (unverifiable which the published figure used) |
-| Utilization | Near-continuous, ~70%+ | Possibly lower effective utilization (shared contention, downtime) | ASSUMPTION |
-| Financing terms | 5yr @ 8% annuity | Possibly shorter term, higher rate, or cash purchase | ASSUMPTION |
-| Electricity price | ~$0.20/kWh illustrative | Possibly higher EU retail rate (~€0.25–0.35/kWh) | ASSUMPTION |
-| Admin/overhead/networking | **Explicitly excluded** | Likely included in published figure (governance, networking, support, redundancy, software) | INTERP |
+| Hardware financing | Standard amortizing annuity on €100,000, 5yr, 6.5% APR, converted to a monthly figure | **≈€1,957/month** | **[CALC]** on an **[ASSUMPTION]** capital base |
+| Electricity | 1 kW illustrative average continuous draw × 24h × ~30.4 days/month × €0.15/kWh | **≈€108/month** | **[CALC]** on an **[ASSUMPTION]** average-draw figure |
+| Cooling/power overhead | 25% allowance on the electricity line | **≈€27/month** | **[ASSUMPTION]** |
+| **Total basic compute infrastructure** | Sum of the above three lines | **≈€2,092/month** | **[CALC]** |
 
-**Formula underlying the recomputation range:** (financed hardware $/yr + electricity $/yr) ÷ 50 members ÷ 12 months = $19.50–23/member/month, using the inputs above; total annual cost of ~$14,000–15,770 ÷ 50 ÷ 12 ≈ $23–26, converging toward the lower end of the quoted €19.50–23 band once currency and rounding are allowed for.
+**On the 1 kW average-draw assumption:** NVIDIA's own documentation states a **fixed maximum system power budget of 1,600 W (1.6 kW)** for the DGX Station GB300, shared between the GB110 compute module and an optional RTX add-in card (**[FACT]** — docs.nvidia.com/dgx/dgx-station-development-guide/dynamic-power-sloshing.html, checked 2026-08-13). The 1 kW figure used above is therefore an **illustrative average-operating-load assumption, well within the documented 1.6 kW ceiling** — it is not a measured consumption figure for any real deployment, and utilization-dependent draw could plausibly range anywhere up to that 1.6 kW maximum.
 
-**Bottom line:** the two figures are not necessarily in conflict — they most plausibly describe two different scopes (a narrower "machine + financing + power only" cost vs. a broader "all-in cooperative" cost), not two contradictory measurements of the same thing. This workbook does not privilege one number over the other; both are carried forward, labeled, and the reader should treat the true all-in cost for any real cooperative as falling somewhere in or above this €19.50–42 band depending on which of the five categories above it actually includes.
+**Shared across members (**[CALC]**, same €2,092/month base throughout):**
+
+| Members sharing this one machine | €/member/month |
+|---|---|
+| 20 | €105 |
+| **50** | **€42** |
+| 100 | **€21** |
+
+This is the exact arithmetic underlying the author's originally published €42 (50 members) and €21 (100 members) figures — both now shown as **[CALC]** outputs of an explicit, editable €2,092/month base, not as unaudited "published facts." The earlier draft of this workbook was wrong to describe the €42 figure as impossible to audit; it is fully auditable once the €100,000 illustrative capital base (which the original article did not state) is disclosed.
+
+This calculation deliberately excludes people, data storage, software development, applications, support, and model training — it prices only shared hardware financing and power for running open AI models, exactly as originally scoped. One machine would in practice be shared through an inference service rather than dedicating a separate model or machine to every member, with additional machines financed as demand grows.
+
+### 1b. The DGX Spark scenario (unchanged, kept explicitly separate)
+
+The **~€19.50–23/member/month** figure remains valid **as a description of a different, smaller hardware tier**: 10× NVIDIA DGX Spark units at the verified current price of $4,699 each (**[FACT]**) — 10 units × $4,699 ≈ $46,990 capital; 5yr@8% financing ≈ $11,770/yr; electricity ≈ $2,000–4,000/yr; total ≈ $14,000–15,770/yr **before admin/networking**, ÷ 50 members ÷ 12 months. See Section 2 of the Global Baseline Workbook (Release Asset #7) for the full build. This is **[CALC]**, unchanged from the earlier draft.
+
+**Bottom line, corrected:** €42/member/month (50 members, illustrative €100,000 DGX-Station-class machine) and €19.50–23/member/month (50 members, verified $4,699 DGX Spark machines) are not two conflicting estimates of one cooperative. They are two internally consistent, explicitly different hardware-tier scenarios — a single larger shared workstation-class system versus a pool of ten smaller desktop-class devices. **Both are correct for what they describe; neither should be cited as "the" cost of AI-compute cooperation without also stating which hardware tier and member count it assumes.** A cooperative's actual all-in cost depends on which tier of hardware it chooses, its real financing terms and utilization, and — critically — whether people, storage, software, support, and model training are included, none of which either figure above covers.
 
 ---
 

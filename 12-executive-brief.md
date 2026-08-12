@@ -74,7 +74,7 @@ The paper's position: these are not competing facts, they're overlapping ones �
 
 The paper separately asks who controls the stack (energy, hardware, compute, models, information, agents) once it's built. Six access models exist side by side today — **centralized platforms, enterprise dedicated contracts, open models on owned hardware, private ownership, cooperatives, and local/regional capacity** — each trading differently across cost, privacy, resilience, and control. **No model is asserted here as universally better.**
 
-The author's own cooperative/ownership proposal (through Prifina, Digiole, and the peecos/PIOS framework) is one candidate among these six, argued on its own numbers — including an unresolved, openly-flagged gap between the author's previously published cooperative-cost figure (~€42/member/month) and a separate recomputation (~€20–23/member/month). This is disclosed as the author's own commercial and advocacy interest, not presented as a neutral finding.
+The author's own cooperative/ownership proposal (through Prifina, Digiole, and the peecos/PIOS framework) is one candidate among these six, argued on its own numbers — including two cooperative-cost scenarios for two different hardware tiers, shown side by side rather than treated as competing: ~€42/member/month (50 members) for an illustrative shared workstation-class machine, and ~€20–23/member/month (50 members) for a pool of smaller NVIDIA DGX Spark devices. This is disclosed as the author's own commercial and advocacy interest, not presented as a neutral finding.
 
 ---
 
