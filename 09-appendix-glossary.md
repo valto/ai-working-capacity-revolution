@@ -10,7 +10,7 @@ This is a plain-language glossary of every technical and economic term used else
 
 | Code | Meaning |
 |---|---|
-| **OBSERVED FACT** | Primary documentation, official specs/pricing, filings, regulation, or a direct recording/transcript, independently checked against a live/primary source on or immediately before 2026-08-12. |
+| **OBSERVED FACT** | Primary documentation, official specs/pricing, filings, regulation, or a direct recording/transcript, independently checked against a live/primary source on or immediately before 2026-08-13 (the paper's factual source cut-off; most claims were originally checked on or before 2026-08-12, with a small number of specific corrections independently verified on 2026-08-13). |
 | **ATTRIBUTED STATEMENT** | What a named executive, organization, or source says, publicly and on the record — not automatically treated as independently proven fact. |
 | **DERIVED CALCULATION** | Transparent arithmetic from cited OBSERVED FACT or ATTRIBUTED STATEMENT inputs, with the formula shown. |
 | **SCENARIO ASSUMPTION** | A visible, editable parameter used to explore a possible case — explicitly not a market figure. |
@@ -146,7 +146,7 @@ This is a plain-language glossary of every technical and economic term used else
 
 ## O
 
-**OBSERVED FACT.** See evidence-class table above. The strictest class in this paper's system: it requires independent verification against a live or primary source on or immediately before the paper's 2026-08-12 cut-off, with an exact citation.
+**OBSERVED FACT.** See evidence-class table above. The strictest class in this paper's system: it requires independent verification against a live or primary source on or immediately before the paper's 2026-08-13 cut-off, with an exact citation.
 
 **Open-weight model.** A model whose trained parameters ("weights") are published and can be downloaded and run by anyone with sufficient hardware — e.g., DeepSeek-R1, Qwen, Kimi, all referenced in this paper's *owned-production cost* models — as distinct from a *proprietary model* accessible only through a lab's paid API. This paper's cost models deliberately price owned/cooperative hardware running open-weight models, never using a proprietary lab's retail API price as a stand-in cost basis for owned infrastructure (see *retail API pricing* below, and the explicit methodology correction in the Token-Factory Scenario Workbook, Section 2).
 

@@ -251,7 +251,9 @@ Aggregate max continuous draw: `0.240kW × 10 = 2.4kW` (**DERIVED** from OBSERVE
 
 ### 4.3 Professional tier — production cost curve ($/million tokens), mid capex $350,000, mid power 11kW, offline-derived throughput 78,568 tok/s, $0.10/kWh electricity
 
-| Utilization | Annual tokens (DERIVED) | Electricity/yr (DERIVED) | Capital+financing/yr (5yr@8%, DERIVED) | **$/million tokens (DERIVED)** |
+**Scope correction, added 2026-08-13: the figures in this table are capital + financing + electricity ONLY — no opex/overhead layer is included.** This makes them structurally incomparable to the Hyperscale tier's canonical figure (§5.6), which explicitly includes $200,000–$1,000,000/rack/yr of opex (facility, cooling beyond raw electricity, staffing, networking, replacement reserve). An earlier version of this workbook and the parent whitepaper compared Professional's $0.044–$0.146/M directly against Hyperscale's $0.091–$0.312/M as if both were full-layer figures, which made Professional look artificially cheaper. It is not shown here as cheaper than Hyperscale — see the illustrative opex sensitivity immediately below.
+
+| Utilization | Annual tokens (DERIVED) | Electricity/yr (DERIVED) | Capital+financing/yr (5yr@8%, DERIVED) | **$/million tokens, NO OPEX (DERIVED)** |
 |---|---|---|---|---|
 | Low 25% | 619.4B | $2,409 | $87,660 | **$0.146** |
 | Mid 60% | 1,486.6B | $5,782 | $87,660 | **$0.064** |
@@ -259,7 +261,17 @@ Aggregate max continuous draw: `0.240kW × 10 = 2.4kW` (**DERIVED** from OBSERVE
 
 `annuity_payment($350,000, 8%, 5yr) = $87,660/yr` using the same formula as Section 1.
 
-### 4.4 Professional tier — $/AI-working-hour (mid scenario, $0.064/M tokens)
+**Illustrative opex sensitivity (SCENARIO ASSUMPTION, added 2026-08-13 — not derived from any verified single-node opex figure, since none exists in this project's source register):** a single 8-GPU node plausibly requires far less facility/staffing/networking overhead than a full rack, but is very unlikely to require zero. Using an illustrative $10,000/$25,000/$50,000-per-year low/mid/high opex band — deliberately not scaled proportionally from Hyperscale's per-rack opex, since staffing and networking costs do not scale linearly with node count — the mid-utilization (60%) cost becomes:
+
+| Opex scenario | Opex/yr | Total annual cost (capital+financing+electricity+opex) | **$/million tokens, WITH OPEX** |
+|---|---|---|---|
+| Low | $10,000 | $103,442 | **$0.070** |
+| Mid | $25,000 | $118,442 | **$0.080** |
+| High | $50,000 | $143,442 | **$0.096** |
+
+This remains a SCENARIO ASSUMPTION, not a verified figure — the point is not that $0.070–$0.096/M is "the" correct Professional-tier cost, but that adding any plausible opex allowance narrows the apparent gap to Hyperscale's canonical $0.133/M mid-case substantially, and the no-opex figures above should never be quoted as if they were a complete cost.
+
+### 4.4 Professional tier — $/AI-working-hour (mid scenario, $0.064/M tokens, NO OPEX — see scope correction above)
 
 | Usage-intensity band | Tokens/hour | **$/AI-working-hour** |
 |---|---|---|
@@ -268,7 +280,7 @@ Aggregate max continuous draw: `0.240kW × 10 = 2.4kW` (**DERIVED** from OBSERVE
 | Delegated single agent | 200,000-600,000 | $0.0127-$0.0382 |
 | Heavy multi-agent orchestration | 1,000,000-12,000,000 | $0.064-$0.764 |
 
-**Read:** even under a wide capital-cost/power ASSUMPTION range, the professional tier's $/M-tokens is already roughly 25-70x cheaper than the home tier at comparable utilization, purely from GPU-generation efficiency (Blackwell Ultra vs. GB10) and better amortization of fixed cost across much higher throughput. This should not be over-read given the unverified capex/power inputs — it is directionally informative, not a confirmed market price point.
+**Read, corrected 2026-08-13:** the professional tier's no-opex $/M-tokens figure is roughly 25-70x lower than the Home tier's figure at comparable utilization — but this comparison is not on equal footing, since Home's figure already includes its full (if modest) cost structure while Professional's excludes opex entirely (see the scope correction above). Even after adding the illustrative opex sensitivity, Professional still comes out well below Home, consistent with GPU-generation efficiency (Blackwell Ultra vs. GB10) and better amortization of fixed cost across much higher throughput — but the specific 25-70x multiple should not be treated as a clean, like-for-like efficiency ratio, and should not be over-read given the unverified capex/power inputs. It is directionally informative, not a confirmed market price point.
 
 ---
 
@@ -432,11 +444,11 @@ All figures above use a global USD baseline with illustrative electricity-price 
 
 ## 9. Summary comparison table — mid-scenario $/million tokens across all four tiers
 
-| Tier | Capital basis | Mid $/M tokens (DERIVED) | Confidence on capital/power inputs |
-|---|---|---|---|
-| Home (1× DGX Spark) | $4,699, OBSERVED price | $3.17 | High — price and power OBSERVED, throughput OBSERVED community benchmark |
-| Cooperative (50 members, 10× DGX Spark) | $46,990, OBSERVED price ×10 | $3.20 | High on hardware; admin/overhead is ASSUMPTION |
-| Professional (1× HGX B300 node) | $350,000, ASSUMPTION | $0.064 | Low-medium — capex and power are unverified placeholders; throughput is a scaling derivation, not a direct benchmark |
-| Hyperscale (1× GB300 NVL72 rack) | $4,000,000, ASSUMPTION (hardware-only) | $0.133 | Medium — rack specs and power OBSERVED; capex is analyst-anchored ASSUMPTION, not an official price |
+| Tier | Capital basis | Opex/overhead included? | Mid $/M tokens (DERIVED) | Confidence on capital/power inputs |
+|---|---|---|---|---|
+| Home (1× DGX Spark) | $4,699, OBSERVED price | Yes (§2, illustrative support/software allowance) | $3.17 | High — price and power OBSERVED, throughput OBSERVED community benchmark |
+| Cooperative (50 members, 10× DGX Spark) | $46,990, OBSERVED price ×10 | Yes (§3.3, ASSUMPTION admin/networking band) | $3.20 | High on hardware; admin/overhead is ASSUMPTION |
+| Professional (1× HGX B300 node) | $350,000, ASSUMPTION | **No — capital+financing+electricity only (§4.3); with an illustrative opex sensitivity added in §4.3, mid-case rises to ~$0.080/M** | $0.064 (no opex) | Low-medium — capex and power are unverified placeholders; throughput is a scaling derivation, not a direct benchmark |
+| Hyperscale (1× GB300 NVL72 rack) | $4,000,000, ASSUMPTION (hardware-only) | Yes (§5.5, ASSUMPTION opex band, $200k-1M/yr) | $0.133 | Medium — rack specs and power OBSERVED; capex is analyst-anchored ASSUMPTION, not an official price |
 
-**INTERPRETATION:** the roughly 25-50x gap between Home/Cooperative and Professional/Hyperscale tiers is directionally consistent with expected economies of scale in AI infrastructure (higher-generation silicon, better amortization of fixed cost over vastly higher throughput) but should not be read as a precise multiplier given the mixed confidence levels above — the Home/Cooperative tiers rest on OBSERVED prices and OBSERVED community benchmarks, while the Professional tier in particular rests on ASSUMPTION-level capex and power inputs with no public price found for that specific hardware SKU.
+**INTERPRETATION, corrected 2026-08-13:** the roughly 25-50x gap between Home/Cooperative and Professional/Hyperscale tiers is directionally consistent with expected economies of scale in AI infrastructure (higher-generation silicon, better amortization of fixed cost over vastly higher throughput) but should not be read as a precise multiplier given the mixed confidence levels above — the Home/Cooperative tiers rest on OBSERVED prices and OBSERVED community benchmarks, while the Professional tier in particular rests on ASSUMPTION-level capex and power inputs with no public price found for that specific hardware SKU. **The Professional-vs-Hyperscale comparison specifically is not apples-to-apples**: Professional's $0.064/M excludes opex entirely while Hyperscale's $0.133/M includes it, so part of the apparent 2x gap between them is a scope artifact, not a pure hardware-generation effect — see §4.3's illustrative opex sensitivity, which narrows this gap once a plausible (though unverified) opex allowance is added to Professional.
