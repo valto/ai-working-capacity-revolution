@@ -3,7 +3,7 @@
 
 **Companion to:** "Why Are They Spending Trillions on AI?" (v1.0 research package)
 **Author:** Valto Loikkanen
-**Factual source cut-off:** 2026-08-12
+**Factual source cut-off:** 2026-08-13
 **Licence:** CC BY 4.0 — Attribution 4.0 International
 
 ---
@@ -108,4 +108,4 @@ Licensed under CC BY 4.0. Suggested attribution: Research synthesis and modellin
 
 ---
 
-This executive brief is a standalone deliverable summarizing the full whitepaper "Why Are They Spending Trillions on AI?" No file was saved to disk as part of producing this brief — the text above is the complete deliverable, ready to be placed in `Storage-wiki/Storage/Other/why-trillions-ai-whitepaper/` alongside the other release assets if you want it persisted there.
+This executive brief is a standalone deliverable summarizing the full whitepaper "Why Are They Spending Trillions on AI?"

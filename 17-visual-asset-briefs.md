@@ -9,7 +9,7 @@
 - Every diagram touching a cost, price, financing, or scenario figure (Diagrams 2, 3, 8, 9) must carry a visible "SCENARIO ASSUMPTION — editable illustration, not a forecast; not investment/legal/tax/procurement/policy advice" boundary tag, per the paper's requirement that this boundary appear in every scale/investment-bearing section, not only once in front matter.
 - No diagram may present open-weight/cooperative/decentralized ownership as superior to centralized/proprietary ownership, or vice versa (Diagrams 6, 7, 8). Trade-off diagrams must show gains and costs on both sides.
 - Where a figure is flagged UNVERIFIABLE in the source text (e.g., "2.8M tokens/sec/MW," the NVIDIA "32K/8K reference workload"), it must NOT appear on any diagram as if confirmed — either omit it entirely or show it struck through/greyed with an "UNVERIFIABLE — not used" tag if its exclusion itself needs explaining. Note: "$0.123/M tokens" was corrected to CONFIRMED on 2026-08-13 (directly on NVIDIA's own site) and may now appear on diagrams, but only when explicitly scoped to the 72-GPU GB300 NVL72 rack tier — never applied to a workstation or desktop-class device.
-- Standard footer for every diagram: "Licensed under CC BY 4.0. Suggested attribution: Research synthesis and modelling by Valto Loikkanen, assisted by AI." plus the paper's factual source cut-off date, 2026-08-12.
+- Standard footer for every diagram: "Licensed under CC BY 4.0. Suggested attribution: Research synthesis and modelling by Valto Loikkanen, assisted by AI." plus the paper's factual source cut-off date, 2026-08-13.
 
 ---
 
@@ -201,7 +201,7 @@
 - Use one consistent 5-class legend (icon + color) across the entire asset set (#15) so a reader moving between diagrams doesn't have to relearn the code each time.
 - Use one consistent typographic/color treatment for "SCENARIO ASSUMPTION — not a forecast, not advice" boundary tags across Diagrams 2, 3, 8, 9 (and the financing/scenario portions of 1, 6).
 - Do not introduce color-coding that implies a preferred ownership model, executive, or reader lens anywhere in the set — palette choices should be functional (evidence class, tier, or axis) not evaluative.
-- All 10 diagrams should carry the same footer block: factual source cut-off (2026-08-12) and the CC BY 4.0 attribution line.
+- All 10 diagrams should carry the same footer block: factual source cut-off (2026-08-13) and the CC BY 4.0 attribution line.
 
 ---
 

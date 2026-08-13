@@ -214,8 +214,4 @@ This is a plain-language glossary of every technical and economic term used else
 
 ---
 
-**Files referenced in composing this appendix (for cross-check, not created new in this task):**
-- `/Users/valtoloikkanen/Library/Mobile Documents/iCloud~md~obsidian/Documents/Storage-wiki/Storage/Other/why-trillions-ai-whitepaper/global-baseline-workbook-release-asset-07.md`
-- `/Users/valtoloikkanen/Library/Mobile Documents/iCloud~md~obsidian/Documents/Storage-wiki/Storage/Other/why-trillions-ai-whitepaper/release-asset-09-ai-working-capacity-conversion-workbook.md`
-
-No new file was written to disk for this deliverable — the appendix text above is the requested output itself. If it should be saved to the same `why-trillions-ai-whitepaper` folder as the other release assets, that path is `/Users/valtoloikkanen/Library/Mobile Documents/iCloud~md~obsidian/Documents/Storage-wiki/Storage/Other/why-trillions-ai-whitepaper/`.
+This appendix cross-references the Global Baseline Workbook (Release Asset #7) and the AI Working-Capacity Conversion Workbook (Release Asset #9), both included in this release package.

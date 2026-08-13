@@ -83,19 +83,19 @@ The two conventions produce slightly different totals for an identical principal
 
 ## 5. Worked Model A — Home AI factory (single DGX Spark), EUR
 
-Inputs: Capital €4,370 (§3 floor reference — not a real EU quote) · financing 8%/5yr, annual convention · power draw 240W continuous max (OBSERVED FACT spec, NVIDIA product page) · electricity €0.15/kWh (SCENARIO ASSUMPTION) · throughput range 50–83 tok/s (community forum benchmark range for a real workload, Qwen3.5-122B-A10B on DGX Spark — ATTRIBUTED STATEMENT, only 38.4 tok/s was directly viewable in the underlying forum thread; the 51 tok/s+ headline figure is the poster's own claim, not independently re-confirmed).
+Inputs: Capital €4,370 (§3 floor reference — not a real EU quote) · financing 8%/5yr, annual convention · power draw 240W continuous max (OBSERVED FACT spec, NVIDIA product page) · electricity €0.15/kWh (SCENARIO ASSUMPTION) · throughput range **corrected 2026-08-13**: 30.8–38.4 tok/s directly confirmed in the underlying community forum thread (Qwen3.5-122B-A10B on DGX Spark), with a separate, unconfirmed "51 tok/s+" headline claim by the same poster not independently re-confirmed — **an earlier version of this section used an 83 tok/s figure that does not trace to any source in this project's register and has been removed.** Both the confirmed 30.8–38.4 tok/s range and the unconfirmed 51 tok/s ceiling are shown below, clearly labeled by confidence, rather than collapsing them into one unlabeled range.
 
 **Financing:** `A = 4,370 × 0.08 / (1 − 1.08⁻⁵) = €1,095/yr`
 **Electricity at 100% utilization:** `240W × 8,760h/yr × €0.15/kWh = 2,102.4 kWh × €0.15 = €315/yr`
 
-| Utilization | Tokens/yr @ 50 tok/s | Tokens/yr @ 83 tok/s | Total cost/yr (financing + electricity) | Cost/M tokens @ 50 tok/s | Cost/M tokens @ 83 tok/s |
+| Utilization | Tokens/yr @ 38.4 tok/s (confirmed) | Tokens/yr @ 51 tok/s (unconfirmed) | Total cost/yr (financing + electricity) | Cost/M tokens @ 38.4 tok/s | Cost/M tokens @ 51 tok/s |
 |---|---|---|---|---|---|
-| 100% | 1,576.8M | 2,617.5M | €1,410 | €0.89 | €0.54 |
-| 75% | 1,182.6M | 1,963.1M | €1,331 | €1.13 | €0.68 |
-| 50% | 788.4M | 1,308.7M | €1,253 | €1.59 | €0.96 |
-| 25% | 394.2M | 654.4M | €1,174 | €2.98 | €1.79 |
+| 100% | 1,211.0M | 1,608.3M | €1,410 | €1.16 | €0.88 |
+| 75% | 908.3M | 1,206.2M | €1,331 | €1.47 | €1.10 |
+| 50% | 605.5M | 804.2M | €1,253 | €2.07 | €1.56 |
+| 25% | 302.8M | 402.1M | €1,174 | €3.88 | €2.92 |
 
-Formula for every cell: `Tokens/yr = tok/s × 86,400s × 365 × utilization`; `Cost/M tokens = (€1,095 + €315×utilization) / (Tokens/yr ÷ 1,000,000)`.
+Formula for every cell: `Tokens/yr = tok/s × 86,400s × 365 × utilization`; `Cost/M tokens = (€1,095 + €315×utilization) / (Tokens/yr ÷ 1,000,000)`. **The 51 tok/s column should be treated as an optimistic, unconfirmed scenario ceiling — the 38.4 tok/s column is the confirmed figure to rely on for any real planning use.**
 
 **Boundary note:** this is a scenario illustration of one machine's amortized + electricity cost per token, at an assumed local electricity price and an assumed hardware landed price. It excludes maintenance, software, networking, supervision time, and any real EU reseller markup (see §3). It is not a forecast of what running a home AI factory will actually cost you, and it is not investment or procurement advice.
 
@@ -180,21 +180,21 @@ Maintenance reserve (10%): €1,255/yr. Electricity: same €0.10/h placeholder 
 
 ---
 
-## 8. Economic-layer separation, illustrated with the localized Home AI Factory (§5) numbers at 65 tok/s, 100% utilization
+## 8. Economic-layer separation, illustrated with the localized Home AI Factory (§5) numbers at 34.6 tok/s, 100% utilization
 
-Per the project's required methodology, these layers are never collapsed into one number. Using tok/s = 65 (midpoint of the 50–83 range) for a single readable worked path:
+Per the project's required methodology, these layers are never collapsed into one number. **Corrected 2026-08-13:** an earlier version of this section used tok/s = 65 as the "midpoint of the 50–83 range" — but 83 tok/s did not trace to any source in this project's register (see §5's correction) and has been removed. Using tok/s = 34.6 (midpoint of the confirmed 30.8–38.4 tok/s range from §5) for a single readable worked path:
 
-`Tokens/yr @ 100% = 65 × 31,536,000 = 2,049.8M`
+`Tokens/yr @ 100% = 34.6 × 31,536,000 = 1,091.1M`
 
 | Layer | What's included | Formula | Result (€/M tokens) | Class |
 |---|---|---|---|---|
-| 1. Raw energy cost | Electricity only | €315 ÷ 2,049.8M | **€0.154/M** | DERIVED CALCULATION |
-| 2. Hardware-amortized production cost | + straight-line capital depreciation (€4,370 ÷ 5yr = €874/yr, no interest) | (€874+€315) ÷ 2,049.8M | **€0.580/M** | DERIVED CALCULATION |
-| 3. Financed asset cost | Straight-line capital replaced with 8%/5yr financed payment (€1,095/yr) | (€1,095+€315) ÷ 2,049.8M | **€0.688/M** | DERIVED CALCULATION |
-| 4. Full operating infrastructure cost | + illustrative 5%/yr of capital for support/software/space (€218.5/yr, SCENARIO ASSUMPTION) | (€1,095+€315+€218.5) ÷ 2,049.8M | **€0.794/M** | DERIVED CALCULATION on a SCENARIO ASSUMPTION input |
-| 5. Capacity/utilisation cost | Same stack, but at 50% utilization instead of 100% (fixed costs unchanged, electricity and tokens both halve) | (€1,095+€218.5+€157.5) ÷ 1,024.9M | **€1.435/M** | DERIVED CALCULATION — shows utilization sensitivity |
+| 1. Raw energy cost | Electricity only | €315 ÷ 1,091.1M | **€0.289/M** | DERIVED CALCULATION |
+| 2. Hardware-amortized production cost | + straight-line capital depreciation (€4,370 ÷ 5yr = €874/yr, no interest) | (€874+€315) ÷ 1,091.1M | **€1.090/M** | DERIVED CALCULATION |
+| 3. Financed asset cost | Straight-line capital replaced with 8%/5yr financed payment (€1,095/yr) | (€1,095+€315) ÷ 1,091.1M | **€1.292/M** | DERIVED CALCULATION |
+| 4. Full operating infrastructure cost | + illustrative 5%/yr of capital for support/software/space (€218.5/yr, SCENARIO ASSUMPTION) | (€1,095+€315+€218.5) ÷ 1,091.1M | **€1.492/M** | DERIVED CALCULATION on a SCENARIO ASSUMPTION input |
+| 5. Capacity/utilisation cost | Same stack, but at 50% utilization instead of 100% (fixed costs unchanged, electricity and tokens both halve) | (€1,095+€218.5+€157.5) ÷ 545.6M | **€2.696/M** | DERIVED CALCULATION — shows utilization sensitivity |
 | 6. Token production cost | = the €/M-token figure itself at whichever layer/utilization you've chosen | — | (one of the above) | DERIVED CALCULATION |
-| 7. Workload / AI-working-capacity cost | Convert token cost into a cost per usage-band hour, using illustrative usage-intensity bands (chat/advisor 10k–30k tokens/hr; copilot 60k–120k; delegated agent 200k–600k; heavy multi-agent 1M–12M+ tokens/hr — bands drawn from the project's own conceptual framework, not independently re-verified per-band in this pass) | tokens/hr × (€/M-token rate) ÷ 1,000,000 | e.g. at €0.794/M and 60k tokens/hr: €0.048/hr; at 1M tokens/hr: €0.79/hr | DERIVED CALCULATION on an unverified band assumption |
+| 7. Workload / AI-working-capacity cost | Convert token cost into a cost per usage-band hour, using illustrative usage-intensity bands (chat/advisor 10k–30k tokens/hr; copilot 60k–120k; delegated agent 200k–600k; heavy multi-agent 1M–12M+ tokens/hr — bands drawn from the project's own conceptual framework, not independently re-verified per-band in this pass) | tokens/hr × (€/M-token rate) ÷ 1,000,000 | e.g. at €1.492/M and 60k tokens/hr: €0.090/hr; at 1M tokens/hr: €1.49/hr | DERIVED CALCULATION on an unverified band assumption |
 | 8. Outcome and value | Whether that hour of AI working capacity produced anything worth more, less, or nothing compared to its cost | **not mechanically derived from layers 1–7** | — | INTERPRETATION only — value can be positive, zero, or negative; more tokens/hours is not automatically better |
 
 ---
@@ -226,7 +226,3 @@ Everything downstream of these five cells is a formula, shown explicitly in each
 ---
 
 *This workbook is one of potentially many national/currency adaptations of the same underlying method. It is released under the same CC BY 4.0 license as the parent whitepaper. It is educational research and scenario analysis only — not investment, legal, tax, procurement, or policy advice.*
-
----
-
-**Files/paths note:** this content was produced directly in response and is not yet saved to a file; no repository or vault path was in scope for this subagent task. If this needs to be placed into a specific location (e.g. a Storage-wiki working-files folder or a release-assets repo), that path should be supplied so it can be written there.

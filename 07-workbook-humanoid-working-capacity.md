@@ -215,4 +215,4 @@ Per the original scope (unchanged; **SCENARIO ASSUMPTION** boundary, not a compl
 
 ---
 
-This workbook (Part 1 real-price sourcing, Parts 2–6 arithmetic, Parts 7–8 scope/interpretation) is a standalone numeric asset for the whitepaper "Why Are They Spending Trillions on AI?" (CC BY 4.0, Valto Loikkanen). No file path was specified for this deliverable in the task; the full content above is the release asset itself, returned as markdown text. If a physical file location is wanted (e.g., under `Storage-wiki/Storage/Other/`), it was not created in this run — only the content was produced here.
+This workbook (Part 1 real-price sourcing, Parts 2–6 arithmetic, Parts 7–8 scope/interpretation) is a standalone numeric asset for the whitepaper "Why Are They Spending Trillions on AI?" (CC BY 4.0, Valto Loikkanen).

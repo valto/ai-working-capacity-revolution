@@ -90,22 +90,24 @@ The two numbers can legitimately differ by 1–2 orders of magnitude in either d
 |---|---|---|---|---|---|
 | Home factory (1× DGX Spark) | $4,699 **[FACT — current NVIDIA price, cluster A]** | ~$1,177/yr | ~$420/yr (240W, $0.20/kWh ASSUMPTION) | ~$0.6–2/M tokens (25–100% utilization) | CALC (referenced) |
 | Cooperative factory (10× DGX Spark, 50 members) | ~$46,990 | ~$11,770/yr | ~$2,000–4,000/yr | ~$0.77–1.20/M tokens at ~70% utilization | CALC (referenced) |
-| Industrial factory (GB300 NVL72, 4-rack/288-GPU cluster) | ~$16M **[ASSUMPTION — analyst-estimate based, explicitly not an official NVIDIA price]** | see Section 4.1 sensitivity table | ~568kW max draw, $0.10/kWh ASSUMPTION | ~$0.05–0.12/M tokens depending on financing term and utilization | CALC |
+| Industrial factory (GB300 NVL72, 4-rack/288-GPU cluster) | ~$16M **[ASSUMPTION — analyst-estimate based, explicitly not an official NVIDIA price]** | see Section 4.1 sensitivity table | ~568kW max draw, $0.10/kWh ASSUMPTION | ~$0.091–0.312/M tokens, full-layer (capital + financing + opex), CANONICAL figure per the Global Baseline Workbook §5.6 | CALC (referenced) |
 
-These carry forward the earlier workbook's figures unchanged; see Section 1 for the cooperative-tier discrepancy discussion.
+These carry forward the earlier workbook's figures unchanged; see Section 1 for the cooperative-tier explanation. **The canonical, full-layer Hyperscale figure used consistently across this paper is the Global Baseline Workbook's §5.6 range ($0.091–0.312/M tokens, mid $0.133/M) — that figure includes capital, financing, electricity, AND opex/overhead. The partial-layer sensitivity table in §4.1 below (capital + financing + electricity only, no opex) is a narrower, deliberately incomplete cross-check on the financing-term lever specifically; its lower headline numbers (as low as $0.050/M) must not be read as an alternative or cheaper "real" Hyperscale cost — they simply omit the opex layer that the canonical figure includes.**
 
-### 4.1 Financing-term sensitivity — industrial tier only (newly derived here, formula shown)
+### 4.1 Financing-term sensitivity — industrial tier only, CAPITAL+FINANCING+ELECTRICITY ONLY (opex excluded; not the canonical full-layer figure)
+
+**Scope of this table, stated explicitly:** this sensitivity table isolates only the *financing-term* lever, holding capital, electricity, and utilization fixed while varying loan term. It deliberately **excludes the opex/overhead layer** (facility, cooling beyond raw electricity, staffing, networking, replacement reserve — see the Global Baseline Workbook §5.5, $200,000–$1,000,000/rack/yr) that the canonical Hyperscale figure above includes. **Do not cite the $0.050–0.094/M-tokens figures below as "the" Hyperscale cost — they are a partial-layer illustration of financing-term sensitivity only.**
 
 **Formula:** Annual financed capital cost = Capital ÷ AF(n,8%), where AF(n,8%) = (1 − 1.08⁻ⁿ) ÷ 0.08. Annual facility-power cost = 568kW × 90% utilization × 8,760 h/yr × $0.10/kWh **[ASSUMPTION]** ≈ $447,800/yr. Cost per million tokens = (financed capital + facility power) ÷ (max annual tokens × 90% utilization ÷ 1,000,000), where max annual tokens = 2.5M tok/s × 31,536,000 s/yr ≈ 78.84 trillion tok/yr **[the 2.5M tok/s figure is itself an OBSERVED FACT for a 4-rack/288-GPU MLPerf v6.0 aggregate, not a single rack — see source register cluster A]**.
 
-| Financed term | Annuity factor AF(n,8%) | Annual financed capital ($16M) | + Facility power/yr | Total annual cost | Cost per M tokens |
+| Financed term | Annuity factor AF(n,8%) | Annual financed capital ($16M) | + Facility power/yr | Total annual cost (capital+financing+electricity ONLY) | Cost per M tokens (partial layer) |
 |---|---|---|---|---|---|
 | 3 years | 2.577 | $6,206,900 | $447,800 | $6,654,700 | ~$0.094/M tokens |
 | 4 years | 3.312 | $4,832,600 | $447,800 | $5,280,400 | ~$0.074/M tokens |
 | 5 years | 3.993 | $4,007,300 | $447,800 | $4,455,100 | ~$0.063/M tokens |
 | 7 years | 5.206 | $3,073,000 | $447,800 | $3,520,800 | ~$0.050/M tokens |
 
-Cross-check: at 5 years, straight-line depreciation alone ($16M÷5 = $3.2M/yr) implies ~$0.045/M tokens; the financing premium over depreciation is ~$0.0114/M tokens — consistent with the earlier workbook's stated figure. **Longer financing terms mechanically lower the per-token financed-capital cost but increase total interest paid and lock in today's hardware for longer against a fast-depreciating asset class — this table shows the arithmetic trade-off, it does not recommend a term.**
+Cross-check: at 5 years, straight-line depreciation alone ($16M÷5 = $3.2M/yr) implies ~$0.045/M tokens; the financing premium over depreciation is ~$0.0114/M tokens — consistent with the earlier workbook's stated figure. **Longer financing terms mechanically lower the per-token financed-capital cost but increase total interest paid and lock in today's hardware for longer against a fast-depreciating asset class — this table shows the arithmetic trade-off, it does not recommend a term.** Adding the canonical mid-opex figure ($500,000/yr, per Global Baseline Workbook §5.5) to any row above and recomputing would bring it back into the $0.091–0.312/M range shown in the canonical table — these are not two different measurements of Hyperscale cost, they are the same model shown at two different layers of completeness.
 
 ### 4.2 Retail benchmark (comparison point only — never the owned-production cost)
 

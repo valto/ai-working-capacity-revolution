@@ -5,7 +5,7 @@
 **Author:** Valto Loikkanen
 **Status:** v1.0 research package (draft — not yet publicly released)
 **Research initiated:** August 12, 2026
-**Factual source cut-off:** 2026-08-12
+**Factual source cut-off:** 2026-08-13
 **Licence:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — copy, redistribute, remix, adapt, and build upon this material for any purpose, including commercially, with attribution.
 **Suggested attribution:** "Research synthesis and modelling by Valto Loikkanen, assisted by AI."
 

@@ -1,7 +1,7 @@
 # Appendix — Source Register and Methodology
 
 ### Companion appendix to *"Why Are They Spending Trillions on AI?"* (Valto Loikkanen, CC BY 4.0)
-**Factual source cut-off: 2026-08-12. All retrieval dates below are on or immediately before this date unless otherwise noted.**
+**Factual source cut-off: 2026-08-13. Most retrieval dates below are on or immediately before 2026-08-12; a small number of specific corrections (the DGX Station cooperative-cost clarification and the confirmed $0.123/M-tokens GB300 figure) were independently verified on 2026-08-13 and folded into this same register, with individual dates noted per row.**
 
 ---
 
@@ -261,7 +261,3 @@ Each lettered cluster below (A–J) corresponds to a distinct research thread. E
 ---
 
 *This appendix is released under the same licence as the parent whitepaper: CC BY 4.0 — Attribution 4.0 International. Suggested attribution: "Research synthesis and modelling by Valto Loikkanen, assisted by AI."*
-
----
-
-**File/path note:** No file path was specified for this deliverable in the task; the appendix content above is the release asset itself, returned as markdown text. If a physical file location is needed (e.g., under `Storage-wiki/Storage/Other/why-trillions-ai-whitepaper/`, alongside Release Assets #7–#12), that path should be supplied so this can be written there as a standalone file.

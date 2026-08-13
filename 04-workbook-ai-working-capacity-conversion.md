@@ -2,7 +2,7 @@
 ## The Usage-Intensity Ladder: Tokens/Hour → $/AI-Working-Hour, Across Production Tiers — Plus a Human-Work Comparison Table
 
 **Part of:** *Why Are They Spending Trillions on AI?* — Valto Loikkanen, CC BY 4.0
-**Workbook status:** v1.0 draft, built from the verified source register (cut-off 2026-08-12)
+**Workbook status:** v1.0 draft, built from the verified source register (cut-off 2026-08-13)
 **Currency baseline:** Global USD
 **Depends on:** Release Asset #7 (Global Baseline Workbook — production-cost curves per tier). This workbook does not re-derive hardware/electricity/financing costs; it takes Asset #7's already-derived $/million-tokens figures as inputs and converts them into $/AI-working-hour across a usage-intensity ladder.
 **Not investment, legal, tax, procurement, or policy advice.** Every scenario below is an editable illustration built on stated assumptions, not a forecast or recommendation.
@@ -58,7 +58,11 @@ Four bands, low/mid/high, each an **ASSUMPTION** (illustrative range, not a sing
 - By May 2026, **70.2%** of sampled individual Codex users had made at least one request OpenAI itself estimated as equivalent to more than **1 human-hour** of work; **25.6%** had made at least one request estimated above **8 human-hours**.
 - By June 2026, users at the **99th percentile** regularly generated **more than 60 hours of Codex agent-turn time per single calendar day**, distributed across multiple parallel agents.
 
-**DERIVED, from the last figure above:** if a 99th-percentile user generates >60 agent-turn-hours of Codex work within one human clock-hour of elapsed wall time (i.e., dozens of agents running in parallel for a slice of that day), that is direct evidence that *parallel orchestration* — not any single agent's raw tok/s — is what pushes real observed usage into the millions-of-tokens-per-human-hour range this workbook's band 4 describes. This is why band 4 is anchored as an open-ended "12,000,000+" rather than a tight point estimate: OpenAI's own reported distribution has a long, fast-growing tail (the 8h+ share of requests grew "+1131%" over roughly six months per the same report), and this workbook does not attempt to cap it.
+**Corrected 2026-08-13 — the inference below was invalid and has been removed.** An earlier version of this passage claimed that ">60 agent-turn-hours per calendar day" is evidence that a user generates 60 agent-hours *within one human clock-hour*. That does not follow: a calendar day contains 24 clock-hours, so 60 agent-turn-hours spread across a full day could be produced by as few as ~2.5 agents running continuously throughout the day — it says nothing on its own about how many agents run *simultaneously within any single hour*. The OpenAI statistic is retained below only for what it actually shows, not for the invalid extrapolation:
+
+**What this statistic actually supports [ATTRIBUTED, OpenAI's self-report]:** it is strong evidence of sustained, heavy *parallel* usage by 99th-percentile users, aggregated across a full day, and of a long, fast-growing tail in request duration (the 8h+ share of requests reportedly grew "+1131%" over roughly six months per the same report). It does **not**, by itself, establish a specific tokens-per-human-clock-hour figure for band 4.
+
+**Why band 4 remains anchored as an open-ended "1,000,000–12,000,000+" [SCENARIO ASSUMPTION, not DERIVED from the statistic above]:** the ceiling is illustrative, chosen to be wide enough to accommodate genuinely heavy parallel-orchestration scenarios without implying false precision — it is not calculated from the 60-hours/day figure. A reader who has actual token-consumption logs or concurrency data for a specific heavy-orchestration workflow should replace this band with a directly measured figure rather than relying on this illustrative ceiling (see Part G's recommendation to use your own measured token logs).
 
 **Important scope caveats, stated plainly:**
 - These figures describe OpenAI's own internal employee usage of its own coding-agent product (Codex). They are evidence that heavy multi-agent orchestration usage exists and can be extreme — they are **not** a general population statistic, not independently audited by any third party, and not necessarily representative of usage in other organizations, other tools, or non-coding work.

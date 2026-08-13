@@ -4,7 +4,7 @@
 **Part of:** "Why Are They Spending Trillions on AI?" — Valto Loikkanen, CC BY 4.0
 **Model status:** Draft v0.1, editable baseline
 **Currency baseline:** Global USD (see localization note below)
-**Source cut-off for inputs used here:** 2026-08-12
+**Source cut-off for inputs used here:** 2026-08-13
 **Not investment, legal, tax, procurement, or policy advice.** Every scenario below is an editable illustration built on stated assumptions, not a forecast or recommendation.
 
 ---
@@ -216,26 +216,11 @@ Aggregate max continuous draw: `0.240kW × 10 = 2.4kW` (**DERIVED** from OBSERVE
 | Delegated single agent | 200,000-600,000 | $0.641-$1.922 |
 | Heavy multi-agent orchestration | 1,000,000-12,000,000 | $3.20-$38.44 |
 
-### 3.7 Reconciliation — required discrepancy disclosure
+### 3.7 The €42/member/month figure — resolved, see Token-Factory Scenario Workbook §1
 
-**The author's own published article states ~€42/member/month for a 50-member cooperative; a later detailed DGX Spark recomputation (this workbook) arrives at ~€23-25/member/month for a similarly-sized cooperative.** Per the source register (Cluster H), the €42 figure and its Aug 5, 2026 publish date are both independently confirmed as accurately stated in the article — this is not a citation error, it is a genuine model-assumption discrepancy that must be shown, not hidden.
+**Corrected 2026-08-13:** an earlier version of this section treated the author's published ~€42/member/month figure and this workbook's ~€23-25/member/month DGX Spark recomputation as an unresolved discrepancy requiring reverse-engineering (the previous content of this section attempted exactly that, without success). The author has since clarified that €42/member/month was never based on DGX Spark pricing — it was built on his own illustrative €100,000-excluding-VAT capital assumption for a shared workstation-class machine (e.g., an NVIDIA DGX Station-type system), for which NVIDIA publishes specs but no retail price. The two figures describe two different hardware tiers, not one measurement with an uncertain source.
 
-**Reverse-engineering what assumption set would produce €42/member/month (DERIVED):**
-
-```
-target_annual_cost_implied = €42 × 50 members × 12 months = €25,200/yr ≈ $27,391/yr (at 0.92 FX)
-```
-
-Testing which lever, held alone, could close a ~$11,300/yr → ~$27,400/yr gap (**DERIVED sensitivity, holding electricity/admin/utilization at this workbook's mid values**):
-
-| Financing term (8% rate) | 10-machine capital+financing/yr |
-|---|---|
-| 3 yr | $17,720 |
-| 4 yr | $13,699 |
-| 5 yr (this workbook's baseline) | $11,295 |
-| 7 yr | $8,563 |
-
-Shortening the term alone (e.g., to 3yr) moves the total toward ~$18,700/yr (with mid electricity+admin) — still well short of the ~$27,400/yr implied by €42/member/month. **INTERPRETATION:** the most likely reconciling factors, none independently confirmed here, are: (a) the €42 figure may have used a different/higher-cost hardware reference than the DGX Spark (e.g., a more expensive workstation-class or rack-mounted alternative), (b) a materially lower assumed utilization rate, (c) inclusion of a larger admin/overhead/support-services line than modelled here, or (d) a shorter financing term or higher rate. Without access to the original article's underlying spreadsheet, the exact driver cannot be confirmed — flagged here explicitly as an open reconciliation item rather than silently resolved in either direction.
+**See the Token-Factory Scenario Workbook (Release Asset #10), §1/§1a/§1b, for the full corrected explanation, the €100,000 capital-base arithmetic, and the side-by-side comparison of both hardware tiers.** This workbook's own ~€23-25/member/month figure (§3.5-3.6 above) remains valid and unchanged as the DGX Spark-tier scenario.
 
 ---
 
@@ -334,7 +319,7 @@ These three per-rack estimates (623,578 / 707,112 / 580,608) bracket a plausible
 | $0.10/kWh | $0.0060 |
 | $0.25/kWh | $0.0150 |
 
-**This confirms the source-register finding: raw electricity is a rounding error at hyperscale — well under 1 cent per million tokens even at high electricity prices.** All of the meaningful cost at this tier comes from capital, financing, and operating overhead, not power.
+**This confirms the source-register finding: raw electricity is a rounding error at hyperscale — a small fraction of a cent per million tokens at typical electricity prices, and still under two cents even at the high end of the range shown ($0.015, i.e. 1.5 cents, at $0.25/kWh).** All of the meaningful cost at this tier comes from capital, financing, and operating overhead, not power.
 
 ### 5.4 Rack capital cost — two very different reference points, kept explicitly separate
 
@@ -426,7 +411,11 @@ Do not use these to price owned hardware. Shown only as the "buy from the grid" 
 | OpenAI GPT-5.6 Sol | $5.00 | $30.00 | **ATTRIBUTED** |
 | Google Gemini 3.1 Pro (≤200K tokens) | $2.00 | $12.00 | **OBSERVED** — Google's own live pricing page; model still in "Preview," not GA |
 
-**Read across tiers vs. retail:** even the Home tier's best-case $/M-tokens (~$1.37 at 38.4 tok/s, 80% utilization) is roughly 14-25x more expensive than mid-tier retail API pricing for a comparable-capability open model — home-scale self-hosting is not currently a cost-competitive alternative to renting frontier-lab inference; its value proposition (per the wider whitepaper's ownership-architecture argument) is about data control, customization, and independence from a provider, not raw $/token cost. Hyperscale production cost ($0.09-$0.31/M tokens) is far below any retail API price shown here — consistent with the source-register finding that inference-serving margins for frontier labs are, per Huang's on-air framing, "incredibly profitable" (ATTRIBUTED, unverified against any lab's actual disclosed margins).
+**Read across tiers vs. retail, corrected 2026-08-13 (an earlier version of this passage stated an unsupported and directionally wrong "14-25x more expensive" claim — the actual comparison is more nuanced and depends heavily on both Home-tier utilization and which retail tier is used):** using the same 30% input / 70% output blend convention applied consistently elsewhere in this paper (see the AI Working-Capacity Conversion Workbook §C.0), the retail tiers above blend to approximately $0.90/M (Luna), $7.60/M (Sonnet 5), $9.00/M (Terra/Gemini), $19.00/M (Opus 5), $22.50/M (Sol), and $38.00/M (Fable 5) **[CALC]**.
+
+Against the Home tier's **best-case** $/M-tokens (~$1.37 at 38.4 tok/s, 80% utilization): Home is *cheaper* than every retail tier except Luna (where Luna is instead roughly 1.5x cheaper than Home). Against the Home tier's **worst-case** $/M-tokens (~$11.89 at 10% utilization): Home is now more expensive than Luna, Sonnet 5, Terra, and Gemini, roughly comparable to Opus 5, and cheaper than Sol and Fable 5 **[CALC]**.
+
+**The honest finding is therefore not a fixed multiplier in either direction — it is that Home-scale self-hosting's cost-competitiveness versus retail depends entirely on (a) how steadily the owner actually uses the machine and (b) which retail tier is the realistic alternative.** A well-utilized Home device can undercut most mid-to-premium retail tiers; a poorly-utilized one can be worse than all but the most expensive retail tiers. This is consistent with the wider whitepaper's ownership-architecture argument that self-hosting's case rests on data control, customization, and independence from a provider — but it is not true that self-hosting is categorically uncompetitive on raw $/token cost, and this workbook no longer claims that. Hyperscale production cost ($0.091-$0.312/M tokens, canonical mid $0.133/M) remains far below any retail API price shown here at every utilization scenario — consistent with the source-register finding that inference-serving margins for frontier labs are, per Huang's on-air framing, "incredibly profitable" (ATTRIBUTED, unverified against any lab's actual disclosed margins).
 
 ---
 

@@ -5,7 +5,7 @@
 
 **Slide 1 — Title**
 - "Why Are They Spending Trillions on AI?" — The numbers and economics behind the AI working-capacity revolution
-- Author: Valto Loikkanen · v1.0 research package · Factual source cut-off 2026-08-12
+- Author: Valto Loikkanen · v1.0 research package · Factual source cut-off 2026-08-13
 - Licence: CC BY 4.0 — Attribution 4.0 International
 - Speaker note: This is a neutral research synthesis, not a vendor report or investment recommendation — state that framing before anything else.
 
