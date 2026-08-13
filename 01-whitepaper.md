@@ -575,10 +575,10 @@ The framework separates two connected questions:
 
 This is also why no single ownership or deployment model is presented as universally superior, a stance Part V takes up in full. Centralized hyperscale infrastructure, APIs, local systems, cooperative capacity, managed services, and sovereign deployments can all have a role. Their suitability depends not only on token economics (Parts I–IV), but on the type of value being created, who needs to control the infrastructure and information, how capacity is actually used, and who should capture the resulting value.
 
-A companion visual, "Creating Growth Based on New Value" (see `17-visual-asset-briefs.md`, Diagram 11, for the full brief — not yet built as of this release), is intended to support the distinction between:
+A companion visual, "Creating Growth Based on New Value" (see `assets/diagrams/diagram-11-creating-growth-from-new-value.jpg`; full description in `17-visual-asset-briefs.md`, Diagram 11), makes this distinction concrete. It is the author's own general business/innovation framework — applicable well beyond AI, and predating this whitepaper — organized as two columns converging on a shared "New Value" band:
 
-- **Creating new value:** idea / invention → innovation → verifying new value
-- **Creating growth from new value:** new value → value proposition and communication → revenue model → productivity
+- **Creating new value** (left column, descending into New Value): idea / invention → innovation → verifying new value
+- **Growth based on new value** (right column, ascending out of New Value): value proposition and communication → revenue model → productivity
 
 **A note on the planned Scenario Explorer:** this paper's companion workbooks (and a planned interactive Scenario Explorer building on them) can model capacity and cost — $/M tokens, $/AI-working-hour, break-even utilization, financing sensitivity — with every formula shown and every input editable. **They cannot determine whether a particular deployment will create verified value.** That would require separate, additional assumptions about the work being done, the users being served, adoption, and the value-capture model chosen — inputs this paper's cost model does not and cannot supply. Any future Scenario Explorer built on this paper's cost tables should make that boundary explicit in its own interface, not just in this prose.
 

@@ -52,11 +52,11 @@ This package is built so different readers can get a common factual base at diff
 | `14-shortform-general.md` | ~300-word general-audience explainer | Social/short-form sharing |
 | `15-shortform-ownership.md` | ~300-400 word piece on the ownership question (Part V) | Social/short-form sharing |
 | `16-shortform-value.md` | ~300-400 word piece on why cheap tokens ≠ cheap value (Part IV) | Social/short-form sharing |
-| `17-visual-asset-briefs.md` | Diagram specifications — Diagrams 1–10 are built (see `assets/diagrams/`), Diagram 11 ("Creating Growth Based on New Value") is spec-only, pending production | Whoever builds/edits the final graphics |
+| `17-visual-asset-briefs.md` | Diagram specifications for Diagrams 1–11 (all 11 now built — see `assets/diagrams/`) | Whoever builds/edits the final graphics |
 | `18-companion-data-model.xlsx` | Live-formula Excel workbook (10 sheets: README, Home/Cooperative/Professional/Hyperscale tiers, Working-Capacity Matrix, Bitcoin Comparison, Humanoid Robot, EUR-Finland Localization, Assumptions Master) — built from `03-04-05-07-08`'s tables, edit any yellow assumption cell to recalculate everything downstream | Anyone who wants to run their own numbers without retyping formulas |
 | `19-slide-deck.pptx` | 25-slide presentation deck built from `13-slide-deck-outline.md`, with speaker notes | Anyone presenting this material |
 | `20-appendix-known-limitations.md` | Consolidated list of live uncertainties (model performance, utilization, financing, power pricing, adoption timing, Professional-tier evidence gap) | Anyone deciding how much weight to put on a specific figure |
-| `assets/diagrams/diagram-01…10-*.png` | The 10 finished diagram images specified in `17-visual-asset-briefs.md` | Report/deck/web use |
+| `assets/diagrams/diagram-01…10-*.png`, `diagram-11-*.jpg` | The 11 finished diagram images specified in `17-visual-asset-briefs.md` — Diagram 11 is the author's own pre-existing framework diagram, supplied and used as-is | Report/deck/web use |
 | `data/canonical-cost-model.csv` | The single canonical source for every tier's $/M-token and $/AI-working-hour figures | Anyone checking or extending the model |
 | `tools/check-canonical-consistency.py` | Automated check that the whitepaper, workbooks, deck, and xlsx have not drifted from the canonical figures | Maintainers, before any release |
 | `CITATION.cff` | Machine-readable citation metadata (GitHub renders this as a "Cite this repository" prompt) | Anyone citing this work |

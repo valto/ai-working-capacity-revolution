@@ -3,8 +3,8 @@
 # (This file cannot list its own checksum -- verify its own integrity against the
 # GitHub release/commit hash instead.)
 b4d0856c4dc8950cc2b13052491f4ce3be6c73b1788be3adb6cd10f2b6e93cfa  ./00-how-to-use-this-research.md
-cfb2db84dc6c26e7b035ebac5427b4f147c7aff15c93db6ff1a47d3afda66db3  ./01-whitepaper.md
-5a352a1751b21653562c9c79cd65626c18148e8b532de270cf39decea0574c13  ./01-whitepaper.pdf
+9139ae10fb1335d575cf751e44deef4da58771927b76e883fc926ed6f4a01d7b  ./01-whitepaper.md
+d9d680408028eaef94b47d02645246700b0d1ead762d5fb60d8ad84f264209e1  ./01-whitepaper.pdf
 02657132c87e3766019fd2ae11d80312c768661952fa9708f87ab1cefadd5ce1  ./02-source-register.md
 c612e603356b2290dc80dee51d19ba14f829883aa22969cb25ce229dd125a648  ./03-workbook-global-baseline.md
 e8dc6fc8ba52727f8e2253ceb1fd9848a072c6b836c5c40918ec75183c0add9f  ./04-workbook-ai-working-capacity-conversion.md
@@ -20,14 +20,14 @@ cb22d744dea386b7cfd2493cd4d22d0160c7cce52f0b7330cc99bb7201b3ae33  ./10-appendix-
 2bb6937b07b7c8701b7e1eb08574cde42cc6a9bf70b8ede0a51f09d50aee84a4  ./14-shortform-general.md
 b0da5d398f6e54118b5231c2abfe1101996167e677d8fad31c963ed500f90274  ./15-shortform-ownership.md
 5968c1e20bddcbd0c3318b43379245c18626bd2512af8aa2a07caa2dc81eaeab  ./16-shortform-value.md
-bfe901e3be882ce73f0927b984cf70b6982cc09188d88d80ccce53aa61b6dde5  ./17-visual-asset-briefs.md
+29de3b756c2660a7afe2ee9386ededc6aee626ee5dcc6d1e6442a90394ba3fbb  ./17-visual-asset-briefs.md
 246fdf7656a77209f109106b7b453eb263ac0f66a94fcb5d0c51d546539d8087  ./18-companion-data-model.xlsx
 ad564caf44232c5fb93719b0e6b651fabccdf1fc3b2551e1b03431441203d103  ./19-slide-deck.pptx
 cb81a2ca006768dd72986652f4e7684c6a96847736b804c5ff85cc175c10516c  ./20-appendix-known-limitations.md
-fc460e2a786fc19db86e3428d657f544ef5acf09b47f70c9a140de1e0c6f2c97  ./CHANGELOG.md
+bf9685a0207e7e178ea5b791d6bb7d7d54aeac853733048eb6fe89721266b0ec  ./CHANGELOG.md
 e33184d3f7f1fa7a74dd2e1302be0f0c15db378b608b5845ea26280c9b3cf805  ./CITATION.cff
 839f99099d8bac968959ec2cd24f18bfedc20b384c4aaaeb6fcfbaee2e08235b  ./LICENSE
-2666e6795c902d06e4c11e42ee1949bc2cf69ef444c28b91a226c26072ec7240  ./README.md
+fae86731258028b1d0731c4eb00664226fc3f410c93a3c4d9363cabe1e526695  ./README.md
 c103775f7156cffb59dda55bd1daaae0d2ccc3b03e7c595c0eb87aeb47fbe8a0  ./assets/diagrams/diagram-01-end-to-end-chain.png
 79f00ee078bbaa4809462c4d48b9028afb07e9f8040aa34f6d554f3906d35e5c  ./assets/diagrams/diagram-02-cost-waterfall.png
 cb9f999d06be30fb943a7a079c6258661a2f017f9be4e61c9623d0039338eb78  ./assets/diagrams/diagram-03-intensity-ladder.png
@@ -38,6 +38,7 @@ edbc255a6ee65e3aba3804537b8285917b47fb65f4d419d7fc2dfbb524c3ea10  ./assets/diagr
 b5edbfeff70be3719b895d916685af2c75447beb9f0ff04c16843de76b8c0ac7  ./assets/diagrams/diagram-08-scale-spectrum.png
 4049f27e4cc2bd0cf443fe5e352766f3f1e348fd1f6180c850bac3dba936d1e1  ./assets/diagrams/diagram-09-humanoid-extension.png
 f133211cbe46f95f6b4674fa02fd39fe2eae41338cb3009ef0b8f462f80ad308  ./assets/diagrams/diagram-10-final-transition.png
+6ad6946fc81cf87525f66dd5fa175275907e6d19f02e603827c85f3c3d7af2cb  ./assets/diagrams/diagram-11-creating-growth-from-new-value.jpg
 063546b1b7445c01393ee41cf6fafe040b33678d35d391cfdee2d86fc00e68e2  ./assets/pdf-style.css
 0a944463e7add7f7ac7f5fe94178e6d0ee2154a44e31b19a5b6421e076b2ef69  ./data/canonical-cost-model.csv
 7368dbb42caafdb0e86d6295b1950721a370e995516edda87d328aaacd13db18  ./tools/check-canonical-consistency.py
