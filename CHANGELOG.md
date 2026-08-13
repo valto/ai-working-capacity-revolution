@@ -2,6 +2,16 @@
 
 All notable changes to this research package are documented here. Versioning follows [Semantic Versioning](https://semver.org/) in spirit — a major version bump indicates a change to canonical figures or conclusions, not just prose.
 
+## [Unreleased]
+
+Content additions after the v1.0.0 GitHub release/Zenodo archive. Not yet cut as a new tagged release.
+
+### Added
+- Replaced the front-matter "About the author and method" section with an expanded "About the author, perspective and method" — covers the author's broader entrepreneurship/innovation-ecosystem and advisory background (30+ ecosystems, government/EU/university advisory work) alongside the AI-infrastructure-specific disclosure, and names ValtoAI and the EIOS reference framework (organizations/governed information/agent-ready context) alongside the previously-named Prifina, Digiole, and PIOS. Propagated the same venture list to Method §3.4's disclosure, `12-executive-brief.md`, `15-shortform-ownership.md`, `13-slide-deck-outline.md`/`19-slide-deck.pptx` (slide 15), and `README.md`, replacing all remaining "peecos/PIOS" references.
+- Added a new conceptual-bridge section, "From AI working capacity to new value," between Part IV (§25) and Part V of the whitepaper — explicitly tagged INTERPRETATION throughout, introduces no new cost figures. Distinguishes "can the capacity be created" (this paper's cost/capacity model, Parts I–IV) from "can that capacity create and capture new value" (invention, innovation, adoption, and revenue-model questions this paper's cost tables cannot answer), and notes the same boundary applies to any future Scenario Explorer built on this paper's workbooks.
+- Added Diagram 11 ("Creating Growth Based on New Value") to `17-visual-asset-briefs.md` — specification only, no image produced yet, following the same brief format as Diagrams 1–10.
+- Fixed a stale cross-reference in `README.md`'s disclosure line (pointed to whitepaper "§4," which no longer exists as a numbered section; corrected to "Method §3.4").
+
 ## [1.0.0] — 2026-08-13
 
 Initial public release.

@@ -94,7 +94,7 @@
 - Speaker note: This is the guardrail slide against naive "$/hour AI vs. $/hour human" headlines.
 
 **Slide 15 — Part IV: Information as AI's Operating System**
-- Author's own framing: information is "the operating system for AI" [FACT that phrase appears; INTERP as underlying claim] — disclosed author interest in this framing (Prifina/Digiole/peecos).
+- Author's own framing: information is "the operating system for AI" [FACT that phrase appears; INTERP as underlying claim] — disclosed author interest in this framing (Prifina/Digiole/ValtoAI/PIOS/EIOS).
 - Same model + different information = very different effective working capacity.
 - Zuckerberg: "fully private mode…even Meta cannot see" [ATTR]; Altman's usage anecdote implies ~1,000,000x token growth per heaviest user, 2019→2026 [CALC on ATTR inputs].
 - Speaker note: Flag the disclosure here explicitly — this section sits closest to the author's own commercial stake.

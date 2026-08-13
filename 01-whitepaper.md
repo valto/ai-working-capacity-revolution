@@ -19,6 +19,7 @@
 - Part II — First principles: from energy to tokens (sections 10-15)
 - Part III — From tokens to working capacity (sections 16-20)
 - Part IV — Value, information, and leadership (sections 21-25)
+- Conceptual bridge — From AI working capacity to new value (unnumbered, between Parts IV and V)
 - Part V — Ownership, access, and possible market architectures (sections 26-30)
 - Part VI — Scale scenarios and tangible examples (sections 31-36)
 - Part VII — What this can mean for different readers (sections 37-42)
@@ -42,9 +43,23 @@ This paper does not resolve that question, and does not try to. Instead it separ
 
 ---
 
-## About the author and method
+## About the author, perspective and method
 
-Valto Loikkanen is a systems architect and product developer working across AI infrastructure, personal-data architecture, and cooperative ownership models, including Prifina (an AI Twins platform), Digiole (Talking Product AI for physical venues), and the peecos/PIOS personal-information-infrastructure reference framework. This background gives him direct, practitioner-level exposure to the compute, token-economics, and information-architecture questions this paper covers — and, as stated in the disclosure below, a commercial and advocacy stake in some of the ownership models it evaluates. The research and modelling work for this package was produced with AI assistance under his direction, verified where possible against primary sources, and is presented as a synthesis for readers to check, challenge, and adapt — not as a settled conclusion.
+Valto Loikkanen is an international entrepreneur, systems architect, and AI-native product builder who creates concrete products, ventures, and open reference frameworks for real markets.
+
+For more than a decade, his work has sat at the intersection of entrepreneurship, innovation, and digital platforms and ecosystems: how new technologies become useful products, new ventures, scalable markets, and verified new value. He has contributed to startup- and innovation-ecosystem work across more than 30 ecosystems internationally, alongside work in digital finance, platform economy, personal data, customer experience, and AI.
+
+Alongside building ventures and products, he has been invited as an international expert to advise governments, ministries, cities, universities, European Commission initiatives, and international innovation consortia. This work has covered entrepreneurship and innovation ecosystems, digital transformation, international cooperation, access to risk finance, platform economy, and research and innovation programmes, including evaluation of consortium and innovation projects.
+
+His current work includes personal AI and personal-data architecture through Prifina; AI-native product, customer-experience, and advisory work through ValtoAI; and the open PIOS and EIOS reference frameworks. PIOS explores owner-controlled personal information and AI infrastructure; EIOS applies related principles to organizations, governed information, and agent-ready operating context.
+
+This background provides the perspective behind this paper: not only how AI infrastructure and working capacity can be financed, built, and operated, but how they may become useful work, verified new value, viable market activity, and different forms of ownership and sovereignty.
+
+This paper is independent open research, not investment, procurement, legal, policy, or technology advice. It combines publicly available evidence, attributed industry statements, transparent calculations, scenario assumptions, and interpretation. AI tools were used under the author's direction to accelerate research, modelling, drafting, and consistency checking; they are not treated as source authority.
+
+The purpose is to provide a model that readers can inspect, challenge, reproduce, improve, and adapt to their own context — not to present a settled forecast or a single prescribed outcome.
+
+**Disclosure:** the author's current work includes personal-data ownership, personal AI, open infrastructure, and cooperative or distributed ownership models. These perspectives inform the questions explored in this research. The paper therefore aims to make assumptions, alternatives, benefits, constraints, and trade-offs explicit rather than presenting any one model as universally superior. (This disclosure is restated, with additional specificity about named ventures and frameworks, at Method §3.4.)
 
 ---
 
@@ -93,7 +108,7 @@ This paper treats Jensen Huang, Sam Altman, and Mark Zuckerberg as three indepen
 
 ### 3.4 Disclosure
 
-The author has commercial and advocacy interests in personal AI infrastructure and cooperative/ownership-based AI models through Prifina (AI Twins platform), Digiole (Talking Product AI), and the peecos/PIOS personal-information-infrastructure reference framework. This paper synthesizes third-party public statements and independently verifiable figures; it was not commissioned by and should not be read as endorsed by Nvidia, OpenAI, Anthropic, Google, Meta, Y Combinator, CNBC, or any named individual. The cooperative/ownership architecture discussed in Part V is one candidate model evaluated on its own numbers; readers should weigh the author's stated interest in that outcome accordingly.
+The author has commercial and advocacy interests in personal AI infrastructure and cooperative/ownership-based AI models through Prifina (personal AI and personal-data architecture), Digiole (Talking Product AI), ValtoAI (AI-native product, customer-experience, and advisory work), and the open PIOS and EIOS reference frameworks (PIOS: owner-controlled personal information and AI infrastructure; EIOS: related principles applied to organizations, governed information, and agent-ready operating context). This paper synthesizes third-party public statements and independently verifiable figures; it was not commissioned by and should not be read as endorsed by Nvidia, OpenAI, Anthropic, Google, Meta, Y Combinator, CNBC, or any named individual. The cooperative/ownership architecture discussed in Part V is one candidate model evaluated on its own numbers; readers should weigh the author's stated interest in that outcome accordingly.
 
 ### 3.5 Non-advice statement
 
@@ -482,7 +497,7 @@ Every table in this Part is therefore labeled by layer — **owned production**,
 
 As established in Part II/III, a token is a unit of model processing/output — it meters AI working capacity the way a kWh meters energy capacity, not a unit of economic value (see the AI Working-Capacity Conversion Workbook, Part A, for the formal token vs. AI-working-hour distinction). A model's raw capability is general: the same frontier model, run at the same settings, is available to anyone who can pay the retail price shown in Part II/III's pricing tables. What is not general is what that capability can actually do in a specific person's or organization's setting — and the variable that closes that gap is information.
 
-Valto Loikkanen's own published framing states this directly: his LinkedIn article "Who Owns Your AI" (published 2026-08-11) describes information as "the operating system for AI" **[OBSERVED FACT — this exact phrase appears in the live article, confirmed 2026-08-12]**. The underlying claim — that models supply general intelligence while information, context, memory, and organizational knowledge determine what that intelligence can understand and do in a given setting — is the author's own conceptual argument, not a claim made by any of the three executives profiled in this paper, and should be read as **INTERPRETATION**, not settled fact. It is flagged here, as throughout, against the Method section's disclosure that the author has a stated commercial and advocacy interest in personal-information-infrastructure (Prifina, Digiole, peecos/PIOS) that this framing is directly adjacent to.
+Valto Loikkanen's own published framing states this directly: his LinkedIn article "Who Owns Your AI" (published 2026-08-11) describes information as "the operating system for AI" **[OBSERVED FACT — this exact phrase appears in the live article, confirmed 2026-08-12]**. The underlying claim — that models supply general intelligence while information, context, memory, and organizational knowledge determine what that intelligence can understand and do in a given setting — is the author's own conceptual argument, not a claim made by any of the three executives profiled in this paper, and should be read as **INTERPRETATION**, not settled fact. It is flagged here, as throughout, against the Method section's disclosure that the author has a stated commercial and advocacy interest in personal-information-infrastructure (Prifina, Digiole, ValtoAI, PIOS, EIOS) that this framing is directly adjacent to.
 
 The practical consequence, developed further in §22–§23: two deployments of an identical model can produce wildly different working capacity depending only on what information they carry — a point that becomes central to why "AI capability" and "AI working capacity" are not the same thing, and why the six reader lenses this paper treats equally (individual, SME/owner-manager, finance/infrastructure investor, government/community, AI builder/operator, educator/researcher/journalist) each face a different version of the same information problem rather than a shared, uniform one.
 
@@ -535,13 +550,47 @@ The same structure applies once AI working capacity — not human capacity — i
 
 ---
 
+## From AI working capacity to new value
+
+*A conceptual bridge, not a numerical finding. Everything in this section is **[INTERPRETATION]** — the author's own conceptual framework for how the cost/capacity model in Parts I–IV connects to the ownership and market-architecture questions taken up in Part V. It introduces no new cost figures and asserts no causal law; it should be read as one candidate lens for organizing the question, open to disagreement, not as something this paper's evidence proves.*
+
+Parts I–IV established, with formulas shown, what it costs to produce AI working capacity at a given tier and utilization. **AI working capacity is not economic value by itself.** Compute, models, electricity, capital, and infrastructure can create a new supply of digital work; whether that supply produces growth depends on what people, organizations, and markets do with it — a distinction this paper has already drawn sharply in §25 ("positive, zero, and negative value") and restates here as a bridge into Part V's ownership question.
+
+The crucial conversion, as this paper's author frames it, runs:
+
+```
+Electricity → compute infrastructure → AI working capacity
+→ useful work outputs → human and organizational integration
+→ idea / invention → innovation → verified new value
+→ value proposition and communication → revenue model
+→ productivity and growth
+```
+
+This distinction matters. A lower cost per token, a more capable model, a larger agent fleet, or more available robot capacity does not automatically create income, productivity, GDP, or social benefit. Value must still be created, validated by a user or customer, adopted in a real workflow, communicated, and captured through an appropriate revenue, service, or public-value model.
+
+The framework separates two connected questions:
+
+1. **Can the capacity be created?** This is what Parts I–IV of this paper examine: the infrastructure, capital, energy, hardware, model, utilization, ownership, and operating conditions involved.
+2. **Can that capacity create and capture new value?** This depends on invention, innovation, user need, organizational learning, workflow integration, trust, distribution, governance, and the chosen market or public-service model — none of which any cost-per-token or cost-per-AI-working-hour figure in this paper can determine on its own.
+
+This is also why no single ownership or deployment model is presented as universally superior, a stance Part V takes up in full. Centralized hyperscale infrastructure, APIs, local systems, cooperative capacity, managed services, and sovereign deployments can all have a role. Their suitability depends not only on token economics (Parts I–IV), but on the type of value being created, who needs to control the infrastructure and information, how capacity is actually used, and who should capture the resulting value.
+
+A companion visual, "Creating Growth Based on New Value" (see `17-visual-asset-briefs.md`, Diagram 11, for the full brief — not yet built as of this release), is intended to support the distinction between:
+
+- **Creating new value:** idea / invention → innovation → verifying new value
+- **Creating growth from new value:** new value → value proposition and communication → revenue model → productivity
+
+**A note on the planned Scenario Explorer:** this paper's companion workbooks (and a planned interactive Scenario Explorer building on them) can model capacity and cost — $/M tokens, $/AI-working-hour, break-even utilization, financing sensitivity — with every formula shown and every input editable. **They cannot determine whether a particular deployment will create verified value.** That would require separate, additional assumptions about the work being done, the users being served, adoption, and the value-capture model chosen — inputs this paper's cost model does not and cannot supply. Any future Scenario Explorer built on this paper's cost tables should make that boundary explicit in its own interface, not just in this prose.
+
+---
+
 # Part V — Ownership, access, and possible market architectures
 
 **Evidence-class legend used throughout this section:** **[FACT]** = Observed Fact (checked against a primary/live source on or immediately before 2026-08-12) · **[ATTR]** = Attributed Statement (a named person/org's on-record claim, not independently proven) · **[CALC]** = Derived Calculation (formula shown) · **[ASSUMPTION]** = Scenario Assumption (editable, not a market figure) · **[INTERP]** = Interpretation (a labelled possible reading, never presented as fact).
 
 As established in Part I through Part IV of this paper, the analytical chain running from energy through hardware, compute, models, and tokens produces something measurable — AI working capacity — but says nothing on its own about who controls that capacity, who can direct it, or who benefits when it produces outcomes and value. Part V turns to that separate question: not "how much does it cost to produce a token or an AI-working-hour" (Parts II–IV), but "who owns and controls the stack that produces it, and what does that ownership actually mean in practice."
 
-**A note on standpoint, restated from the Method section's disclosure:** the author, Valto Loikkanen, has stated commercial and advocacy interests in personal AI infrastructure and cooperative/ownership-based AI models through Prifina, Digiole, and the peecos/PIOS framework. Several concepts in this Part — the electricity-grid/solar analogy in Section 28, the three-layer ownership architecture, and the cooperative cost model discussed in Section 27 — are drawn directly from the author's own previously published articles. These are presented here as **one candidate architecture among several**, argued on its own numbers, not asserted as the correct or superior model. Where a claim in this Part rests on the author's own published position rather than an independently checkable fact, it is flagged explicitly, not folded silently into the surrounding analysis.
+**A note on standpoint, restated from the Method section's disclosure:** the author, Valto Loikkanen, has stated commercial and advocacy interests in personal AI infrastructure and cooperative/ownership-based AI models through Prifina, Digiole, ValtoAI, and the PIOS and EIOS reference frameworks. Several concepts in this Part — the electricity-grid/solar analogy in Section 28, the three-layer ownership architecture, and the cooperative cost model discussed in Section 27 — are drawn directly from the author's own previously published articles. These are presented here as **one candidate architecture among several**, argued on its own numbers, not asserted as the correct or superior model. Where a claim in this Part rests on the author's own published position rather than an independently checkable fact, it is flagged explicitly, not folded silently into the surrounding analysis.
 
 ---
 
@@ -813,7 +862,7 @@ This is also where Part V's ownership-architecture framing is most concrete for 
 
 ## 38. Owner-managed SMEs and service delivery
 
-The SME/owner-manager lens is where this paper's author has directly published prior work, so it is worth stating the disclosure plainly here again: Valto Loikkanen has commercial and advocacy interests in this space through Prifina, Digiole, and the peecos/PIOS framework, and the argument below draws on his own May 2026 Substack piece as a cited source, not an independently adjudicated finding.
+The SME/owner-manager lens is where this paper's author has directly published prior work, so it is worth stating the disclosure plainly here again: Valto Loikkanen has commercial and advocacy interests in this space through Prifina, Digiole, ValtoAI, and the PIOS and EIOS reference frameworks, and the argument below draws on his own May 2026 Substack piece as a cited source, not an independently adjudicated finding.
 
 That piece, "The Overlooked AI Scale-Up Layer" (startupcommons.substack.com, published 2026-05-22, OBSERVED FACT of date and content per direct fetch), argues that owner-managed SMEs — firms with existing customers, revenue, and operational knowledge, distinct from both pre-revenue startups and large bureaucratic corporations — are structurally well positioned to benefit from agentic AI, precisely because they can act on it quickly without a large internal approval chain. Its central claim is that the opportunity for most SMEs is **delivery innovation, not product innovation**: "The product or service may not be new. The way it is delivered may be new" (quoted from the source per the register). An SME does not need to invent a new offering to benefit from the token-cost curves modeled in Part II/III of this paper — it can apply falling AI working-capacity costs to how an existing offering is scheduled, communicated, scaled across new markets, or supported.
 

@@ -1,8 +1,8 @@
 # Visual Asset Briefs — Diagram Specifications for "Why Are They Spending Trillions on AI?"
 
-**Status: DIAGRAM SPECIFICATIONS ONLY — these are designer briefs for Release Asset #15, not finished artwork, mockups, or final visual assets. No image has been produced. Every brief below tells a designer what to draw, from which whitepaper data, in what form — final layout, color, and typography are left to design execution.**
+**Status:** Diagrams 1–10 have been built as finished PNG images (see `assets/diagrams/`); the briefs below remain the specification each was built from, kept for anyone editing or re-deriving them. **Diagram 11** (added 2026-08-14, alongside the new "From AI working capacity to new value" conceptual bridge section) is specification-only as of this release — no image has been produced for it yet.
 
-**Governing rules for every diagram (apply to all 10 briefs below, not restated per-brief except where a specific exception matters):**
+**Governing rules for every diagram (apply to all 11 briefs below, not restated per-brief except where a specific exception matters):**
 - Every number, label, or data point pulled onto a diagram must carry the same evidence-class tag used in the source text — OBSERVED FACT, ATTRIBUTED STATEMENT, DERIVED CALCULATION, SCENARIO ASSUMPTION, or INTERPRETATION. Use a small legend (color-coded or icon-coded) rather than prose footnotes wherever the diagram has room; where it doesn't, a numbered footnote keyed to a legend block is acceptable.
 - No diagram may rank, size, or visually privilege one of the six reader lenses (Individual, SME/owner-manager, Finance/infrastructure investor, Government/region/community, AI builder/operator, Educator/researcher/journalist) over another. Where a lens appears (Diagrams 1, 6, 8, 10), use a neutral, unordered layout (e.g., a ring, a grid, or alphabetical/equal-width columns) — never a numbered ranking, size gradient, or "priority" arrow.
 - No diagram may visually endorse or rank Huang, Altman, and Zuckerberg's positions relative to one another (Diagrams 1, 6, 10). Where their statements appear together, use equal visual weight (same box size, same typographic treatment, neutral placement — e.g., three parallel columns, not a hierarchy).
@@ -197,7 +197,30 @@
 
 ---
 
-**Cross-diagram consistency notes for the designer (apply across all 10 briefs):**
+## Diagram 11 — Creating Growth Based on New Value
+
+**Status:** Added 2026-08-14, alongside the new "From AI working capacity to new value" conceptual bridge section (placed between Parts IV and V of the whitepaper). No source image was supplied for this brief — unlike Diagrams 1–10, there is no pre-existing author visual to redraw from; this brief describes the diagram to be designed from scratch, following the same structural discipline as the rest of this set.
+
+**Suggested type:** A two-stage horizontal conversion diagram (not a funnel, not a ranking) — Stage A ("Creating new value") feeding into Stage B ("Creating growth from new value") — visually distinct from, but positioned to echo, Diagram 1's chain-of-nodes grammar, so a reader recognizes it as the same family of diagram applied to a different link in the paper's overall chain.
+
+**What it shows:** The whitepaper's new conceptual-bridge section's core distinction: that AI working capacity (the output of Parts I–IV's cost/capacity model) is not economic value by itself, and that converting capacity into growth requires a separate chain — idea/invention → innovation → verified new value → value proposition and communication → revenue model → productivity — which this paper's cost tables and workbooks do not, and cannot, model on their own.
+
+**Data/sections visualized:** The whitepaper's "From AI working capacity to new value" section (unnumbered, between §25 and Part V): the full extended conversion chain (electricity → compute infrastructure → AI working capacity → useful work outputs → human and organizational integration → idea/invention → innovation → verified new value → value proposition and communication → revenue model → productivity and growth), and its two-question framing ("can the capacity be created" vs. "can that capacity create and capture new value").
+
+**Structural requirements:**
+- The full 11-node chain from the whitepaper section should appear once, in full, at the top of the diagram as a single horizontal or wrapped-horizontal reference strip — using the same node/arrow visual grammar as Diagram 1, so the two diagrams read as companions. The first six nodes (electricity → compute infrastructure → AI working capacity → useful work outputs → human and organizational integration → idea/invention) should be visually grouped as "capacity" (cool/neutral color, matching Diagram 1's digital-chain color); the remaining five (innovation → verified new value → value proposition and communication → revenue model → productivity and growth) should be visually grouped as "value and growth" (a distinct but equally neutral color — not a "better" color, since this is a conversion, not an upgrade).
+- Beneath that reference strip, two clearly separated, equal-sized panels:
+  - **Panel A — "Creating new value":** idea/invention → innovation → verifying new value. Caption: "This paper's cost/capacity model (Parts I–IV) supplies inputs to this chain — cheap tokens, available agent capacity — but does not perform it."
+  - **Panel B — "Creating growth from new value":** new value → value proposition and communication → revenue model → productivity. Caption: "Growth requires all four steps; verified new value alone is not yet growth."
+- A visible boundary callout, styled consistently with the "SCENARIO ASSUMPTION" tags used in Diagrams 2/3/8/9, but using this section's own tag instead: "INTERPRETATION — conceptual framework, not a numerical finding or a causal law. Introduces no new cost figures."
+- A small annotation tying this diagram to the planned Scenario Explorer, worded closely to the whitepaper section's own language: "The Scenario Explorer (built on this paper's cost workbooks) can model the 'capacity' half of this chain — $/M tokens, $/AI-working-hour, utilization, financing. It cannot model the 'value and growth' half without separate assumptions about users, adoption, and revenue model."
+- Do not imply that any one production tier (Home/Cooperative/Professional/Hyperscale, Diagram 8) or ownership model (Diagram 6/7) is more likely to successfully complete the "value and growth" half of the chain than another — this diagram's job is to show the conversion exists and is separate from the cost model, not to score any tier or model against it.
+
+**Evidence-class labeling:** The entire diagram is **[INTERPRETATION]** — the author's own conceptual framework, not derived from any named executive's statement or from this paper's cost workbooks. Label it as such once, prominently, rather than per-node, since no individual node carries a different evidence class here.
+
+---
+
+**Cross-diagram consistency notes for the designer (apply across all 11 briefs):**
 - Use one consistent 5-class legend (icon + color) across the entire asset set (#15) so a reader moving between diagrams doesn't have to relearn the code each time.
 - Use one consistent typographic/color treatment for "SCENARIO ASSUMPTION — not a forecast, not advice" boundary tags across Diagrams 2, 3, 8, 9 (and the financing/scenario portions of 1, 6).
 - Do not introduce color-coding that implies a preferred ownership model, executive, or reader lens anywhere in the set — palette choices should be functional (evidence class, tier, or axis) not evaluative.

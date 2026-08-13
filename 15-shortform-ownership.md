@@ -6,7 +6,7 @@ One recurring way to make this legible is an electricity-grid analogy: home sola
 
 The whitepaper models real numbers for a compute cooperative at two different hardware tiers — roughly €19.50–23 per member/month for a pool of smaller DGX Spark-class devices, versus about €42/member/month for a single shared workstation-class machine, with the underlying assumptions for each shown explicitly rather than treated as one contested figure [DERIVED CALCULATION, Part V §27]. No ownership model — centralized platform, enterprise contract, open-weight self-hosting, private ownership, cooperative, or local/regional capacity — is shown to dominate on every dimension of cost, control, resilience, and convenience [Part V §30].
 
-Disclosure, stated in the whitepaper itself: the author, Valto Loikkanen, has commercial and advocacy interests in cooperative and personal-ownership AI models through Prifina, Digiole, and the peecos/PIOS framework. The cooperative/ownership architecture described here is presented as one candidate model among several, evaluated on its own numbers — not asserted as superior, and not investment or policy advice.
+Disclosure, stated in the whitepaper itself: the author, Valto Loikkanen, has commercial and advocacy interests in cooperative and personal-ownership AI models through Prifina, Digiole, ValtoAI, and the PIOS and EIOS reference frameworks. The cooperative/ownership architecture described here is presented as one candidate model among several, evaluated on its own numbers — not asserted as superior, and not investment or policy advice.
 
 Licensed under CC BY 4.0. Suggested attribution: Research synthesis and modelling by Valto Loikkanen, assisted by AI.
 

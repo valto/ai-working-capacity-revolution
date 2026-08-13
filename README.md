@@ -18,7 +18,7 @@ It is not a vendor report, a political programme, or an investment recommendatio
 
 Every substantive claim is tagged with one of five evidence classes (Observed Fact / Attributed Statement / Derived Calculation / Scenario Assumption / Interpretation) so a reader can tell, at a glance, what is independently verified, what is someone's on-record claim, what is arithmetic, and what is an editable illustration.
 
-**Disclosure:** the author has commercial and advocacy interests in personal AI infrastructure and cooperative/ownership-based AI models through Prifina, Digiole, and the peecos/PIOS reference framework. See §4 of the whitepaper (`01-whitepaper.md`) for the full disclosure and non-advice boundary.
+**Disclosure:** the author has commercial and advocacy interests in personal AI infrastructure and cooperative/ownership-based AI models through Prifina, Digiole, ValtoAI, and the PIOS and EIOS reference frameworks. See Method §3.4 of the whitepaper (`01-whitepaper.md`) for the full disclosure and non-advice boundary.
 
 ## Reading paths — start here, not with the whole package at once
 
@@ -52,7 +52,7 @@ This package is built so different readers can get a common factual base at diff
 | `14-shortform-general.md` | ~300-word general-audience explainer | Social/short-form sharing |
 | `15-shortform-ownership.md` | ~300-400 word piece on the ownership question (Part V) | Social/short-form sharing |
 | `16-shortform-value.md` | ~300-400 word piece on why cheap tokens ≠ cheap value (Part IV) | Social/short-form sharing |
-| `17-visual-asset-briefs.md` | Diagram specifications for the 10 required visualizations | Whoever builds/edits the final graphics |
+| `17-visual-asset-briefs.md` | Diagram specifications — Diagrams 1–10 are built (see `assets/diagrams/`), Diagram 11 ("Creating Growth Based on New Value") is spec-only, pending production | Whoever builds/edits the final graphics |
 | `18-companion-data-model.xlsx` | Live-formula Excel workbook (10 sheets: README, Home/Cooperative/Professional/Hyperscale tiers, Working-Capacity Matrix, Bitcoin Comparison, Humanoid Robot, EUR-Finland Localization, Assumptions Master) — built from `03-04-05-07-08`'s tables, edit any yellow assumption cell to recalculate everything downstream | Anyone who wants to run their own numbers without retyping formulas |
 | `19-slide-deck.pptx` | 25-slide presentation deck built from `13-slide-deck-outline.md`, with speaker notes | Anyone presenting this material |
 | `20-appendix-known-limitations.md` | Consolidated list of live uncertainties (model performance, utilization, financing, power pricing, adoption timing, Professional-tier evidence gap) | Anyone deciding how much weight to put on a specific figure |
