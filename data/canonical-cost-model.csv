@@ -1,0 +1,10 @@
+tier,metric,low,mid,high,unit,scope,source_section,notes
+Home,cost_per_million_tokens,1.37,3.17,11.89,USD/M tokens,full layer (capital+financing+electricity),Global Baseline Workbook §2.4,10-80% utilization range; canonical figure
+Cooperative,cost_per_million_tokens,1.99,3.20,7.62,USD/M tokens,full layer (capital+financing+electricity+admin),Global Baseline Workbook §3.4,20-85% utilization range; canonical figure
+Professional,cost_per_million_tokens,0.044,0.064,0.146,USD/M tokens,PARTIAL layer - capital+financing+electricity ONLY - no opex,Global Baseline Workbook §4,least-evidenced tier; not comparable to Hyperscale without adding opex
+Hyperscale,cost_per_million_tokens,0.091,0.133,0.312,USD/M tokens,FULL layer (capital+financing+electricity+opex) - CANONICAL,Global Baseline Workbook §5.6,90/60/25pct utilization high/mid/low; this is the paper's single canonical Hyperscale figure
+Hyperscale_partial,cost_per_million_tokens,0.050,0.063,0.094,USD/M tokens,PARTIAL layer - capital+financing+electricity ONLY - no opex,Token-Factory Scenario Workbook §4.1,financing-term sensitivity (7yr/5yr/3yr) - NOT the canonical figure - do not cite as "the" Hyperscale cost
+Home,cost_per_ai_working_hour,0.014,,1.427,USD/hr,chat/advisor to active-copilot band (10k-120k tokens/hr) at full-layer cost,Global Baseline Workbook §2.5,derived: tokens/hr / 1e6 * cost_per_million_tokens
+Cooperative,cost_per_ai_working_hour,0.119,,4.572,USD/hr,copilot to delegated-agent band (60k-600k tokens/hr) at full-layer cost,Global Baseline Workbook §3.6,derived: tokens/hr / 1e6 * cost_per_million_tokens
+Hyperscale,cost_per_ai_working_hour,0.091,,3.74,USD/hr,heavy multi-agent orchestration band (1M-12M tokens/hr) at canonical full-layer cost,AI Working-Capacity Conversion Workbook §C.0,derived: tokens/hr / 1e6 * cost_per_million_tokens
+Retail_API,price_per_million_tokens_blended,0.90,9.00,38.00,USD/M tokens,retail benchmark - NEVER a cost basis for owned hardware,Token-Factory Scenario Workbook §4.2,30pct input / 70pct output blend convention; Luna floor / Terra-Gemini central / Fable ceiling

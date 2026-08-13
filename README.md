@@ -3,11 +3,12 @@
 *The numbers and economics behind the AI working-capacity revolution—from electricity and infrastructure to tokens, robots, value, ownership, and agency.*
 
 **Author:** Valto Loikkanen
-**Status:** v1.0 research package (draft — not yet publicly released)
+**Status:** v1.0.0 research package — content and consistency complete; pending author sign-off before a tagged GitHub release
 **Research initiated:** August 12, 2026
 **Factual source cut-off:** 2026-08-13
-**Licence:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — copy, redistribute, remix, adapt, and build upon this material for any purpose, including commercially, with attribution.
+**Licence:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) for original prose, diagrams, and model structure — see `LICENSE` for the full scope note (third-party quotes, trademarks, and external data are excluded and remain under their own terms).
 **Suggested attribution:** "Research synthesis and modelling by Valto Loikkanen, assisted by AI."
+**Citation:** see `CITATION.cff`. **Checksums:** see `CHECKSUMS.sha256`. **Changelog:** see `CHANGELOG.md`.
 
 ## What this is
 
@@ -19,11 +20,23 @@ Every substantive claim is tagged with one of five evidence classes (Observed Fa
 
 **Disclosure:** the author has commercial and advocacy interests in personal AI infrastructure and cooperative/ownership-based AI models through Prifina, Digiole, and the peecos/PIOS reference framework. See §4 of the whitepaper (`01-whitepaper.md`) for the full disclosure and non-advice boundary.
 
+## Reading paths — start here, not with the whole package at once
+
+This package is built so different readers can get a common factual base at different depths, without everyone being forced through the same 82-page document first:
+
+- **First-time reader, any lens:** start with `00-how-to-use-this-research.md` (one page — what this is/is not, what it can/cannot establish), then `12-executive-brief.md`.
+- **The authoritative map** — `01-whitepaper.md` (+ `01-whitepaper.pdf`). The complete model, all evidence-class tagging, all caveats. This is the source of truth every other asset should trace back to.
+- **The entry point** — `12-executive-brief.md`. A fast, self-contained summary for readers who want the shape of the argument without the full depth.
+- **The audit and exploration layer** — the companion workbooks (`03`–`08`) and `18-companion-data-model.xlsx`. Every formula is shown; every assumption is an editable cell. This is where you check the paper's arithmetic or re-run it with your own numbers.
+- **The conversation starter** — `19-slide-deck.pptx` / `13-slide-deck-outline.md` and the short-form pieces (`14`–`16`). For presenting or sharing the argument, not for auditing it.
+- **Before relying on any specific figure:** check `20-appendix-known-limitations.md` — a consolidated list of what this model's evidence can and cannot currently establish (model performance, utilization, financing, power pricing, adoption timing, and the Professional-tier evidence gap).
+
 ## Package contents
 
 | File | What it is | For |
 |---|---|---|
-| `01-whitepaper.md` | The full whitepaper — front matter, Parts I–VII, closing (45 sections) | Everyone; start here |
+| `00-how-to-use-this-research.md` | One-page orientation: neutral-model framing, what this can/cannot establish, how to challenge or extend it | Everyone; read this first |
+| `01-whitepaper.md` | The full whitepaper — front matter, Parts I–VII, closing (45 sections) | Everyone; the authoritative map |
 | `02-source-register.md` | Raw fact-check ledger from the verification pass — every claim checked, its evidence class, and how it was checked | Anyone auditing a specific number or quote |
 | `03-workbook-global-baseline.md` | Release Asset #7 — full energy-to-tokens cost curves for Home / Cooperative / Professional / Hyperscale tiers, global USD baseline | Anyone modeling their own AI-factory economics |
 | `04-workbook-ai-working-capacity-conversion.md` | Release Asset #9 — the usage-intensity ladder (chat → copilot → delegated agent → heavy orchestration) and human-work comparison tables | Anyone converting $/token into $/AI-working-hour |
@@ -42,7 +55,14 @@ Every substantive claim is tagged with one of five evidence classes (Observed Fa
 | `17-visual-asset-briefs.md` | Diagram specifications for the 10 required visualizations | Whoever builds/edits the final graphics |
 | `18-companion-data-model.xlsx` | Live-formula Excel workbook (10 sheets: README, Home/Cooperative/Professional/Hyperscale tiers, Working-Capacity Matrix, Bitcoin Comparison, Humanoid Robot, EUR-Finland Localization, Assumptions Master) — built from `03-04-05-07-08`'s tables, edit any yellow assumption cell to recalculate everything downstream | Anyone who wants to run their own numbers without retyping formulas |
 | `19-slide-deck.pptx` | 25-slide presentation deck built from `13-slide-deck-outline.md`, with speaker notes | Anyone presenting this material |
+| `20-appendix-known-limitations.md` | Consolidated list of live uncertainties (model performance, utilization, financing, power pricing, adoption timing, Professional-tier evidence gap) | Anyone deciding how much weight to put on a specific figure |
 | `assets/diagrams/diagram-01…10-*.png` | The 10 finished diagram images specified in `17-visual-asset-briefs.md` | Report/deck/web use |
+| `data/canonical-cost-model.csv` | The single canonical source for every tier's $/M-token and $/AI-working-hour figures | Anyone checking or extending the model |
+| `tools/check-canonical-consistency.py` | Automated check that the whitepaper, workbooks, deck, and xlsx have not drifted from the canonical figures | Maintainers, before any release |
+| `CITATION.cff` | Machine-readable citation metadata (GitHub renders this as a "Cite this repository" prompt) | Anyone citing this work |
+| `LICENSE` | Full CC BY 4.0 legal text, plus a scope note on what is (and is not) covered by that license | Anyone reusing this material |
+| `CHECKSUMS.sha256` | SHA-256 manifest for every file in this release, so a public copy can be verified against this exact commit | Anyone verifying package integrity |
+| `CHANGELOG.md` | Version history — what changed between releases, and why | Anyone tracking revisions |
 
 ## Status and known open items
 

@@ -45,7 +45,7 @@
 - None of the three claims is independently audited; that they were said is confirmed, whether they're true is not.
 - Speaker note: Resist any temptation to declare a winner here — the paper's whole editorial stance depends on not doing so.
 
-**Slide 7 — Bubble, Infrastructure Transition, or Both?**
+**Slide 7 — What Would Need to Be True: Bubble, Infrastructure Transition, or Both?**
 - Supports "transition": signed $500B MOUs are real [FACT]; independent power-demand forecasts (BCG 50–80GW, S&P Global 64.4GW in 2025) are directionally consistent [ATTR, low-confidence sourcing].
 - Supports "bubble caution": Huang/Fink's own per-GW and demand figures are self-interested ATTR statements; independent analyst estimates ($35–49B/GW) sit below Huang's $50–60B [ATTR].
 - Disciplined position: both readings draw on overlapping, not competing, facts [INTERP] — the same MOU can be real infrastructure and include mispriced capital.

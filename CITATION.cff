@@ -1,0 +1,43 @@
+cff-version: 1.2.0
+message: >-
+  If you use or reference this research package, please cite it using
+  the metadata below. A DOI will be added once this release is archived
+  on Zenodo.
+title: "Why Are They Spending Trillions on AI? The numbers and economics behind the AI working-capacity revolution"
+type: report
+authors:
+  - family-names: Loikkanen
+    given-names: Valto
+version: 1.0.0
+date-released: "2026-08-13"
+license: CC-BY-4.0
+repository-code: "https://github.com/valto/ai-working-capacity-revolution"
+abstract: >-
+  A neutral-observer research synthesis reverse-engineering a connected
+  economic model — energy, hardware, compute, models, tokens, AI working
+  capacity, digital work, outcomes, value, and agency — from public
+  statements by Jensen Huang, Sam Altman, and Mark Zuckerberg, combined
+  with independently verified hardware specs, pricing, and benchmarks,
+  plus the author's own prior published work on AI infrastructure
+  ownership and cooperative models. Includes companion workbooks, a
+  slide deck, diagrams, and a full source register, each tagged with
+  one of five evidence classes (Observed Fact, Attributed Statement,
+  Derived Calculation, Scenario Assumption, Interpretation).
+keywords:
+  - artificial intelligence
+  - AI infrastructure
+  - AI economics
+  - compute costs
+  - tokenomics
+  - AI working capacity
+  - cooperative ownership
+  - digital sovereignty
+preferred-citation:
+  type: report
+  title: "Why Are They Spending Trillions on AI? The numbers and economics behind the AI working-capacity revolution"
+  authors:
+    - family-names: Loikkanen
+      given-names: Valto
+  version: 1.0.0
+  date-released: "2026-08-13"
+  url: "https://github.com/valto/ai-working-capacity-revolution"

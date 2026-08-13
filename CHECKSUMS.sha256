@@ -1,0 +1,43 @@
+# SHA-256 checksums for the v1.0.0 release of "Why Are They Spending Trillions on AI?"
+# Verify with: shasum -a 256 -c CHECKSUMS.sha256
+# (This file cannot list its own checksum -- verify its own integrity against the
+# GitHub release/commit hash instead.)
+b4d0856c4dc8950cc2b13052491f4ce3be6c73b1788be3adb6cd10f2b6e93cfa  ./00-how-to-use-this-research.md
+4ba823dd3f71e518e4a9ea3935100edde53d3ed0dbf8be7d09a1228f93577b97  ./01-whitepaper.md
+8f4487e703a29a1e1c7041088bd9450b7c80c641a6f8d279bad355a815690f41  ./01-whitepaper.pdf
+02657132c87e3766019fd2ae11d80312c768661952fa9708f87ab1cefadd5ce1  ./02-source-register.md
+c612e603356b2290dc80dee51d19ba14f829883aa22969cb25ce229dd125a648  ./03-workbook-global-baseline.md
+e8dc6fc8ba52727f8e2253ceb1fd9848a072c6b836c5c40918ec75183c0add9f  ./04-workbook-ai-working-capacity-conversion.md
+228771a79fa4a5cd910370ed33ee8bb2e8b0e445defb18aebcedf2ba8de54804  ./05-workbook-token-factory-scenarios.md
+35b2bde2aae3d9bb4e8443a2cf97e0e547c0cc2cf0369641fa9d9397eb312b72  ./06-investment-thesis-notes.md
+30034038a4c14b718a0a56e28f58bde076f7acf0263f889a1f40e8956baf0768  ./07-workbook-humanoid-working-capacity.md
+0bd43750b292c07ac5349f796834d9c3a3c9e6a102ae03fba428786510f2b74b  ./08-workbook-localized-scenario-eur-finland.md
+ccdd9c3cc1720a099556a91371a7a9f3de13588c42468c11852d64baabaa1c74  ./09-appendix-glossary.md
+cb22d744dea386b7cfd2493cd4d22d0160c7cce52f0b7330cc99bb7201b3ae33  ./10-appendix-source-register-formatted.md
+5c5d68c11a5ecc58c83bb84d5ea076773f54c638cfde5ed9be0e07bc3ada634e  ./11-appendix-assumption-register.md
+91f0e6e0481605ba570fbbc35f07e92f346666e00d187b334e70f101b0ce58f2  ./12-executive-brief.md
+a8ab1a1f4ea41e2d8766f76663954c9a0ab0f83921f51ef1f5088a2efd2eefc9  ./13-slide-deck-outline.md
+2bb6937b07b7c8701b7e1eb08574cde42cc6a9bf70b8ede0a51f09d50aee84a4  ./14-shortform-general.md
+df00eda9e3e27f5ac0e11b822c7a9301490ce12b4a14c1c3f02f731bfafc2f23  ./15-shortform-ownership.md
+5968c1e20bddcbd0c3318b43379245c18626bd2512af8aa2a07caa2dc81eaeab  ./16-shortform-value.md
+e70ca38aef55c52139c7a98bdada089698295ae9511efabcf0cba9b97759d161  ./17-visual-asset-briefs.md
+246fdf7656a77209f109106b7b453eb263ac0f66a94fcb5d0c51d546539d8087  ./18-companion-data-model.xlsx
+632c3bb1f49c5dabbd0e67a8d41174eb8f5202d6ee0237ca27be2b26c9f93daf  ./19-slide-deck.pptx
+cb81a2ca006768dd72986652f4e7684c6a96847736b804c5ff85cc175c10516c  ./20-appendix-known-limitations.md
+86a90b148d3802b322148a093ff54fda4c8f023c69a7690483658d222253a0d0  ./CHANGELOG.md
+e33184d3f7f1fa7a74dd2e1302be0f0c15db378b608b5845ea26280c9b3cf805  ./CITATION.cff
+839f99099d8bac968959ec2cd24f18bfedc20b384c4aaaeb6fcfbaee2e08235b  ./LICENSE
+23d805a64fe9d473824950e3b80485468a5ce564cb5c9393e8b9de011cf6a26d  ./README.md
+c103775f7156cffb59dda55bd1daaae0d2ccc3b03e7c595c0eb87aeb47fbe8a0  ./assets/diagrams/diagram-01-end-to-end-chain.png
+79f00ee078bbaa4809462c4d48b9028afb07e9f8040aa34f6d554f3906d35e5c  ./assets/diagrams/diagram-02-cost-waterfall.png
+cb9f999d06be30fb943a7a079c6258661a2f017f9be4e61c9623d0039338eb78  ./assets/diagrams/diagram-03-intensity-ladder.png
+6678baea42f3903b517c4f6429d1aa5c18d069107e85217d45ce99f498af7997  ./assets/diagrams/diagram-04-value-multipliers.png
+42023e236f2da15dde4b6fa3fce5ee96db1ac400162ee5e0d259af62cfbe51f1  ./assets/diagrams/diagram-05-maturity-framework.png
+edbc255a6ee65e3aba3804537b8285917b47fb65f4d419d7fc2dfbb524c3ea10  ./assets/diagrams/diagram-06-ownership-stack.png
+517f85fab985110b7b2c2cb8c1e1063403a2be576e96e8dd4a84bc63dbd505e6  ./assets/diagrams/diagram-07-electricity-analogy.png
+b5edbfeff70be3719b895d916685af2c75447beb9f0ff04c16843de76b8c0ac7  ./assets/diagrams/diagram-08-scale-spectrum.png
+4049f27e4cc2bd0cf443fe5e352766f3f1e348fd1f6180c850bac3dba936d1e1  ./assets/diagrams/diagram-09-humanoid-extension.png
+f133211cbe46f95f6b4674fa02fd39fe2eae41338cb3009ef0b8f462f80ad308  ./assets/diagrams/diagram-10-final-transition.png
+063546b1b7445c01393ee41cf6fafe040b33678d35d391cfdee2d86fc00e68e2  ./assets/pdf-style.css
+0a944463e7add7f7ac7f5fe94178e6d0ee2154a44e31b19a5b6421e076b2ef69  ./data/canonical-cost-model.csv
+7368dbb42caafdb0e86d6295b1950721a370e995516edda87d328aaacd13db18  ./tools/check-canonical-consistency.py

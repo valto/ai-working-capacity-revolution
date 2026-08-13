@@ -10,7 +10,7 @@
 
 ### The ten-second version
 
-Since 2025–2026, a small group of companies, executives, and financial institutions have committed hundreds of billions — and on their own stated ambitions, potentially trillions — of dollars to AI infrastructure. This brief maps why, without assuming the spending is either obviously justified or obviously a bubble. **Working capacity is not the same as value, and nothing in the numbers proves the underlying bet right.**
+Since 2025–2026, a small group of companies, executives, and financial institutions have committed hundreds of billions — and on their own stated ambitions, potentially trillions — of dollars to AI infrastructure. This brief maps the real question: **what would need to be true for that spending to make economic sense, and how much of that is independently checkable today versus asserted by people who benefit from it being believed?** It does not assume the spending is either obviously justified or obviously a bubble. **Working capacity is not the same as value, and nothing in the numbers proves the underlying bet right.**
 
 ---
 
