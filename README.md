@@ -39,7 +39,10 @@ Every substantive claim is tagged with one of five evidence classes (Observed Fa
 | `14-shortform-general.md` | ~300-word general-audience explainer | Social/short-form sharing |
 | `15-shortform-ownership.md` | ~300-400 word piece on the ownership question (Part V) | Social/short-form sharing |
 | `16-shortform-value.md` | ~300-400 word piece on why cheap tokens ≠ cheap value (Part IV) | Social/short-form sharing |
-| `17-visual-asset-briefs.md` | Diagram specifications for the 10 required visualizations — specs for a designer, not finished images | Whoever builds the final graphics |
+| `17-visual-asset-briefs.md` | Diagram specifications for the 10 required visualizations | Whoever builds/edits the final graphics |
+| `18-companion-data-model.xlsx` | Live-formula Excel workbook (10 sheets: README, Home/Cooperative/Professional/Hyperscale tiers, Working-Capacity Matrix, Bitcoin Comparison, Humanoid Robot, EUR-Finland Localization, Assumptions Master) — built from `03-04-05-07-08`'s tables, edit any yellow assumption cell to recalculate everything downstream | Anyone who wants to run their own numbers without retyping formulas |
+| `19-slide-deck.pptx` | 25-slide presentation deck built from `13-slide-deck-outline.md`, with speaker notes | Anyone presenting this material |
+| `assets/diagrams/diagram-01…10-*.png` | The 10 finished diagram images specified in `17-visual-asset-briefs.md` | Report/deck/web use |
 
 ## Status and known open items
 
@@ -50,6 +53,7 @@ Known items flagged transparently within the package itself:
 - **Resolved (2026-08-13):** the earlier "€42 vs €19.50–25/member/month" cooperative-cost item was not actually a discrepancy — the two figures describe two different hardware tiers (an illustrative €100,000 shared workstation-class machine vs. a pool of $4,699 NVIDIA DGX Spark units), not competing estimates of the same cooperative. See `05-workbook-token-factory-scenarios.md` §1a/§1b and `11-appendix-assumption-register.md` row 6a for the corrected, fully auditable breakdown.
 - **Resolved (2026-08-13):** the "$0.123/M tokens" GB300-class inference figure is now confirmed directly on NVIDIA's own site (previously flagged UNVERIFIABLE). It applies specifically to a 72-GPU GB300 NVL72 rack at 116 tokens/sec/user using NVIDIA Dynamo and TensorRT-LLM — it must not be used to price any workstation or desktop-class device. See `03-workbook-global-baseline.md` §5.7.
 - Several hardware/price inputs (Professional-tier HGX B300 node pricing/power, hyperscale rack capex, the illustrative €100,000 DGX-Station-class and €25,000 humanoid robot prices) have no public source and are flagged ⚠ throughout as placeholders, not verified figures — NVIDIA does not publish retail prices for DGX Station or HGX B300.
+- **Resolved (2026-08-13):** the slide deck, diagrams, and companion workbook are now finished binary files (`19-slide-deck.pptx`, `assets/diagrams/*.png`, `18-companion-data-model.xlsx`) rather than markdown specs — the workbook's formulas and the diagrams were independently verified against the source markdown during the build (one hyperscale-utilization formula error and two diagram layout defects were caught and fixed this way).
 - This package has **not** been deployed to a public site (no GitHub Pages) — it exists as a reviewable Markdown package, with a generated PDF (`01-whitepaper.pdf`), in this repository pending author review.
 
 Before any public release, a human review pass of the full whitepaper and workbooks is recommended, particularly for the reconciliation and placeholder items above.

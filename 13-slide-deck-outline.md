@@ -72,7 +72,7 @@
 **Slide 11 — Owned Production Cost vs. Retail API Price**
 - Self-correction preserved deliberately: retail lab prices are a finished, marked-up product price, not a cost basis for owned hardware [method note].
 - Retail benchmark: Claude Sonnet 5 $2/$10 per M tokens [FACT]; GPT-5.6 Terra ~$2/$12 [ATTR, via intermediary fetch]; Gemini 3.1 Pro Preview $2/$12 [FACT].
-- Owned production: Home ~$0.6–2/M tokens; Hyperscale ~$0.05–0.12/M tokens [CALC] — 1–2 orders of magnitude below retail, by design, not error.
+- Owned production: Home ~$0.6–2/M tokens; Hyperscale ~$0.091–0.312/M tokens, canonical full-layer, mid $0.133/M [CALC] — 1–2 orders of magnitude below retail, by design, not error.
 - Speaker note: This gap is the point, not a mistake to reconcile — "generate your own power" vs. "buy from the grid."
 
 **Slide 12 — Part III: Usage-Intensity Bands**
@@ -130,7 +130,7 @@
 - Speaker note: Note explicitly that this analogy is the author's own structural comparison, flagged as such rather than presented as settled.
 
 **Slide 21 — Part VI: Scale Scenarios, Tier by Tier**
-- Table: Home ($4,699, $1.37–11.89/M tokens) · Cooperative (~$47K, $1.99–7.62/M) · Professional (unofficial/ASSUMPTION) · Hyperscale (~$16M/4-rack, $0.05–0.094/M) [CALC throughout].
+- Table: Home ($4,699, $1.37–11.89/M tokens) · Cooperative (~$47K, $1.99–7.62/M) · Professional (unofficial/ASSUMPTION, $0.044–0.146/M, no opex — least evidenced) · Hyperscale (~$16M/4-rack, canonical full-layer $0.091–0.312/M, mid $0.133/M) [CALC throughout].
 - Governing levers: utilisation (3.5–4x swing), financing term, interactivity setting — all editable, none a forecast.
 - Cost-per-hour of capacity is not value — a 500–800x swing between production cost and retail pricing shows how meaningless a bare figure is without its pricing assumption.
 - Speaker note: State the non-advice boundary explicitly here — every number is a scenario, not a recommendation.
