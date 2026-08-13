@@ -1,5 +1,5 @@
 # Slide Deck Outline — "Why Are They Spending Trillions on AI?"
-### Companion deliverable (Release Asset #5) — ~24 slides, following the whitepaper's own Front Matter → Closing structure. Evidence-class tags used throughout: **[FACT]** = Observed Fact · **[ATTR]** = Attributed Statement · **[CALC]** = Derived Calculation · **[ASSUMPTION]** = Scenario Assumption · **[INTERP]** = Interpretation.
+### Companion deliverable (Release Asset #5) — 26 slides, following the whitepaper's own Front Matter → Closing structure. Evidence-class tags used throughout: **[FACT]** = Observed Fact · **[ATTR]** = Attributed Statement · **[CALC]** = Derived Calculation · **[ASSUMPTION]** = Scenario Assumption · **[INTERP]** = Interpretation.
 
 ---
 
@@ -111,49 +111,56 @@
 - No production tier or ownership architecture is shown by this paper's evidence to be inherently more likely to produce positive value than another.
 - Speaker note: This is the hinge slide — everything before it is cost/capacity; everything after assumes this boundary holds.
 
-**Slide 18 — Part V: The Ownership Stack**
+**Slide 18 — From AI Working Capacity to New Value**
+- Conceptual bridge, not a numerical finding [INTERP throughout]: capacity created (Parts I–IV) is not automatically growth, income, or social benefit.
+- Two separate questions: (1) can the capacity be created — this paper's cost/utilization model; (2) can that capacity create and capture new value — invention, adoption, trust, revenue model, none of which any $/token figure supplies.
+- Visual: "Creating Growth Based on New Value" (Diagram 11) — two columns converging on a shared "New Value" band: Idea/Invention → Innovation → Verifying New Value descending on the left; Productivity → Revenue Model → Value Proposition & Communication ascending on the right.
+- Note: the same boundary applies to any future Scenario Explorer built on this paper's workbooks — it models cost and capacity, not whether a deployment creates value.
+- Speaker note: This slide is the second hinge — it stops the room from reading "cheaper tokens" as "more growth" without the missing middle step.
+
+**Slide 19 — Part V: The Ownership Stack**
 - Layers, each separately ownable: energy, hardware, compute (access), models, information, agents, identity, governance.
 - Concentration varies sharply by layer: hardware manufacturing is extremely concentrated [FACT/INTERP]; information is the least standardized/portable layer [INTERP].
 - No single actor owns "AI" end to end — ownership questions must be asked layer by layer.
 - Speaker note: Use this to reframe "who owns AI" as a bad question — it's really six or seven different questions.
 
-**Slide 19 — Six Coexisting Access Models**
+**Slide 20 — Six Coexisting Access Models**
 - Table: Centralized platform · Enterprise dedicated (e.g., IBM Cloud/Together AI $240M deal [FACT]) · Open models on owned hardware · Private/individual ownership · Cooperative (€19.50–23/member/month for a DGX Spark pool, or €42/member/month for a shared workstation-class machine — two hardware tiers, not one contested figure [CALC/FACT]) · Local/regional capacity.
 - None asserted as universally superior — trade-offs differ across scale, cost, privacy, resilience, convenience, control [INTERP].
 - Ownership models only make arithmetic sense once usage sits consistently at copilot-band intensity or above [CALC-supported break-even].
 - Speaker note: The two cooperative figures describe two different hardware tiers (a DGX Spark pool vs. a shared workstation-class machine), not a discrepancy in one estimate — shown explicitly as a worked example of assumption transparency.
 
-**Slide 20 — Electricity-Grid Analogy and Digital Sovereignty Beyond Geography**
+**Slide 21 — Electricity-Grid Analogy and Digital Sovereignty Beyond Geography**
 - Analogy: home solar → cooperative → commercial producer → utility-scale plant → grid exchange, mapped onto AI compute tiers [INTERP, author's own commentary, not independently sourced verbatim].
 - Weakest link: no frictionless spot market for AI compute yet exists, unlike electricity or Bitcoin hashrate [FACT/INTERP].
 - Sovereignty reframed via five questions: control, portability, exit, governance, continuity — not just server geography [INTERP, framework proposed in this paper].
 - Speaker note: Note explicitly that this analogy is the author's own structural comparison, flagged as such rather than presented as settled.
 
-**Slide 21 — Part VI: Scale Scenarios, Tier by Tier**
+**Slide 22 — Part VI: Scale Scenarios, Tier by Tier**
 - Table: Home ($4,699, $1.37–11.89/M tokens) · Cooperative (~$47K, $1.99–7.62/M) · Professional (unofficial/ASSUMPTION, $0.044–0.146/M, no opex — least evidenced) · Hyperscale (~$16M/4-rack, canonical full-layer $0.091–0.312/M, mid $0.133/M) [CALC throughout].
 - Governing levers: utilisation (3.5–4x swing), financing term, interactivity setting — all editable, none a forecast.
 - Cost-per-hour of capacity is not value — a 500–800x swing between production cost and retail pricing shows how meaningless a bare figure is without its pricing assumption.
 - Speaker note: State the non-advice boundary explicitly here — every number is a scenario, not a recommendation.
 
-**Slide 22 — Humanoid Robots as Embodied Working Capacity**
+**Slide 23 — Humanoid Robots as Embodied Working Capacity**
 - Real market range: Unitree G1 from $13.5K [FACT] to Agility Digit ~$250K [ATTR, secondary]; illustrative €25K base case sits within this spread [INTERP].
 - Same utilisation pattern as digital tiers: 2,000→8,000 hrs/yr cuts cost/hour ~3.5–4x [CALC]; electricity is not the binding cost here (unlike token production).
 - Scope explicitly narrow: excludes supervision, insurance, downtime — every figure is a cost floor, not a full commercial cost.
 - Speaker note: Flag this as a "later, illustrative extension," not a general robotics-economics claim.
 
-**Slide 23 — Part VII: Six Lenses, Equal Weight, No Ranking**
+**Slide 24 — Part VII: Six Lenses, Equal Weight, No Ranking**
 - Individual: rent vs. own break-even sits near the copilot band, not chat band.
 - SME: delivery innovation, not product innovation, is the accessible opportunity [ATTR, author's prior work].
 - Investor/Government/Builder/Educator: same MOU and cost figures, read through different risk lenses — interested-party statements (Huang, Fink) flagged consistently as ATTR, not audited fact.
 - Speaker note: Reiterate — these are grouped for slide economy only, not because any lens outranks another.
 
-**Slide 24 — Closing: Opportunity, Not Inevitability**
+**Slide 25 — Closing: Opportunity, Not Inevitability**
 - Capital and infrastructure figures (Parts II–IV) support reading this as opportunity, not destiny [INTERP, editorial choice].
 - The unknown variable: adoption, organizational change, and time — not model capability — appear to be the binding constraint [INTERP].
 - Closing synthesis: "how do we get it done" is getting cheaper faster than most say plainly; "what should we do" has not gotten any easier at all.
 - Speaker note: End on the open question, not a resolved answer — the paper deliberately does not decide this for the reader.
 
-**Slide 25 — Licence and Attribution**
+**Slide 26 — Licence and Attribution**
 - Licensed under CC BY 4.0. Suggested attribution: Research synthesis and modelling by Valto Loikkanen, assisted by AI.
 - This material is educational research and scenario analysis — not investment, legal, tax, procurement, or policy advice.
 - Companion workbooks (Global Baseline, AI Working-Capacity Conversion, Token-Factory Scenarios, Investment-Thesis Notes, Humanoid Working-Capacity, Localized/EUR-Finland template) available for readers to rebuild any model with their own inputs.

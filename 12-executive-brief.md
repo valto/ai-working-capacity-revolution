@@ -47,6 +47,8 @@ These two numbers legitimately differ by 1–2 orders of magnitude because retai
 
 Converted into **$/AI-working-hour** (how much AI capacity actually costs per hour of use, depending on whether it's casual chat use or heavy multi-agent orchestration), costs range from **under a cent to roughly $150/hour** depending entirely on production tier and usage intensity [DERIVED CALCULATION]. None of these figures says whether the hour produced anything worth having.
 
+**From capacity to value — a conceptual bridge, not a new set of numbers [INTERPRETATION]:** cheap AI working capacity is a *supply* of digital work, not automatically growth, income, or social benefit. The full paper's "From AI working capacity to new value" section frames this as two separate questions: (1) can the capacity be created — the cost/utilization arithmetic above — and (2) can that capacity create and *capture* new value, which depends on invention, user adoption, trust, and a chosen revenue or public-value model, none of which any $/token figure can supply. The same boundary applies to any future Scenario Explorer built on this paper's workbooks: it can model cost and capacity, not whether a given deployment actually creates value.
+
 ---
 
 ### 4. Three interested voices, shown side by side — none endorsed

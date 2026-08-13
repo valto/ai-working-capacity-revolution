@@ -2,15 +2,25 @@
 
 All notable changes to this research package are documented here. Versioning follows [Semantic Versioning](https://semver.org/) in spirit — a major version bump indicates a change to canonical figures or conclusions, not just prose.
 
-## [Unreleased]
+## [Unreleased] — targeted as v1.0.1
 
-Content additions after the v1.0.0 GitHub release/Zenodo archive. Not yet cut as a new tagged release.
+Content and release-mechanics work on `main` since the v1.0.0 GitHub release/Zenodo archive. Not yet cut as a new tagged release — pending author sign-off. See `README.md`'s Status line for the current relationship between `main` and the last tagged release.
 
-### Added
+### Added — content
 - Replaced the front-matter "About the author and method" section with an expanded "About the author, perspective and method" — covers the author's broader entrepreneurship/innovation-ecosystem and advisory background (30+ ecosystems, government/EU/university advisory work) alongside the AI-infrastructure-specific disclosure, and names ValtoAI and the EIOS reference framework (organizations/governed information/agent-ready context) alongside the previously-named Prifina, Digiole, and PIOS. Propagated the same venture list to Method §3.4's disclosure, `12-executive-brief.md`, `15-shortform-ownership.md`, `13-slide-deck-outline.md`/`19-slide-deck.pptx` (slide 15), and `README.md`, replacing all remaining "peecos/PIOS" references.
-- Added a new conceptual-bridge section, "From AI working capacity to new value," between Part IV (§25) and Part V of the whitepaper — explicitly tagged INTERPRETATION throughout, introduces no new cost figures. Distinguishes "can the capacity be created" (this paper's cost/capacity model, Parts I–IV) from "can that capacity create and capture new value" (invention, innovation, adoption, and revenue-model questions this paper's cost tables cannot answer), and notes the same boundary applies to any future Scenario Explorer built on this paper's workbooks.
-- Added Diagram 11 ("Creating Growth Based on New Value") — the author's own pre-existing framework diagram, supplied directly and used as-is at `assets/diagrams/diagram-11-creating-growth-from-new-value.jpg`. Unlike Diagrams 1–10, this was not built from a from-scratch designer brief; `17-visual-asset-briefs.md`'s Diagram 11 entry instead documents the actual image's structure (two columns converging on a shared "New Value" band) for editors and consistency checking.
+- Added a new conceptual-bridge section, "From AI working capacity to new value," between Part IV (§25) and Part V of the whitepaper — explicitly tagged INTERPRETATION throughout, introduces no new cost figures. Distinguishes "can the capacity be created" (this paper's cost/capacity model, Parts I–IV) from "can that capacity create and capture new value" (invention, innovation, adoption, and revenue-model questions this paper's cost tables cannot answer), and notes the same boundary applies to any future Scenario Explorer built on this paper's workbooks. Added a corresponding paragraph to `12-executive-brief.md` and a new slide 18 to `13-slide-deck-outline.md`/`19-slide-deck.pptx` (deck is now 26 slides, up from 25; slides 18–25 renumbered to 19–26).
+- Added Diagram 11 ("Creating Growth Based on New Value") — the author's own pre-existing framework diagram, supplied directly and used as-is at `assets/diagrams/diagram-11-creating-growth-from-new-value.jpg`. Unlike Diagrams 1–10, this was not built from a from-scratch designer brief; `17-visual-asset-briefs.md`'s Diagram 11 entry instead documents the actual image's structure (two columns converging on a shared "New Value" band) for editors and consistency checking. A provenance-framed PNG derivative (`diagram-11-creating-growth-from-new-value.png`, evidence-class tag, attribution, source note, standard footer) was added for use in the PDF, deck, and Pages site; the original JPG is kept as the raw source.
 - Fixed a stale cross-reference in `README.md`'s disclosure line (pointed to whitepaper "§4," which no longer exists as a numbered section; corrected to "Method §3.4").
+
+### Added — release mechanics (in response to external audit)
+- `tools/requirements.txt` — pinned dependency versions (openpyxl, python-pptx, pypdf) for a reproducible consistency-check environment.
+- Rewrote `tools/check-canonical-consistency.py`: required figures are now derived at runtime from `data/canonical-cost-model.csv` rather than hard-coded; added a PDF-text check (previously only markdown/xlsx/pptx were checked, so a stale PDF that wasn't regenerated after a markdown fix could pass silently); every check now fails closed — a missing dependency or a broken Python environment (e.g. a `pyexpat` symbol mismatch) is reported as a failure, never silently skipped, and an unexpected exception inside any check is caught and reported rather than crashing the script.
+- `index.html` + `.nojekyll` — a GitHub Pages landing page: reading paths, full package-contents tables, version/citation/licence links, and setup instructions for the consistency checker. Markdown documents link to their GitHub-rendered view; binaries (PDF/xlsx/pptx/checksums/diagrams) are served directly from the Pages site.
+- `01-whitepaper.pdf` now embeds its four most load-bearing diagrams (end-to-end chain, ownership stack, scale spectrum, new-value bridge) directly at their point of use in the text, so a reader holding only the PDF sees them without the repository; fixed a `pdf-style.css` gap (no `img` sizing rule existed) that was causing embedded images to overflow the page width before this was caught and corrected.
+- `CHECKSUMS.sha256` no longer contains comment/header lines, so it validates without warnings under both macOS `shasum -a 256 -c` and GNU `sha256sum -c`; the explanatory header moved to `README.md`.
+
+### Fixed
+- `main` had drifted from `CITATION.cff`/`CHECKSUMS.sha256`/`README.md`'s v1.0.0 version claims after the content additions above — this is the discrepancy this v1.0.1 entry and cut resolves; see `README.md`'s Status line for how `main` related to the tagged release at any given point.
 
 ## [1.0.0] — 2026-08-13
 

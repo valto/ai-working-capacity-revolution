@@ -1,10 +1,7 @@
-# SHA-256 checksums for the v1.0.0 release of "Why Are They Spending Trillions on AI?"
-# Verify with: shasum -a 256 -c CHECKSUMS.sha256
-# (This file cannot list its own checksum -- verify its own integrity against the
-# GitHub release/commit hash instead.)
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  ./.nojekyll
 b4d0856c4dc8950cc2b13052491f4ce3be6c73b1788be3adb6cd10f2b6e93cfa  ./00-how-to-use-this-research.md
-9139ae10fb1335d575cf751e44deef4da58771927b76e883fc926ed6f4a01d7b  ./01-whitepaper.md
-d9d680408028eaef94b47d02645246700b0d1ead762d5fb60d8ad84f264209e1  ./01-whitepaper.pdf
+bb9fb913ce32026cb58ab6c2780d0ee4a57e0c8b71c33adf08f0cadcb9504760  ./01-whitepaper.md
+4575a6bf2adc1cb1231a6949666bf09b0453c5632cf0a66575b6a71705d48471  ./01-whitepaper.pdf
 02657132c87e3766019fd2ae11d80312c768661952fa9708f87ab1cefadd5ce1  ./02-source-register.md
 c612e603356b2290dc80dee51d19ba14f829883aa22969cb25ce229dd125a648  ./03-workbook-global-baseline.md
 e8dc6fc8ba52727f8e2253ceb1fd9848a072c6b836c5c40918ec75183c0add9f  ./04-workbook-ai-working-capacity-conversion.md
@@ -15,19 +12,19 @@ e8dc6fc8ba52727f8e2253ceb1fd9848a072c6b836c5c40918ec75183c0add9f  ./04-workbook-
 ccdd9c3cc1720a099556a91371a7a9f3de13588c42468c11852d64baabaa1c74  ./09-appendix-glossary.md
 cb22d744dea386b7cfd2493cd4d22d0160c7cce52f0b7330cc99bb7201b3ae33  ./10-appendix-source-register-formatted.md
 5c5d68c11a5ecc58c83bb84d5ea076773f54c638cfde5ed9be0e07bc3ada634e  ./11-appendix-assumption-register.md
-11ff14cfc89a36e7d5a7a52e0a1b2cd447c1b842bc7f8b6ed0669ce693c66e6c  ./12-executive-brief.md
-808332ab199580cacf8a144b7a7c9bea27ae44f4e351476ab08dd0e97ccb83c9  ./13-slide-deck-outline.md
+67eb1085c625141b9c090f7ff331a7537fa622dd5c8b4f0f289b937c5bece08f  ./12-executive-brief.md
+38511b2c2745baa35f03df5aacaad7dd3744c8324075f678a37d66fc4767d6df  ./13-slide-deck-outline.md
 2bb6937b07b7c8701b7e1eb08574cde42cc6a9bf70b8ede0a51f09d50aee84a4  ./14-shortform-general.md
 b0da5d398f6e54118b5231c2abfe1101996167e677d8fad31c963ed500f90274  ./15-shortform-ownership.md
 5968c1e20bddcbd0c3318b43379245c18626bd2512af8aa2a07caa2dc81eaeab  ./16-shortform-value.md
-29de3b756c2660a7afe2ee9386ededc6aee626ee5dcc6d1e6442a90394ba3fbb  ./17-visual-asset-briefs.md
+5fb42db881236917cd2e0572e9b2b783c6c9823dfadae6ddaca0ae905995b770  ./17-visual-asset-briefs.md
 246fdf7656a77209f109106b7b453eb263ac0f66a94fcb5d0c51d546539d8087  ./18-companion-data-model.xlsx
-ad564caf44232c5fb93719b0e6b651fabccdf1fc3b2551e1b03431441203d103  ./19-slide-deck.pptx
+92bb8890cb9fa8efafa6334d9582eb22bc61d0ae506fd1ca2792c3c6aae2dc45  ./19-slide-deck.pptx
 cb81a2ca006768dd72986652f4e7684c6a96847736b804c5ff85cc175c10516c  ./20-appendix-known-limitations.md
-bf9685a0207e7e178ea5b791d6bb7d7d54aeac853733048eb6fe89721266b0ec  ./CHANGELOG.md
+e353817141689ffb762e1ebefd76352eaf5daaf1868a184d8fe1982f2a1f0a2c  ./CHANGELOG.md
 e33184d3f7f1fa7a74dd2e1302be0f0c15db378b608b5845ea26280c9b3cf805  ./CITATION.cff
 839f99099d8bac968959ec2cd24f18bfedc20b384c4aaaeb6fcfbaee2e08235b  ./LICENSE
-fae86731258028b1d0731c4eb00664226fc3f410c93a3c4d9363cabe1e526695  ./README.md
+a9925d58d25cc9cd2477aa2d2bd805ebb3d26a2fa4705fbb1195836158f90b6c  ./README.md
 c103775f7156cffb59dda55bd1daaae0d2ccc3b03e7c595c0eb87aeb47fbe8a0  ./assets/diagrams/diagram-01-end-to-end-chain.png
 79f00ee078bbaa4809462c4d48b9028afb07e9f8040aa34f6d554f3906d35e5c  ./assets/diagrams/diagram-02-cost-waterfall.png
 cb9f999d06be30fb943a7a079c6258661a2f017f9be4e61c9623d0039338eb78  ./assets/diagrams/diagram-03-intensity-ladder.png
@@ -39,6 +36,9 @@ b5edbfeff70be3719b895d916685af2c75447beb9f0ff04c16843de76b8c0ac7  ./assets/diagr
 4049f27e4cc2bd0cf443fe5e352766f3f1e348fd1f6180c850bac3dba936d1e1  ./assets/diagrams/diagram-09-humanoid-extension.png
 f133211cbe46f95f6b4674fa02fd39fe2eae41338cb3009ef0b8f462f80ad308  ./assets/diagrams/diagram-10-final-transition.png
 6ad6946fc81cf87525f66dd5fa175275907e6d19f02e603827c85f3c3d7af2cb  ./assets/diagrams/diagram-11-creating-growth-from-new-value.jpg
-063546b1b7445c01393ee41cf6fafe040b33678d35d391cfdee2d86fc00e68e2  ./assets/pdf-style.css
+71bbf59daa1c225e5d862fec07e2d2073ae6642987ac1af7823573e680166610  ./assets/diagrams/diagram-11-creating-growth-from-new-value.png
+e9f2309d6f8e5313db721323176051d2466bb11a9e878b9c8d1ec7864f6db3aa  ./assets/pdf-style.css
 0a944463e7add7f7ac7f5fe94178e6d0ee2154a44e31b19a5b6421e076b2ef69  ./data/canonical-cost-model.csv
-7368dbb42caafdb0e86d6295b1950721a370e995516edda87d328aaacd13db18  ./tools/check-canonical-consistency.py
+9088788143cb7d20e2d73f30c19584bc057e4ca66e6550433896458aa514e155  ./index.html
+cb51e2c9ba04efa9569cfe917a53ccaa9e64b4748a3a3dea62c29b2f7b96be5b  ./tools/check-canonical-consistency.py
+66a08035b19f0c96f473a46b2344d10657f1af85fc6b7fbedfe77a4241f1b6fd  ./tools/requirements.txt

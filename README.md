@@ -3,7 +3,7 @@
 *The numbers and economics behind the AI working-capacity revolution—from electricity and infrastructure to tokens, robots, value, ownership, and agency.*
 
 **Author:** Valto Loikkanen
-**Status:** v1.0.0 research package — content and consistency complete; pending author sign-off before a tagged GitHub release
+**Status:** `main` is ahead of the tagged **v1.0.0** release (published, Zenodo-archived). This branch contains additional content — an expanded author section, the "From AI working capacity to new value" bridge, Diagram 11, embedded PDF visuals, and this GitHub Pages site — targeted for a **v1.0.1** release, pending author sign-off. See `CHANGELOG.md`'s Unreleased section for the exact diff from v1.0.0, and the repository's [Releases page](https://github.com/valto/ai-working-capacity-revolution/releases) for the last citable, checksum-verified snapshot.
 **Research initiated:** August 12, 2026
 **Factual source cut-off:** 2026-08-13
 **Licence:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) for original prose, diagrams, and model structure — see `LICENSE` for the full scope note (third-party quotes, trademarks, and external data are excluded and remain under their own terms).
@@ -25,7 +25,7 @@ Every substantive claim is tagged with one of five evidence classes (Observed Fa
 This package is built so different readers can get a common factual base at different depths, without everyone being forced through the same 82-page document first:
 
 - **First-time reader, any lens:** start with `00-how-to-use-this-research.md` (one page — what this is/is not, what it can/cannot establish), then `12-executive-brief.md`.
-- **The authoritative map** — `01-whitepaper.md` (+ `01-whitepaper.pdf`). The complete model, all evidence-class tagging, all caveats. This is the source of truth every other asset should trace back to.
+- **The authoritative map** — `01-whitepaper.md` (+ `01-whitepaper.pdf`). The complete model, all evidence-class tagging, all caveats. This is the source of truth every other asset should trace back to. **The PDF is self-contained**: it embeds the four diagrams most load-bearing for the argument (the end-to-end chain, the ownership stack, the scale spectrum, and the new-value bridge) directly at their point of use, so a reader holding only the downloaded PDF sees them without needing the repository. The remaining diagrams (2–5, 7, 9–10) live only in `assets/diagrams/` and the standalone deck/briefs — the PDF is the narrative paper with its most essential visuals embedded, not a complete visual reproduction of the full 11-diagram set.
 - **The entry point** — `12-executive-brief.md`. A fast, self-contained summary for readers who want the shape of the argument without the full depth.
 - **The audit and exploration layer** — the companion workbooks (`03`–`08`) and `18-companion-data-model.xlsx`. Every formula is shown; every assumption is an editable cell. This is where you check the paper's arithmetic or re-run it with your own numbers.
 - **The conversation starter** — `19-slide-deck.pptx` / `13-slide-deck-outline.md` and the short-form pieces (`14`–`16`). For presenting or sharing the argument, not for auditing it.
@@ -54,15 +54,38 @@ This package is built so different readers can get a common factual base at diff
 | `16-shortform-value.md` | ~300-400 word piece on why cheap tokens ≠ cheap value (Part IV) | Social/short-form sharing |
 | `17-visual-asset-briefs.md` | Diagram specifications for Diagrams 1–11 (all 11 now built — see `assets/diagrams/`) | Whoever builds/edits the final graphics |
 | `18-companion-data-model.xlsx` | Live-formula Excel workbook (10 sheets: README, Home/Cooperative/Professional/Hyperscale tiers, Working-Capacity Matrix, Bitcoin Comparison, Humanoid Robot, EUR-Finland Localization, Assumptions Master) — built from `03-04-05-07-08`'s tables, edit any yellow assumption cell to recalculate everything downstream | Anyone who wants to run their own numbers without retyping formulas |
-| `19-slide-deck.pptx` | 25-slide presentation deck built from `13-slide-deck-outline.md`, with speaker notes | Anyone presenting this material |
+| `19-slide-deck.pptx` | 26-slide presentation deck built from `13-slide-deck-outline.md`, with speaker notes | Anyone presenting this material |
 | `20-appendix-known-limitations.md` | Consolidated list of live uncertainties (model performance, utilization, financing, power pricing, adoption timing, Professional-tier evidence gap) | Anyone deciding how much weight to put on a specific figure |
-| `assets/diagrams/diagram-01…10-*.png`, `diagram-11-*.jpg` | The 11 finished diagram images specified in `17-visual-asset-briefs.md` — Diagram 11 is the author's own pre-existing framework diagram, supplied and used as-is | Report/deck/web use |
+| `assets/diagrams/diagram-01…11-*.png` | The 11 finished diagram images specified in `17-visual-asset-briefs.md` — Diagram 11 is the author's own pre-existing framework diagram, provenance-framed (evidence-class tag, attribution, footer) to match the rest of the set; the unmodified original is kept alongside it as `diagram-11-*.jpg` | Report/deck/web use |
 | `data/canonical-cost-model.csv` | The single canonical source for every tier's $/M-token and $/AI-working-hour figures | Anyone checking or extending the model |
-| `tools/check-canonical-consistency.py` | Automated check that the whitepaper, workbooks, deck, and xlsx have not drifted from the canonical figures | Maintainers, before any release |
+| `tools/check-canonical-consistency.py` | Automated check that the whitepaper, PDF, workbooks, deck, and xlsx have not drifted from `data/canonical-cost-model.csv` | Maintainers, before any release — see setup below |
+| `tools/requirements.txt` | Pinned Python dependencies for the consistency checker | Maintainers running the checker |
 | `CITATION.cff` | Machine-readable citation metadata (GitHub renders this as a "Cite this repository" prompt) | Anyone citing this work |
 | `LICENSE` | Full CC BY 4.0 legal text, plus a scope note on what is (and is not) covered by that license | Anyone reusing this material |
-| `CHECKSUMS.sha256` | SHA-256 manifest for every file in this release, so a public copy can be verified against this exact commit | Anyone verifying package integrity |
+| `CHECKSUMS.sha256` | SHA-256 manifest for every file in this release (data lines only, no comments — plain `sha256sum`/`shasum` output for cross-platform compatibility), so a public copy can be verified against this exact commit | Anyone verifying package integrity |
 | `CHANGELOG.md` | Version history — what changed between releases, and why | Anyone tracking revisions |
+
+## Running the consistency checker
+
+`tools/check-canonical-consistency.py` verifies that the whitepaper, the built PDF, the companion Excel workbook, and the slide deck all agree with `data/canonical-cost-model.csv` — the single source of truth for tier cost figures. It fails closed: a missing dependency, a missing file, or a broken Python environment is reported as a failure, not silently skipped, so a `PASS` can be trusted to mean every check actually ran.
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r tools/requirements.txt
+python3 tools/check-canonical-consistency.py
+```
+
+**Known environment issue on some macOS/Homebrew setups:** if the default `python3` on your system reports `ImportError: ... pyexpat ...` or `No module named expat`, that Python build's XML support is broken (a Homebrew `libexpat` version mismatch), and every check that touches the xlsx or pptx will fail — this is a real environment problem the checker is correctly refusing to paper over, not a bug in this script. Use a different Python installation (e.g. a `pyenv`-managed build, or `python3.11` from a fresh Homebrew `python@3.11` install) to create the virtualenv above instead.
+
+## Verifying checksums
+
+```bash
+shasum -a 256 -c CHECKSUMS.sha256      # macOS
+sha256sum -c CHECKSUMS.sha256          # Linux/GNU coreutils
+```
+
+`CHECKSUMS.sha256` contains plain hash/filename lines only — no comments or header text — so both tools above accept it without warnings.
 
 ## Status and known open items
 

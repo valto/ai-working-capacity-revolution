@@ -35,6 +35,8 @@ The chain runs: **energy → hardware → compute → models → tokens → AI w
 
 A parallel chain is emerging for physical work: **capital + energy + maintenance + utilisation + orchestration → humanoid physical working capacity** — the same logic applied to robots instead of tokens, at a much earlier and less certain stage of commercial maturity, as explored in Part V.
 
+![The End-to-End Working-Capacity Chain — energy through agency, with the parallel physical/humanoid chain below. Organizing framework, INTERPRETATION per Method §3.1.](assets/diagrams/diagram-01-end-to-end-chain.png)
+
 On the numbers assembled here (Part I onward), the headline financing commitments are real and independently corroborated: on August 10, 2026, Nvidia and six financial institutions — Apollo, Blackstone, BlackRock, Brookfield, Goldman Sachs, and KKR — announced financing platforms intended to mobilize more than $500 billion [OBSERVED FACT] in third-party capital for AI infrastructure, with BlackRock's Larry Fink stating on the record that the eventual figure could reach "trillions of dollars over the coming years" [ATTRIBUTED STATEMENT, Fink]. Jensen Huang's own stated per-gigawatt build cost — "something like $50, $60 billion" [ATTRIBUTED STATEMENT, Huang] — sits at the high end of, but broadly consistent with, independent analyst estimates found for this paper. What is *not* independently provable at this stage is whether the demand these executives describe — a historical usage ratio showing per-user token consumption rising roughly a millionfold over six and a half years, derived by comparing OpenAI's own reported 2019 and 2026 usage figures [DERIVED CALCULATION], alongside Sam Altman's own attributed claim of a further million-fold expansion still to come [ATTRIBUTED STATEMENT, Altman], and OpenAI's own unaudited internal telemetry showing its coding agent Codex now accounts for 99.8% of its weekly internal output tokens [ATTRIBUTED STATEMENT, OpenAI] — will continue at anything like the pace its proponents describe, or whether it will produce value commensurate with the capital being committed.
 
 This paper does not resolve that question, and does not try to. Instead it separates the layers that are usually collapsed into one misleading number — raw energy cost, hardware-amortized cost, financed-asset cost, full infrastructure cost, utilization-adjusted cost, token production cost, and workload cost — and keeps the final, most important step, *outcome and value*, visibly and permanently separate from all of them (Parts II–IV). It also examines, on its own numbers and without asserting it is the answer, one candidate architecture for who ends up *owning* the infrastructure, information, and agents this buildout creates (Part V) — because the trillions being spent are not just a bet on capability; they are a bet on a particular allocation of control.
@@ -66,6 +68,8 @@ The purpose is to provide a model that readers can inspect, challenge, reproduce
 ## 2. How to Use This Research
 
 *A shorter, one-page version of this guidance — plus what this research can and cannot establish, and how to challenge or extend it — is available standalone as `00-how-to-use-this-research.md`. See also `20-appendix-known-limitations.md` for a consolidated list of live uncertainties this section's evidence-class discipline surfaces throughout the paper.*
+
+*A note on this document's visuals, for readers with only the PDF: this paper embeds its four most load-bearing diagrams (the end-to-end working-capacity chain, the ownership stack, the scale spectrum, and the new-value bridge) directly at their point of use. The remaining diagrams in the full 11-diagram set, the presentation deck, and the Excel workbook are repository-only assets — see `README.md`'s reading-path guidance if you are reading this from the repository rather than a standalone PDF.*
 
 This paper is written for six reader lenses. **No lens is prioritized over any other** — this is a deliberate editorial choice, not an oversight, and it holds throughout every part of the paper, not just here. Each lens will find different sections most load-bearing; all are welcome to read the whole thing, skip to their own section, or use the workbooks as standalone tools.
 
@@ -575,10 +579,12 @@ The framework separates two connected questions:
 
 This is also why no single ownership or deployment model is presented as universally superior, a stance Part V takes up in full. Centralized hyperscale infrastructure, APIs, local systems, cooperative capacity, managed services, and sovereign deployments can all have a role. Their suitability depends not only on token economics (Parts I–IV), but on the type of value being created, who needs to control the infrastructure and information, how capacity is actually used, and who should capture the resulting value.
 
-A companion visual, "Creating Growth Based on New Value" (see `assets/diagrams/diagram-11-creating-growth-from-new-value.jpg`; full description in `17-visual-asset-briefs.md`, Diagram 11), makes this distinction concrete. It is the author's own general business/innovation framework — applicable well beyond AI, and predating this whitepaper — organized as two columns converging on a shared "New Value" band:
+A companion visual, "Creating Growth Based on New Value" (full description in `17-visual-asset-briefs.md`, Diagram 11), makes this distinction concrete. It is the author's own general business/innovation framework — applicable well beyond AI, and predating this whitepaper — organized as two columns converging on a shared "New Value" band:
 
 - **Creating new value** (left column, descending into New Value): idea / invention → innovation → verifying new value
 - **Growth based on new value** (right column, ascending out of New Value): value proposition and communication → revenue model → productivity
+
+![Creating Growth Based on New Value — two columns converging on a shared "New Value" band: Idea/Invention → Innovation → Verifying New Value descending on the left; Productivity → Revenue Model → Value Proposition & Communication ascending on the right. INTERPRETATION — the author's own general framework, applied here, introduces no new cost figures.](assets/diagrams/diagram-11-creating-growth-from-new-value.png)
 
 **A note on the planned Scenario Explorer:** this paper's companion workbooks (and a planned interactive Scenario Explorer building on them) can model capacity and cost — $/M tokens, $/AI-working-hour, break-even utilization, financing sensitivity — with every formula shown and every input editable. **They cannot determine whether a particular deployment will create verified value.** That would require separate, additional assumptions about the work being done, the users being served, adoption, and the value-capture model chosen — inputs this paper's cost model does not and cannot supply. Any future Scenario Explorer built on this paper's cost tables should make that boundary explicit in its own interface, not just in this prose.
 
@@ -610,6 +616,8 @@ Ownership of "AI" is not a single question because AI is not a single layer. The
 | **Governance** | Who sets the rules the model/agent follows, and whose values it is aligned to | Zuckerberg frames this explicitly: "we view alignment as ensuring that agents share a person's goals and values, not our company's" — his own stated position, not an industry consensus | [ATTR] — same source as above |
 
 **Reading this table [INTERP]:** no single actor owns "AI" end to end. A hyperscaler may dominate hardware access while depending on a chip vendor upstream and a user's own information downstream; a household running a single DGX Spark owns its compute and model layer outright but has no influence over energy-grid or governance layers. Ownership questions must be asked layer by layer — collapsing them into one "who owns AI" question obscures more than it reveals.
+
+![The 8-layer ownership stack alongside the 6 coexisting access models — energy, hardware, compute/access, models, information, agents, identity, governance; centralized platform, enterprise dedicated, open models on owned hardware, private/individual, cooperative, local/regional. None asserted as universally superior.](assets/diagrams/diagram-06-ownership-stack.png)
 
 ---
 
@@ -792,6 +800,8 @@ Bridged to working-capacity terms at the heavy multi-agent orchestration band (1
 | Hyperscale (4-rack/288-GPU cluster) — **full layer including capital+financing+electricity+opex, this paper's canonical figure** | ~$16M hardware-only, [ASSUMPTION] | $0.091–$0.312, mid $0.133 [CALC] | $0.091–$3.74 (heavy orchestration) | Utilization, then financing term |
 
 **Why Professional appears cheaper than Hyperscale above, and why that comparison is not apples-to-apples:** Professional's $0.044–$0.146/M omits the opex/overhead layer (facility, cooling, staffing, networking, replacement reserve — $200,000–$1,000,000/rack/yr at Hyperscale scale, Section 34) that Hyperscale's canonical figure includes. Adding a comparable opex allowance to Professional would likely narrow or reverse the apparent gap, but no verified opex figure exists for an 8-GPU node in this paper's source register — this is exactly why Professional is flagged as the least-evidenced tier throughout this paper, not a tier that has been shown to beat Hyperscale on cost.
+
+![Scale Spectrum: Home → Cooperative → Professional → Hyperscale — capital, $/M-token, and $/AI-working-hour side by side, ordered by capital scale, not by recommended choice.](assets/diagrams/diagram-08-scale-spectrum.png)
 
 Four patterns hold across every tier in this paper's workbooks, and none of them is a value judgment about which scale is "better" — per this paper's stated position, no ownership model or scale is asserted to be universally superior:
 

@@ -24,6 +24,14 @@ body {
   max-width: 100%;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.2em auto;
+  page-break-inside: avoid;
+}
+
 h1, h2, h3, h4 {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   color: #0d1b2a;

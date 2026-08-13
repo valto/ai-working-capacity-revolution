@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Are They Spending Trillions on AI? — Research Package</title>
+<meta name="description" content="A neutral research synthesis reverse-engineering the economics of AI compute, tokens, and working capacity — with full source register, editable workbooks, and evidence-class tagging throughout.">
+<style>
+  :root {
+    --navy: #0d1b2a;
+    --accent: #1b4965;
+    --grey: #555555;
+    --light: #f7f9fa;
+    --border: #dfe3e6;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #1a1a1a;
+    margin: 0;
+    line-height: 1.6;
+    background: #ffffff;
+  }
+  header {
+    background: var(--navy);
+    color: #fff;
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: center;
+  }
+  header h1 {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 2rem;
+    margin: 0 0 0.6rem;
+    line-height: 1.25;
+    max-width: 100%;
+    word-wrap: break-word;
+  }
+  header p.subtitle {
+    font-style: italic;
+    color: #cfd8e3;
+    max-width: 46rem;
+    margin: 0 auto;
+    font-size: 1.05rem;
+  }
+  header p.meta {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.85rem;
+    color: #9fb3c8;
+    margin-top: 1.2rem;
+  }
+  main {
+    max-width: 56rem;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 4rem;
+  }
+  h2 {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: var(--navy);
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 0.4rem;
+    margin-top: 2.6rem;
+  }
+  .banner {
+    background: #fff8e1;
+    border: 1px solid #e0c46c;
+    border-radius: 6px;
+    padding: 1rem 1.2rem;
+    margin: 1.5rem 0 2rem;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.92rem;
+  }
+  .paths {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1rem;
+    margin: 1.2rem 0;
+  }
+  .path-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.1rem 1.2rem;
+    background: var(--light);
+  }
+  .path-card h3 {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1rem;
+    color: var(--accent);
+    margin: 0 0 0.5rem;
+  }
+  .path-card p { font-size: 0.95rem; margin: 0 0 0.6rem; }
+  .path-card a { font-size: 0.9rem; }
+  table.assets {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.92rem;
+    margin: 1rem 0;
+  }
+  table.assets th {
+    background: var(--accent);
+    color: #fff;
+    text-align: left;
+    padding: 0.55rem 0.7rem;
+  }
+  table.assets td {
+    padding: 0.55rem 0.7rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  table.assets tr:nth-child(even) { background: var(--light); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff !important;
+    padding: 0.35rem 0.9rem;
+    border-radius: 5px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.85rem;
+  }
+  .btn:hover { background: var(--navy); text-decoration: none; }
+  code {
+    background: var(--light);
+    padding: 0.1rem 0.35rem;
+    border-radius: 3px;
+    font-size: 0.9em;
+  }
+  footer {
+    text-align: center;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.85rem;
+    color: var(--grey);
+    padding: 2rem 1.5rem 3rem;
+    border-top: 1px solid var(--border);
+  }
+  .tag {
+    display: inline-block;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.75rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 10px;
+    background: #e8eef2;
+    color: var(--accent);
+    margin: 0.15rem 0.3rem 0.15rem 0;
+    white-space: normal;
+  }
+  .table-wrap {
+    overflow-x: auto;
+    max-width: 100%;
+  }
+  table.assets { table-layout: fixed; word-wrap: break-word; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Why Are They Spending Trillions on AI?</h1>
+  <p class="subtitle">The numbers and economics behind the AI working-capacity revolution — from electricity and infrastructure to tokens, robots, value, ownership, and agency.</p>
+  <p class="meta">Author: Valto Loikkanen &nbsp;·&nbsp; Licence: CC BY 4.0 &nbsp;·&nbsp; Factual source cut-off: 2026-08-13</p>
+</header>
+
+<main>
+
+<div class="banner">
+  <strong>Status:</strong> This site tracks the repository's <code>main</code> branch, which may be ahead of the last tagged/archived release. See <a href="https://github.com/valto/ai-working-capacity-revolution/blob/main/CHANGELOG.md">CHANGELOG.md</a> for what has changed since the last release, and the repository's <a href="https://github.com/valto/ai-working-capacity-revolution/releases">Releases page</a> for citable, checksum-verified snapshots.
+</div>
+
+<p>A neutral-observer research synthesis reverse-engineering a connected economic model — energy → hardware → compute → models → tokens → AI working capacity → digital work → outcomes → value → agency — from public statements by Jensen Huang, Sam Altman, and Mark Zuckerberg, combined with independently verified hardware specs, pricing, and benchmarks. Every substantive claim is tagged with one of five evidence classes (<span class="tag">OBSERVED FACT</span><span class="tag">ATTRIBUTED STATEMENT</span><span class="tag">DERIVED CALCULATION</span><span class="tag">SCENARIO ASSUMPTION</span><span class="tag">INTERPRETATION</span>) so a reader can tell, at a glance, what is independently verified, what is someone's on-record claim, what is arithmetic, and what is an editable illustration.</p>
+
+<p>It is not a vendor report, a political programme, or an investment recommendation. Six reader lenses — Individual, SME/owner-manager, Finance/infrastructure investor, Government/region/community, AI builder/operator, and Educator/researcher/journalist — are given equal weight and no priority ordering, by deliberate editorial decision.</p>
+
+<h2>Reading paths</h2>
+<p>Different readers can get a common factual base at different depths, without everyone being forced through the whole document first.</p>
+<div class="paths">
+  <div class="path-card">
+    <h3>Start here</h3>
+    <p>One page: what this is/is not, what it can/cannot establish, how to challenge it.</p>
+    <a href="https://github.com/valto/ai-working-capacity-revolution/blob/main/00-how-to-use-this-research.md">How to Use This Research →</a>
+  </div>
+  <div class="path-card">
+    <h3>The authoritative map</h3>
+    <p>The complete model, 45 sections, all evidence-class tagging, all caveats.</p>
+    <a href="01-whitepaper.pdf">Whitepaper (PDF) →</a> &nbsp;·&nbsp; <a href="https://github.com/valto/ai-working-capacity-revolution/blob/main/01-whitepaper.md">Markdown →</a>
+  </div>
+  <div class="path-card">
+    <h3>The entry point</h3>
+    <p>A fast, self-contained summary for readers who want the shape of the argument.</p>
+    <a href="https://github.com/valto/ai-working-capacity-revolution/blob/main/12-executive-brief.md">Executive Brief →</a>
+  </div>
+  <div class="path-card">
+    <h3>The audit &amp; exploration layer</h3>
+    <p>Every formula shown, every assumption an editable cell.</p>
+    <a href="18-companion-data-model.xlsx">Excel Workbook →</a> &nbsp;·&nbsp; <a href="#workbooks">Companion Workbooks →</a>
+  </div>
+  <div class="path-card">
+    <h3>The conversation starter</h3>
+    <p>A 26-slide deck with speaker notes, for presenting or sharing the argument.</p>
+    <a href="19-slide-deck.pptx">Slide Deck →</a>
+  </div>
+  <div class="path-card">
+    <h3>Before citing a figure</h3>
+    <p>What this model's evidence can and cannot currently establish.</p>
+    <a href="https://github.com/valto/ai-working-capacity-revolution/blob/main/20-appendix-known-limitations.md">Known Limitations →</a>
+  </div>
+</div>
+
+<h2>Core documents</h2>
+<div class="table-wrap"><table class="assets">
+<tr><th>Document</th><th>What it is</th></tr>
+<tr><td><a href="https://github.com/valto/ai-working-capacity-revolution/blob/main/01-whitepaper.md">01 — Whitepaper</a> (<a href="01-whitepaper.pdf">PDF</a>)</td><td>The full 45-section research paper</td></tr>
+<tr><td><a href="https://github.com/valto/ai-working-capacity-revolution/blob/main/02-source-register.md">02 — Source Register</a></td><td>Claim-by-claim fact-check ledger</td></tr>
+<tr><td><a href="https://github.com/valto/ai-working-capacity-revolution/blob/main/09-appendix-glossary.md">09 — Glossary</a></td><td>Every technical/economic term, plain-language</td></tr>
+<tr><td><a href="https://github.com/valto/ai-working-capacity-revolution/blob/main/10-appendix-source-register-formatted.md">10 — Source Register (formatted)</a></td><td>Publication-formatted version, by source</td></tr>
+<tr><td><a href="https://github.com/valto/ai-working-capacity-revolution/blob/main/11-appendix-assumption-register.md">11 — Assumption Register</a></td><td>Every editable scenario assumption, consolidated</td></tr>
+<tr><td><a href="https://github.com/valto/ai-working-capacity-revolution/blob/main/12-executive-brief.md">12 — Executive Brief</a></td><td>Standalone summary of the whole paper</td></tr>
+<tr><td><a href="https://github.com/valto/ai-working-capacity-revolution/blob/main/20-appendix-known-limitations.md">20 — Known Limitations</a></td><td>Consolidated live uncertainties</td></tr>
+</table></div>
+
+<h2 id="workbooks">Companion workbooks</h2>
+<div class="table-wrap"><table class="assets">
+<tr><th>Workbook</th><th>Covers</th></tr>
+<tr><td><a href="https://github.com/valto/ai-working-capacity-revolution/blob/main/03-workbook-global-baseline.md">03 — Global Baseline</a></td><td>Home/Cooperative/Professional/Hyperscale cost curves, global USD baseline</td></tr>
+<tr><td><a href="https://github.com/valto/ai-working-capacity-revolution/blob/main/04-workbook-ai-working-capacity-conversion.md">04 — AI Working-Capacity Conversion</a></td><td>Usage-intensity ladder, $/token → $/AI-working-hour</td></tr>
+<tr><td><a href="https://github.com/valto/ai-working-capacity-revolution/blob/main/05-workbook-token-factory-scenarios.md">05 — Token-Factory Scenarios</a></td><td>Cooperative-cost reconciliation, Bitcoin energy-monetization comparison</td></tr>
+<tr><td><a href="https://github.com/valto/ai-working-capacity-revolution/blob/main/06-investment-thesis-notes.md">06 — Investment-Thesis Notes</a></td><td>Educational, non-advice investment scenarios by scale tier</td></tr>
+<tr><td><a href="https://github.com/valto/ai-working-capacity-revolution/blob/main/07-workbook-humanoid-working-capacity.md">07 — Humanoid Working-Capacity</a></td><td>Embodied working-capacity extension (robots)</td></tr>
+<tr><td><a href="https://github.com/valto/ai-working-capacity-revolution/blob/main/08-workbook-localized-scenario-eur-finland.md">08 — Localized Scenario (EUR/Finland)</a></td><td>Worked non-USD localization template</td></tr>
+<tr><td><a href="18-companion-data-model.xlsx">18 — Excel Data Model</a></td><td>Live-formula workbook, 10 sheets, all tiers</td></tr>
+<tr><td><a href="data/canonical-cost-model.csv">Canonical Cost Model (CSV)</a></td><td>Single source of truth for every tier's cost figures</td></tr>
+</table></div>
+
+<h2>Presentation &amp; short-form</h2>
+<div class="table-wrap"><table class="assets">
+<tr><th>Asset</th><th>For</th></tr>
+<tr><td><a href="19-slide-deck.pptx">19 — Slide Deck</a> (<a href="https://github.com/valto/ai-working-capacity-revolution/blob/main/13-slide-deck-outline.md">outline</a>)</td><td>26 slides with speaker notes</td></tr>
+<tr><td><a href="https://github.com/valto/ai-working-capacity-revolution/blob/main/14-shortform-general.md">14 — General explainer</a></td><td>~300-word social/short-form piece</td></tr>
+<tr><td><a href="https://github.com/valto/ai-working-capacity-revolution/blob/main/15-shortform-ownership.md">15 — Ownership piece</a></td><td>The ownership question (Part V)</td></tr>
+<tr><td><a href="https://github.com/valto/ai-working-capacity-revolution/blob/main/16-shortform-value.md">16 — Value piece</a></td><td>Why cheap tokens ≠ cheap value (Part IV)</td></tr>
+<tr><td><a href="assets/diagrams/">Diagrams (11)</a> (<a href="https://github.com/valto/ai-working-capacity-revolution/blob/main/17-visual-asset-briefs.md">specs</a>)</td><td>End-to-end chain, cost waterfall, ownership stack, scale spectrum, new-value bridge, and more</td></tr>
+</table></div>
+
+<h2>Version, citation &amp; licence</h2>
+<p>
+  <a class="btn" href="CITATION.cff">CITATION.cff</a>
+  <a class="btn" href="LICENSE">LICENSE</a>
+  <a class="btn" href="CHECKSUMS.sha256">CHECKSUMS.sha256</a>
+  <a class="btn" href="https://github.com/valto/ai-working-capacity-revolution/blob/main/CHANGELOG.md">CHANGELOG.md</a>
+</p>
+<p>Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> for this paper's original prose, diagrams, and model structure — see <a href="LICENSE">LICENSE</a> for the scope note on quoted third-party statements, trademarks, and external data, which remain under their own terms.</p>
+<p>Suggested attribution: <em>"Research synthesis and modelling by Valto Loikkanen, assisted by AI."</em></p>
+
+<h2>Running the checks yourself</h2>
+<p>This package includes a mechanical consistency checker that verifies the whitepaper, PDF, Excel workbook, and slide deck all agree with the canonical cost model — see <a href="https://github.com/valto/ai-working-capacity-revolution#running-the-consistency-checker">README.md</a> for setup instructions.</p>
+
+</main>
+
+<footer>
+  <p>© Valto Loikkanen. Licensed under CC BY 4.0 where stated. Educational research and scenario analysis — not investment, legal, tax, procurement, or policy advice.</p>
+  <p><a href="https://github.com/valto/ai-working-capacity-revolution">View source on GitHub</a></p>
+</footer>
+
+</body>
+</html>
