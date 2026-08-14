@@ -79,7 +79,8 @@
 - Four bands (tokens/AI-working-hour, all SCENARIO ASSUMPTION): Chat/advisor (10K–30K) · Active copilot (60K–120K) · Delegated agent (200K–600K) · Heavy multi-agent orchestration (1M–12M+).
 - OpenAI's own unaudited telemetry: Codex = 99.8% of weekly internal output tokens; 99th-percentile users ran 60+ agent-hours/day [ATTR, OpenAI, self-reported].
 - These describe OpenAI staff using OpenAI's own product — not a general-population statistic [caveat, stated explicitly].
-- Speaker note: Band 4's open-ended ceiling is informed by, not proven by, this one company's internal data.
+- Orchestration does not create a different kind of hour — it creates multiple working hours in parallel: 1 hour = 1 agent/person × 1h; 10-team hour = 10 agents/people × 1h = 10 agent/human-hours; 1 day = 8 agent/human-hours; 10-team day = 80 agent/human-hours. Team capacity is workers × hours, on both sides, with no exception.
+- Speaker note: Band 4's open-ended ceiling is informed by, not proven by, this one company's internal data. The 1-vs-10 table is the guardrail against reading a band-4 figure as "one very fast hour" instead of "many parallel ordinary hours."
 
 **Slide 13 — From Tokens to $/AI-Working-Hour**
 - Formula: $/AI-working-hour = (tokens/hour ÷ 1,000,000) × ($/M tokens at that tier) [CALC].
@@ -91,7 +92,8 @@
 - Eight factors shape effective working capacity: capability, reliability, initiative, judgment, creativity, context, tools, information [INTERP, author's own framework].
 - Reliability and information act as multipliers, not add-ons — unreliable capacity caps how much can safely be delegated.
 - What IS comparable: throughput, marginal cost, capacity elasticity. What is NOT: workload complexity, quality/correctness, supervision burden, context completeness — kept visibly separate, not folded into one multiplier.
-- Speaker note: This is the guardrail slide against naive "$/hour AI vs. $/hour human" headlines.
+- The employer/billable split: owned AI pairs with human employer cost (fully loaded — wage+benefits+overhead); retail AI pairs with human billable/externally-purchased rate (agency/contractor/consultancy, which embeds its own margin and overhead on top). Comparing owned AI against a billable rate — or retail AI against employer cost — mixes the internal/external layers exactly as Part III warns against mixing owned-production cost with retail API price [INTERP].
+- Speaker note: This is the guardrail slide against naive "$/hour AI vs. $/hour human" headlines — and against the narrower mistake of picking whichever AI number and whichever human number make the best-sounding comparison.
 
 **Slide 15 — Part IV: Information as AI's Operating System**
 - Author's own framing: information is "the operating system for AI" [FACT that phrase appears; INTERP as underlying claim] — disclosed author interest in this framing (Prifina/Digiole/ValtoAI/PIOS/EIOS).

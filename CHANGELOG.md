@@ -2,6 +2,15 @@
 
 All notable changes to this research package are documented here. Versioning follows [Semantic Versioning](https://semver.org/) in spirit — a major version bump indicates a change to canonical figures or conclusions, not just prose.
 
+## [Unreleased] — targeted as v1.0.2
+
+### Added — content
+- Split the human-work comparison (whitepaper §19.2; `04-workbook-ai-working-capacity-conversion.md` Part E.2) into two explicit columns: **Human employer cost, fully loaded** (internal hire — wage + benefits + overhead) and **Human billable / externally purchased rate** (agency/contractor/consultancy, which embeds its own margin and overhead on top). States the pairing explicitly: owned-AI production cost compares against human employer cost; retail API price compares against human billable rate — mixing the pairs mixes the same internal/external cost layers the paper already warns against mixing on the AI side alone (owned-production cost vs. retail API price). Added illustrative billable-rate bands (~2-3x the employer-cost bands) as a clearly-flagged scenario assumption.
+- Added a compact "1 working hour / 10-team hour / 1 working day / 10-team day" table (whitepaper §16, after the usage-intensity band table; `04-workbook-ai-working-capacity-conversion.md` new Part B.2) stating explicitly that orchestration does not create a different kind of hour — it creates multiple working hours in parallel, and that team working capacity is workers × hours on both the AI and human side, with no exception. Added the same table and framing to slide 12 of the deck (`13-slide-deck-outline.md`/`19-slide-deck.pptx`), and the employer/billable split to slide 14.
+- Changed whitepaper §24's SME/owner-manager lens description from "must govern an AI workforce it did not previously need to manage" to "must lead and govern an AI workforce it did not previously have" — makes "lead" the default term for the human-AI-team relationship in the maturity narrative, reserving "supervise" for the specific review/risk-cost component already used correctly in the usage-band descriptions (§16-17, Part E.3's supervision-burden caveat) and "govern" for boundaries/accountability.
+
+Regenerates `01-whitepaper.pdf` (89 pages, up from 88) and `19-slide-deck.pptx`, syncs the Desktop PDF copy, and regenerates `CHECKSUMS.sha256`.
+
 ## [1.0.1] — 2026-08-14
 
 ### Added — content

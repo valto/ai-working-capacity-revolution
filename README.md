@@ -22,7 +22,7 @@ Every substantive claim is tagged with one of five evidence classes (Observed Fa
 
 ## Reading paths — start here, not with the whole package at once
 
-This package is built so different readers can get a common factual base at different depths, without everyone being forced through the same 88-page document first:
+This package is built so different readers can get a common factual base at different depths, without everyone being forced through the same 89-page document first:
 
 - **First-time reader, any lens:** start with `00-how-to-use-this-research.md` (one page — what this is/is not, what it can/cannot establish), then `12-executive-brief.md`.
 - **The authoritative map** — `01-whitepaper.md` (+ `01-whitepaper.pdf`). The complete model, all evidence-class tagging, all caveats. This is the source of truth every other asset should trace back to. **The PDF is self-contained**: it embeds the four diagrams most load-bearing for the argument (the end-to-end chain, the ownership stack, the scale spectrum, and the new-value bridge) directly at their point of use, so a reader holding only the downloaded PDF sees them without needing the repository. The remaining diagrams (2–5, 7, 9–10) live only in `assets/diagrams/` and the standalone deck/briefs — the PDF is the narrative paper with its most essential visuals embedded, not a complete visual reproduction of the full 11-diagram set.

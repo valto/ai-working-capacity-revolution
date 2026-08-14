@@ -68,6 +68,19 @@ Four bands, low/mid/high, each an **ASSUMPTION** (illustrative range, not a sing
 - These figures describe OpenAI's own internal employee usage of its own coding-agent product (Codex). They are evidence that heavy multi-agent orchestration usage exists and can be extreme — they are **not** a general population statistic, not independently audited by any third party, and not necessarily representative of usage in other organizations, other tools, or non-coding work.
 - A separately-claimed "NVIDIA reference agentic workload of 32,000 input + 8,000 output tokens per turn" **could not be verified anywhere** (source register Cluster J) and is explicitly **not used** as an input to this workbook's bands.
 
+### B.2 Orchestration does not create a different kind of hour — it creates multiple working hours in parallel
+
+Band 4's high token count comes entirely from *how many agents run at once*, not from any single agent processing tokens at a different rate than bands 1–3. This is worth stating as its own compact table, because it is easy to lose inside a single "tokens/hour" number:
+
+| Working capacity | AI | Human |
+|---|---|---|
+| 1 working hour | 1 AI agent × 1 hour = 1 agent-hour | 1 person × 1 hour = 1 human-hour |
+| 10-agent/person team hour | 10 AI agents × 1 hour = 10 agent-hours | 10 people × 1 hour = 10 human-hours |
+| 1 working day | 1 agent × 8 hours = 8 agent-hours | 1 person × 8 hours = 8 human-hours |
+| 10-agent/person team day | 10 agents × 8 hours = 80 agent-hours | 10 people × 8 hours = 80 human-hours |
+
+**Team working capacity is workers × hours, on both sides of the comparison, with no exception.** A 10-agent orchestration hour is not "one agent working ten times faster" any more than a 10-person team hour is "one person working ten times faster" — both are ten independent units of working capacity applied over the same one clock-hour. Band 4's 1,000,000–12,000,000+ tokens/hour range in the table above is this same arithmetic collapsed into a single per-clock-hour figure for cost-modeling convenience (Part C needs one number per band to multiply against $/M-tokens) — it is a modeling convenience for estimating infrastructure demand, not a claim that heavy orchestration is a qualitatively different kind of hour from bands 1–3. Reading a band-4 figure as "one very fast hour" rather than "many parallel ordinary hours" is the single easiest way to misread this table.
+
 ---
 
 ## Part C — $/AI-working-hour across production tiers
@@ -138,27 +151,38 @@ This workbook, and the paper it is part of, is **not investment, legal, tax, pro
 | Dimension | How AI side is measured | How human side is measured | Comparability basis | Class |
 |---|---|---|---|---|
 | **Raw throughput of a defined, mechanical sub-task** (e.g., transcribing a fixed-length recording, drafting a first-pass summary of a fixed document, running a fixed batch of similar classifications) | Tokens processed/produced per clock-hour, from Part B/C | Task-time studies or the requester's own estimate of "how long this would take a competent person," which is itself OpenAI's own internal methodology for its "human-hour equivalent" telemetry (**ATTRIBUTED**, source register Cluster J) — not an independently validated labor-economics standard | Both sides can be clocked against the same fixed, narrowly-scoped deliverable | **DERIVED** (when both sides are actually measured against the same task) |
-| **Marginal cost of one additional unit of throughput, holding task type fixed** | $/AI-working-hour at a given production tier (Part C) | Fully-loaded hourly cost of a human worker at a given wage/benefits/overhead level (**ASSUMPTION** — see E.2) | Both are cost figures in the same currency, for the same nominal task category | **DERIVED** |
+| **Marginal cost of one additional unit of throughput, holding task type fixed** | $/AI-working-hour at a given production tier (Part C) — owned-production cost pairs with human employer cost; retail API price pairs with human billable rate (**ASSUMPTION** — see E.2) | Human employer cost (fully loaded — wage/benefits/overhead) for an internal hire, or human billable/externally-purchased rate for a bought-in worker (**ASSUMPTION** — see E.2) | Both are cost figures in the same currency, for the same nominal task category, kept to matching internal/internal or external/external pairs | **DERIVED** |
 | **Availability / elasticity of capacity** | Additional AI-working-hours can typically be added by paying for more compute or more API calls, subject to real hardware/provider capacity limits (see Part C's production-tier ceilings) | Additional human-hours require hiring, training, or overtime, subject to real labor-market and calendar-time limits | Both are real, observable capacity-expansion constraints, even though their shapes differ sharply | **INTERPRETATION** |
 
 ### E.2 Illustrative $/hour comparison — human labor bands vs. AI-working-hour bands (SCENARIO_ASSUMPTION on the human side; do not read as a market wage survey)
 
+**The employer/billable distinction, stated explicitly.** Human labor cost is not one number — it depends on whether the work is done by someone the organization directly employs (the fully-loaded internal cost: wage + benefits + overhead) or bought from an external party (an agency, contractor, consultancy, or freelance marketplace, whose billable rate embeds *its own* margin, overhead, non-billable time, and business risk on top of what it pays its own worker). This is exactly the same structural distinction Part C draws on the AI side between **owned-production cost** and **retail API price** — and the two pairs line up:
+
+| | Internal / owned | External / bought-in |
+|---|---|---|
+| **AI** | Owned-production cost (Home/Cooperative/Professional/Hyperscale, Part C) | Retail API price (buy-from-market, Part C) |
+| **Human** | Employer cost, fully loaded (this section) | Billable / externally purchased rate (this section) |
+
+Comparing owned-AI cost against a human's *billable* rate — or retail-API price against a human's *employer* cost — mixes the two internal/external layers exactly as the paper warns against mixing owned-production cost with retail API price on the AI side alone (Part C.0, "critical methodology reminder"). The comparison below therefore keeps both pairs separate throughout, never blended into one "AI vs. human" number.
+
 **Human-side ASSUMPTION, explicitly editable, NOT sourced from any specific labor-market dataset in this workbook:**
 
-| Human labor tier | Illustrative fully-loaded $/hour (wage + benefits + overhead) | Class |
-|---|---|---|
-| Entry-level / routine task labor | $15-$35 | **ASSUMPTION** — replace with your own local, role-specific fully-loaded cost; this is not a wage-survey figure |
-| Skilled professional (e.g., mid-level analyst, developer, specialist) | $50-$150 | **ASSUMPTION** |
-| Senior specialist / expert consultant | $150-$500+ | **ASSUMPTION** |
+| Human labor tier | Human employer cost (fully loaded — wage + benefits + overhead, internal hire) | Human billable / externally purchased working capacity (agency, contractor, consultancy, or freelance-marketplace rate) | Class |
+|---|---|---|---|
+| Entry-level / routine task labor | $15-$35/hr | $40-$90/hr | **ASSUMPTION** — replace with your own local, role-specific figures; these are not wage/rate-survey figures |
+| Skilled professional (e.g., mid-level analyst, developer, specialist) | $50-$150/hr | $100-$350/hr | **ASSUMPTION** |
+| Senior specialist / expert consultant | $150-$500+/hr | $300-$1,000+/hr | **ASSUMPTION** |
 
-| Usage-intensity band | $/AI-working-hour, central case (Hyperscale tier, cheapest owned-production tier from Part C) | $/AI-working-hour, central case (Retail API, buy-from-market) | vs. Entry-level human ($15-35/hr) | vs. Skilled professional ($50-150/hr) |
-|---|---|---|---|---|
-| 1. Chat/advisor | $0.0027 | $0.18 | Far below either human band at this tier | Far below |
-| 2. Active AI coworker | $0.012 | $0.81 | Below | Below |
-| 3. Delegated single agent | $0.053 | $3.60 | Below | Below |
-| 4. Heavy multi-agent orchestration | $0.665 | $45.00 | Hyperscale still below; Retail-API central case now inside/above the skilled-professional band | Retail-API ceiling ($456/hr, from Part C) exceeds even the senior-specialist band |
+**Why the billable column runs higher, stated as an assumption, not a proven ratio:** an external provider's billable rate must cover the same wage/benefits/overhead their own worker costs them, plus their own margin, sales/account-management overhead, bench time between engagements, and the risk premium of variable-demand work — the same logic Part C.0 uses to explain why retail API price sits above owned-production cost. The illustrative ~2-3x multiple shown here is a **SCENARIO ASSUMPTION** for orientation only; real billable rates vary enormously by market, specialization, and contract structure, and should be replaced with your own quotes before using this table for any real decision.
 
-**INTERPRETATION, stated carefully:** at the cheapest owned-production tiers, $/AI-working-hour is dramatically below any human labor band shown here, at every usage intensity — this is a real, verifiable arithmetic comparison of *cost of generating tokens* vs. *cost of a human's time*. It is explicitly **not** a claim that an AI-working-hour and a human-labor-hour of the same duration produce equivalent, substitutable, or equally reliable output — that equivalence is exactly what Part E.3 below says cannot be assumed. The comparison in this table should be read as "cost of raw capacity," not "cost of equivalent finished outcome."
+| Usage-intensity band | Owned AI, central case (Hyperscale, cheapest owned-production tier from Part C) | Retail AI, central case (buy-from-market, Part C) | vs. Human employer cost — entry-level ($15-35/hr) | vs. Human employer cost — skilled professional ($50-150/hr) | vs. Human billable rate — entry-level ($40-90/hr) | vs. Human billable rate — skilled professional ($100-350/hr) |
+|---|---|---|---|---|---|---|
+| 1. Chat/advisor | $0.0027 | $0.18 | Far below | Far below | Far below | Far below |
+| 2. Active AI coworker | $0.012 | $0.81 | Below | Below | Below | Below |
+| 3. Delegated single agent | $0.053 | $3.60 | Below | Below | Below | Below |
+| 4. Heavy multi-agent orchestration | $0.665 | $45.00 | Owned AI still below; Retail AI now inside/above the human-employer skilled-professional band | Owned AI still below; Retail AI now inside/above | Owned AI still below; Retail AI now inside the billable skilled-professional band | Owned AI still below; Retail AI ceiling ($456/hr, from Part C) exceeds even the billable senior-specialist band |
+
+**INTERPRETATION, stated carefully:** the cleanest apples-to-apples pairing is **owned AI vs. human employer cost** (both are internal, fully-loaded production costs) and **retail AI vs. human billable cost** (both are what you pay an external party for finished, ready-to-use capacity, inclusive of their margin). Read diagonally — owned AI against billable rates, or retail AI against employer cost — and the comparison silently crosses the internal/external line without saying so. At the cheapest owned-production tiers, $/AI-working-hour is dramatically below any human employer-cost band shown here, at every usage intensity — this is a real, verifiable arithmetic comparison of *cost of generating tokens* vs. *cost of a human's time*, kept to its correct internal/internal or external/external pairing. It is explicitly **not** a claim that an AI-working-hour and a human-labor-hour of the same duration produce equivalent, substitutable, or equally reliable output — that equivalence is exactly what Part E.3 below says cannot be assumed. The comparison in this table should be read as "cost of raw capacity," not "cost of equivalent finished outcome."
 
 ### E.3 Dimensions that ARE NOT comparable without an explicit, visible bridging assumption — the paper's required caveats, kept visible rather than hidden
 
@@ -199,7 +223,7 @@ the implied ratio = 480 / 0.283 ≈ 1,696x
 
 1. **Change the Part B usage-intensity bands** to match your own organization's measured token logs (if available) rather than the illustrative bands here.
 2. **Swap in updated production-tier $/M-tokens figures** from a refreshed version of Release Asset #7 as hardware prices, electricity rates, or utilization assumptions change — this workbook's Part C table is entirely downstream of Asset #7 and should be regenerated whenever that workbook's tier figures change.
-3. **Replace the Part E.2 human-hourly-cost bands** with your own local, role-specific, fully-loaded labor cost (wage + benefits + overhead + management burden) — the bands here are illustrative placeholders, not a wage survey.
+3. **Replace the Part E.2 human-hourly-cost bands** with your own local, role-specific figures for both columns — employer cost (wage + benefits + overhead + management burden) for internal hires, and billable/externally-purchased rate for bought-in capacity — the bands here are illustrative placeholders, not a wage or rate survey. Keep the two columns separate; do not average them into one "human cost" figure, for the same reason Part C.0 never averages owned-production cost with retail API price.
 4. **Do not delete or soften the Part E.3 caveats** when adapting this table for a specific claim — if you want to assert a specific human-to-AI equivalence for a specific task, add a new row with your own named, sourced bridging assumption rather than removing the caveat that a general one does not exist.
 5. **Preserve the Part D outcome/value boundary language** in any derived or excerpted version of this table — per the paper's evidence standard, every investment-thesis or scale-scenario section must include this boundary explicitly, not merely once in front matter.
 
