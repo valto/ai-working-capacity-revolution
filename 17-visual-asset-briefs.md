@@ -226,7 +226,7 @@
 - Use one consistent 5-class legend (icon + color) across the entire asset set (#15) so a reader moving between diagrams doesn't have to relearn the code each time.
 - Use one consistent typographic/color treatment for "SCENARIO ASSUMPTION — not a forecast, not advice" boundary tags across Diagrams 2, 3, 8, 9 (and the financing/scenario portions of 1, 6).
 - Do not introduce color-coding that implies a preferred ownership model, executive, or reader lens anywhere in the set — palette choices should be functional (evidence class, tier, or axis) not evaluative.
-- All 10 diagrams should carry the same footer block: factual source cut-off (2026-08-13) and the CC BY 4.0 attribution line.
+- All 11 diagrams should carry the same footer block: factual source cut-off (2026-08-13) and the CC BY 4.0 attribution line.
 
 ---
 

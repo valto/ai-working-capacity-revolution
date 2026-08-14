@@ -17,14 +17,14 @@ cb22d744dea386b7cfd2493cd4d22d0160c7cce52f0b7330cc99bb7201b3ae33  ./10-appendix-
 2bb6937b07b7c8701b7e1eb08574cde42cc6a9bf70b8ede0a51f09d50aee84a4  ./14-shortform-general.md
 b0da5d398f6e54118b5231c2abfe1101996167e677d8fad31c963ed500f90274  ./15-shortform-ownership.md
 5968c1e20bddcbd0c3318b43379245c18626bd2512af8aa2a07caa2dc81eaeab  ./16-shortform-value.md
-5fb42db881236917cd2e0572e9b2b783c6c9823dfadae6ddaca0ae905995b770  ./17-visual-asset-briefs.md
+7dbd5332f3b2080628f1561d09fedadb48135b766e16910c89faf0532efab0f8  ./17-visual-asset-briefs.md
 246fdf7656a77209f109106b7b453eb263ac0f66a94fcb5d0c51d546539d8087  ./18-companion-data-model.xlsx
 92bb8890cb9fa8efafa6334d9582eb22bc61d0ae506fd1ca2792c3c6aae2dc45  ./19-slide-deck.pptx
 cb81a2ca006768dd72986652f4e7684c6a96847736b804c5ff85cc175c10516c  ./20-appendix-known-limitations.md
 e353817141689ffb762e1ebefd76352eaf5daaf1868a184d8fe1982f2a1f0a2c  ./CHANGELOG.md
 e33184d3f7f1fa7a74dd2e1302be0f0c15db378b608b5845ea26280c9b3cf805  ./CITATION.cff
 839f99099d8bac968959ec2cd24f18bfedc20b384c4aaaeb6fcfbaee2e08235b  ./LICENSE
-a9925d58d25cc9cd2477aa2d2bd805ebb3d26a2fa4705fbb1195836158f90b6c  ./README.md
+c2ba405142f3a57f6e483e68682b86eee93b5a8402b694cc59629654fa6d5bbd  ./README.md
 c103775f7156cffb59dda55bd1daaae0d2ccc3b03e7c595c0eb87aeb47fbe8a0  ./assets/diagrams/diagram-01-end-to-end-chain.png
 79f00ee078bbaa4809462c4d48b9028afb07e9f8040aa34f6d554f3906d35e5c  ./assets/diagrams/diagram-02-cost-waterfall.png
 cb9f999d06be30fb943a7a079c6258661a2f017f9be4e61c9623d0039338eb78  ./assets/diagrams/diagram-03-intensity-ladder.png
@@ -39,6 +39,6 @@ f133211cbe46f95f6b4674fa02fd39fe2eae41338cb3009ef0b8f462f80ad308  ./assets/diagr
 71bbf59daa1c225e5d862fec07e2d2073ae6642987ac1af7823573e680166610  ./assets/diagrams/diagram-11-creating-growth-from-new-value.png
 e9f2309d6f8e5313db721323176051d2466bb11a9e878b9c8d1ec7864f6db3aa  ./assets/pdf-style.css
 0a944463e7add7f7ac7f5fe94178e6d0ee2154a44e31b19a5b6421e076b2ef69  ./data/canonical-cost-model.csv
-9088788143cb7d20e2d73f30c19584bc057e4ca66e6550433896458aa514e155  ./index.html
+8bf418a2c88ac612fc6b28f70fb4369baa64383b52e469a769172fc55adf069c  ./index.html
 cb51e2c9ba04efa9569cfe917a53ccaa9e64b4748a3a3dea62c29b2f7b96be5b  ./tools/check-canonical-consistency.py
 66a08035b19f0c96f473a46b2344d10657f1af85fc6b7fbedfe77a4241f1b6fd  ./tools/requirements.txt
