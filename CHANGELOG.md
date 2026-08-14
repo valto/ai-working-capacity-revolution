@@ -2,9 +2,7 @@
 
 All notable changes to this research package are documented here. Versioning follows [Semantic Versioning](https://semver.org/) in spirit — a major version bump indicates a change to canonical figures or conclusions, not just prose.
 
-## [Unreleased] — targeted as v1.0.1
-
-Content and release-mechanics work on `main` since the v1.0.0 GitHub release/Zenodo archive. Not yet cut as a new tagged release — pending author sign-off. See `README.md`'s Status line for the current relationship between `main` and the last tagged release.
+## [1.0.1] — 2026-08-14
 
 ### Added — content
 - Replaced the front-matter "About the author and method" section with an expanded "About the author, perspective and method" — covers the author's broader entrepreneurship/innovation-ecosystem and advisory background (30+ ecosystems, government/EU/university advisory work) alongside the AI-infrastructure-specific disclosure, and names ValtoAI and the EIOS reference framework (organizations/governed information/agent-ready context) alongside the previously-named Prifina, Digiole, and PIOS. Propagated the same venture list to Method §3.4's disclosure, `12-executive-brief.md`, `15-shortform-ownership.md`, `13-slide-deck-outline.md`/`19-slide-deck.pptx` (slide 15), and `README.md`, replacing all remaining "peecos/PIOS" references.
@@ -20,7 +18,10 @@ Content and release-mechanics work on `main` since the v1.0.0 GitHub release/Zen
 - `CHECKSUMS.sha256` no longer contains comment/header lines, so it validates without warnings under both macOS `shasum -a 256 -c` and GNU `sha256sum -c`; the explanatory header moved to `README.md`.
 
 ### Fixed
-- `main` had drifted from `CITATION.cff`/`CHECKSUMS.sha256`/`README.md`'s v1.0.0 version claims after the content additions above — this is the discrepancy this v1.0.1 entry and cut resolves; see `README.md`'s Status line for how `main` related to the tagged release at any given point.
+- `main` had drifted from `CITATION.cff`/`CHECKSUMS.sha256`/`README.md`'s v1.0.0 version claims after the content additions above — resolved by this v1.0.1 release.
+- `index.html`: the "Diagrams (11)" link pointed to `assets/diagrams/`, which 404s on GitHub Pages (it does not browse directories) — changed to the GitHub tree view.
+- `README.md`: fixed a stale "82-page document" reference (the PDF is now 88 pages) and a stale "not deployed to a public site (no GitHub Pages)" line — the Pages site has been live since this release's preceding commit.
+- `17-visual-asset-briefs.md`: fixed "All 10 diagrams" to "All 11 diagrams" in the cross-diagram consistency notes.
 
 ## [1.0.0] — 2026-08-13
 

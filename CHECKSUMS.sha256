@@ -21,10 +21,10 @@ b0da5d398f6e54118b5231c2abfe1101996167e677d8fad31c963ed500f90274  ./15-shortform
 246fdf7656a77209f109106b7b453eb263ac0f66a94fcb5d0c51d546539d8087  ./18-companion-data-model.xlsx
 92bb8890cb9fa8efafa6334d9582eb22bc61d0ae506fd1ca2792c3c6aae2dc45  ./19-slide-deck.pptx
 cb81a2ca006768dd72986652f4e7684c6a96847736b804c5ff85cc175c10516c  ./20-appendix-known-limitations.md
-e353817141689ffb762e1ebefd76352eaf5daaf1868a184d8fe1982f2a1f0a2c  ./CHANGELOG.md
-e33184d3f7f1fa7a74dd2e1302be0f0c15db378b608b5845ea26280c9b3cf805  ./CITATION.cff
+f8906cefe9d43ab1b99038deeaf305cb358f983c2a125057de50b603702a5850  ./CHANGELOG.md
+719911b6bc306538df3bddd1fabf68401c504e3cb610ce7be8e79976bfdb2d86  ./CITATION.cff
 839f99099d8bac968959ec2cd24f18bfedc20b384c4aaaeb6fcfbaee2e08235b  ./LICENSE
-c2ba405142f3a57f6e483e68682b86eee93b5a8402b694cc59629654fa6d5bbd  ./README.md
+4098073fe37e6089e2beaa4e6a46fe933f079f48fd17aadec068f0935d42846c  ./README.md
 c103775f7156cffb59dda55bd1daaae0d2ccc3b03e7c595c0eb87aeb47fbe8a0  ./assets/diagrams/diagram-01-end-to-end-chain.png
 79f00ee078bbaa4809462c4d48b9028afb07e9f8040aa34f6d554f3906d35e5c  ./assets/diagrams/diagram-02-cost-waterfall.png
 cb9f999d06be30fb943a7a079c6258661a2f017f9be4e61c9623d0039338eb78  ./assets/diagrams/diagram-03-intensity-ladder.png

@@ -3,7 +3,7 @@
 *The numbers and economics behind the AI working-capacity revolution—from electricity and infrastructure to tokens, robots, value, ownership, and agency.*
 
 **Author:** Valto Loikkanen
-**Status:** `main` is ahead of the tagged **v1.0.0** release (published, Zenodo-archived). This branch contains additional content — an expanded author section, the "From AI working capacity to new value" bridge, Diagram 11, embedded PDF visuals, and this GitHub Pages site — targeted for a **v1.0.1** release, pending author sign-off. See `CHANGELOG.md`'s Unreleased section for the exact diff from v1.0.0, and the repository's [Releases page](https://github.com/valto/ai-working-capacity-revolution/releases) for the last citable, checksum-verified snapshot.
+**Status:** **v1.0.1** research package, released 2026-08-14. See `CHANGELOG.md` for what changed since v1.0.0, and the repository's [Releases page](https://github.com/valto/ai-working-capacity-revolution/releases) for citable, checksum-verified snapshots of every release.
 **Research initiated:** August 12, 2026
 **Factual source cut-off:** 2026-08-13
 **Licence:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) for original prose, diagrams, and model structure — see `LICENSE` for the full scope note (third-party quotes, trademarks, and external data are excluded and remain under their own terms).

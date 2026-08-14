@@ -8,8 +8,8 @@ type: report
 authors:
   - family-names: Loikkanen
     given-names: Valto
-version: 1.0.0
-date-released: "2026-08-13"
+version: 1.0.1
+date-released: "2026-08-14"
 license: CC-BY-4.0
 repository-code: "https://github.com/valto/ai-working-capacity-revolution"
 abstract: >-
@@ -38,6 +38,6 @@ preferred-citation:
   authors:
     - family-names: Loikkanen
       given-names: Valto
-  version: 1.0.0
-  date-released: "2026-08-13"
+  version: 1.0.1
+  date-released: "2026-08-14"
   url: "https://github.com/valto/ai-working-capacity-revolution"
