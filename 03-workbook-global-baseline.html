@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Global Baseline
+Workbook — Why Are They Spending Trillions on AI?</title>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header>
+  <h1 style="font-size:1.5rem;"><a href="index.html" style="color:#fff; text-decoration:none;">Why Are They Spending Trillions on AI?</a></h1>
+  <p class="meta">Research foundation and living reference model &nbsp;·&nbsp; CC BY 4.0</p>
+</header>
+<main>
+<nav class="crumbs"><a href="index.html">Home</a> / Global Baseline Workbook</nav>
+<article class="doc-body">
+<h1 id="release-asset-7-global-baseline-workbook">Release Asset #7 —
+Global Baseline Workbook</h1>
+<h2
+id="energy-to-tokens-production-cost-curves-home-cooperative-professional-hyperscale">Energy-to-Tokens
+Production Cost Curves: Home, Cooperative, Professional, Hyperscale</h2>
+<p><strong>Part of:</strong> “Why Are They Spending Trillions on AI?” —
+Valto Loikkanen, CC BY 4.0 <strong>Model status:</strong> Draft v0.1,
+editable baseline <strong>Currency baseline:</strong> Global USD (see
+localization note below) <strong>Source cut-off for inputs used
+here:</strong> 2026-08-13 <strong>Not investment, legal, tax,
+procurement, or policy advice.</strong> Every scenario below is an
+editable illustration built on stated assumptions, not a forecast or
+recommendation.</p>
+<hr />
+<h2
+id="evidence-class-legend-used-throughout-every-table">Evidence-class
+legend (used throughout every table)</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>OBSERVED</strong></td>
+<td>Primary documentation, official spec sheet, or a directly-fetched
+primary source, checked on/immediately before 2026-08-12.</td>
+</tr>
+<tr>
+<td><strong>ATTRIBUTED</strong></td>
+<td>A named person/organization’s on-the-record statement. Not
+independently proven merely because it was said.</td>
+</tr>
+<tr>
+<td><strong>DERIVED</strong></td>
+<td>Transparent arithmetic from cited OBSERVED/ATTRIBUTED inputs.
+Formula always shown.</td>
+</tr>
+<tr>
+<td><strong>ASSUMPTION</strong></td>
+<td>A visible, editable scenario parameter — not a market fact. What it
+controls is stated.</td>
+</tr>
+<tr>
+<td><strong>INTERPRETATION</strong></td>
+<td>A labelled explanation of how the above may connect. Never a
+fact.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="how-to-adapt-this-workbook-to-your-own-numbers">How to adapt
+this workbook to your own numbers</h2>
+<p>This workbook is built as a chain of separated economic layers, never
+collapsed into one number:</p>
+<pre><code>raw energy cost → hardware-amortized cost → financed asset cost → full operating cost
+→ capacity/utilisation cost → token production cost → workload/working-capacity cost
+→ outcome and value (NOT mechanically determined by the layers above)</code></pre>
+<p>To re-run any tier with your own numbers, replace only the labelled
+<strong>ASSUMPTION</strong> cells — every <strong>OBSERVED</strong> cell
+is a verified spec/price and should only change if you have a newer
+primary source:</p>
+<ol type="1">
+<li><strong>Capital cost</strong> — swap in your actual purchase
+price/quote (tax, shipping, import duty excluded unless you add
+them).</li>
+<li><strong>Financing terms</strong> — down-payment %, interest rate,
+and term (years) are all editable; the formula is a standard amortizing
+annuity, shown once below so you can reuse it anywhere.</li>
+<li><strong>Electricity price ($/kWh)</strong> — replace the
+low/mid/high scenario with your local industrial, commercial, or
+residential tariff. This is the single most locally-variable input in
+the entire model (rates from ~$0.03/kWh to ~$0.40/kWh exist across real
+global markets).</li>
+<li><strong>Utilization (%)</strong> — the share of the year the
+hardware is actually generating tokens vs. idle. This is usually the
+single biggest lever on $/million-tokens — always shown as low/mid/high,
+never a single point estimate.</li>
+<li><strong>Throughput (tokens/sec)</strong> — swap in your own
+benchmark for your own model/quantization/framework. Do not reuse
+NVIDIA’s or any vendor’s benchmark number for a different model,
+precision, or interactivity setting — throughput is workload-specific
+and can vary 10-50x depending on target latency (see Hyperscale tier
+notes).</li>
+<li><strong>Opex/admin overhead</strong> — add your own facility,
+staffing, insurance, cooling, and networking costs; the illustrative
+bands here are placeholders, explicitly marked ASSUMPTION.</li>
+<li><strong>Currency</strong> — every figure below is USD. An FX line is
+shown only where needed to reconcile against a EUR-denominated prior
+figure; swap in your own rate and date for any other currency.</li>
+</ol>
+<p><strong>Formula used for every “capital + financing per year” row
+(DERIVED, standard amortizing-loan formula):</strong></p>
+<pre><code>down_payment = price × down_payment_%
+financed_amount = price − down_payment
+annual_loan_payment = financed_amount × rate / (1 − (1 + rate)^(−term_years))
+capital_and_financing_per_year = annual_loan_payment + (down_payment / term_years)</code></pre>
+<p>The second term spreads the down payment evenly across the financing
+term purely for annualized comparability — you may instead treat the
+down payment as a one-time year-0 cost if you prefer; both are
+legitimate and are flagged here as a modelling choice, not a fact.</p>
+<p><strong>Formula used for every “$/million tokens” row
+(DERIVED):</strong></p>
+<pre><code>annual_tokens = throughput_tokens_per_sec × 3600 × 8760 × utilization_%
+cost_per_million_tokens = (capital_and_financing_per_year + electricity_cost_per_year + opex_per_year)
+                            / (annual_tokens / 1,000,000)</code></pre>
+<p><strong>Formula used for every “$/AI-working-hour” row
+(DERIVED):</strong></p>
+<pre><code>cost_per_working_hour = cost_per_million_tokens × (tokens_per_working_hour_for_usage_mode / 1,000,000)</code></pre>
+<p>where <code>tokens_per_working_hour_for_usage_mode</code> comes from
+the usage-intensity bands defined in Section 6.</p>
+<hr />
+<h2 id="critical-methodology-rule-do-not-skip-this">1. Critical
+methodology rule — do not skip this</h2>
+<p><strong>Owned-production cost and retail API price are two different
+economic layers and must never be blended into one number.</strong></p>
+<ul>
+<li>The tables below price the <em>cost of producing tokens on hardware
+you own or co-own</em>, running <strong>open-weight models</strong>
+(e.g., Qwen, DeepSeek, Kimi-class models) — independent of what OpenAI,
+Anthropic, or Google charge for their own proprietary, closed
+models.</li>
+<li>Retail API prices (Section 7) are a separate comparison point — the
+“buy electricity from the grid” analogue to “generate your own solar
+power.” They tell you what it costs to rent someone else’s finished
+token-production capacity; they do not tell you what it costs to build
+and run your own.</li>
+<li>An earlier pass of this research mistakenly mixed lab retail pricing
+into an owned-hardware cost curve and had to be self-corrected
+mid-session. That correction is preserved here deliberately, as a worked
+“how not to model this” lesson, not smoothed over.</li>
+</ul>
+<hr />
+<h2 id="home-tier-single-nvidia-dgx-spark">2. HOME TIER — single NVIDIA
+DGX Spark</h2>
+<h3 id="capital-and-financing">2.1 Capital and financing</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Input</th>
+<th>Value</th>
+<th>Class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DGX Spark, Founders Edition, current MSRP</td>
+<td>$4,699</td>
+<td><strong>OBSERVED</strong> — NVIDIA Developer Forums official
+price-change notice, effective week of 2026-02-23 (raised from original
+$3,999 launch MSRP). URL:
+forums.developer.nvidia.com/t/2-23-2026-price-change-announcement/361713</td>
+</tr>
+<tr>
+<td>Down payment</td>
+<td>20% ($939.80)</td>
+<td><strong>ASSUMPTION</strong> — controls how much is financed vs. paid
+up front</td>
+</tr>
+<tr>
+<td>Financing rate</td>
+<td>8%/yr</td>
+<td><strong>ASSUMPTION</strong> — illustrative consumer/small-business
+credit rate</td>
+</tr>
+<tr>
+<td>Financing term</td>
+<td>5 years</td>
+<td><strong>ASSUMPTION</strong> — controls annuity size; shown at
+3/4/5/7yr sensitivity below</td>
+</tr>
+</tbody>
+</table>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Formula</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>financed_amount = $4,699 − $939.80 = $3,759.20</code></td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>annual_loan_payment = $3,759.20 × 0.08 / (1 − 1.08^−5) = $941.52</code></td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>capital_and_financing_per_year = $941.52 + ($939.80/5) = $941.52 + $187.96</code></td>
+<td><strong>$1,129.48/yr</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Straight-line cash-purchase comparison (no financing):
+<code>$4,699 / 5 = $939.80/yr</code> (<strong>DERIVED</strong>) — shown
+so you can compare “pay cash” vs. “finance” framing.</p>
+<p><strong>Financing-term sensitivity (DERIVED, same 8% rate, 20%
+down):</strong></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Term</th>
+<th>Annuity payment/yr</th>
+<th>Capital+financing/yr (incl. spread down payment)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3 yr</td>
+<td>$1,447.79</td>
+<td>$1,635.72</td>
+</tr>
+<tr>
+<td>4 yr</td>
+<td>$1,135.02</td>
+<td>$1,322.95</td>
+</tr>
+<tr>
+<td>5 yr</td>
+<td>$941.52</td>
+<td>$1,129.48</td>
+</tr>
+<tr>
+<td>7 yr</td>
+<td>$702.35</td>
+<td>$890.31</td>
+</tr>
+</tbody>
+</table>
+<h3 id="electricity">2.2 Electricity</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Input</th>
+<th>Value</th>
+<th>Class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Max continuous power draw</td>
+<td>240W (PSU rating); GB10 SoC TDP 140W</td>
+<td><strong>OBSERVED</strong> — NVIDIA official DGX Spark product
+page</td>
+</tr>
+<tr>
+<td>Electricity price scenarios</td>
+<td>Low $0.06/kWh · Mid $0.12/kWh · High $0.25/kWh</td>
+<td><strong>ASSUMPTION</strong> — replace with your local
+residential/commercial tariff</td>
+</tr>
+</tbody>
+</table>
+<h3 id="throughput-tokenssec-benchmark-basis">2.3 Throughput
+(tokens/sec) — benchmark basis</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>tok/s</th>
+<th>Class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Low (INT4 baseline, vLLM+AutoRound+FlashInfer)</td>
+<td>28.3</td>
+<td><strong>OBSERVED</strong> — NVIDIA Developer Forums thread by
+“Albond,” Qwen3.5-122B-A10B on single DGX Spark, directly-visible post
+content</td>
+</tr>
+<tr>
+<td>Mid (hybrid INT4+FP8 quantization)</td>
+<td>30.8</td>
+<td><strong>OBSERVED</strong> — same thread, +8.8% over baseline</td>
+</tr>
+<tr>
+<td>High (+ MTP-1 speculative decoding, “likely the memory bandwidth
+ceiling” per poster)</td>
+<td>38.4</td>
+<td><strong>OBSERVED</strong> — same thread, +25% over baseline</td>
+</tr>
+<tr>
+<td>Headline claim (unconfirmed)</td>
+<td>up to 51</td>
+<td><strong>ATTRIBUTED</strong> — same thread’s own summary line
+references a later post (#71) not independently viewed in this check;
+treat as unconfirmed</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tokens/kWh at 240W (DERIVED):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Throughput</th>
+<th>Tokens/hour</th>
+<th>Tokens/kWh</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>28.3 tok/s</td>
+<td>101,880</td>
+<td>424,500</td>
+</tr>
+<tr>
+<td>30.8 tok/s</td>
+<td>110,880</td>
+<td>462,000</td>
+</tr>
+<tr>
+<td>38.4 tok/s</td>
+<td>138,240</td>
+<td>576,000</td>
+</tr>
+<tr>
+<td>51 tok/s (unconfirmed)</td>
+<td>183,600</td>
+<td>765,000</td>
+</tr>
+</tbody>
+</table>
+<p><code>tokens_per_kWh = tok/s × 3600 / kW_draw</code> —
+e.g. <code>30.8 × 3600 / 0.240 = 462,000</code>.</p>
+<h3 id="home-tier-full-production-cost-curve-million-tokens">2.4 Home
+tier — full production cost curve ($/million tokens)</h3>
+<p>Utilization = share of the 8,760 hours/year the machine is actually
+generating tokens vs. idle. <strong>ASSUMPTION</strong>, shown at
+low/mid/high.</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr>
+<th>Throughput</th>
+<th>Utilization</th>
+<th>Elec price</th>
+<th>Annual tokens (DERIVED)</th>
+<th>Electricity cost/yr (DERIVED)</th>
+<th><strong>$/million tokens (DERIVED)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>30.8 tok/s</td>
+<td>Low 10%</td>
+<td>$0.12</td>
+<td>97.1M</td>
+<td>$25</td>
+<td><strong>$11.89</strong></td>
+</tr>
+<tr>
+<td>30.8 tok/s</td>
+<td>Mid 40%</td>
+<td>$0.12</td>
+<td>388.5M</td>
+<td>$101</td>
+<td><strong>$3.17</strong></td>
+</tr>
+<tr>
+<td>30.8 tok/s</td>
+<td>High 80%</td>
+<td>$0.12</td>
+<td>777.0M</td>
+<td>$202</td>
+<td><strong>$1.71</strong></td>
+</tr>
+<tr>
+<td>38.4 tok/s</td>
+<td>Low 10%</td>
+<td>$0.12</td>
+<td>121.1M</td>
+<td>$25</td>
+<td><strong>$9.53</strong></td>
+</tr>
+<tr>
+<td>38.4 tok/s</td>
+<td>Mid 40%</td>
+<td>$0.12</td>
+<td>484.4M</td>
+<td>$101</td>
+<td><strong>$2.54</strong></td>
+</tr>
+<tr>
+<td>38.4 tok/s</td>
+<td>High 80%</td>
+<td>$0.12</td>
+<td>968.8M</td>
+<td>$202</td>
+<td><strong>$1.37</strong></td>
+</tr>
+<tr>
+<td>30.8 tok/s</td>
+<td>Mid 40%</td>
+<td>Low $0.06</td>
+<td>388.5M</td>
+<td>$50</td>
+<td><strong>$3.04</strong></td>
+</tr>
+<tr>
+<td>30.8 tok/s</td>
+<td>Mid 40%</td>
+<td>High $0.25</td>
+<td>388.5M</td>
+<td>$210</td>
+<td><strong>$3.45</strong></td>
+</tr>
+</tbody>
+</table>
+<p><code>cost_per_million_tokens = ($1,129.48 + electricity_cost) / (annual_tokens/1,000,000)</code>.</p>
+<p><strong>Read:</strong> at home scale, capital+financing dominates the
+cost curve — electricity is a rounding error (~$13-$420/yr
+vs. ~$1,130/yr financing). Utilization is by far the biggest lever:
+going from 10% to 80% utilization at the same throughput cuts $/M-tokens
+by roughly 7x, because the fixed financing cost is spread over far more
+tokens.</p>
+<h3
+id="home-tier-ai-working-hour-mid-scenario-30.8-toks-40-utilization-0.12kwh-3.17m-tokens">2.5
+Home tier — $/AI-working-hour (mid scenario: 30.8 tok/s, 40%
+utilization, $0.12/kWh → $3.17/M tokens)</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Usage-intensity band (see Section 6)</th>
+<th>Tokens/hour</th>
+<th><strong>$/AI-working-hour (DERIVED)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chat/advisor</td>
+<td>10,000-30,000</td>
+<td>$0.032-$0.095</td>
+</tr>
+<tr>
+<td>Active AI coworker/copilot</td>
+<td>60,000-120,000</td>
+<td>$0.190-$0.380</td>
+</tr>
+<tr>
+<td>Delegated single agent</td>
+<td>200,000-600,000</td>
+<td>$0.633-$1.900</td>
+</tr>
+<tr>
+<td>Heavy multi-agent orchestration</td>
+<td>1,000,000-12,000,000</td>
+<td>$3.17-$38.00</td>
+</tr>
+</tbody>
+</table>
+<p>At high-utilization scenario ($1.71/M tokens), the same bands run
+roughly 46% lower; at low-utilization scenario ($11.89/M tokens),
+roughly 3.75x higher. Always state which utilization scenario a
+$/working-hour figure assumes.</p>
+<hr />
+<h2 id="cooperative-tier-50-members-10-dgx-sparks">3. COOPERATIVE TIER —
+50 members, 10 DGX Sparks</h2>
+<h3 id="capital-and-financing-10-machines">3.1 Capital and financing (10
+machines)</h3>
+<p>Same per-unit price/financing terms as Section 2.1, scaled ×10
+(<strong>DERIVED</strong>):</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Per machine</th>
+<th>×10 machines</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Capital+financing/yr</td>
+<td>$1,129.48</td>
+<td><strong>$11,294.76/yr</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="electricity-10-machines">3.2 Electricity (10 machines)</h3>
+<p>Aggregate max continuous draw: <code>0.240kW × 10 = 2.4kW</code>
+(<strong>DERIVED</strong> from OBSERVED per-unit spec).</p>
+<h3 id="adminoverhead-cooperative-specific-cost-layer">3.3
+Admin/overhead — cooperative-specific cost layer</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>$/yr</th>
+<th>Class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Low</td>
+<td>$1,000</td>
+<td><strong>ASSUMPTION</strong> — light self-managed coordination</td>
+</tr>
+<tr>
+<td>Mid</td>
+<td>$3,000</td>
+<td><strong>ASSUMPTION</strong> — part-time admin, basic
+networking/switch gear</td>
+</tr>
+<tr>
+<td>High</td>
+<td>$6,000</td>
+<td><strong>ASSUMPTION</strong> — dedicated coordinator time, redundant
+networking</td>
+</tr>
+</tbody>
+</table>
+<h3
+id="cooperative-tier-production-cost-curve-million-tokens-aggregate-throughput-1030.8-toks-308-toks">3.4
+Cooperative tier — production cost curve ($/million tokens), aggregate
+throughput 10×30.8 tok/s = 308 tok/s</h3>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Utilization</th>
+<th>Annual tokens (DERIVED)</th>
+<th>Electricity/yr ($0.12/kWh, DERIVED)</th>
+<th>Total/yr (incl. <span
+class="math inline">3, 000<em>a</em><em>d</em><em>m</em><em>i</em><em>n</em>)|**</span>/million
+tokens (DERIVED)**</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Low 20%</td>
+<td>1.94B</td>
+<td>$505</td>
+<td>$14,799</td>
+<td><strong>$7.62</strong></td>
+</tr>
+<tr>
+<td>Mid 50%</td>
+<td>4.86B</td>
+<td>$1,261</td>
+<td>$15,556</td>
+<td><strong>$3.20</strong></td>
+</tr>
+<tr>
+<td>High 85%</td>
+<td>8.26B</td>
+<td>$2,144</td>
+<td>$16,439</td>
+<td><strong>$1.99</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="cooperative-tier-membermonth-derived">3.5 Cooperative tier —
+$/member/month (DERIVED)</h3>
+<p><code>total_cost_per_year / 50 members / 12 months</code>:</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Utilization</th>
+<th>Total/yr</th>
+<th><strong>$/member/month</strong></th>
+<th>€/member/month (FX ASSUMPTION: 1 USD = 0.92 EUR)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Low 20%</td>
+<td>$14,799</td>
+<td><strong>$24.67</strong></td>
+<td>€22.69</td>
+</tr>
+<tr>
+<td>Mid 50%</td>
+<td>$15,556</td>
+<td><strong>$25.93</strong></td>
+<td>€23.85</td>
+</tr>
+<tr>
+<td>High 85%</td>
+<td>$16,439</td>
+<td><strong>$27.40</strong></td>
+<td>€25.21</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cooperative-tier-ai-working-hour-mid-scenario-3.20m-tokens">3.6
+Cooperative tier — $/AI-working-hour (mid scenario, $3.20/M tokens)</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Usage-intensity band</th>
+<th>Tokens/hour</th>
+<th><strong>$/AI-working-hour</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chat/advisor</td>
+<td>10,000-30,000</td>
+<td>$0.032-$0.096</td>
+</tr>
+<tr>
+<td>Active AI coworker/copilot</td>
+<td>60,000-120,000</td>
+<td>$0.192-$0.384</td>
+</tr>
+<tr>
+<td>Delegated single agent</td>
+<td>200,000-600,000</td>
+<td>$0.641-$1.922</td>
+</tr>
+<tr>
+<td>Heavy multi-agent orchestration</td>
+<td>1,000,000-12,000,000</td>
+<td>$3.20-$38.44</td>
+</tr>
+</tbody>
+</table>
+<h3
+id="the-42membermonth-figure-resolved-see-token-factory-scenario-workbook-1">3.7
+The €42/member/month figure — resolved, see Token-Factory Scenario
+Workbook §1</h3>
+<p><strong>Corrected 2026-08-13:</strong> an earlier version of this
+section treated the author’s published ~€42/member/month figure and this
+workbook’s ~€23-25/member/month DGX Spark recomputation as an unresolved
+discrepancy requiring reverse-engineering (the previous content of this
+section attempted exactly that, without success). The author has since
+clarified that €42/member/month was never based on DGX Spark pricing —
+it was built on his own illustrative €100,000-excluding-VAT capital
+assumption for a shared workstation-class machine (e.g., an NVIDIA DGX
+Station-type system), for which NVIDIA publishes specs but no retail
+price. The two figures describe two different hardware tiers, not one
+measurement with an uncertain source.</p>
+<p><strong>See the Token-Factory Scenario Workbook (Release Asset #10),
+§1/§1a/§1b, for the full corrected explanation, the €100,000
+capital-base arithmetic, and the side-by-side comparison of both
+hardware tiers.</strong> This workbook’s own ~€23-25/member/month figure
+(§3.5-3.6 above) remains valid and unchanged as the DGX Spark-tier
+scenario.</p>
+<hr />
+<h2 id="professional-tier-single-nvidia-hgx-b300-8-gpu-node">4.
+PROFESSIONAL TIER — single NVIDIA HGX B300 (8-GPU) node</h2>
+<p><strong>Important caveat up front:</strong> NVIDIA’s official HGX
+B300 product page (OBSERVED specs below) does <strong>not</strong>
+publish a power-draw figure or a price for this SKU. Both are therefore
+<strong>ASSUMPTION</strong>, not OBSERVED, in this tier — a materially
+different confidence level from the Home and Hyperscale tiers, where
+hardware price and/or power are directly sourced.</p>
+<h3 id="specs-observed-vs.-cost-inputs-assumption">4.1 Specs (OBSERVED)
+vs. cost inputs (ASSUMPTION)</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+<th>Class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPUs</td>
+<td>8× NVIDIA Blackwell Ultra (SXM)</td>
+<td><strong>OBSERVED</strong> — nvidia.com/en-us/data-center/hgx/</td>
+</tr>
+<tr>
+<td>Total memory</td>
+<td>2.1 TB</td>
+<td><strong>OBSERVED</strong></td>
+</tr>
+<tr>
+<td>NVFP4 inference</td>
+<td>144 PFLOPS sparse / 108 PFLOPS dense</td>
+<td><strong>OBSERVED</strong></td>
+</tr>
+<tr>
+<td>NVLink5 bandwidth</td>
+<td>1.8 TB/s per GPU-link, 14.4 TB/s total</td>
+<td><strong>OBSERVED</strong></td>
+</tr>
+<tr>
+<td>Networking</td>
+<td>1.6 TB/s</td>
+<td><strong>OBSERVED</strong></td>
+</tr>
+<tr>
+<td>Power draw</td>
+<td>Low 8kW · Mid 11kW · High 15kW</td>
+<td><strong>ASSUMPTION</strong> — no primary source; scaled
+illustratively from GB300 NVL72’s 135kW/72-GPU rack ratio plus host
+overhead margin</td>
+</tr>
+<tr>
+<td>Capital cost</td>
+<td>Low $250,000 · Mid $350,000 · High $500,000</td>
+<td><strong>ASSUMPTION</strong> — no public price found for this SKU;
+placeholder range only</td>
+</tr>
+</tbody>
+</table>
+<h3
+id="throughput-derived-by-linear-gpu-count-scaling-from-observed-per-gpu-mlperf-figures">4.2
+Throughput — derived by linear GPU-count scaling from OBSERVED per-GPU
+MLPerf figures</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Basis</th>
+<th>Per-GPU tok/s (OBSERVED, MLPerf v6.0 DeepSeek-R1)</th>
+<th>×8 GPUs (DERIVED)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offline scenario</td>
+<td>9,821</td>
+<td>78,568 tok/s</td>
+</tr>
+<tr>
+<td>Server (interactive) scenario</td>
+<td>8,064</td>
+<td>64,512 tok/s</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Caveat (carried from source register):</strong> the
+9,821/8,064 per-GPU figures were measured inside a 72-GPU NVL72 NVLink
+domain with Grace CPUs and rack-scale memory coherence — an 8-GPU HGX
+box (no NVL72 rack-scale fabric, no Grace CPU tier) will very likely NOT
+reproduce this per-GPU rate at the same precision/model. Treat this
+DERIVED figure as an optimistic upper bound, not a confirmed HGX B300
+benchmark.</p>
+<h3
+id="professional-tier-production-cost-curve-million-tokens-mid-capex-350000-mid-power-11kw-offline-derived-throughput-78568-toks-0.10kwh-electricity">4.3
+Professional tier — production cost curve ($/million tokens), mid capex
+$350,000, mid power 11kW, offline-derived throughput 78,568 tok/s,
+$0.10/kWh electricity</h3>
+<p><strong>Scope correction, added 2026-08-13: the figures in this table
+are capital + financing + electricity ONLY — no opex/overhead layer is
+included.</strong> This makes them structurally incomparable to the
+Hyperscale tier’s canonical figure (§5.6), which explicitly includes
+$200,000–$1,000,000/rack/yr of opex (facility, cooling beyond raw
+electricity, staffing, networking, replacement reserve). An earlier
+version of this workbook and the parent whitepaper compared
+Professional’s $0.044–$0.146/M directly against Hyperscale’s
+$0.091–$0.312/M as if both were full-layer figures, which made
+Professional look artificially cheaper. It is not shown here as cheaper
+than Hyperscale — see the illustrative opex sensitivity immediately
+below.</p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Utilization</th>
+<th>Annual tokens (DERIVED)</th>
+<th>Electricity/yr (DERIVED)</th>
+<th>Capital+financing/yr (5yr@8%, DERIVED)</th>
+<th><strong>$/million tokens, NO OPEX (DERIVED)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Low 25%</td>
+<td>619.4B</td>
+<td>$2,409</td>
+<td>$87,660</td>
+<td><strong>$0.146</strong></td>
+</tr>
+<tr>
+<td>Mid 60%</td>
+<td>1,486.6B</td>
+<td>$5,782</td>
+<td>$87,660</td>
+<td><strong>$0.064</strong></td>
+</tr>
+<tr>
+<td>High 90%</td>
+<td>2,229.9B</td>
+<td>$8,672</td>
+<td>$87,660</td>
+<td><strong>$0.044</strong></td>
+</tr>
+</tbody>
+</table>
+<p><code>annuity_payment($350,000, 8%, 5yr) = $87,660/yr</code> using
+the same formula as Section 1.</p>
+<p><strong>Illustrative opex sensitivity (SCENARIO ASSUMPTION, added
+2026-08-13 — not derived from any verified single-node opex figure,
+since none exists in this project’s source register):</strong> a single
+8-GPU node plausibly requires far less facility/staffing/networking
+overhead than a full rack, but is very unlikely to require zero. Using
+an illustrative $10,000/$25,000/$50,000-per-year low/mid/high opex band
+— deliberately not scaled proportionally from Hyperscale’s per-rack
+opex, since staffing and networking costs do not scale linearly with
+node count — the mid-utilization (60%) cost becomes:</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Opex scenario</th>
+<th>Opex/yr</th>
+<th>Total annual cost (capital+financing+electricity+opex)</th>
+<th><strong>$/million tokens, WITH OPEX</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Low</td>
+<td>$10,000</td>
+<td>$103,442</td>
+<td><strong>$0.070</strong></td>
+</tr>
+<tr>
+<td>Mid</td>
+<td>$25,000</td>
+<td>$118,442</td>
+<td><strong>$0.080</strong></td>
+</tr>
+<tr>
+<td>High</td>
+<td>$50,000</td>
+<td>$143,442</td>
+<td><strong>$0.096</strong></td>
+</tr>
+</tbody>
+</table>
+<p>This remains a SCENARIO ASSUMPTION, not a verified figure — the point
+is not that $0.070–$0.096/M is “the” correct Professional-tier cost, but
+that adding any plausible opex allowance narrows the apparent gap to
+Hyperscale’s canonical $0.133/M mid-case substantially, and the no-opex
+figures above should never be quoted as if they were a complete
+cost.</p>
+<h3
+id="professional-tier-ai-working-hour-mid-scenario-0.064m-tokens-no-opex-see-scope-correction-above">4.4
+Professional tier — $/AI-working-hour (mid scenario, $0.064/M tokens, NO
+OPEX — see scope correction above)</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Usage-intensity band</th>
+<th>Tokens/hour</th>
+<th><strong>$/AI-working-hour</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chat/advisor</td>
+<td>10,000-30,000</td>
+<td>$0.0006-$0.0019</td>
+</tr>
+<tr>
+<td>Active AI coworker/copilot</td>
+<td>60,000-120,000</td>
+<td>$0.0038-$0.0076</td>
+</tr>
+<tr>
+<td>Delegated single agent</td>
+<td>200,000-600,000</td>
+<td>$0.0127-$0.0382</td>
+</tr>
+<tr>
+<td>Heavy multi-agent orchestration</td>
+<td>1,000,000-12,000,000</td>
+<td>$0.064-$0.764</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Read, corrected 2026-08-13:</strong> the professional tier’s
+no-opex $/M-tokens figure is roughly 25-70x lower than the Home tier’s
+figure at comparable utilization — but this comparison is not on equal
+footing, since Home’s figure already includes its full (if modest) cost
+structure while Professional’s excludes opex entirely (see the scope
+correction above). Even after adding the illustrative opex sensitivity,
+Professional still comes out well below Home, consistent with
+GPU-generation efficiency (Blackwell Ultra vs. GB10) and better
+amortization of fixed cost across much higher throughput — but the
+specific 25-70x multiple should not be treated as a clean, like-for-like
+efficiency ratio, and should not be over-read given the unverified
+capex/power inputs. It is directionally informative, not a confirmed
+market price point.</p>
+<hr />
+<h2 id="hyperscaleindustrial-tier-gb300-nvl72-rack-scale">5.
+HYPERSCALE/INDUSTRIAL TIER — GB300 NVL72 rack scale</h2>
+<h3 id="rack-specs-observed">5.1 Rack specs (OBSERVED)</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPUs/rack</td>
+<td>72× Blackwell Ultra</td>
+<td>NVIDIA official GB300 NVL72 page</td>
+</tr>
+<tr>
+<td>CPUs/rack</td>
+<td>36× Grace (2,592 Arm Neoverse V2 cores)</td>
+<td>NVIDIA official page</td>
+</tr>
+<tr>
+<td>GPU memory</td>
+<td>20 TB HBM3e @ up to 576 TB/s</td>
+<td>NVIDIA official page</td>
+</tr>
+<tr>
+<td>NVLink5 bandwidth</td>
+<td>130 TB/s</td>
+<td>NVIDIA official page</td>
+</tr>
+<tr>
+<td>FP4 dense</td>
+<td>1,440 PFLOPS (10,800 PFLOPS with sparsity)</td>
+<td>NVIDIA official page</td>
+</tr>
+<tr>
+<td>Rack power (TDP)</td>
+<td>135 kW</td>
+<td><strong>OBSERVED</strong>, Lenovo Press LP2357 OEM reference spec
+(NVIDIA’s own page does not publish a power figure)</td>
+</tr>
+<tr>
+<td>Rack power (peak)</td>
+<td>up to 155 kW</td>
+<td>Lenovo Press LP2357</td>
+</tr>
+</tbody>
+</table>
+<h3 id="benchmark-throughput-critical-scaling-caveat">5.2 Benchmark
+throughput — critical scaling caveat</h3>
+<p>NVIDIA’s own MLPerf Inference v6.0 submission reports
+<strong>2,494,310 tokens/sec</strong> (rounded to “2.5M tok/s” in
+NVIDIA’s own captioning) for DeepSeek-R1 — but this is an
+<strong>aggregate across 4 interconnected GB300 NVL72 racks (288
+GPUs)</strong>, not one rack. Dividing evenly
+(<strong>DERIVED</strong>):</p>
+<pre><code>per_rack_offline_tokps = 2,494,310 / 4 racks = 623,578 tok/s (derived, even split assumption)</code></pre>
+<p>Cross-check against NVIDIA’s directly-published per-GPU figures
+(<strong>OBSERVED</strong>, more granular and arguably more reliable
+than the even-split derivation above):</p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Per-GPU tok/s (OBSERVED)</th>
+<th>×72 GPUs (DERIVED, rack total)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offline</td>
+<td>9,821</td>
+<td>707,112</td>
+</tr>
+<tr>
+<td>Server (interactive)</td>
+<td>8,064</td>
+<td>580,608</td>
+</tr>
+</tbody>
+</table>
+<p>These three per-rack estimates (623,578 / 707,112 / 580,608) bracket
+a plausible ~580,000-710,000 tok/s per-rack range depending on exact
+scenario and derivation method — this workbook uses <strong>623,578
+tok/s</strong> (the even-split figure) as its primary working number for
+continuity with the 4-rack aggregate benchmark, and flags the ~14%
+spread against the per-GPU-derived figures explicitly rather than
+picking one silently.</p>
+<h3 id="tokenskwh-derived-electricity-only-layer">5.3 Tokens/kWh
+(DERIVED) — electricity-only layer</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Basis</th>
+<th>tok/s/kW</th>
+<th>Tokens/kWh</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>623,578 tok/s @ 135kW TDP</td>
+<td>4,619</td>
+<td>16,628,733</td>
+</tr>
+<tr>
+<td>623,578 tok/s @ 155kW peak</td>
+<td>4,023</td>
+<td>14,483,090</td>
+</tr>
+<tr>
+<td>580,608 tok/s (server-scenario, per-GPU-derived) @ 135kW</td>
+<td>4,301</td>
+<td>15,482,880</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Electricity-ONLY cost per million tokens (DERIVED)</strong> —
+this is the bottom layer only, before any hardware/financing/opex:</p>
+<table>
+<thead>
+<tr>
+<th>Electricity price</th>
+<th>$/M tokens (at 16.6M tok/kWh basis)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$0.06/kWh</td>
+<td>$0.0036</td>
+</tr>
+<tr>
+<td>$0.10/kWh</td>
+<td>$0.0060</td>
+</tr>
+<tr>
+<td>$0.25/kWh</td>
+<td>$0.0150</td>
+</tr>
+</tbody>
+</table>
+<p><strong>This confirms the source-register finding: raw electricity is
+a rounding error at hyperscale — a small fraction of a cent per million
+tokens at typical electricity prices, and still under two cents even at
+the high end of the range shown ($0.015, i.e. 1.5 cents, at
+$0.25/kWh).</strong> All of the meaningful cost at this tier comes from
+capital, financing, and operating overhead, not power.</p>
+<h3
+id="rack-capital-cost-two-very-different-reference-points-kept-explicitly-separate">5.4
+Rack capital cost — two very different reference points, kept explicitly
+separate</h3>
+<p><strong>Reference point A — implied all-in infrastructure cost from
+Huang/Fink’s on-air $50-60B/GW figure (ATTRIBUTED, CNBC, Aug 10
+2026):</strong></p>
+<pre><code>rack_share_of_1GW = 135kW / 1,000,000kW = 0.000135
+implied_allin_cost_per_rack = $50-60B × 0.000135 = $6.75M-$8.1M</code></pre>
+<p>This is a full-infrastructure figure — land, shell, power delivery,
+cooling, and compute together, per Huang’s and Fink’s own framing on the
+CNBC segment — <strong>not</strong> a hardware-only rack price.</p>
+<p><strong>Reference point B — illustrative hardware-only capex
+(ASSUMPTION, analyst-anchored, explicitly NOT an official NVIDIA
+price):</strong> $4,000,000/rack. No official NVIDIA rack price was
+found in this check; this figure sits below Reference Point A because it
+excludes land/shell/power-delivery infrastructure, consistent with A
+being the “full buildout” number and B being “compute hardware
+only.”</p>
+<p><strong>Financing sensitivity on the $4M hardware-only scenario
+(DERIVED, 8% rate):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Annuity payment/yr</th>
+<th>Straight-line depreciation/yr</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3 yr</td>
+<td>$1,552,134</td>
+<td>$1,333,333</td>
+</tr>
+<tr>
+<td>4 yr</td>
+<td>$1,207,683</td>
+<td>$1,000,000</td>
+</tr>
+<tr>
+<td>5 yr</td>
+<td>$1,001,826</td>
+<td>$800,000</td>
+</tr>
+<tr>
+<td>7 yr</td>
+<td>$768,290</td>
+<td>$571,429</td>
+</tr>
+</tbody>
+</table>
+<h3
+id="opexoverhead-layer-assumption-facility-cooling-beyond-raw-electricity-staffing-networking-replacement-reserve">5.5
+Opex/overhead layer (ASSUMPTION — facility, cooling beyond raw
+electricity, staffing, networking, replacement reserve)</h3>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>$/yr per rack</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Low</td>
+<td>$200,000</td>
+</tr>
+<tr>
+<td>Mid</td>
+<td>$500,000</td>
+</tr>
+<tr>
+<td>High</td>
+<td>$1,000,000</td>
+</tr>
+</tbody>
+</table>
+<h3
+id="hyperscale-tier-full-production-cost-curve-million-tokens-5yr8-financing-on-4m-hardware-capex-mid-opex-500000yr-0.10kwh">5.6
+Hyperscale tier — full production cost curve ($/million tokens), 5yr@8%
+financing on $4M hardware capex, mid opex $500,000/yr, $0.10/kWh</h3>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr>
+<th>Utilization</th>
+<th>Annual tokens (DERIVED)</th>
+<th>Raw electricity/M tok</th>
+<th>Capital+financing/M tok</th>
+<th>Opex(mid)/M tok</th>
+<th><strong>TOTAL $/million tokens (DERIVED)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Low 25%</td>
+<td>4.92T</td>
+<td>$0.0060</td>
+<td>$0.204</td>
+<td>$0.102</td>
+<td><strong>$0.312</strong></td>
+</tr>
+<tr>
+<td>Mid 60%</td>
+<td>11.80T</td>
+<td>$0.0060</td>
+<td>$0.085</td>
+<td>$0.042</td>
+<td><strong>$0.133</strong></td>
+</tr>
+<tr>
+<td>High 90%</td>
+<td>17.70T</td>
+<td>$0.0060</td>
+<td>$0.057</td>
+<td>$0.028</td>
+<td><strong>$0.091</strong></td>
+</tr>
+</tbody>
+</table>
+<h3
+id="cross-check-against-nvidias-own-published-figure-now-independently-verified-with-a-correction-to-its-scope">5.7
+Cross-check against NVIDIA’s own published figure — now independently
+verified, with a correction to its scope</h3>
+<p><strong>Correction (2026-08-13):</strong> an earlier version of this
+workbook flagged “$0.123/M tokens” as UNVERIFIABLE. It is now
+independently confirmed directly on NVIDIA’s own site: NVIDIA states
+GB300 NVL72 delivers AI inference at <strong>$0.123 per million tokens
+at 116 tokens/sec/user interactivity, using NVIDIA Dynamo and
+TensorRT-LLM</strong>, attributed to SemiAnalysis InferenceX benchmarks
+as of April 2026 (<strong>[FACT]</strong> —
+nvidia.com/en-gb/solutions/ai/inference/, checked 2026-08-13).</p>
+<p><strong>The correction that matters is scope, not existence.</strong>
+This figure describes a <strong>72-GPU GB300 NVL72 rack-scale
+system</strong> running a specific software stack (Dynamo +
+TensorRT-LLM) at a specific interactivity setting (116 tok/s/user) — it
+is a hyperscale/industrial-tier figure and belongs only in this
+section’s comparison, cross-checked against this workbook’s own
+$0.091–$0.312/M-tokens hyperscale range above (same order of magnitude,
+consistent with a real, verified figure landing inside a modeled range
+built on different capex/opex assumptions). <strong>It must never be
+used to estimate the economics of a single workstation, a DGX Spark, or
+a DGX Station</strong> — those are entirely different hardware tiers
+(see Section 2 and the Token-Factory Scenario Workbook §1a/1b for the
+workstation-tier and desktop-tier figures respectively). Using a 72-GPU
+rack-scale benchmark to price a one-machine cooperative purchase would
+understate that tier’s real cost by roughly two to three orders of
+magnitude, which is exactly the kind of cross-tier mixing this paper’s
+core methodology rule warns against (Section 1, above).</p>
+<p>SemiAnalysis’s own live InferenceX dashboard separately shows a wider
+GB300 DeepSeek-R1 cost range of roughly <strong>$0.065–$0.076/M
+tokens</strong> at ~70 tok/s/user interactivity up to
+<strong>$2.3–$3.3/M tokens</strong> at ~219 tok/s/user (higher
+interactivity = fewer tokens batched together = higher cost) — the
+now-confirmed $0.123/M-tokens figure sits inside this same range, at a
+specific interactivity point (116 tok/s/user) that differs from either
+end of that spread, which is expected given “tokens per watt” is not one
+fixed number for a given chip (see Section 10’s discussion of the same
+interactivity trade-off).</p>
+<h3 id="hyperscale-tier-ai-working-hour-mid-scenario-0.133m-tokens">5.8
+Hyperscale tier — $/AI-working-hour (mid scenario, $0.133/M tokens)</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Usage-intensity band</th>
+<th>Tokens/hour</th>
+<th><strong>$/AI-working-hour</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chat/advisor</td>
+<td>10,000-30,000</td>
+<td>$0.0013-$0.0040</td>
+</tr>
+<tr>
+<td>Active AI coworker/copilot</td>
+<td>60,000-120,000</td>
+<td>$0.0081-$0.0161</td>
+</tr>
+<tr>
+<td>Delegated single agent</td>
+<td>200,000-600,000</td>
+<td>$0.0269-$0.0807</td>
+</tr>
+<tr>
+<td>Heavy multi-agent orchestration</td>
+<td>1,000,000-12,000,000</td>
+<td>$0.133-$1.614</td>
+</tr>
+</tbody>
+</table>
+<h3
+id="vera-rubin-nvl72-forward-looking-comparison-not-this-workbooks-baseline-shown-for-context-only">5.9
+Vera Rubin NVL72 — forward-looking comparison (not this workbook’s
+baseline; shown for context only)</h3>
+<p>NVIDIA’s own vendor claims (<strong>ATTRIBUTED</strong>, marketing
+material) for its next-generation Vera Rubin NVL72 (successor to GB300)
+claim “up to 10x more tokens per megawatt” and “one-tenth the cost per
+million tokens” vs. GB200 NVL72. SemiAnalysis’s own independent
+benchmark-based analysis is more conservative and workload-dependent:
+<strong>~1.5-8x</strong> cost advantage and a throughput-per-MW gap that
+starts near 2x at low interactivity and reaches <strong>~5.4x</strong>
+at high interactivity, depending on which GB200/GB300 baseline
+generation is used. Do not use the vendor’s “10x”/“one-tenth” figures as
+a confirmed multiplier in any forward projection without citing this
+more conservative independent range alongside it.</p>
+<hr />
+<h2
+id="usage-intensity-tokens-per-hour-conversion-bands-used-in-every-tiers-working-hour-row">6.
+Usage-intensity → tokens-per-hour conversion bands (used in every tier’s
+$/working-hour row)</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Usage mode</th>
+<th>Tokens/AI-working-hour</th>
+<th>Class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chat/advisor mode</td>
+<td>10,000-30,000</td>
+<td><strong>ASSUMPTION</strong> — illustrative band, informed by general
+usage patterns, not a single verified statistic</td>
+</tr>
+<tr>
+<td>Active AI coworker/copilot</td>
+<td>60,000-120,000</td>
+<td><strong>ASSUMPTION</strong></td>
+</tr>
+<tr>
+<td>Delegated single agent</td>
+<td>200,000-600,000</td>
+<td><strong>ASSUMPTION</strong></td>
+</tr>
+<tr>
+<td>Heavy multi-agent orchestration</td>
+<td>1,000,000-12,000,000+</td>
+<td><strong>ASSUMPTION</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Supporting context (ATTRIBUTED, OpenAI’s own self-reported
+internal telemetry, not independently audited):</strong> OpenAI reports
+Codex reached 99.8% of its weekly internal output tokens by mid-2026; by
+May 2026, 70.2% of sampled Codex users made at least one request
+estimated above 1 human-hour of equivalent work, and 25.6% made one
+above 8 human-hours; by June 2026, 99th-percentile heavy users regularly
+generated 60+ hours of Codex agent-turn time per day across parallel
+agents. Source: OpenAI, “How agents are transforming work”
+(openai.com/index/how-agents-are-transforming-work/, June 25, 2026),
+retrieved via Wayback Machine archive. Independent press coverage
+explicitly notes “every number comes from OpenAI itself,” with no
+third-party audit — treat these as directional context for why
+heavy-orchestration usage bands can run orders of magnitude above
+chat-mode usage, not as a calibration of the exact band boundaries
+above.</p>
+<p><strong>A claimed NVIDIA reference agentic workload figure of “32K
+input + 8K output tokens/turn” could not be found anywhere</strong>
+despite extensive searching (source register, Cluster J) and should not
+be cited as an NVIDIA figure in this or any other release asset.</p>
+<hr />
+<h2
+id="retail-api-pricing-comparison-layer-only-not-a-production-cost-input">7.
+Retail API pricing — comparison layer ONLY, not a production-cost
+input</h2>
+<p>Do not use these to price owned hardware. Shown only as the “buy from
+the grid” comparison point (per Section 1’s methodology rule). All
+confirmed <strong>OBSERVED</strong> or <strong>ATTRIBUTED</strong> as of
+2026-08-12 (see full source register for per-model confidence
+notes):</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Provider/tier</th>
+<th>Input $/M tokens</th>
+<th>Output $/M tokens</th>
+<th>Class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Anthropic Claude Sonnet 5</td>
+<td>$2.00</td>
+<td>$10.00</td>
+<td><strong>OBSERVED</strong> — Anthropic’s own live pricing page; this
+is now the permanent standard price, not an expiring intro rate</td>
+</tr>
+<tr>
+<td>Anthropic Claude Opus 5</td>
+<td>$5.00</td>
+<td>$25.00</td>
+<td><strong>OBSERVED</strong></td>
+</tr>
+<tr>
+<td>Anthropic Claude Fable 5</td>
+<td>$10.00</td>
+<td>$50.00</td>
+<td><strong>OBSERVED</strong></td>
+</tr>
+<tr>
+<td>OpenAI GPT-5.6 Luna</td>
+<td>$0.20</td>
+<td>$1.20</td>
+<td><strong>ATTRIBUTED</strong> — via AI-summarizing fetch tool, not raw
+primary text; treat as lower-confidence</td>
+</tr>
+<tr>
+<td>OpenAI GPT-5.6 Terra</td>
+<td>$2.00</td>
+<td>$12.00</td>
+<td><strong>ATTRIBUTED</strong></td>
+</tr>
+<tr>
+<td>OpenAI GPT-5.6 Sol</td>
+<td>$5.00</td>
+<td>$30.00</td>
+<td><strong>ATTRIBUTED</strong></td>
+</tr>
+<tr>
+<td>Google Gemini 3.1 Pro (≤200K tokens)</td>
+<td>$2.00</td>
+<td>$12.00</td>
+<td><strong>OBSERVED</strong> — Google’s own live pricing page; model
+still in “Preview,” not GA</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Read across tiers vs. retail, corrected 2026-08-13 (an
+earlier version of this passage stated an unsupported and directionally
+wrong “14-25x more expensive” claim — the actual comparison is more
+nuanced and depends heavily on both Home-tier utilization and which
+retail tier is used):</strong> using the same 30% input / 70% output
+blend convention applied consistently elsewhere in this paper (see the
+AI Working-Capacity Conversion Workbook §C.0), the retail tiers above
+blend to approximately $0.90/M (Luna), $7.60/M (Sonnet 5), $9.00/M
+(Terra/Gemini), $19.00/M (Opus 5), $22.50/M (Sol), and $38.00/M (Fable
+5) <strong>[CALC]</strong>.</p>
+<p>Against the Home tier’s <strong>best-case</strong> $/M-tokens (~$1.37
+at 38.4 tok/s, 80% utilization): Home is <em>cheaper</em> than every
+retail tier except Luna (where Luna is instead roughly 1.5x cheaper than
+Home). Against the Home tier’s <strong>worst-case</strong> $/M-tokens
+(~$11.89 at 10% utilization): Home is now more expensive than Luna,
+Sonnet 5, Terra, and Gemini, roughly comparable to Opus 5, and cheaper
+than Sol and Fable 5 <strong>[CALC]</strong>.</p>
+<p><strong>The honest finding is therefore not a fixed multiplier in
+either direction — it is that Home-scale self-hosting’s
+cost-competitiveness versus retail depends entirely on (a) how steadily
+the owner actually uses the machine and (b) which retail tier is the
+realistic alternative.</strong> A well-utilized Home device can undercut
+most mid-to-premium retail tiers; a poorly-utilized one can be worse
+than all but the most expensive retail tiers. This is consistent with
+the wider whitepaper’s ownership-architecture argument that
+self-hosting’s case rests on data control, customization, and
+independence from a provider — but it is not true that self-hosting is
+categorically uncompetitive on raw $/token cost, and this workbook no
+longer claims that. Hyperscale production cost ($0.091-$0.312/M tokens,
+canonical mid $0.133/M) remains far below any retail API price shown
+here at every utilization scenario — consistent with the source-register
+finding that inference-serving margins for frontier labs are, per
+Huang’s on-air framing, “incredibly profitable” (ATTRIBUTED, unverified
+against any lab’s actual disclosed margins).</p>
+<hr />
+<h2 id="localization-note">8. Localization note</h2>
+<p>All figures above use a global USD baseline with illustrative
+electricity-price scenarios. To localize:</p>
+<ol type="1">
+<li>Replace the $0.06/$0.12/$0.25 (or $0.10 mid, where used) per-kWh
+scenarios with your actual local commercial/industrial tariff — this is
+usually the largest source of legitimate cross-country variation.</li>
+<li>Replace financing rate/term with your locally available credit terms
+(consumer credit, SME loan, or infrastructure project finance, depending
+on tier).</li>
+<li>Convert USD to local currency using a stated FX rate and date —
+never silently blend currencies.</li>
+<li>Re-run utilization scenarios against your own realistic usage
+pattern; the illustrative low/mid/high bands here are not calibrated to
+any specific country or organization.</li>
+</ol>
+<hr />
+<h2
+id="summary-comparison-table-mid-scenario-million-tokens-across-all-four-tiers">9.
+Summary comparison table — mid-scenario $/million tokens across all four
+tiers</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Capital basis</th>
+<th>Opex/overhead included?</th>
+<th>Mid $/M tokens (DERIVED)</th>
+<th>Confidence on capital/power inputs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Home (1× DGX Spark)</td>
+<td>$4,699, OBSERVED price</td>
+<td>Yes (§2, illustrative support/software allowance)</td>
+<td>$3.17</td>
+<td>High — price and power OBSERVED, throughput OBSERVED community
+benchmark</td>
+</tr>
+<tr>
+<td>Cooperative (50 members, 10× DGX Spark)</td>
+<td>$46,990, OBSERVED price ×10</td>
+<td>Yes (§3.3, ASSUMPTION admin/networking band)</td>
+<td>$3.20</td>
+<td>High on hardware; admin/overhead is ASSUMPTION</td>
+</tr>
+<tr>
+<td>Professional (1× HGX B300 node)</td>
+<td>$350,000, ASSUMPTION</td>
+<td><strong>No — capital+financing+electricity only (§4.3); with an
+illustrative opex sensitivity added in §4.3, mid-case rises to
+~$0.080/M</strong></td>
+<td>$0.064 (no opex)</td>
+<td>Low-medium — capex and power are unverified placeholders; throughput
+is a scaling derivation, not a direct benchmark</td>
+</tr>
+<tr>
+<td>Hyperscale (1× GB300 NVL72 rack)</td>
+<td>$4,000,000, ASSUMPTION (hardware-only)</td>
+<td>Yes (§5.5, ASSUMPTION opex band, $200k-1M/yr)</td>
+<td>$0.133</td>
+<td>Medium — rack specs and power OBSERVED; capex is analyst-anchored
+ASSUMPTION, not an official price</td>
+</tr>
+</tbody>
+</table>
+<p><strong>INTERPRETATION, corrected 2026-08-13:</strong> the roughly
+25-50x gap between Home/Cooperative and Professional/Hyperscale tiers is
+directionally consistent with expected economies of scale in AI
+infrastructure (higher-generation silicon, better amortization of fixed
+cost over vastly higher throughput) but should not be read as a precise
+multiplier given the mixed confidence levels above — the
+Home/Cooperative tiers rest on OBSERVED prices and OBSERVED community
+benchmarks, while the Professional tier in particular rests on
+ASSUMPTION-level capex and power inputs with no public price found for
+that specific hardware SKU. <strong>The Professional-vs-Hyperscale
+comparison specifically is not apples-to-apples</strong>: Professional’s
+$0.064/M excludes opex entirely while Hyperscale’s $0.133/M includes it,
+so part of the apparent 2x gap between them is a scope artifact, not a
+pure hardware-generation effect — see §4.3’s illustrative opex
+sensitivity, which narrows this gap once a plausible (though unverified)
+opex allowance is added to Professional.</p>
+</article>
+<div class="page-footer-nav">
+  <a href="index.html">← Back to home</a>
+  <a href="https://github.com/valto/ai-working-capacity-revolution/blob/main/03-workbook-global-baseline.md">View source / edit on GitHub →</a>
+</div>
+</main>
+<footer>
+  <p>© Valto Loikkanen. Licensed under CC BY 4.0 where stated. Educational research and scenario analysis — not investment, legal, tax, procurement, or policy advice.</p>
+  <p><a href="https://github.com/valto/ai-working-capacity-revolution">View repository on GitHub</a></p>
+</footer>
+</body>
+</html>

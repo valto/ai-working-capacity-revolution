@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Working-Capacity Conversion
+Workbook — Why Are They Spending Trillions on AI?</title>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header>
+  <h1 style="font-size:1.5rem;"><a href="index.html" style="color:#fff; text-decoration:none;">Why Are They Spending Trillions on AI?</a></h1>
+  <p class="meta">Research foundation and living reference model &nbsp;·&nbsp; CC BY 4.0</p>
+</header>
+<main>
+<nav class="crumbs"><a href="index.html">Home</a> / AI Working-Capacity Conversion Workbook</nav>
+<article class="doc-body">
+<h1 id="release-asset-9-ai-working-capacity-conversion-workbook">Release
+Asset #9 — AI Working-Capacity Conversion Workbook</h1>
+<h2
+id="the-usage-intensity-ladder-tokenshour-ai-working-hour-across-production-tiers-plus-a-human-work-comparison-table">The
+Usage-Intensity Ladder: Tokens/Hour → $/AI-Working-Hour, Across
+Production Tiers — Plus a Human-Work Comparison Table</h2>
+<p><strong>Part of:</strong> <em>Why Are They Spending Trillions on
+AI?</em> — Valto Loikkanen, CC BY 4.0 <strong>Workbook status:</strong>
+v1.0 draft, built from the verified source register (cut-off 2026-08-13)
+<strong>Currency baseline:</strong> Global USD <strong>Depends
+on:</strong> Release Asset #7 (Global Baseline Workbook —
+production-cost curves per tier). This workbook does not re-derive
+hardware/electricity/financing costs; it takes Asset #7’s
+already-derived $/million-tokens figures as inputs and converts them
+into $/AI-working-hour across a usage-intensity ladder. <strong>Not
+investment, legal, tax, procurement, or policy advice.</strong> Every
+scenario below is an editable illustration built on stated assumptions,
+not a forecast or recommendation.</p>
+<hr />
+<h2
+id="evidence-class-legend-used-throughout-every-table">Evidence-class
+legend (used throughout every table)</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>OBSERVED</strong></td>
+<td>Primary documentation, official spec/price page, filing, regulation,
+or direct recording/transcript, independently checked on/immediately
+before 2026-08-12.</td>
+</tr>
+<tr>
+<td><strong>ATTRIBUTED</strong></td>
+<td>A named person/organization’s on-the-record statement. Not
+independently proven merely because it was said — including when the
+statement is itself well-documented.</td>
+</tr>
+<tr>
+<td><strong>DERIVED</strong></td>
+<td>Transparent arithmetic from cited OBSERVED/ATTRIBUTED inputs.
+Formula always shown, never just the result.</td>
+</tr>
+<tr>
+<td><strong>ASSUMPTION</strong></td>
+<td>A visible, editable scenario parameter — not a market fact. What it
+controls is always stated.</td>
+</tr>
+<tr>
+<td><strong>INTERPRETATION</strong></td>
+<td>A labelled explanation of how the above may connect. Never presented
+as if it were a fact.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2
+id="part-a-what-a-token-and-an-ai-working-hour-are-and-what-they-are-not">Part
+A — What a “token” and an “AI-working-hour” are, and what they are
+not</h2>
+<p><strong>INTERPRETATION.</strong> A token is a measurable unit of
+model processing/output — it meters AI <em>working capacity</em>,
+roughly the way a kWh meters energy capacity. A token is
+<strong>not</strong> equivalent to value, quality, correctness, or “an
+hour of work.” An “AI-working-hour” as used in this workbook is a
+<em>usage-intensity band</em> (a rate of token consumption sustained
+across one clock-hour), not a unit of guaranteed human-equivalent
+output. Two agents can each burn identical tokens/hour and produce
+wildly different value — one useful, one wasted, one actively harmful.
+This workbook prices token throughput; it does not, and cannot, price
+outcomes. See Part D for the outcome/value boundary stated explicitly,
+and Release Asset #11 (or the paper’s core value-framework section) for
+the fuller treatment of why working capacity ≠ value.</p>
+<p><strong>Required economic-layer separation (never collapsed in this
+workbook):</strong></p>
+<pre><code>raw energy cost → hardware-amortized production cost → financed asset cost → full operating infrastructure cost
+→ capacity/utilisation cost → token production cost → workload/AI-working-capacity cost
+→ outcome and value  (NOT mechanically determined by anything above this line)</code></pre>
+<p>Everything in Parts B and C below lives at the “token production
+cost” and “workload/AI-working-capacity cost” layers. Part D restates
+explicitly that the step to “outcome and value” is never automatic.</p>
+<hr />
+<h2 id="part-b-the-usage-intensity-ladder-tokensai-working-hour">Part B
+— The usage-intensity ladder (tokens/AI-working-hour)</h2>
+<p>Four bands, low/mid/high, each an <strong>ASSUMPTION</strong>
+(illustrative range, not a single verified statistic) but informed where
+noted by OpenAI’s Codex telemetry (<strong>ATTRIBUTED</strong>,
+self-reported, not independently audited).</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>Usage-intensity band</th>
+<th>What it describes</th>
+<th>Tokens/AI-working-hour: Low</th>
+<th>Mid</th>
+<th>High</th>
+<th>Class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Chat/advisor</strong></td>
+<td>Human asks, AI answers; human reads/decides/executes. AI never
+touches the world directly.</td>
+<td>10,000</td>
+<td>20,000</td>
+<td>30,000</td>
+<td><strong>ASSUMPTION</strong></td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Active AI coworker</strong></td>
+<td>Human and AI work the same task together in real time (co-editing,
+co-drafting, pair-programming style); continuous back-and-forth within
+the hour.</td>
+<td>60,000</td>
+<td>90,000</td>
+<td>120,000</td>
+<td><strong>ASSUMPTION</strong></td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Delegated single agent</strong></td>
+<td>Human defines an outcome/objective; one agent executes autonomously
+for a stretch, human supervises/reviews rather than co-drafts.</td>
+<td>200,000</td>
+<td>400,000</td>
+<td>600,000</td>
+<td><strong>ASSUMPTION</strong></td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Heavy multi-agent orchestration</strong></td>
+<td>Human directs a fleet — multiple parallel agents running
+simultaneously against one human clock-hour, not one agent running
+fast.</td>
+<td>1,000,000</td>
+<td>5,000,000</td>
+<td>12,000,000+</td>
+<td><strong>ASSUMPTION</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>What each band’s boundary controls:</strong> moving a band’s
+low/mid/high number up or down directly rescales every $/AI-working-hour
+figure in Part C for that row — these are the single most important
+editable inputs in this workbook. Replace them with your own
+organization’s observed token logs if you have them; the numbers above
+are illustrative bands, not measured medians for any specific product or
+company.</p>
+<h3
+id="b.1-why-band-4-is-stated-as-1000000-12000000-and-not-a-tighter-range">B.1
+Why band 4 is stated as “1,000,000-12,000,000+” and not a tighter
+range</h3>
+<p><strong>ATTRIBUTED, OpenAI’s own self-reported internal telemetry
+(source register Cluster J — treat as company self-report, not
+independently audited):</strong></p>
+<ul>
+<li>Codex reached <strong>99.8%</strong> of OpenAI’s own weekly internal
+output tokens (vs. non-Codex chat usage) by mid-2026.</li>
+<li>By May 2026, <strong>70.2%</strong> of sampled individual Codex
+users had made at least one request OpenAI itself estimated as
+equivalent to more than <strong>1 human-hour</strong> of work;
+<strong>25.6%</strong> had made at least one request estimated above
+<strong>8 human-hours</strong>.</li>
+<li>By June 2026, users at the <strong>99th percentile</strong>
+regularly generated <strong>more than 60 hours of Codex agent-turn time
+per single calendar day</strong>, distributed across multiple parallel
+agents.</li>
+</ul>
+<p><strong>Corrected 2026-08-13 — the inference below was invalid and
+has been removed.</strong> An earlier version of this passage claimed
+that “&gt;60 agent-turn-hours per calendar day” is evidence that a user
+generates 60 agent-hours <em>within one human clock-hour</em>. That does
+not follow: a calendar day contains 24 clock-hours, so 60
+agent-turn-hours spread across a full day could be produced by as few as
+~2.5 agents running continuously throughout the day — it says nothing on
+its own about how many agents run <em>simultaneously within any single
+hour</em>. The OpenAI statistic is retained below only for what it
+actually shows, not for the invalid extrapolation:</p>
+<p><strong>What this statistic actually supports [ATTRIBUTED, OpenAI’s
+self-report]:</strong> it is strong evidence of sustained, heavy
+<em>parallel</em> usage by 99th-percentile users, aggregated across a
+full day, and of a long, fast-growing tail in request duration (the 8h+
+share of requests reportedly grew “+1131%” over roughly six months per
+the same report). It does <strong>not</strong>, by itself, establish a
+specific tokens-per-human-clock-hour figure for band 4.</p>
+<p><strong>Why band 4 remains anchored as an open-ended
+“1,000,000–12,000,000+” [SCENARIO ASSUMPTION, not DERIVED from the
+statistic above]:</strong> the ceiling is illustrative, chosen to be
+wide enough to accommodate genuinely heavy parallel-orchestration
+scenarios without implying false precision — it is not calculated from
+the 60-hours/day figure. A reader who has actual token-consumption logs
+or concurrency data for a specific heavy-orchestration workflow should
+replace this band with a directly measured figure rather than relying on
+this illustrative ceiling (see Part G’s recommendation to use your own
+measured token logs).</p>
+<p><strong>Important scope caveats, stated plainly:</strong> - These
+figures describe OpenAI’s own internal employee usage of its own
+coding-agent product (Codex). They are evidence that heavy multi-agent
+orchestration usage exists and can be extreme — they are
+<strong>not</strong> a general population statistic, not independently
+audited by any third party, and not necessarily representative of usage
+in other organizations, other tools, or non-coding work. - A
+separately-claimed “NVIDIA reference agentic workload of 32,000 input +
+8,000 output tokens per turn” <strong>could not be verified
+anywhere</strong> (source register Cluster J) and is explicitly
+<strong>not used</strong> as an input to this workbook’s bands.</p>
+<h3
+id="b.2-orchestration-does-not-create-a-different-kind-of-hour-it-creates-multiple-working-hours-in-parallel">B.2
+Orchestration does not create a different kind of hour — it creates
+multiple working hours in parallel</h3>
+<p>Band 4’s high token count comes entirely from <em>how many agents run
+at once</em>, not from any single agent processing tokens at a different
+rate than bands 1–3. This is worth stating as its own compact table,
+because it is easy to lose inside a single “tokens/hour” number:</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Working capacity</th>
+<th>AI</th>
+<th>Human</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 working hour</td>
+<td>1 AI agent × 1 hour = 1 agent-hour</td>
+<td>1 person × 1 hour = 1 human-hour</td>
+</tr>
+<tr>
+<td>10-agent/person team hour</td>
+<td>10 AI agents × 1 hour = 10 agent-hours</td>
+<td>10 people × 1 hour = 10 human-hours</td>
+</tr>
+<tr>
+<td>1 working day</td>
+<td>1 agent × 8 hours = 8 agent-hours</td>
+<td>1 person × 8 hours = 8 human-hours</td>
+</tr>
+<tr>
+<td>10-agent/person team day</td>
+<td>10 agents × 8 hours = 80 agent-hours</td>
+<td>10 people × 8 hours = 80 human-hours</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Team working capacity is workers × hours, on both sides of
+the comparison, with no exception.</strong> A 10-agent orchestration
+hour is not “one agent working ten times faster” any more than a
+10-person team hour is “one person working ten times faster” — both are
+ten independent units of working capacity applied over the same one
+clock-hour. Band 4’s 1,000,000–12,000,000+ tokens/hour range in the
+table above is this same arithmetic collapsed into a single
+per-clock-hour figure for cost-modeling convenience (Part C needs one
+number per band to multiply against $/M-tokens) — it is a modeling
+convenience for estimating infrastructure demand, not a claim that heavy
+orchestration is a qualitatively different kind of hour from bands 1–3.
+Reading a band-4 figure as “one very fast hour” rather than “many
+parallel ordinary hours” is the single easiest way to misread this
+table.</p>
+<hr />
+<h2 id="part-c-ai-working-hour-across-production-tiers">Part C —
+$/AI-working-hour across production tiers</h2>
+<p>This is the core deliverable: cross the Part B usage-intensity ladder
+against Release Asset #7’s already-derived production-cost tiers, at
+low/mid/high scenarios on both axes.</p>
+<p><strong>Formula (DERIVED, used for every cell below):</strong></p>
+<pre><code>$/AI-working-hour = (tokens_per_working_hour / 1,000,000) × ($/million_tokens_at_that_production_tier)</code></pre>
+<p>Floor = best-case usage-band tokens/hr (Low) × best-case (cheapest)
+production-tier $/M tokens. Central = mid-case tokens/hr (Mid) ×
+mid-case production-tier $/M tokens. Ceiling = worst-case usage-band
+tokens/hr (High) × worst-case (priciest) production-tier $/M tokens.
+This intentionally pairs “best-with-best” and “worst-with-worst” to
+bound a plausible range — it is not claiming best-usage always coincides
+with best-production-economics in reality; treat floor/ceiling as an
+illustrative bracket, not a joint-probability forecast.</p>
+<h3
+id="c.0-production-tier-million-tokens-inputs-carried-directly-from-release-asset-7-not-re-derived-here">C.0
+Production-tier $/million-tokens inputs (carried directly from Release
+Asset #7 — not re-derived here)</h3>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr>
+<th>Production tier</th>
+<th>Low (best-case) $/M tok</th>
+<th>Mid $/M tok</th>
+<th>High (worst-case) $/M tok</th>
+<th>Opex included?</th>
+<th>Confidence class (per Asset #7)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Home</strong> — 1× DGX Spark, owned production</td>
+<td>$1.71</td>
+<td>$3.17</td>
+<td>$11.89</td>
+<td>Yes (illustrative allowance)</td>
+<td>High on hardware price/power (OBSERVED); throughput is an OBSERVED
+community benchmark; utilization is ASSUMPTION</td>
+</tr>
+<tr>
+<td><strong>Cooperative</strong> — 10× DGX Spark, 50 members, owned
+production</td>
+<td>$1.99</td>
+<td>$3.20</td>
+<td>$7.62</td>
+<td>Yes (ASSUMPTION admin/networking band)</td>
+<td>High on hardware; admin/overhead line is ASSUMPTION</td>
+</tr>
+<tr>
+<td><strong>Professional</strong> — 1× HGX B300 (8-GPU) node, owned
+production</td>
+<td>$0.044</td>
+<td>$0.064</td>
+<td>$0.146</td>
+<td><strong>No — capital+financing+electricity only; see Asset #7 §4.3’s
+illustrative opex sensitivity, mid-case rises to ~$0.080/M with opex
+added</strong></td>
+<td>Low-medium — capex and power are ASSUMPTION placeholders (no public
+price/power found for this SKU); throughput is a DERIVED scaling
+estimate, not a direct benchmark</td>
+</tr>
+<tr>
+<td><strong>Hyperscale/Industrial</strong> — 1× GB300 NVL72 rack, owned
+production</td>
+<td>$0.091</td>
+<td>$0.133</td>
+<td>$0.312</td>
+<td>Yes (ASSUMPTION opex band, $200k-1M/yr)</td>
+<td>Medium — rack specs/power OBSERVED; capex is analyst-anchored
+ASSUMPTION, not an official NVIDIA price</td>
+</tr>
+<tr>
+<td><strong>Retail API</strong> — buy-from-market, NOT owned production
+(comparison layer only)</td>
+<td>$0.90</td>
+<td>$9.00</td>
+<td>$38.00</td>
+<td>n/a (retail price, not a production-cost breakdown)</td>
+<td>OBSERVED (Anthropic, Google) / ATTRIBUTED (OpenAI, via
+AI-summarizing fetch tool — see Asset #7 §7 confidence notes)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Corrected 2026-08-13:</strong> the Professional tier’s
+figures above exclude opex while Home, Cooperative, and Hyperscale
+include it — this is not a like-for-like comparison. Do not read
+Professional as simply “the cheapest owned-production tier”; part of its
+apparent advantage over Hyperscale is a cost-scope artifact, not a pure
+hardware-generation effect. See Asset #7 §4.3/§9 for the full
+correction.</p>
+<p><strong>Retail API blend methodology (DERIVED):</strong> each named
+model’s “blended $/M tokens” =
+<code>0.3 × input_price + 0.7 × output_price</code>
+(<strong>ASSUMPTION</strong>: 30% input / 70% output token mix,
+illustrative of an agentic/generation-heavy workload rather than a
+short-question chat workload — a chat-heavy workload with more input
+than output tokens would shift this blend lower). Floor = OpenAI GPT-5.6
+Luna blended ($0.90); Mid ≈ OpenAI GPT-5.6 Terra / Google Gemini 3.1 Pro
+blended (both $9.00); Ceiling = Anthropic Claude Fable 5 blended
+($38.00). <strong>Critical methodology reminder (carried from Asset #7
+§1): retail API prices are the “buy electricity from the grid”
+comparison point for renting someone else’s finished token-production
+capacity — they are never a valid input to price your own owned
+hardware, and are shown here only so a reader can see how self-hosted
+production cost compares to renting frontier-lab inference at the same
+usage intensity.</strong></p>
+<h3 id="c.1-full-matrix-ai-working-hour-floor-central-ceiling">C.1 Full
+matrix — $/AI-working-hour (floor | central | ceiling)</h3>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr>
+<th>Usage-intensity band</th>
+<th>Home</th>
+<th>Cooperative</th>
+<th>Professional</th>
+<th>Hyperscale</th>
+<th>Retail API (comparison only)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. Chat/advisor</strong></td>
+<td>$0.0171 | $0.063 | $0.36</td>
+<td>$0.0199 | $0.064 | $0.23</td>
+<td>$0.00044 | $0.0013 | $0.004</td>
+<td>$0.00091 | $0.0027 | $0.009</td>
+<td>$0.009 | $0.18 | $1.14</td>
+</tr>
+<tr>
+<td><strong>2. Active AI coworker</strong></td>
+<td>$0.103 | $0.285 | $1.43</td>
+<td>$0.119 | $0.288 | $0.91</td>
+<td>$0.0026 | $0.0058 | $0.018</td>
+<td>$0.0055 | $0.012 | $0.037</td>
+<td>$0.054 | $0.81 | $4.56</td>
+</tr>
+<tr>
+<td><strong>3. Delegated single agent</strong></td>
+<td>$0.342 | $1.268 | $7.13</td>
+<td>$0.398 | $1.280 | $4.57</td>
+<td>$0.0088 | $0.0256 | $0.088</td>
+<td>$0.018 | $0.053 | $0.19</td>
+<td>$0.18 | $3.60 | $22.80</td>
+</tr>
+<tr>
+<td><strong>4. Heavy multi-agent orchestration</strong></td>
+<td>$1.71 | $15.85 | $142.68</td>
+<td>$1.99 | $16.00 | $91.44</td>
+<td>$0.044 | $0.32 | $1.75</td>
+<td>$0.091 | $0.665 | $3.74</td>
+<td>$0.90 | $45.00 | $456.00</td>
+</tr>
+</tbody>
+</table>
+<p><code>$/AI-working-hour = (tokens/hr ÷ 1,000,000) × ($/M tokens)</code>
+— e.g., Hyperscale, band 3, central:
+<code>(400,000 ÷ 1,000,000) × $0.133 = $0.0532</code>, rounded to $0.053
+above.</p>
+<h3 id="c.2-reading-the-matrix-what-the-spread-means">C.2 Reading the
+matrix — what the spread means</h3>
+<p><strong>INTERPRETATION.</strong></p>
+<ol type="1">
+<li><strong>Across production tiers at the same usage band</strong>, the
+spread is enormous — at “delegated single agent” (central case),
+Hyperscale ($0.053/hr) is roughly <strong>24x cheaper</strong> than Home
+($1.268/hr) and roughly <strong>68x cheaper</strong> than the Retail-API
+comparison ($3.60/hr). This is the same conclusion as Asset #7’s tier
+comparison, now expressed per working-hour instead of per million tokens
+— economies of scale in owned production infrastructure translate
+directly into economies of scale in AI-working-hour cost.</li>
+<li><strong>Across usage bands at the same production tier</strong>, the
+spread is also large by construction — moving from “chat/advisor” to
+“heavy multi-agent orchestration” multiplies $/AI-working-hour by
+roughly 100-250x at every tier, because the usage bands themselves span
+two-plus orders of magnitude in tokens/hour (Part B). This is not a
+claim that heavy orchestration is “worse value” — it is simply consuming
+far more raw working capacity per clock-hour, by definition.</li>
+<li><strong>Home and Cooperative tiers are, at every usage band, more
+expensive per AI-working-hour than Retail API at its floor (Luna) but
+cheaper than Retail API at its ceiling (Fable 5).</strong> This matters
+for the paper’s ownership argument: self-hosting on consumer-grade
+hardware (DGX Spark) is not automatically the cheapest per-token option
+— its case for existing rests on data control, customization, and
+independence from a provider (per the ownership-architecture argument
+elsewhere in the paper), not on being the lowest $/token path.
+Professional and Hyperscale tiers, by contrast, undercut even the
+cheapest retail-API floor by 1-2 orders of magnitude — but those tiers
+require capital and scale far beyond an individual or small cooperative,
+their capex/power inputs carry materially lower confidence (see C.0
+table) than the Home/Cooperative or Retail rows, and
+<strong>Professional’s own figure specifically excludes opex while
+Hyperscale’s includes it (see C.0 note, corrected 2026-08-13) — the two
+should not be directly ranked against each other without accounting for
+that scope difference.</strong></li>
+<li><strong>None of this matrix says anything about whether the work
+performed was worth doing.</strong> See Part D.</li>
+</ol>
+<hr />
+<h2
+id="part-d-the-outcomevalue-boundary-restated-explicitly-not-just-once-in-front-matter">Part
+D — The outcome/value boundary (restated explicitly, not just once in
+front matter)</h2>
+<p><strong>INTERPRETATION, restated per the paper’s required
+framing.</strong> Working capacity → work → outcome → value is a chain,
+and the last step is never mechanically determined by the ones before
+it. A $/AI-working-hour figure in Part C tells you what it costs to
+<em>generate a given rate of AI output</em> at a given production tier —
+it says nothing about whether that output was correct, useful,
+well-directed, or net-positive. Value can be positive, zero, or negative
+regardless of how cheaply or expensively the underlying tokens were
+produced. A heavy-multi-agent-orchestration hour at $0.665 (Hyperscale,
+central case) that produces confidently-wrong code, poorly-targeted
+customer outreach, or a plausible-sounding but incorrect analysis is not
+“cheap good work” — it is cheap work of undetermined or negative value,
+and abundant cheap working capacity increases rather than decreases the
+importance of human judgment about <em>what</em> to direct that capacity
+toward. This boundary applies to every number in Part C and every number
+in Part E; it is not a disclaimer confined to front matter.</p>
+<p>This workbook, and the paper it is part of, is <strong>not
+investment, legal, tax, procurement, or policy advice.</strong> Every
+scenario is an editable illustration built on stated, visible
+assumptions — not a forecast or a recommendation about which tier,
+provider, or usage pattern to adopt.</p>
+<hr />
+<h2 id="part-e-human-work-comparison-table">Part E — Human-work
+comparison table</h2>
+<p><strong>Purpose and scope.</strong> This table exists to make
+explicit <em>what is and is not meaningfully comparable</em> between
+human labor-hours and AI-working-hours, using the same
+visible-assumption discipline as the rest of this workbook. It
+deliberately does <strong>not</strong> produce a single “AI is worth X
+human-hours” conversion factor as a fact — any such multiplier below is
+shown as a SCENARIO ASSUMPTION or DERIVED calculation from a named,
+editable assumption, never as a settled equivalence. The dimensions
+explicitly marked “not comparable” are not filler — they are the paper’s
+own required caveats about workload, quality, reliability, supervision,
+and context, kept visible rather than folded silently into a single
+number.</p>
+<h3
+id="e.1-dimensions-that-are-reasonably-comparable-with-stated-method">E.1
+Dimensions that ARE reasonably comparable (with stated method)</h3>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>How AI side is measured</th>
+<th>How human side is measured</th>
+<th>Comparability basis</th>
+<th>Class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Raw throughput of a defined, mechanical sub-task</strong>
+(e.g., transcribing a fixed-length recording, drafting a first-pass
+summary of a fixed document, running a fixed batch of similar
+classifications)</td>
+<td>Tokens processed/produced per clock-hour, from Part B/C</td>
+<td>Task-time studies or the requester’s own estimate of “how long this
+would take a competent person,” which is itself OpenAI’s own internal
+methodology for its “human-hour equivalent” telemetry
+(<strong>ATTRIBUTED</strong>, source register Cluster J) — not an
+independently validated labor-economics standard</td>
+<td>Both sides can be clocked against the same fixed, narrowly-scoped
+deliverable</td>
+<td><strong>DERIVED</strong> (when both sides are actually measured
+against the same task)</td>
+</tr>
+<tr>
+<td><strong>Marginal cost of one additional unit of throughput, holding
+task type fixed</strong></td>
+<td>$/AI-working-hour at a given production tier (Part C) —
+owned-production cost pairs with human employer cost; retail API price
+pairs with human billable rate (<strong>ASSUMPTION</strong> — see
+E.2)</td>
+<td>Human employer cost (fully loaded — wage/benefits/overhead) for an
+internal hire, or human billable/externally-purchased rate for a
+bought-in worker (<strong>ASSUMPTION</strong> — see E.2)</td>
+<td>Both are cost figures in the same currency, for the same nominal
+task category, kept to matching internal/internal or external/external
+pairs</td>
+<td><strong>DERIVED</strong></td>
+</tr>
+<tr>
+<td><strong>Availability / elasticity of capacity</strong></td>
+<td>Additional AI-working-hours can typically be added by paying for
+more compute or more API calls, subject to real hardware/provider
+capacity limits (see Part C’s production-tier ceilings)</td>
+<td>Additional human-hours require hiring, training, or overtime,
+subject to real labor-market and calendar-time limits</td>
+<td>Both are real, observable capacity-expansion constraints, even
+though their shapes differ sharply</td>
+<td><strong>INTERPRETATION</strong></td>
+</tr>
+</tbody>
+</table>
+<h3
+id="e.2-illustrative-hour-comparison-human-labor-bands-vs.-ai-working-hour-bands-scenario_assumption-on-the-human-side-do-not-read-as-a-market-wage-survey">E.2
+Illustrative $/hour comparison — human labor bands vs. AI-working-hour
+bands (SCENARIO_ASSUMPTION on the human side; do not read as a market
+wage survey)</h3>
+<p><strong>The employer/billable distinction, stated
+explicitly.</strong> Human labor cost is not one number — it depends on
+whether the work is done by someone the organization directly employs
+(the fully-loaded internal cost: wage + benefits + overhead) or bought
+from an external party (an agency, contractor, consultancy, or freelance
+marketplace, whose billable rate embeds <em>its own</em> margin,
+overhead, non-billable time, and business risk on top of what it pays
+its own worker). This is exactly the same structural distinction Part C
+draws on the AI side between <strong>owned-production cost</strong> and
+<strong>retail API price</strong> — and the two pairs line up:</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th></th>
+<th>Internal / owned</th>
+<th>External / bought-in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AI</strong></td>
+<td>Owned-production cost (Home/Cooperative/Professional/Hyperscale,
+Part C)</td>
+<td>Retail API price (buy-from-market, Part C)</td>
+</tr>
+<tr>
+<td><strong>Human</strong></td>
+<td>Employer cost, fully loaded (this section)</td>
+<td>Billable / externally purchased rate (this section)</td>
+</tr>
+</tbody>
+</table>
+<p>Comparing owned-AI cost against a human’s <em>billable</em> rate — or
+retail-API price against a human’s <em>employer</em> cost — mixes the
+two internal/external layers exactly as the paper warns against mixing
+owned-production cost with retail API price on the AI side alone (Part
+C.0, “critical methodology reminder”). The comparison below therefore
+keeps both pairs separate throughout, never blended into one “AI
+vs. human” number.</p>
+<p><strong>Human-side ASSUMPTION, explicitly editable, NOT sourced from
+any specific labor-market dataset in this workbook:</strong></p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Human labor tier</th>
+<th>Human employer cost (fully loaded — wage + benefits + overhead,
+internal hire)</th>
+<th>Human billable / externally purchased working capacity (agency,
+contractor, consultancy, or freelance-marketplace rate)</th>
+<th>Class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Entry-level / routine task labor</td>
+<td>$15-$35/hr</td>
+<td>$40-$90/hr</td>
+<td><strong>ASSUMPTION</strong> — replace with your own local,
+role-specific figures; these are not wage/rate-survey figures</td>
+</tr>
+<tr>
+<td>Skilled professional (e.g., mid-level analyst, developer,
+specialist)</td>
+<td>$50-$150/hr</td>
+<td>$100-$350/hr</td>
+<td><strong>ASSUMPTION</strong></td>
+</tr>
+<tr>
+<td>Senior specialist / expert consultant</td>
+<td>$150-$500+/hr</td>
+<td>$300-$1,000+/hr</td>
+<td><strong>ASSUMPTION</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Why the billable column runs higher, stated as an assumption,
+not a proven ratio:</strong> an external provider’s billable rate must
+cover the same wage/benefits/overhead their own worker costs them, plus
+their own margin, sales/account-management overhead, bench time between
+engagements, and the risk premium of variable-demand work — the same
+logic Part C.0 uses to explain why retail API price sits above
+owned-production cost. The illustrative ~2-3x multiple shown here is a
+<strong>SCENARIO ASSUMPTION</strong> for orientation only; real billable
+rates vary enormously by market, specialization, and contract structure,
+and should be replaced with your own quotes before using this table for
+any real decision.</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr>
+<th>Usage-intensity band</th>
+<th>Owned AI, central case (Hyperscale, cheapest owned-production tier
+from Part C)</th>
+<th>Retail AI, central case (buy-from-market, Part C)</th>
+<th>vs. Human employer cost — entry-level ($15-35/hr)</th>
+<th>vs. Human employer cost — skilled professional ($50-150/hr)</th>
+<th>vs. Human billable rate — entry-level ($40-90/hr)</th>
+<th>vs. Human billable rate — skilled professional ($100-350/hr)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Chat/advisor</td>
+<td>$0.0027</td>
+<td>$0.18</td>
+<td>Far below</td>
+<td>Far below</td>
+<td>Far below</td>
+<td>Far below</td>
+</tr>
+<tr>
+<td>2. Active AI coworker</td>
+<td>$0.012</td>
+<td>$0.81</td>
+<td>Below</td>
+<td>Below</td>
+<td>Below</td>
+<td>Below</td>
+</tr>
+<tr>
+<td>3. Delegated single agent</td>
+<td>$0.053</td>
+<td>$3.60</td>
+<td>Below</td>
+<td>Below</td>
+<td>Below</td>
+<td>Below</td>
+</tr>
+<tr>
+<td>4. Heavy multi-agent orchestration</td>
+<td>$0.665</td>
+<td>$45.00</td>
+<td>Owned AI still below; Retail AI now inside/above the human-employer
+skilled-professional band</td>
+<td>Owned AI still below; Retail AI now inside/above</td>
+<td>Owned AI still below; Retail AI now inside the billable
+skilled-professional band</td>
+<td>Owned AI still below; Retail AI ceiling ($456/hr, from Part C)
+exceeds even the billable senior-specialist band</td>
+</tr>
+</tbody>
+</table>
+<p><strong>INTERPRETATION, stated carefully:</strong> the cleanest
+apples-to-apples pairing is <strong>owned AI vs. human employer
+cost</strong> (both are internal, fully-loaded production costs) and
+<strong>retail AI vs. human billable cost</strong> (both are what you
+pay an external party for finished, ready-to-use capacity, inclusive of
+their margin). Read diagonally — owned AI against billable rates, or
+retail AI against employer cost — and the comparison silently crosses
+the internal/external line without saying so. At the cheapest
+owned-production tiers, $/AI-working-hour is dramatically below any
+human employer-cost band shown here, at every usage intensity — this is
+a real, verifiable arithmetic comparison of <em>cost of generating
+tokens</em> vs. <em>cost of a human’s time</em>, kept to its correct
+internal/internal or external/external pairing. It is explicitly
+<strong>not</strong> a claim that an AI-working-hour and a
+human-labor-hour of the same duration produce equivalent, substitutable,
+or equally reliable output — that equivalence is exactly what Part E.3
+below says cannot be assumed. The comparison in this table should be
+read as “cost of raw capacity,” not “cost of equivalent finished
+outcome.”</p>
+<h3
+id="e.3-dimensions-that-are-not-comparable-without-an-explicit-visible-bridging-assumption-the-papers-required-caveats-kept-visible-rather-than-hidden">E.3
+Dimensions that ARE NOT comparable without an explicit, visible bridging
+assumption — the paper’s required caveats, kept visible rather than
+hidden</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Why a direct AI-hour ↔︎ human-hour comparison breaks down here</th>
+<th>What would be needed to make it comparable (and why this workbook
+does not supply it)</th>
+<th>Class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Workload definition</strong></td>
+<td>“One AI-working-hour” at 5,000,000 tokens/hour (band 4, mid) is not
+doing “the same kind of work” as one human-hour — it may represent
+dozens of parallel, narrow, mechanical sub-tasks rather than one
+continuous, integrated piece of judgment-requiring work. Token count
+measures processing volume, not task complexity or task count.</td>
+<td>A task-by-task mapping (e.g., “this specific 500,000-token agent run
+= this specific 3-hour human task, independently timed”) for the
+<em>specific</em> workload in question — this workbook supplies no such
+mapping; OpenAI’s own “estimated human-hours” telemetry (Cluster J) is
+the closest available proxy, and even OpenAI does not disclose its
+estimation methodology in verifiable detail.</td>
+<td><strong>CAVEAT (kept visible, not resolved)</strong></td>
+</tr>
+<tr>
+<td><strong>Quality / correctness of output</strong></td>
+<td>Nothing in Part B or C measures whether the tokens produced were
+accurate, appropriately-scoped, or fit for purpose. A human worker’s
+output and an AI agent’s output at the “same” nominal task can differ in
+error rate, hallucination risk, and appropriateness in ways no token
+count captures.</td>
+<td>An independently-audited, task-specific quality/error-rate benchmark
+for both the AI system and the comparison human workforce, on the
+identical task distribution — out of scope for this workbook; the paper
+should not imply one exists.</td>
+<td><strong>CAVEAT (kept visible, not resolved)</strong></td>
+</tr>
+<tr>
+<td><strong>Reliability / consistency across repeated runs</strong></td>
+<td>Human performance and AI-agent performance both vary run to run, but
+for different reasons (fatigue/skill variance vs. model
+stochasticity/prompt sensitivity/failure modes), and neither this
+workbook nor the wider source register contains a controlled
+repeated-trials study comparing the two.</td>
+<td>A repeated-trials reliability study (e.g., variance in output
+quality across N runs of the same task, same prompt, same human vs. same
+agent config) — not available in the source register; do not assume AI
+is either more or less reliable than human labor from anything in this
+workbook.</td>
+<td><strong>CAVEAT (kept visible, not resolved)</strong></td>
+</tr>
+<tr>
+<td><strong>Supervision and review burden</strong></td>
+<td>Delegated and orchestrated AI usage bands (3-4) explicitly assume
+“human supervises rather than co-drafts” (Part B) — but the supervision
+time itself is a real cost not counted anywhere in Part C’s
+$/AI-working-hour figures. A human worker’s hourly cost typically
+already includes some baseline of self-review; an AI agent’s supervision
+cost is a separate, uncounted human-hour layered on top.</td>
+<td>A measured supervision-time-per-agent-hour ratio, which would vary
+enormously by task risk and organizational maturity (see the paper’s AI
+Maturity Framework, Advise→Cowork→Delegate→Lead progression) — not
+modeled here; any total-cost comparison that omits this is
+systematically understating the true cost of AI-produced work at bands
+3-4.</td>
+<td><strong>CAVEAT (kept visible, not resolved)</strong></td>
+</tr>
+<tr>
+<td><strong>Context and organizational knowledge</strong></td>
+<td>Per the paper’s “information is AI’s operating system” framing, the
+same model at the same token cost can produce very different effective
+working capacity depending on what context/information it has access to
+— a dimension with no analogue in a simple human hourly-wage figure,
+where accumulated tacit knowledge is priced implicitly into
+seniority/experience but not separately measured.</td>
+<td>A context-completeness or information-access scoring methodology
+applied consistently to both the AI system and the human comparison —
+not available; this workbook prices raw token throughput only,
+explicitly not “AI working capacity as amplified or constrained by
+context,” which is treated qualitatively elsewhere in the paper, not
+quantitatively here.</td>
+<td><strong>CAVEAT (kept visible, not resolved)</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Required restatement (per the paper’s core principle, not
+optional here):</strong> working capacity is the ability to perform
+work, not the work itself, and not its outcome or value. Every row above
+is a reminder that a $/hour comparison between AI and human labor is a
+comparison of <em>raw capacity cost</em>, bounded by named and visible
+caveats — never a comparison of <em>guaranteed equivalent value
+produced</em>. Where the paper or any reader wants to make a stronger
+claim than “capacity costs less,” the specific bridging assumption (task
+mapping, quality benchmark, reliability study, supervision ratio, or
+context-completeness measure) must be stated openly, exactly as this
+table does, rather than folded silently into a single multiplier.</p>
+<hr />
+<h2
+id="part-f-worked-example-converting-a-claimed-productivity-anecdote-into-this-workbooks-units-methodology-demonstration-only">Part
+F — Worked example: converting a claimed productivity anecdote into this
+workbook’s units (methodology demonstration only)</h2>
+<p><strong>Purpose:</strong> show how a real, source-register-documented
+claim would be <em>converted</em> into this workbook’s units, while
+being explicit about what is and is not verified in the process — not to
+assert a specific productivity multiplier as proven.</p>
+<p>Sam Altman, at Y Combinator’s Startup School closing session (Chase
+Center, San Francisco, 26 July 2026), is independently corroborated (via
+a CC BY 4.0 attendee-notes repository, not a verbatim official
+transcript — source register Cluster D) as having used language
+equivalent to “you can now do three months of work in seventeen
+minutes.” This is an <strong>ATTRIBUTED_STATEMENT</strong> — a real
+claim, by a named person, in a real recorded setting — not an
+independently proven productivity ratio.</p>
+<p><strong>DERIVED, methodology-only, explicitly not endorsing the
+underlying “three months = 17 minutes” claim as true:</strong></p>
+<pre><code>If &quot;three months of work&quot; ≈ 3 months × ~160 working-hours/month (ASSUMPTION, standard full-time month) ≈ 480 human-hours,
+and this were compressed into 17 minutes = 0.283 hours of AI-working-time,
+the implied ratio = 480 / 0.283 ≈ 1,696x</code></pre>
+<p><strong>What this DOES and DOES NOT show:</strong> - It
+<strong>does</strong> show how a vivid rhetorical claim could, in
+principle, be translated into a “human-hours compressed per
+AI-working-hour” ratio comparable in spirit to the tables in Part E. -
+It <strong>does not</strong> show that this ratio is accurate, that it
+applies to any specific task type, at any specific usage-intensity band
+or production tier from Part C, or that “17 minutes of AI time”
+corresponds to any measurable token count in this workbook — Altman’s
+statement, per the source register, appears in the context of an
+argument for founders to be <em>more ambitious</em> given AI-driven
+productivity gains, not as a calibrated benchmark, and no token count or
+task specification accompanies the original claim. - Per Part E.3’s
+caveats (workload definition, quality, reliability, supervision,
+context), a 1,696x-style ratio derived this way should not be presented
+anywhere in the paper as a validated productivity multiplier — it is
+included here strictly as a demonstration of <em>how</em> to convert a
+rhetorical claim into this workbook’s framework transparently, flagging
+every assumption used, rather than as a number to be cited on its
+own.</p>
+<hr />
+<h2 id="part-g-how-to-re-run-this-workbook-with-your-own-numbers">Part G
+— How to re-run this workbook with your own numbers</h2>
+<ol type="1">
+<li><strong>Change the Part B usage-intensity bands</strong> to match
+your own organization’s measured token logs (if available) rather than
+the illustrative bands here.</li>
+<li><strong>Swap in updated production-tier $/M-tokens figures</strong>
+from a refreshed version of Release Asset #7 as hardware prices,
+electricity rates, or utilization assumptions change — this workbook’s
+Part C table is entirely downstream of Asset #7 and should be
+regenerated whenever that workbook’s tier figures change.</li>
+<li><strong>Replace the Part E.2 human-hourly-cost bands</strong> with
+your own local, role-specific figures for both columns — employer cost
+(wage + benefits + overhead + management burden) for internal hires, and
+billable/externally-purchased rate for bought-in capacity — the bands
+here are illustrative placeholders, not a wage or rate survey. Keep the
+two columns separate; do not average them into one “human cost” figure,
+for the same reason Part C.0 never averages owned-production cost with
+retail API price.</li>
+<li><strong>Do not delete or soften the Part E.3 caveats</strong> when
+adapting this table for a specific claim — if you want to assert a
+specific human-to-AI equivalence for a specific task, add a new row with
+your own named, sourced bridging assumption rather than removing the
+caveat that a general one does not exist.</li>
+<li><strong>Preserve the Part D outcome/value boundary language</strong>
+in any derived or excerpted version of this table — per the paper’s
+evidence standard, every investment-thesis or scale-scenario section
+must include this boundary explicitly, not merely once in front
+matter.</li>
+</ol>
+<hr />
+<h2
+id="summary-table-quick-reference-ai-working-hour-central-case-only">Summary
+table — quick-reference $/AI-working-hour, central-case only</h2>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr>
+<th>Usage-intensity band</th>
+<th>Home</th>
+<th>Cooperative</th>
+<th>Professional</th>
+<th>Hyperscale</th>
+<th>Retail API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chat/advisor</td>
+<td>$0.063</td>
+<td>$0.064</td>
+<td>$0.0013</td>
+<td>$0.0027</td>
+<td>$0.18</td>
+</tr>
+<tr>
+<td>Active AI coworker</td>
+<td>$0.285</td>
+<td>$0.288</td>
+<td>$0.0058</td>
+<td>$0.012</td>
+<td>$0.81</td>
+</tr>
+<tr>
+<td>Delegated single agent</td>
+<td>$1.268</td>
+<td>$1.280</td>
+<td>$0.0256</td>
+<td>$0.053</td>
+<td>$3.60</td>
+</tr>
+<tr>
+<td>Heavy multi-agent orchestration</td>
+<td>$15.85</td>
+<td>$16.00</td>
+<td>$0.320</td>
+<td>$0.665</td>
+<td>$45.00</td>
+</tr>
+</tbody>
+</table>
+<p>All central-case figures per
+<code>$/AI-working-hour = (mid tokens/hr ÷ 1,000,000) × (mid $/M tokens at that tier)</code>,
+tier inputs from C.0, usage bands from Part B. See Part C.1 for full
+floor/central/ceiling ranges and Part D/E for the outcome-value and
+human-comparison boundaries that apply to every figure in this table
+without exception.</p>
+</article>
+<div class="page-footer-nav">
+  <a href="index.html">← Back to home</a>
+  <a href="https://github.com/valto/ai-working-capacity-revolution/blob/main/04-workbook-ai-working-capacity-conversion.md">View source / edit on GitHub →</a>
+</div>
+</main>
+<footer>
+  <p>© Valto Loikkanen. Licensed under CC BY 4.0 where stated. Educational research and scenario analysis — not investment, legal, tax, procurement, or policy advice.</p>
+  <p><a href="https://github.com/valto/ai-working-capacity-revolution">View repository on GitHub</a></p>
+</footer>
+</body>
+</html>

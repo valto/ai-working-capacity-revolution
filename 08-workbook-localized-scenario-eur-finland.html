@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Localized Scenario Workbook
+(EUR/Finland) — Why Are They Spending Trillions on AI?</title>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header>
+  <h1 style="font-size:1.5rem;"><a href="index.html" style="color:#fff; text-decoration:none;">Why Are They Spending Trillions on AI?</a></h1>
+  <p class="meta">Research foundation and living reference model &nbsp;·&nbsp; CC BY 4.0</p>
+</header>
+<main>
+<nav class="crumbs"><a href="index.html">Home</a> / Localized Scenario Workbook (EUR/Finland)</nav>
+<article class="doc-body">
+<h1 id="localized-scenario-workbook-eur-finland-template">Localized
+Scenario Workbook — EUR / Finland Template</h1>
+<h3
+id="release-asset-8-companion-to-why-are-they-spending-trillions-on-ai-valto-loikkanen-cc-by-4.0">Release
+Asset #8, companion to <em>“Why Are They Spending Trillions on AI?”</em>
+(Valto Loikkanen, CC BY 4.0)</h3>
+<hr />
+<h2 id="what-this-document-is-and-is-not">0. What this document is — and
+is not</h2>
+<p>This workbook takes the global-USD-baseline cost-model structure used
+elsewhere in this research package and reworks it <strong>once, fully,
+in EUR, using Finland as the illustrative country</strong>.</p>
+<p><strong>It is:</strong> - <strong>One worked template among many
+possible localizations.</strong> Any reader in any country can copy the
+method and substitute their own electricity price, financing terms,
+currency, and hardware-sourcing reality. - A demonstration of how
+sensitive “AI factory” economics are to <em>local</em> inputs that
+global USD headline figures never show.</p>
+<p><strong>It is not:</strong> - A claim that Finland’s actual current
+electricity price, loan rate, or hardware reseller price has been
+independently verified against a live primary Finnish source. <strong>It
+has not.</strong> The verified source register behind this project
+covers global AI-industry facts (chip specs, model pricing, corporate
+announcements) — it contains <strong>no verified Finnish energy-market
+or Finnish credit-market figures</strong>. Every Finland-specific number
+below is therefore explicitly marked as a <strong>SCENARIO
+ASSUMPTION</strong>, not a market fact, and is designed to be
+overwritten by the reader with a number they’ve checked themselves. -
+Investment, legal, tax, procurement, or policy advice. Every scenario
+table in this workbook is an editable illustration built on stated
+assumptions, not a forecast or recommendation.</p>
+<h3 id="evidence-class-legend-used-throughout">Evidence-class legend
+(used throughout)</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>OBSERVED FACT</strong></td>
+<td>Checked against a live/primary source on or immediately before
+2026-08-12 (per the project’s source register).</td>
+</tr>
+<tr>
+<td><strong>ATTRIBUTED STATEMENT</strong></td>
+<td>A named person/org said this; not independently proven as market
+fact.</td>
+</tr>
+<tr>
+<td><strong>DERIVED CALCULATION</strong></td>
+<td>Transparent arithmetic from cited inputs — formula always
+shown.</td>
+</tr>
+<tr>
+<td><strong>SCENARIO ASSUMPTION</strong></td>
+<td>A visible, editable parameter, explicitly not a verified market
+figure.</td>
+</tr>
+<tr>
+<td><strong>INTERPRETATION</strong></td>
+<td>A labelled explanation of how facts/statements/assumptions may
+connect — never a fact.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="the-four-things-every-localization-must-swap">1. The four things
+every localization must swap</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Global USD baseline (illustrative)</th>
+<th>This workbook’s Finland/EUR value</th>
+<th>Class</th>
+<th>What it controls</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Currency</td>
+<td>USD</td>
+<td>EUR</td>
+<td>SCENARIO ASSUMPTION</td>
+<td>Denomination of every cost figure</td>
+</tr>
+<tr>
+<td>FX rate USD→EUR</td>
+<td>n/a</td>
+<td><strong>1 USD = €0.93</strong> (i.e. 1 EUR ≈ $1.075)</td>
+<td>SCENARIO ASSUMPTION — <strong>not a checked live rate</strong>; the
+source register contains no verified current FX quote</td>
+<td>Converts every hardware/API price quoted in USD</td>
+</tr>
+<tr>
+<td>Electricity price (home/prosumer tier)</td>
+<td>$0.20/kWh (illustrative)</td>
+<td><strong>€0.15/kWh</strong></td>
+<td>SCENARIO ASSUMPTION — illustrative placeholder, not a verified
+current Finnish retail rate</td>
+<td>Electricity line of every per-token and per-hour cost</td>
+</tr>
+<tr>
+<td>Electricity price (industrial tier)</td>
+<td>$0.10/kWh (illustrative)</td>
+<td><strong>€0.09/kWh</strong></td>
+<td>SCENARIO ASSUMPTION</td>
+<td>Industrial-scale token production cost</td>
+</tr>
+<tr>
+<td>Financing rate &amp; term</td>
+<td>8% APR, 5-year amortization</td>
+<td><strong>8% APR, 5-year amortization (unchanged)</strong></td>
+<td>SCENARIO ASSUMPTION — kept identical to the USD baseline for
+comparability; <strong>not a verified Finnish consumer/business loan
+rate</strong>. In Finland, business loans are typically quoted as a
+Euribor reference rate plus a bank margin rather than a flat APR — see
+§2 for how to substitute this correctly.</td>
+<td>Annual capital cost of every hardware/robot scenario</td>
+</tr>
+<tr>
+<td>Hardware price basis</td>
+<td>US direct/MSRP</td>
+<td><strong>US MSRP converted at the FX assumption above, NOT a verified
+EU reseller price</strong></td>
+<td>See §3 — explicit non-canonical flag</td>
+<td>Capital cost input to every model</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="readers-substitution-guide-do-this-for-your-own-country">2.
+Reader’s substitution guide — do this for your own country</h2>
+<ol type="1">
+<li><strong>Pick your currency and get a live FX rate</strong> from a
+source you trust at the moment you’re building your own version. Replace
+the €0.93/$1 placeholder above. Every dollar figure in this workbook is
+multiplied by that single number — nothing else needs to change
+structurally.</li>
+<li><strong>Get your own electricity price</strong>, in your currency
+per kWh, from an actual bill or your national/regional retail-tariff
+regulator, <em>not</em> from this document. Note whether it’s a
+residential, commercial, or industrial tariff — they usually differ by
+2–5x, and this workbook keeps that distinction (§1’s two separate rows)
+on purpose.</li>
+<li><strong>Get your own financing terms.</strong> If you’re in the
+Eurozone, a realistic template is: <em>(current Euribor reference rate,
+e.g. 3- or 12-month) + (your bank’s margin, typically 1–4 percentage
+points depending on collateral/credit)</em>. This workbook uses a flat
+8% only because that is what the (also-illustrative) global USD baseline
+used — swap it for whatever rate you can actually get quoted, and re-run
+the same amortization formula shown in §5–§7.</li>
+<li><strong>Check hardware price locally, not from this
+document.</strong> See §3 immediately below — this is the single most
+common way localization goes wrong.</li>
+<li>Re-run the formulas (shown explicitly, not just the results, in
+every table below) with your four substituted numbers. The
+<em>structure</em> — fixed capital/financing cost vs. variable
+electricity cost vs. token output — does not change; only the four
+inputs do.</li>
+</ol>
+<hr />
+<h2
+id="hardware-price-localization-caveat-dgx-spark-case-study-read-this-before-using-any-price-below">3.
+Hardware-price localization caveat (DGX Spark case study) — read this
+before using any price below</h2>
+<p><strong>OBSERVED FACT:</strong> NVIDIA’s official DGX Spark Founders
+Edition MSRP, sold direct in the US, is <strong>$4,699</strong> as of
+2026-08-12 (raised from $3,999 in a price change NVIDIA itself announced
+on 2026-02-25, citing memory supply constraints). Source: NVIDIA
+Developer Forums official price-change notice,
+forums.developer.nvidia.com, checked 2026-08-12.</p>
+<p><strong>What this workbook does NOT claim:</strong> any specific EU
+or Finland reseller price for DGX Spark. NVIDIA’s own product page does
+not display a price at all and routes to third-party “Buy Now”
+marketplace links; no EU/Finland reseller listing was checked or
+verified in the source register behind this project.</p>
+<p><strong>Explicit non-canonical flag, per the task requirement for
+this asset:</strong> <em>outside-US hardware pricing for products like
+DGX Spark is reseller-dependent — shaped by import duty, VAT, logistics,
+local demand, and individual reseller margin — and should never be
+treated as a universal fact equivalent to the manufacturer’s home-market
+MSRP.</em> If you are building your own version of this workbook, get a
+real quote from an actual EU reseller at the time you build it, and
+expect it to be higher than the FX-converted US MSRP shown below, not
+equal to it.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Reference point</th>
+<th>Value</th>
+<th>Class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>US direct MSRP</td>
+<td>$4,699</td>
+<td>OBSERVED FACT</td>
+</tr>
+<tr>
+<td>FX-converted “floor reference” (NOT a real EU quote)</td>
+<td>$4,699 × 0.93 = <strong>€4,370</strong></td>
+<td>DERIVED CALCULATION (mechanical FX conversion only)</td>
+</tr>
+<tr>
+<td>Local VAT</td>
+<td><em>[blank — insert your own country’s rate; not verified in this
+workbook]</em></td>
+<td>reader to fill in</td>
+</tr>
+<tr>
+<td>Import/logistics/reseller margin</td>
+<td><em>[blank — insert your own local reseller quote]</em></td>
+<td>reader to fill in</td>
+</tr>
+<tr>
+<td><strong>Realistic EU landed price</strong></td>
+<td><strong>likely higher than €4,370 — get a real quote</strong></td>
+<td>not modeled here</td>
+</tr>
+</tbody>
+</table>
+<p>For the worked examples below, we use the <strong>€4,370 FX-floor
+figure</strong> purely so the arithmetic is traceable back to the
+OBSERVED-FACT US MSRP. Anyone reading this should assume their actual
+purchase price in Finland (or elsewhere in the EU) will be higher, and
+should re-run §5’s formulas with their real quote.</p>
+<hr />
+<h2 id="financing-convention-note">4. Financing-convention note</h2>
+<p>This workbook uses two different (both legitimate) amortization
+conventions, and says so explicitly rather than hiding the
+difference:</p>
+<ul>
+<li><strong>Annual-payment convention</strong> (§5, §6 — DGX Spark
+tiers): <code>Annual payment = P × r / (1 − (1+r)^-n)</code>, with r =
+8%/yr, n = 5 years. Simpler for an at-a-glance annual TCO.</li>
+<li><strong>Monthly-payment convention</strong> (§7 — humanoid robot
+tier, matching a typical consumer/business loan structure):
+<code>Monthly payment = P × r_m / (1 − (1+r_m)^-n_m)</code>, with r_m =
+8%/12 monthly rate, n_m = 60 months; annualized by ×12.</li>
+</ul>
+<p>The two conventions produce slightly different totals for an
+identical principal and rate (monthly compounding is marginally more
+expensive in total interest paid per year in the way it’s shown here).
+If your own loan is quoted one way, use that formula — don’t mix them
+within one comparison.</p>
+<hr />
+<h2 id="worked-model-a-home-ai-factory-single-dgx-spark-eur">5. Worked
+Model A — Home AI factory (single DGX Spark), EUR</h2>
+<p>Inputs: Capital €4,370 (§3 floor reference — not a real EU quote) ·
+financing 8%/5yr, annual convention · power draw 240W continuous max
+(OBSERVED FACT spec, NVIDIA product page) · electricity €0.15/kWh
+(SCENARIO ASSUMPTION) · throughput range <strong>corrected
+2026-08-13</strong>: 30.8–38.4 tok/s directly confirmed in the
+underlying community forum thread (Qwen3.5-122B-A10B on DGX Spark), with
+a separate, unconfirmed “51 tok/s+” headline claim by the same poster
+not independently re-confirmed — <strong>an earlier version of this
+section used an 83 tok/s figure that does not trace to any source in
+this project’s register and has been removed.</strong> Both the
+confirmed 30.8–38.4 tok/s range and the unconfirmed 51 tok/s ceiling are
+shown below, clearly labeled by confidence, rather than collapsing them
+into one unlabeled range.</p>
+<p><strong>Financing:</strong>
+<code>A = 4,370 × 0.08 / (1 − 1.08⁻⁵) = €1,095/yr</code>
+<strong>Electricity at 100% utilization:</strong>
+<code>240W × 8,760h/yr × €0.15/kWh = 2,102.4 kWh × €0.15 = €315/yr</code></p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr>
+<th>Utilization</th>
+<th>Tokens/yr @ 38.4 tok/s (confirmed)</th>
+<th>Tokens/yr @ 51 tok/s (unconfirmed)</th>
+<th>Total cost/yr (financing + electricity)</th>
+<th>Cost/M tokens @ 38.4 tok/s</th>
+<th>Cost/M tokens @ 51 tok/s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100%</td>
+<td>1,211.0M</td>
+<td>1,608.3M</td>
+<td>€1,410</td>
+<td>€1.16</td>
+<td>€0.88</td>
+</tr>
+<tr>
+<td>75%</td>
+<td>908.3M</td>
+<td>1,206.2M</td>
+<td>€1,331</td>
+<td>€1.47</td>
+<td>€1.10</td>
+</tr>
+<tr>
+<td>50%</td>
+<td>605.5M</td>
+<td>804.2M</td>
+<td>€1,253</td>
+<td>€2.07</td>
+<td>€1.56</td>
+</tr>
+<tr>
+<td>25%</td>
+<td>302.8M</td>
+<td>402.1M</td>
+<td>€1,174</td>
+<td>€3.88</td>
+<td>€2.92</td>
+</tr>
+</tbody>
+</table>
+<p>Formula for every cell:
+<code>Tokens/yr = tok/s × 86,400s × 365 × utilization</code>;
+<code>Cost/M tokens = (€1,095 + €315×utilization) / (Tokens/yr ÷ 1,000,000)</code>.
+<strong>The 51 tok/s column should be treated as an optimistic,
+unconfirmed scenario ceiling — the 38.4 tok/s column is the confirmed
+figure to rely on for any real planning use.</strong></p>
+<p><strong>Boundary note:</strong> this is a scenario illustration of
+one machine’s amortized + electricity cost per token, at an assumed
+local electricity price and an assumed hardware landed price. It
+excludes maintenance, software, networking, supervision time, and any
+real EU reseller markup (see §3). It is not a forecast of what running a
+home AI factory will actually cost you, and it is not investment or
+procurement advice.</p>
+<hr />
+<h2
+id="worked-model-b-cooperative-ai-factory-50-members-10-dgx-sparks-eur">6.
+Worked Model B — Cooperative AI factory (50 members, 10 DGX Sparks),
+EUR</h2>
+<p>Inputs: Capital 10 × €4,370 = <strong>€43,700</strong> (§3 floor
+reference) · financing 8%/5yr annual convention · electricity €0.15/kWh
+· aggregate throughput 500–827 tok/s (10 × the single-unit range).</p>
+<p><strong>Financing:</strong>
+<code>A = 43,700 × 0.08 / (1 − 1.08⁻⁵) = €10,946/yr</code>
+<strong>Electricity at 100% utilization:</strong>
+<code>10 × 2,102.4 kWh × €0.15 = €3,154/yr</code></p>
+<p>At <strong>70% utilization</strong> (a plausible steady-state
+assumption, not a verified figure): Electricity = €3,154 × 0.70 =
+€2,208/yr → <strong>Total = €10,946 + €2,208 = €13,154/yr</strong></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Aggregate tok/s</th>
+<th>Tokens/yr @ 70% util</th>
+<th>Cost/M tokens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>500</td>
+<td>500 × 31,536,000 × 0.70 = 11,037.6M</td>
+<td>€13,154 ÷ 11,037.6 = <strong>€1.19/M</strong></td>
+</tr>
+<tr>
+<td>827</td>
+<td>827 × 31,536,000 × 0.70 = 18,266.2M</td>
+<td>€13,154 ÷ 18,266.2 = <strong>€0.72/M</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Per-member cost:</strong>
+<code>€13,154/yr ÷ 12 months ÷ 50 members = €21.92/member/month</code>.</p>
+<h3
+id="corrected-42membermonth-vs.-22membermonth-were-never-competing-estimates-of-the-same-thing">CORRECTED:
+€42/member/month vs. ~€22/member/month were never competing estimates of
+the same thing</h3>
+<p>An earlier version of this section treated €42/member/month and this
+workbook’s ≈€22/member/month DGX Spark rebuild as two conflicting
+measurements needing reconciliation. On 2026-08-13 the author clarified
+the actual origin of the €42 figure, which resolves this rather than
+leaving it open:</p>
+<p><strong>€42/member/month was built on an illustrative
+€100,000-excluding-VAT capital assumption for a shared workstation-class
+machine (e.g., an NVIDIA DGX Station-type system) — never on DGX Spark
+pricing, and never on any verified retail price, since NVIDIA does not
+publish one for that class of machine</strong> (<strong>[FACT]</strong>
+— nvidia.com/en-us/products/workstations/dgx-station/, checked
+2026-08-13: the DGX Station product page has no listed price and directs
+buyers to a partner/marketplace). At 50 members sharing a €2,092/month
+total cost base (€1,957/month financing on €100,000 at 6.5%/5yr, plus
+€108/month electricity at an illustrative 1kW average draw, plus
+€27/month cooling/power overhead), €42/member/month is simple, fully
+auditable arithmetic — see the Token-Factory Scenario Workbook (Release
+Asset #10), §1a, for the complete worked recomputation.</p>
+<p><strong>This workbook’s ≈€22/member/month figure describes a
+different, cheaper hardware tier</strong> — 10× NVIDIA DGX Spark units
+at $4,699 each, not a €100,000 workstation-class system. The two figures
+were never meant to converge, because they price different equipment.
+There is no remaining gap to explain: <strong>both are correct for the
+specific machine and member count each one assumes.</strong></p>
+<p><strong>Boundary note:</strong> repeated per requirement — both
+cooperative models above are editable scenario illustrations, not
+forecasts of actual cooperative running costs, and not financial or
+procurement advice. A reader evaluating a real cooperative must first
+decide which hardware tier (DGX Spark-class desktop devices vs. DGX
+Station-class shared workstation) fits their actual use case before
+either figure becomes meaningful.</p>
+<hr />
+<h2 id="worked-model-c-humanoid-robot-working-capacity-eur">7. Worked
+Model C — Humanoid robot working capacity, EUR</h2>
+<h3
+id="a.-the-illustrative-base-case-already-eur-native-and-explicitly-a-scenario-not-a-real-product-price">7a.
+The illustrative base case (already EUR-native — and explicitly a
+scenario, not a real product price)</h3>
+<p><strong>SCENARIO ASSUMPTION, restated plainly:</strong> the €25,000
+robot price used below is an illustrative example, not a verified market
+price for any specific real product (per source register cluster G).
+Down payment 20% (€5,000); €20,000 financed 5yr @ 8%, monthly
+convention.</p>
+<p><strong>Financing (monthly convention):</strong>
+<code>Monthly payment = 20,000 × 0.006667 / (1 − 1.006667⁻⁶⁰) = €405.5/month → €4,866/yr</code>
+Down payment spread over 5 years: €5,000 ÷ 5 = €1,000/yr <strong>Total
+capital + financing cost = €4,866 + €1,000 = €5,866/yr</strong>
+Electricity: €0.10/operating hour (SCENARIO ASSUMPTION, bundles an
+unstated power-draw figure — not separately verified) Maintenance
+reserve: €2,500/yr (10% of purchase price, SCENARIO ASSUMPTION)</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Annual productive hours</th>
+<th>Cost/h (financing + electricity only)</th>
+<th>Cost/h (incl. maintenance)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2,000</td>
+<td>€5,866/2,000 + €0.10 = <strong>€3.03</strong></td>
+<td>+ €2,500/2,000 = <strong>€4.28</strong></td>
+</tr>
+<tr>
+<td>4,000</td>
+<td>€5,866/4,000 + €0.10 = <strong>€1.57</strong></td>
+<td>+ €2,500/4,000 = <strong>€2.19</strong></td>
+</tr>
+<tr>
+<td>6,000</td>
+<td>€5,866/6,000 + €0.10 = <strong>€1.08</strong></td>
+<td>+ €2,500/6,000 = <strong>€1.49</strong></td>
+</tr>
+<tr>
+<td>8,000</td>
+<td>€5,866/8,000 + €0.10 = <strong>€0.83</strong></td>
+<td>+ €2,500/8,000 = <strong>€1.15</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Formula:
+<code>Cost/h = (annual financing+down-payment cost ÷ annual hours) + electricity/h [+ maintenance/annual hours]</code>.</p>
+<h3
+id="b.-real-market-price-cross-check-converted-to-eur-at-the-1-fx-assumption">7b.
+Real-market price cross-check (converted to EUR at the §1 FX
+assumption)</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Platform</th>
+<th>USD price</th>
+<th>Class</th>
+<th>EUR equivalent (× 0.93)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unitree G1 (entry)</td>
+<td>$13,500</td>
+<td><strong>OBSERVED FACT</strong> (official Unitree page)</td>
+<td>€12,555</td>
+</tr>
+<tr>
+<td>1X NEO (early-access)</td>
+<td>$20,000 (or $499/month subscription)</td>
+<td>ATTRIBUTED STATEMENT (Engadget, corroborated by several outlets; not
+confirmed on 1X’s own pricing page in the content fetched)</td>
+<td>€18,600</td>
+</tr>
+<tr>
+<td>Tesla Optimus (long-term target, no commercial price yet)</td>
+<td>$20,000–$30,000</td>
+<td>ATTRIBUTED STATEMENT (repeated Musk target; Tesla has not opened
+orders as of 2026-08-12)</td>
+<td>€18,600–€27,900</td>
+</tr>
+<tr>
+<td>Figure 03 (rumored target, unofficial)</td>
+<td>~$20,000</td>
+<td>ATTRIBUTED STATEMENT (third-party aggregators only; Figure AI
+publishes no price)</td>
+<td>€18,600</td>
+</tr>
+<tr>
+<td>Agility Digit (outright purchase)</td>
+<td>~$250,000</td>
+<td>ATTRIBUTED STATEMENT (convergent secondary sources; no primary
+Agility price sheet found)</td>
+<td>€232,500</td>
+</tr>
+</tbody>
+</table>
+<p><strong>INTERPRETATION:</strong> the €25,000 illustrative figure used
+in §7a sits within, but toward the lower-middle of, the real
+observed/targeted market range once converted to EUR — close to Unitree
+G1’s real price, well below Agility Digit’s enterprise price, and in the
+same band as Tesla’s/Figure’s unconfirmed consumer targets. This does
+not mean €25,000 is “the” correct robot price; it means the illustration
+is not wildly unrealistic as a placeholder.</p>
+<h3
+id="c.-re-run-using-a-real-observed-price-unitree-g1-12555-instead-of-the-illustrative-25000">7c.
+Re-run using a real observed price (Unitree G1, €12,555) instead of the
+illustrative €25,000</h3>
+<p>Down payment 20% = €2,511; financed €10,044, 5yr @ 8% monthly
+convention. <strong>Financing:</strong>
+<code>10,044 × 0.020275/month = €203.7/month → €2,444/yr</code>;
+down-payment spread = €2,511/5 = €502/yr → <strong>Total =
+€2,946/yr</strong> Maintenance reserve (10%): €1,255/yr. Electricity:
+same €0.10/h placeholder (G1’s actual power draw was not separately
+verified — reader should substitute if known).</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Annual productive hours</th>
+<th>Cost/h (financing + electricity)</th>
+<th>Cost/h (incl. maintenance)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2,000</td>
+<td>€1.57</td>
+<td>€2.20</td>
+</tr>
+<tr>
+<td>4,000</td>
+<td>€0.84</td>
+<td>€1.15</td>
+</tr>
+<tr>
+<td>6,000</td>
+<td>€0.59</td>
+<td>€0.80</td>
+</tr>
+<tr>
+<td>8,000</td>
+<td>€0.47</td>
+<td>€0.63</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Boundary note (repeated, as required for every
+scale/investment-type scenario in this document):</strong> both §7a and
+§7c are editable illustrations built on stated assumptions about price,
+financing, utilization, and electricity — not forecasts, and not
+investment, procurement, or operational advice. Real total cost of
+ownership would also include supervision, software/subscription fees,
+insurance, workspace adaptation, consumables, and downtime, none of
+which are modeled here.</p>
+<hr />
+<h2
+id="economic-layer-separation-illustrated-with-the-localized-home-ai-factory-5-numbers-at-34.6-toks-100-utilization">8.
+Economic-layer separation, illustrated with the localized Home AI
+Factory (§5) numbers at 34.6 tok/s, 100% utilization</h2>
+<p>Per the project’s required methodology, these layers are never
+collapsed into one number. <strong>Corrected 2026-08-13:</strong> an
+earlier version of this section used tok/s = 65 as the “midpoint of the
+50–83 range” — but 83 tok/s did not trace to any source in this
+project’s register (see §5’s correction) and has been removed. Using
+tok/s = 34.6 (midpoint of the confirmed 30.8–38.4 tok/s range from §5)
+for a single readable worked path:</p>
+<p><code>Tokens/yr @ 100% = 34.6 × 31,536,000 = 1,091.1M</code></p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Layer</th>
+<th>What’s included</th>
+<th>Formula</th>
+<th>Result (€/M tokens)</th>
+<th>Class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Raw energy cost</td>
+<td>Electricity only</td>
+<td>€315 ÷ 1,091.1M</td>
+<td><strong>€0.289/M</strong></td>
+<td>DERIVED CALCULATION</td>
+</tr>
+<tr>
+<td>2. Hardware-amortized production cost</td>
+<td>+ straight-line capital depreciation (€4,370 ÷ 5yr = €874/yr, no
+interest)</td>
+<td>(€874+€315) ÷ 1,091.1M</td>
+<td><strong>€1.090/M</strong></td>
+<td>DERIVED CALCULATION</td>
+</tr>
+<tr>
+<td>3. Financed asset cost</td>
+<td>Straight-line capital replaced with 8%/5yr financed payment
+(€1,095/yr)</td>
+<td>(€1,095+€315) ÷ 1,091.1M</td>
+<td><strong>€1.292/M</strong></td>
+<td>DERIVED CALCULATION</td>
+</tr>
+<tr>
+<td>4. Full operating infrastructure cost</td>
+<td>+ illustrative 5%/yr of capital for support/software/space
+(€218.5/yr, SCENARIO ASSUMPTION)</td>
+<td>(€1,095+€315+€218.5) ÷ 1,091.1M</td>
+<td><strong>€1.492/M</strong></td>
+<td>DERIVED CALCULATION on a SCENARIO ASSUMPTION input</td>
+</tr>
+<tr>
+<td>5. Capacity/utilisation cost</td>
+<td>Same stack, but at 50% utilization instead of 100% (fixed costs
+unchanged, electricity and tokens both halve)</td>
+<td>(€1,095+€218.5+€157.5) ÷ 545.6M</td>
+<td><strong>€2.696/M</strong></td>
+<td>DERIVED CALCULATION — shows utilization sensitivity</td>
+</tr>
+<tr>
+<td>6. Token production cost</td>
+<td>= the €/M-token figure itself at whichever layer/utilization you’ve
+chosen</td>
+<td>—</td>
+<td>(one of the above)</td>
+<td>DERIVED CALCULATION</td>
+</tr>
+<tr>
+<td>7. Workload / AI-working-capacity cost</td>
+<td>Convert token cost into a cost per usage-band hour, using
+illustrative usage-intensity bands (chat/advisor 10k–30k tokens/hr;
+copilot 60k–120k; delegated agent 200k–600k; heavy multi-agent 1M–12M+
+tokens/hr — bands drawn from the project’s own conceptual framework, not
+independently re-verified per-band in this pass)</td>
+<td>tokens/hr × (€/M-token rate) ÷ 1,000,000</td>
+<td>e.g. at €1.492/M and 60k tokens/hr: €0.090/hr; at 1M tokens/hr:
+€1.49/hr</td>
+<td>DERIVED CALCULATION on an unverified band assumption</td>
+</tr>
+<tr>
+<td>8. Outcome and value</td>
+<td>Whether that hour of AI working capacity produced anything worth
+more, less, or nothing compared to its cost</td>
+<td><strong>not mechanically derived from layers 1–7</strong></td>
+<td>—</td>
+<td>INTERPRETATION only — value can be positive, zero, or negative; more
+tokens/hours is not automatically better</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2
+id="brief-industrial-tier-note-gb300-nvl72-scale-eur-for-completeness">9.
+Brief industrial-tier note (GB300 NVL72 scale), EUR, for
+completeness</h2>
+<p>This workbook’s main localization focus is the home/cooperative/robot
+tiers above, since those are what an individual or SME reader would
+actually price locally. For completeness, two industrial-scale facts and
+their key caveats, restated in EUR terms:</p>
+<ul>
+<li><strong>OBSERVED FACT:</strong> NVIDIA’s own MLPerf v6.0 submission
+recorded <strong>2,494,310 tokens/sec (“2.5M tok/s”) on
+DeepSeek-R1</strong> — but this is an aggregate across <strong>four
+interconnected GB300 NVL72 systems (288 GPUs total)</strong>, not a
+single 72-GPU rack. Per-GPU throughput for one rack in the Offline
+scenario was 9,821 tokens/sec/GPU. (developer.nvidia.com blog, checked
+2026-08-12.)</li>
+<li><strong>CORRECTED — now VERIFIED, with scope caveat:</strong> the
+“$0.123/M tokens” figure is confirmed directly on NVIDIA’s own site:
+GB300 NVL72 delivers inference at <strong>$0.123 per million tokens at
+116 tokens/sec/user, using NVIDIA Dynamo and TensorRT-LLM</strong>, per
+SemiAnalysis InferenceX benchmarks as of April 2026
+(<strong>[FACT]</strong> — nvidia.com/en-gb/solutions/ai/inference/,
+checked 2026-08-13). This applies specifically to a <strong>72-GPU
+rack-scale system at that interactivity setting</strong> — it must not
+be used to price a single workstation, a DGX Spark, or a DGX Station;
+doing so would understate that tier’s real cost by roughly two to three
+orders of magnitude (see §6’s cooperative reconciliation above, which
+corrects exactly this kind of cross-tier mixing). The separately-cited
+“2.8M tok/s/MW” GB300 throughput figure remains
+<strong>UNVERIFIABLE</strong> — it could not be located verbatim on
+SemiAnalysis’s InferenceX site as of this check; the closest confirmed
+adjacent data points there are roughly 1.67M–3.89M tok/s/MW depending on
+the interactivity point chosen.</li>
+<li><strong>Illustrative-only, EUR-converted capex reference (explicitly
+not official NVIDIA pricing — analyst-estimate based):</strong>
+~$4M/rack ($16M for a 4-rack/288-GPU installation) × 0.93 FX =
+<strong>≈€3.72M/rack (≈€14.9M for 288 GPUs)</strong>, financed 5yr@8% →
+≈€3.73M/yr financing payment. At 90% utilization and ~71 trillion
+tokens/yr, financing premium alone ≈ €0.0106/M tokens on top of
+depreciation — an order-of-magnitude sensitivity check, not a TCO
+claim.</li>
+</ul>
+<p><strong>Boundary note:</strong> as above — illustrative scenario
+only, not investment or procurement guidance, and explicitly built on an
+unverified analyst-style capex-per-rack estimate rather than an official
+NVIDIA price.</p>
+<hr />
+<h2
+id="quick-reference-the-only-cells-you-need-to-change-to-make-this-your-own-countrys-workbook">10.
+Quick-reference: the only cells you need to change to make this your own
+country’s workbook</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Cell to edit</th>
+<th>Where it appears</th>
+<th>Current placeholder</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FX rate</td>
+<td>§1, all currency conversions</td>
+<td>1 USD = €0.93</td>
+</tr>
+<tr>
+<td>Home/prosumer electricity price</td>
+<td>§5, §7</td>
+<td>€0.15/kWh</td>
+</tr>
+<tr>
+<td>Industrial electricity price</td>
+<td>§9</td>
+<td>€0.09/kWh</td>
+</tr>
+<tr>
+<td>Financing rate &amp; term</td>
+<td>§5, §6, §7</td>
+<td>8% / 5 years</td>
+</tr>
+<tr>
+<td>Local hardware landed price (VAT+import+margin)</td>
+<td>§3</td>
+<td><em>blank — not modeled, get a real quote</em></td>
+</tr>
+</tbody>
+</table>
+<p>Everything downstream of these five cells is a formula, shown
+explicitly in each section above, so changing any one of them re-derives
+every dependent number without needing to rebuild the model from
+scratch.</p>
+<hr />
+<p><em>This workbook is one of potentially many national/currency
+adaptations of the same underlying method. It is released under the same
+CC BY 4.0 license as the parent whitepaper. It is educational research
+and scenario analysis only — not investment, legal, tax, procurement, or
+policy advice.</em></p>
+</article>
+<div class="page-footer-nav">
+  <a href="index.html">← Back to home</a>
+  <a href="https://github.com/valto/ai-working-capacity-revolution/blob/main/08-workbook-localized-scenario-eur-finland.md">View source / edit on GitHub →</a>
+</div>
+</main>
+<footer>
+  <p>© Valto Loikkanen. Licensed under CC BY 4.0 where stated. Educational research and scenario analysis — not investment, legal, tax, procurement, or policy advice.</p>
+  <p><a href="https://github.com/valto/ai-working-capacity-revolution">View repository on GitHub</a></p>
+</footer>
+</body>
+</html>

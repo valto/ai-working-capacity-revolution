@@ -118,6 +118,15 @@ The author has commercial and advocacy interests in personal AI infrastructure a
 
 This material is educational research and scenario analysis. It is not investment, legal, tax, procurement, or policy advice. All scenario models in this paper and its companion workbooks are editable illustrations built on stated, visible assumptions, not forecasts or recommendations — a boundary restated explicitly in every investment-thesis or scale-scenario section throughout the paper, not only here.
 
+### 3.6 A living reference model — the framework is durable, the numbers are not
+
+This paper and its companion workbooks are maintained as a living reference model, not a frozen report. Two layers should be read differently:
+
+- **The conceptual framework is intended to be durable.** The core chain (energy → hardware → compute → models → tokens → AI working capacity → digital work → outcomes → value → agency), the AI-maturity axes (Advise → Cowork → Delegate → Lead; Individual → Team → AI workforce), and the required evidence-class and layer-separation discipline are not expected to change unless better evidence or reasoning requires it.
+- **The numerical inputs are expected to keep changing.** Hardware prices, model efficiency, electricity prices, financing costs, retail token prices, and human labor costs (employer and billable, Section 19) all move — often quickly. Every $/M-token, $/AI-working-hour, or human-cost figure in this paper is downstream of stated, dated, editable assumptions (see the Assumption Register, `11-appendix-assumption-register.md`), not a fixed fact.
+
+The preferred way to state any figure from this paper is therefore not *"AI working capacity costs X"* but *"under these stated conditions, at this model version, the calculation gives X."* Readers publishing or citing a specific number from this package should identify the scenario, the assumptions, and — where practical — the model version or date it was drawn from (see `CHANGELOG.md` for version history), so that a citation made today remains understandable even after the canonical model itself has moved on.
+
 ---
 
 # Part I — The Question Behind the AI Boom

@@ -1,0 +1,13 @@
+title: "So, the majority agrees: the time for digital sovereignty has come, now what?"
+author: "Valto Loikkanen"
+date: "2026-08-05"
+publication: "LinkedIn"
+url: "https://www.linkedin.com/pulse/so-majority-agrees-time-digital-sovereignty-has-come-now-loikkanen-vfgbf/"
+topic: ["Sovereignty", "Cooperatives", "Economics"]
+description: "Proposes a cooperative-ownership model for shared AI compute, with a published cost-sharing calculation (~€42/member/month at 50 members, ~€21/member/month at 100). The whitepaper's Global Baseline and Token-Factory workbooks reconcile this figure against a separately-computed DGX-Spark-pool cost (~€19.50-23/member/month) as two different hardware tiers, not a discrepancy."
+relationship: "extends"
+type: "original"
+language: "en"
+scope: "external"
+discovery: "manual"
+status: "published"

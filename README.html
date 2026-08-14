@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>README — Why Are They Spending Trillions on AI?</title>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header>
+  <h1 style="font-size:1.5rem;"><a href="index.html" style="color:#fff; text-decoration:none;">Why Are They Spending Trillions on AI?</a></h1>
+  <p class="meta">Research foundation and living reference model &nbsp;·&nbsp; CC BY 4.0</p>
+</header>
+<main>
+<nav class="crumbs"><a href="index.html">Home</a> / README</nav>
+<article class="doc-body">
+<h1 id="why-are-they-spending-trillions-on-ai">Why Are They Spending
+Trillions on AI?</h1>
+<p><em>The numbers and economics behind the AI working-capacity
+revolution—from electricity and infrastructure to tokens, robots, value,
+ownership, and agency.</em></p>
+<p><strong>Author:</strong> Valto Loikkanen <strong>Status:</strong>
+<strong>v1.0.1</strong> research package, released 2026-08-14. See
+<code><a href="CHANGELOG.html">CHANGELOG.md</a></code> for what changed since v1.0.0, and the
+repository’s <a
+href="https://github.com/valto/ai-working-capacity-revolution/releases">Releases
+page</a> for citable, checksum-verified snapshots of every release.
+<strong>Research initiated:</strong> August 12, 2026 <strong>Factual
+source cut-off:</strong> 2026-08-13 <strong>Licence:</strong> <a
+href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> for
+original prose, diagrams, and model structure — see <code>LICENSE</code>
+for the full scope note (third-party quotes, trademarks, and external
+data are excluded and remain under their own terms). <strong>Suggested
+attribution:</strong> “Research synthesis and modelling by Valto
+Loikkanen, assisted by AI.” <strong>Citation:</strong> see
+<code>CITATION.cff</code>. <strong>Checksums:</strong> see
+<code>CHECKSUMS.sha256</code>. <strong>Changelog:</strong> see
+<code><a href="CHANGELOG.html">CHANGELOG.md</a></code>.</p>
+<h2 id="what-this-is">What this is</h2>
+<p>A neutral-observer research synthesis reverse-engineering a connected
+economic model — energy → hardware → compute → models → tokens → AI
+working capacity → digital work → outcomes → value → agency — from
+public statements by Jensen Huang (and the Nvidia/Wall Street financing
+panel), Sam Altman, and Mark Zuckerberg, combined with independently
+verified hardware specs, pricing, and benchmarks, plus the author’s own
+prior published work on AI infrastructure ownership and cooperative
+models.</p>
+<p>It is not a vendor report, a political programme, or an investment
+recommendation. Six reader lenses — Individual, SME/owner-manager,
+Finance/infrastructure investor, Government/region/community, AI
+builder/operator, and Educator/researcher/journalist — are given
+<strong>equal weight and no priority ordering</strong>, by deliberate
+editorial decision.</p>
+<p>Every substantive claim is tagged with one of five evidence classes
+(Observed Fact / Attributed Statement / Derived Calculation / Scenario
+Assumption / Interpretation) so a reader can tell, at a glance, what is
+independently verified, what is someone’s on-record claim, what is
+arithmetic, and what is an editable illustration.</p>
+<p><strong>Disclosure:</strong> the author has commercial and advocacy
+interests in personal AI infrastructure and cooperative/ownership-based
+AI models through Prifina, Digiole, ValtoAI, and the PIOS and EIOS
+reference frameworks. See Method §3.4 of the whitepaper
+(<code><a href="01-whitepaper.html">01-whitepaper.md</a></code>) for the full disclosure and non-advice
+boundary.</p>
+<h2
+id="reading-paths-start-here-not-with-the-whole-package-at-once">Reading
+paths — start here, not with the whole package at once</h2>
+<p>This package is built so different readers can get a common factual
+base at different depths, without everyone being forced through the same
+89-page document first:</p>
+<ul>
+<li><strong>First-time reader, any lens:</strong> start with
+<code><a href="00-how-to-use-this-research.html">00-how-to-use-this-research.md</a></code> (one page — what this is/is
+not, what it can/cannot establish), then
+<code><a href="12-executive-brief.html">12-executive-brief.md</a></code>.</li>
+<li><strong>The authoritative map</strong> —
+<code><a href="01-whitepaper.html">01-whitepaper.md</a></code> (+ <code>01-whitepaper.pdf</code>). The
+complete model, all evidence-class tagging, all caveats. This is the
+source of truth every other asset should trace back to. <strong>The PDF
+is self-contained</strong>: it embeds the four diagrams most
+load-bearing for the argument (the end-to-end chain, the ownership
+stack, the scale spectrum, and the new-value bridge) directly at their
+point of use, so a reader holding only the downloaded PDF sees them
+without needing the repository. The remaining diagrams (2–5, 7, 9–10)
+live only in <code>assets/diagrams/</code> and the standalone
+deck/briefs — the PDF is the narrative paper with its most essential
+visuals embedded, not a complete visual reproduction of the full
+11-diagram set.</li>
+<li><strong>The entry point</strong> —
+<code><a href="12-executive-brief.html">12-executive-brief.md</a></code>. A fast, self-contained summary for
+readers who want the shape of the argument without the full depth.</li>
+<li><strong>The audit and exploration layer</strong> — the companion
+workbooks (<code>03</code>–<code>08</code>) and
+<code>18-companion-data-model.xlsx</code>. Every formula is shown; every
+assumption is an editable cell. This is where you check the paper’s
+arithmetic or re-run it with your own numbers.</li>
+<li><strong>The conversation starter</strong> —
+<code>19-slide-deck.pptx</code> / <code><a href="13-slide-deck-outline.html">13-slide-deck-outline.md</a></code>
+and the short-form pieces (<code>14</code>–<code>16</code>). For
+presenting or sharing the argument, not for auditing it.</li>
+<li><strong>Before relying on any specific figure:</strong> check
+<code><a href="20-appendix-known-limitations.html">20-appendix-known-limitations.md</a></code> — a consolidated list of
+what this model’s evidence can and cannot currently establish (model
+performance, utilization, financing, power pricing, adoption timing, and
+the Professional-tier evidence gap).</li>
+</ul>
+<h2 id="package-contents">Package contents</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>File</th>
+<th>What it is</th>
+<th>For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code><a href="00-how-to-use-this-research.html">00-how-to-use-this-research.md</a></code></td>
+<td>One-page orientation: neutral-model framing, what this can/cannot
+establish, how to challenge or extend it</td>
+<td>Everyone; read this first</td>
+</tr>
+<tr>
+<td><code><a href="01-whitepaper.html">01-whitepaper.md</a></code></td>
+<td>The full whitepaper — front matter, Parts I–VII, closing (45
+sections)</td>
+<td>Everyone; the authoritative map</td>
+</tr>
+<tr>
+<td><code><a href="02-source-register.html">02-source-register.md</a></code></td>
+<td>Raw fact-check ledger from the verification pass — every claim
+checked, its evidence class, and how it was checked</td>
+<td>Anyone auditing a specific number or quote</td>
+</tr>
+<tr>
+<td><code><a href="03-workbook-global-baseline.html">03-workbook-global-baseline.md</a></code></td>
+<td>Release Asset #7 — full energy-to-tokens cost curves for Home /
+Cooperative / Professional / Hyperscale tiers, global USD baseline</td>
+<td>Anyone modeling their own AI-factory economics</td>
+</tr>
+<tr>
+<td><code><a href="04-workbook-ai-working-capacity-conversion.html">04-workbook-ai-working-capacity-conversion.md</a></code></td>
+<td>Release Asset #9 — the usage-intensity ladder (chat → copilot →
+delegated agent → heavy orchestration) and human-work comparison
+tables</td>
+<td>Anyone converting $/token into $/AI-working-hour</td>
+</tr>
+<tr>
+<td><code><a href="05-workbook-token-factory-scenarios.html">05-workbook-token-factory-scenarios.md</a></code></td>
+<td>Release Asset #10 — token/AI-factory scenarios, the corrected €42
+vs. €19.50–25/member/month cooperative-cost breakdown (two different
+hardware tiers, not a discrepancy), and the Bitcoin-mining
+energy-monetization comparison</td>
+<td>Cooperative/community infrastructure planners</td>
+</tr>
+<tr>
+<td><code><a href="06-investment-thesis-notes.html">06-investment-thesis-notes.md</a></code></td>
+<td>Release Asset #12 — educational, non-advice investment-scenario
+notes by scale tier</td>
+<td>Investors and capital allocators (read the non-advice boundary
+first)</td>
+</tr>
+<tr>
+<td><code><a href="07-workbook-humanoid-working-capacity.html">07-workbook-humanoid-working-capacity.md</a></code></td>
+<td>Release Asset #11 — the humanoid-robot embodied working-capacity
+extension, illustrative €25,000 example plus real market price
+range</td>
+<td>Anyone extending the model to physical labor</td>
+</tr>
+<tr>
+<td><code><a href="08-workbook-localized-scenario-eur-finland.html">08-workbook-localized-scenario-eur-finland.md</a></code></td>
+<td>Release Asset #8 — a worked EUR/Finland localization template</td>
+<td>Anyone adapting the global baseline to their own country</td>
+</tr>
+<tr>
+<td><code><a href="09-appendix-glossary.html">09-appendix-glossary.md</a></code></td>
+<td>Definitions and notation — every technical/economic term used in the
+paper, plain-language</td>
+<td>New readers</td>
+</tr>
+<tr>
+<td><code><a href="10-appendix-source-register-formatted.html">10-appendix-source-register-formatted.md</a></code></td>
+<td>Publication-formatted version of the source register, organized by
+source with verification methodology</td>
+<td>Fact-checkers, journalists, researchers</td>
+</tr>
+<tr>
+<td><code><a href="11-appendix-assumption-register.html">11-appendix-assumption-register.md</a></code></td>
+<td>Every editable scenario assumption across all workbooks,
+consolidated into one table with cross-workbook consistency notes</td>
+<td>Anyone re-running the models with their own numbers</td>
+</tr>
+<tr>
+<td><code><a href="12-executive-brief.html">12-executive-brief.md</a></code></td>
+<td>A standalone, self-contained summary of the whole paper</td>
+<td>Readers who won’t read the full paper</td>
+</tr>
+<tr>
+<td><code><a href="13-slide-deck-outline.html">13-slide-deck-outline.md</a></code></td>
+<td>Slide-by-slide presentation script covering the whole paper</td>
+<td>Anyone presenting this material</td>
+</tr>
+<tr>
+<td><code><a href="14-shortform-general.html">14-shortform-general.md</a></code></td>
+<td>~300-word general-audience explainer</td>
+<td>Social/short-form sharing</td>
+</tr>
+<tr>
+<td><code><a href="15-shortform-ownership.html">15-shortform-ownership.md</a></code></td>
+<td>~300-400 word piece on the ownership question (Part V)</td>
+<td>Social/short-form sharing</td>
+</tr>
+<tr>
+<td><code><a href="16-shortform-value.html">16-shortform-value.md</a></code></td>
+<td>~300-400 word piece on why cheap tokens ≠ cheap value (Part IV)</td>
+<td>Social/short-form sharing</td>
+</tr>
+<tr>
+<td><code><a href="17-visual-asset-briefs.html">17-visual-asset-briefs.md</a></code></td>
+<td>Diagram specifications for Diagrams 1–11 (all 11 now built — see
+<code>assets/diagrams/</code>)</td>
+<td>Whoever builds/edits the final graphics</td>
+</tr>
+<tr>
+<td><code>18-companion-data-model.xlsx</code></td>
+<td>Live-formula Excel workbook (10 sheets: README,
+Home/Cooperative/Professional/Hyperscale tiers, Working-Capacity Matrix,
+Bitcoin Comparison, Humanoid Robot, EUR-Finland Localization,
+Assumptions Master) — built from <code>03-04-05-07-08</code>’s tables,
+edit any yellow assumption cell to recalculate everything
+downstream</td>
+<td>Anyone who wants to run their own numbers without retyping
+formulas</td>
+</tr>
+<tr>
+<td><code>19-slide-deck.pptx</code></td>
+<td>26-slide presentation deck built from
+<code><a href="13-slide-deck-outline.html">13-slide-deck-outline.md</a></code>, with speaker notes</td>
+<td>Anyone presenting this material</td>
+</tr>
+<tr>
+<td><code><a href="20-appendix-known-limitations.html">20-appendix-known-limitations.md</a></code></td>
+<td>Consolidated list of live uncertainties (model performance,
+utilization, financing, power pricing, adoption timing,
+Professional-tier evidence gap)</td>
+<td>Anyone deciding how much weight to put on a specific figure</td>
+</tr>
+<tr>
+<td><code>assets/diagrams/diagram-01…11-*.png</code></td>
+<td>The 11 finished diagram images specified in
+<code><a href="17-visual-asset-briefs.html">17-visual-asset-briefs.md</a></code> — Diagram 11 is the author’s own
+pre-existing framework diagram, provenance-framed (evidence-class tag,
+attribution, footer) to match the rest of the set; the unmodified
+original is kept alongside it as <code>diagram-11-*.jpg</code></td>
+<td>Report/deck/web use</td>
+</tr>
+<tr>
+<td><code>data/canonical-cost-model.csv</code></td>
+<td>The single canonical source for every tier’s $/M-token and
+$/AI-working-hour figures</td>
+<td>Anyone checking or extending the model</td>
+</tr>
+<tr>
+<td><code>tools/check-canonical-consistency.py</code></td>
+<td>Automated check that the whitepaper, PDF, workbooks, deck, and xlsx
+have not drifted from <code>data/canonical-cost-model.csv</code></td>
+<td>Maintainers, before any release — see setup below</td>
+</tr>
+<tr>
+<td><code>tools/requirements.txt</code></td>
+<td>Pinned Python dependencies for the consistency checker</td>
+<td>Maintainers running the checker</td>
+</tr>
+<tr>
+<td><code>CITATION.cff</code></td>
+<td>Machine-readable citation metadata (GitHub renders this as a “Cite
+this repository” prompt)</td>
+<td>Anyone citing this work</td>
+</tr>
+<tr>
+<td><code>LICENSE</code></td>
+<td>Full CC BY 4.0 legal text, plus a scope note on what is (and is not)
+covered by that license</td>
+<td>Anyone reusing this material</td>
+</tr>
+<tr>
+<td><code>CHECKSUMS.sha256</code></td>
+<td>SHA-256 manifest for every file in this release (data lines only, no
+comments — plain <code>sha256sum</code>/<code>shasum</code> output for
+cross-platform compatibility), so a public copy can be verified against
+this exact commit</td>
+<td>Anyone verifying package integrity</td>
+</tr>
+<tr>
+<td><code><a href="CHANGELOG.html">CHANGELOG.md</a></code></td>
+<td>Version history — what changed between releases, and why</td>
+<td>Anyone tracking revisions</td>
+</tr>
+<tr>
+<td><code>index.html</code>, <code>*.html</code></td>
+<td>The GitHub Pages site — every markdown document above has a matching
+native HTML page (built from it, not a duplicate) so the whole package
+can be read inside the site without jumping to GitHub’s markdown
+viewer</td>
+<td>Anyone reading the live site at <a
+href="https://valto.github.io/ai-working-capacity-revolution/">valto.github.io/ai-working-capacity-revolution</a></td>
+</tr>
+<tr>
+<td><code>diagrams.html</code></td>
+<td>A gallery page for all 11 diagrams, with captions and alt text,
+linking to <code>17-visual-asset-briefs.html</code> for full specs</td>
+<td>Readers browsing the visual set without leaving the site</td>
+</tr>
+<tr>
+<td><code>perspectives.html</code>,
+<code>perspectives/*.yaml</code></td>
+<td>The Perspectives/Writeups index — original, independent, and
+critical publications derived from or challenging this research,
+filterable by type/topic. See <code>perspectives/README.md</code> for
+the entry schema</td>
+<td>Anyone tracking the broader discussion around this work, or
+submitting their own writeup</td>
+</tr>
+<tr>
+<td><code>docs/backlink-discovery.md</code></td>
+<td>Design (not yet implemented) for an automated backlink-discovery →
+classification → Perspectives pipeline</td>
+<td>Maintainers considering Ahrefs/Semrush API integration</td>
+</tr>
+<tr>
+<td><code>tools/build-pages.py</code>,
+<code>tools/page-template.html</code></td>
+<td>Generates every markdown-sourced <code>*.html</code> page from its
+<code>.md</code> source, with cross-references rewritten to stay inside
+the site</td>
+<td>Maintainers, after any markdown content change — see below</td>
+</tr>
+<tr>
+<td><code>tools/build-perspectives.py</code>,
+<code>tools/perspectives-template.html</code></td>
+<td>Generates <code>perspectives.html</code> from every
+<code>perspectives/*.yaml</code> entry</td>
+<td>Maintainers, after adding/editing a perspective</td>
+</tr>
+</tbody>
+</table>
+<h2 id="rebuilding-the-pages-site-after-a-content-change">Rebuilding the
+Pages site after a content change</h2>
+<p>Every <code>*.html</code> file at the repo root except
+<code>index.html</code> and <code>diagrams.html</code> (hand-authored)
+and <code>perspectives.html</code> (generated by a separate script,
+below) is generated from its matching <code>.md</code> file — <strong>do
+not hand-edit a generated <code>.html</code> file</strong>; edit the
+markdown source and rebuild:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> tools/build-pages.py</span></code></pre></div>
+<p>This regenerates all pages and rewrites cross-references between them
+(a link to another tracked <code>.md</code> file becomes a link to that
+file’s <code>.html</code> page) so reading stays inside the Pages site
+rather than jumping to GitHub’s markdown viewer. Requires
+<code>pandoc</code> on <code>PATH</code>.</p>
+<p>After adding or editing a <code>perspectives/*.yaml</code> entry,
+rebuild the Perspectives index:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> tools/build-perspectives.py</span></code></pre></div>
+<p>Requires <code>pyyaml</code> (see
+<code>tools/requirements.txt</code>).</p>
+<h2 id="running-the-consistency-checker">Running the consistency
+checker</h2>
+<p><code>tools/check-canonical-consistency.py</code> verifies that the
+whitepaper, the built PDF, the companion Excel workbook, and the slide
+deck all agree with <code>data/canonical-cost-model.csv</code> — the
+single source of truth for tier cost figures. It fails closed: a missing
+dependency, a missing file, or a broken Python environment is reported
+as a failure, not silently skipped, so a <code>PASS</code> can be
+trusted to mean every check actually ran.</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> venv .venv</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> .venv/bin/activate</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-r</span> tools/requirements.txt</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> tools/check-canonical-consistency.py</span></code></pre></div>
+<p><strong>Known environment issue on some macOS/Homebrew
+setups:</strong> if the default <code>python3</code> on your system
+reports <code>ImportError: ... pyexpat ...</code> or
+<code>No module named expat</code>, that Python build’s XML support is
+broken (a Homebrew <code>libexpat</code> version mismatch), and every
+check that touches the xlsx or pptx will fail — this is a real
+environment problem the checker is correctly refusing to paper over, not
+a bug in this script. Use a different Python installation (e.g. a
+<code>pyenv</code>-managed build, or <code>python3.11</code> from a
+fresh Homebrew <code>python@3.11</code> install) to create the
+virtualenv above instead.</p>
+<h2 id="verifying-checksums">Verifying checksums</h2>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">shasum</span> <span class="at">-a</span> 256 <span class="at">-c</span> CHECKSUMS.sha256      <span class="co"># macOS</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sha256sum</span> <span class="at">-c</span> CHECKSUMS.sha256          <span class="co"># Linux/GNU coreutils</span></span></code></pre></div>
+<p><code>CHECKSUMS.sha256</code> contains plain hash/filename lines only
+— no comments or header text — so both tools above accept it without
+warnings.</p>
+<h2 id="status-and-known-open-items">Status and known open items</h2>
+<p>This is a complete v1.0 draft produced by an AI-assisted research and
+modelling workflow, with an independent verification pass, per-section
+fact-consistency audits, and a deterministic (non-AI-regenerated) final
+assembly step to guarantee no content was dropped or truncated during
+compilation.</p>
+<p>Known items flagged transparently within the package itself:</p>
+<ul>
+<li><strong>Resolved (2026-08-13):</strong> the earlier “€42 vs
+€19.50–25/member/month” cooperative-cost item was not actually a
+discrepancy — the two figures describe two different hardware tiers (an
+illustrative €100,000 shared workstation-class machine vs. a pool of
+$4,699 NVIDIA DGX Spark units), not competing estimates of the same
+cooperative. See <code><a href="05-workbook-token-factory-scenarios.html">05-workbook-token-factory-scenarios.md</a></code>
+§1a/§1b and <code><a href="11-appendix-assumption-register.html">11-appendix-assumption-register.md</a></code> row 6a for
+the corrected, fully auditable breakdown.</li>
+<li><strong>Resolved (2026-08-13):</strong> the “$0.123/M tokens”
+GB300-class inference figure is now confirmed directly on NVIDIA’s own
+site (previously flagged UNVERIFIABLE). It applies specifically to a
+72-GPU GB300 NVL72 rack at 116 tokens/sec/user using NVIDIA Dynamo and
+TensorRT-LLM — it must not be used to price any workstation or
+desktop-class device. See <code><a href="03-workbook-global-baseline.html">03-workbook-global-baseline.md</a></code>
+§5.7.</li>
+<li>Several hardware/price inputs (Professional-tier HGX B300 node
+pricing/power, hyperscale rack capex, the illustrative €100,000
+DGX-Station-class and €25,000 humanoid robot prices) have no public
+source and are flagged ⚠ throughout as placeholders, not verified
+figures — NVIDIA does not publish retail prices for DGX Station or HGX
+B300.</li>
+<li><strong>Resolved (2026-08-13):</strong> the slide deck, diagrams,
+and companion workbook are now finished binary files
+(<code>19-slide-deck.pptx</code>, <code>assets/diagrams/*.png</code>,
+<code>18-companion-data-model.xlsx</code>) rather than markdown specs —
+the workbook’s formulas and the diagrams were independently verified
+against the source markdown during the build (one hyperscale-utilization
+formula error and two diagram layout defects were caught and fixed this
+way).</li>
+<li><strong>Resolved (2026-08-13):</strong> a final reconciliation pass
+found and fixed a cluster of stale Home/Cooperative-tier figures that
+had not been updated when this paper’s canonical ranges were established
+— the whitepaper, <code><a href="05-workbook-token-factory-scenarios.html">05-workbook-token-factory-scenarios.md</a></code>,
+<code><a href="13-slide-deck-outline.html">13-slide-deck-outline.md</a></code>, <code>19-slide-deck.pptx</code>,
+and <code>assets/diagrams/diagram-08-scale-spectrum.png</code> all now
+cite the single canonical Home ($1.37–$11.89/M tokens) and Cooperative
+($1.99–$7.62/M tokens) ranges and their correctly-derived
+$/AI-working-hour figures. The same pass corrected a 1,000x unit error
+in the Bitcoin-mining energy-monetization comparison (§14 of the
+whitepaper, §5 of the Token-Factory Scenario Workbook) — the corrected
+arithmetic inverts that passage’s original illustrative conclusion:
+valued at the canonical Home-tier production cost, AI tokens’ gross
+revenue-per-MWh-equivalent exceeds even efficient Bitcoin-mining fleets,
+not falls below them as an earlier draft claimed. Two prose labels in
+<code>18-companion-data-model.xlsx</code> that were stored as broken
+formulas (would have displayed <code>#NAME?</code>) were also converted
+to plain text.</li>
+<li><strong>Resolved (2026-08-14):</strong> this package is now deployed
+as a GitHub Pages site at <a
+href="https://valto.github.io/ai-working-capacity-revolution/">valto.github.io/ai-working-capacity-revolution</a>,
+tracking <code>main</code> — see the Status line above for how the live
+site relates to the last tagged release.</li>
+</ul>
+<p>Before any public release, a human review pass of the full whitepaper
+and workbooks is recommended, particularly for the reconciliation and
+placeholder items above.</p>
+</article>
+<div class="page-footer-nav">
+  <a href="index.html">← Back to home</a>
+  <a href="https://github.com/valto/ai-working-capacity-revolution/blob/main/README.md">View source / edit on GitHub →</a>
+</div>
+</main>
+<footer>
+  <p>© Valto Loikkanen. Licensed under CC BY 4.0 where stated. Educational research and scenario analysis — not investment, legal, tax, procurement, or policy advice.</p>
+  <p><a href="https://github.com/valto/ai-working-capacity-revolution">View repository on GitHub</a></p>
+</footer>
+</body>
+</html>

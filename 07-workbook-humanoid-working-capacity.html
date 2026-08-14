@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Humanoid Working-Capacity
+Workbook — Why Are They Spending Trillions on AI?</title>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header>
+  <h1 style="font-size:1.5rem;"><a href="index.html" style="color:#fff; text-decoration:none;">Why Are They Spending Trillions on AI?</a></h1>
+  <p class="meta">Research foundation and living reference model &nbsp;·&nbsp; CC BY 4.0</p>
+</header>
+<main>
+<nav class="crumbs"><a href="index.html">Home</a> / Humanoid Working-Capacity Workbook</nav>
+<article class="doc-body">
+<h1 id="humanoid-working-capacity-workbook-release-asset-11">Humanoid
+Working-Capacity Workbook (Release Asset #11)</h1>
+<h2 id="scope-statement-read-this-first">Scope statement — read this
+first</h2>
+<p>This workbook is an <strong>illustrative embodied-capacity
+extension</strong> of the whitepaper’s core chain (Energy → hardware →
+compute → models → tokens → AI working capacity → digital work →
+outcomes → value → agency), extended to: <em>Capital + energy +
+maintenance + utilisation + orchestration → humanoid physical working
+capacity.</em></p>
+<p>It is <strong>not</strong> a general claim about robotics economics,
+a product recommendation, a forecast of any real robot’s field
+performance, or investment/procurement guidance. It models one narrow
+question — <em>what does an hour of a humanoid robot’s uptime cost to
+own, under stated assumptions</em> — using (a) one clearly-labelled
+scenario assumption (the author’s original €25,000 illustrative robot)
+and (b) a real market price range assembled from four named, currently
+sold or announced platforms. All figures below are either cited primary
+specs/prices, attributed secondary claims, transparent arithmetic, or
+explicitly labelled scenario assumptions — never a forecast.
+<strong>This is educational research and scenario analysis, not
+investment, procurement, tax, or policy advice.</strong> This boundary
+applies to every section below, not only here.</p>
+<h3 id="evidence-class-legend-used-throughout">Evidence class legend
+(used throughout)</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>OBSERVED FACT</strong></td>
+<td>Primary/official source, checked live on or immediately before
+2026-08-12</td>
+</tr>
+<tr>
+<td><strong>ATTRIBUTED STATEMENT</strong></td>
+<td>A named party’s on-the-record claim; not independently proven
+true</td>
+</tr>
+<tr>
+<td><strong>DERIVED CALCULATION</strong></td>
+<td>Transparent arithmetic from cited inputs; formula always shown</td>
+</tr>
+<tr>
+<td><strong>SCENARIO ASSUMPTION</strong></td>
+<td>A visible, editable parameter, not a market figure</td>
+</tr>
+<tr>
+<td><strong>INTERPRETATION</strong></td>
+<td>A labelled explanation of how items may connect — never presented as
+fact</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2
+id="part-1-two-starting-points-illustrative-scenario-vs.-real-market-range">Part
+1 — Two starting points: illustrative scenario vs. real market
+range</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Case</th>
+<th>Price</th>
+<th>Evidence class</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Illustrative base case</strong></td>
+<td>€25,000 (≈ $27,000 at an assumed 1.08 EUR/USD rate)</td>
+<td><strong>SCENARIO ASSUMPTION</strong> — the author’s own original
+worked example; not a real product price</td>
+<td>Author’s prior calculation (per project background); FX rate is a
+separate SCENARIO ASSUMPTION, not a market rate</td>
+</tr>
+<tr>
+<td><strong>Real-range LOW</strong></td>
+<td>$13,500</td>
+<td><strong>OBSERVED FACT</strong> — Unitree G1 entry price, “from
+$13.5K,” tax/shipping excluded</td>
+<td>https://www.unitree.com/g1, checked 2026-08-12</td>
+</tr>
+<tr>
+<td><strong>Real-range MID (consumer/prosumer)</strong></td>
+<td>$20,000 upfront (or $499/month subscription)</td>
+<td><strong>ATTRIBUTED STATEMENT</strong> — 1X NEO early-access price,
+reported by Engadget (2025-10-29); not confirmed on 1X’s own pricing
+page in the fetch performed for the source register</td>
+<td>https://www.engadget.com/ai/1x-neo-is-a-20000-home-robot-that-will-learn-chores-via-teleoperation-040252200.html</td>
+</tr>
+<tr>
+<td><strong>Real-range HIGH (enterprise)</strong></td>
+<td>~$250,000</td>
+<td><strong>ATTRIBUTED STATEMENT</strong> — Agility Robotics Digit,
+convergent across multiple secondary/aggregator sources; no primary
+Agility pricing page was accessible to confirm directly</td>
+<td>Multiple secondary sources (GrabARobot, RoboSelect360, Humanoza, et
+al.), checked 2026-08-12</td>
+</tr>
+</tbody>
+</table>
+<p>Explicitly excluded from this workbook’s numeric model because
+pricing is unconfirmed or non-existent as of 2026-08-12: Tesla Optimus
+(Musk has repeated a <strong>$20,000–$30,000 long-term target</strong>,
+ATTRIBUTED STATEMENT, no commercial orders or confirmed retail price
+exist) and Figure AI’s Figure 03 (no official pricing published at all;
+a ~$20,000 figure circulates only via third-party aggregators). Both
+would sit inside or near the MID band if their aspirational figures ever
+became real prices — flagged here as INTERPRETATION, not fact.</p>
+<p><strong>INTERPRETATION:</strong> the €25,000 (~$27,000) illustrative
+case sits between the real-world MID consumer band ($20,000) and would
+be roughly 2x the observed LOW price and roughly 1/9th the ATTRIBUTED
+enterprise HIGH price. It is a plausible illustrative point
+<em>within</em> the real spread, not an outlier — but it is still not a
+verified market price for any named product.</p>
+<hr />
+<h2 id="part-2-required-economic-layer-separation">Part 2 — Required
+economic layer separation</h2>
+<p>Per this project’s modelling rules, the layers below are kept
+separate and never collapsed into one number: <strong>capital cost →
+financing cost → electricity (operating) cost → maintenance reserve →
+utilisation → cost-per-productive-hour</strong>. (The further layers —
+token production cost, workload/AI-working-capacity cost, outcome/value
+— are out of scope for a hardware-hours model and are addressed only in
+the Part 6 interpretation, explicitly labelled as such.)</p>
+<h3 id="capital-layer-all-four-price-points">2.1 Capital layer (all four
+price points)</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Case</th>
+<th>Price</th>
+<th>Down payment (20%, SCENARIO ASSUMPTION)</th>
+<th>Amount financed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Illustrative (€25,000 / ~$27,000)</td>
+<td>$27,000</td>
+<td>$5,400</td>
+<td>$21,600</td>
+</tr>
+<tr>
+<td>Real LOW ($13,500)</td>
+<td>$13,500</td>
+<td>$2,700</td>
+<td>$10,800</td>
+</tr>
+<tr>
+<td>Real MID ($20,000)</td>
+<td>$20,000</td>
+<td>$4,000</td>
+<td>$16,000</td>
+</tr>
+<tr>
+<td>Real HIGH ($250,000)</td>
+<td>$250,000</td>
+<td>$50,000</td>
+<td>$200,000</td>
+</tr>
+</tbody>
+</table>
+<p>The 20% down payment is a <strong>SCENARIO ASSUMPTION</strong>
+controlling how much capital is financed vs. paid up front; it is
+editable (see Part 3.2 sensitivity).</p>
+<hr />
+<h2 id="part-3-financing-layer">Part 3 — Financing layer</h2>
+<p><strong>DERIVED CALCULATION.</strong> Standard amortizing-loan
+formula:</p>
+<p><code>M = P × i / (1 − (1+i)^-n)</code> where P = amount financed, i
+= monthly rate (annual rate ÷ 12), n = number of monthly payments (years
+× 12).</p>
+<p>Base case: 5-year term, 8% annual rate (both <strong>SCENARIO
+ASSUMPTIONS</strong> — editable; 8% is illustrative, not a quoted lender
+rate). Down payment is amortized straight-line over the same term and
+added back so total capital+financing cost is comparable across
+cases.</p>
+<p><code>Total annual capital+financing cost = (M × 12) + (Down payment ÷ financing term years)</code></p>
+<h3 id="base-case-5yr-8-20-down">3.1 Base case (5yr @ 8%, 20% down)</h3>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Case</th>
+<th>Monthly payment</th>
+<th>Annual financing (M×12)</th>
+<th>Down payment amortized/yr</th>
+<th><strong>Total capital+financing cost/yr</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Illustrative (~$27,000 / €25,000)</td>
+<td>$437.97 (≈€405.53)</td>
+<td>$5,255.64</td>
+<td>$1,080.00</td>
+<td><strong>$6,335.64</strong> (≈€5,866.33 — matches the original EUR
+worked example)</td>
+</tr>
+<tr>
+<td>Real LOW ($13,500)</td>
+<td>$218.99</td>
+<td>$2,627.82</td>
+<td>$540.00</td>
+<td><strong>$3,167.82</strong></td>
+</tr>
+<tr>
+<td>Real MID ($20,000)</td>
+<td>$324.42</td>
+<td>$3,893.07</td>
+<td>$800.00</td>
+<td><strong>$4,693.07</strong></td>
+</tr>
+<tr>
+<td>Real HIGH ($250,000)</td>
+<td>$4,055.28</td>
+<td>$48,663.35</td>
+<td>$10,000.00</td>
+<td><strong>$58,663.35</strong></td>
+</tr>
+</tbody>
+</table>
+<h3
+id="financing-term-sensitivity-8-rate-20-down-held-constant-total-capitalfinancing-costyr">3.2
+Financing-term sensitivity (8% rate, 20% down held constant) — total
+capital+financing cost/yr</h3>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Case</th>
+<th>3 yr</th>
+<th>4 yr</th>
+<th>5 yr</th>
+<th>7 yr</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Illustrative (~$27,000)</td>
+<td>$9,921.79</td>
+<td>$7,677.83</td>
+<td>$6,335.64</td>
+<td>$4,811.38</td>
+</tr>
+<tr>
+<td>Real LOW ($13,500)</td>
+<td>$4,961.19</td>
+<td>$3,838.91</td>
+<td>$3,167.82</td>
+<td>$2,405.69</td>
+</tr>
+<tr>
+<td>Real MID ($20,000)</td>
+<td>$7,349.92</td>
+<td>$5,687.28</td>
+<td>$4,693.07</td>
+<td>$3,563.98</td>
+</tr>
+<tr>
+<td>Real HIGH ($250,000)</td>
+<td>$91,873.94</td>
+<td>$71,091.01</td>
+<td>$58,663.35</td>
+<td>$44,549.77</td>
+</tr>
+</tbody>
+</table>
+<p>(Illustrative column recomputed at the $27,000 USD-equivalent scale
+for internal consistency; native-EUR values scale proportionally.)</p>
+<h3
+id="down-payment-sensitivity-5yr-8-held-constant-total-capitalfinancing-costyr">3.3
+Down-payment sensitivity (5yr @ 8% held constant) — total
+capital+financing cost/yr</h3>
+<table>
+<thead>
+<tr>
+<th>Case</th>
+<th>0% down</th>
+<th>20% down</th>
+<th>40% down</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Illustrative (~$27,000)</td>
+<td>$6,569.55</td>
+<td>$6,335.64</td>
+<td>$6,101.73</td>
+</tr>
+<tr>
+<td>Real LOW ($13,500)</td>
+<td>$3,284.78</td>
+<td>$3,167.82</td>
+<td>$3,050.87</td>
+</tr>
+<tr>
+<td>Real MID ($20,000)</td>
+<td>$4,866.33</td>
+<td>$4,693.07</td>
+<td>$4,519.80</td>
+</tr>
+<tr>
+<td>Real HIGH ($250,000)</td>
+<td>$60,829.18</td>
+<td>$58,663.35</td>
+<td>$56,497.51</td>
+</tr>
+</tbody>
+</table>
+<p><strong>INTERPRETATION:</strong> term length matters far more than
+down-payment size in this model — stretching from 3 to 7 years cuts the
+annual capital+financing burden by roughly half, while doubling the down
+payment only trims it by a few percent. Both are editable levers, not
+market facts.</p>
+<hr />
+<h2 id="part-4-electricity-layer">Part 4 — Electricity layer</h2>
+<p>Two parallel methods, both <strong>SCENARIO ASSUMPTIONS</strong>
+unless noted:</p>
+<p><strong>(a) Flat operating-hour assumption</strong> (as in the
+original illustrative case): $0.11/operating hour (≈€0.10/h at the
+assumed FX rate) — a simple placeholder, not tied to any specific
+robot’s power draw.</p>
+<p><strong>(b) Spec-derived rate</strong>, using 1X NEO’s OBSERVED
+battery spec (842 Wh runtime over 4 hours → average continuous draw ≈
+0.2105 kW) at an illustrative $0.15/kWh electricity price
+(<strong>SCENARIO ASSUMPTION</strong> — a plausible
+commercial/industrial US-average rate, not a quoted utility tariff):</p>
+<p><code>Electricity $/hour = average power draw (kW) × electricity price ($/kWh)</code>
+<code>= 0.2105 kW × $0.15/kWh = $0.0316/hour</code></p>
+<p>Source for the underlying spec: https://www.1x.tech/neo (OBSERVED
+FACT — 842 Wh runtime, 4-hour battery life), checked 2026-08-12.</p>
+<p><strong>INTERPRETATION:</strong> the spec-derived figure is an order
+of magnitude lower than the flat $0.11/h placeholder — humanoid robots
+at ~200W average draw are electrically cheap to run relative to almost
+any other capital cost in this model; electricity is not the binding
+cost driver here (unlike in data-center/token-production economics
+elsewhere in the whitepaper). This spec applies to 1X NEO specifically
+and is used as an illustrative order-of-magnitude anchor for the other
+three price points too — it is not verified for Unitree G1, Agility
+Digit, or the illustrative case.</p>
+<hr />
+<h2 id="part-5-maintenance-layer">Part 5 — Maintenance layer</h2>
+<p><strong>SCENARIO ASSUMPTION:</strong> maintenance/repair reserve =
+10% of purchase price per year (unchanged from the original illustrative
+case; not a manufacturer-quoted service contract for any of the four
+platforms — none of the four sources in the register publish a
+maintenance-cost figure).</p>
+<table>
+<thead>
+<tr>
+<th>Case</th>
+<th>Maintenance reserve/yr</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Illustrative (~$27,000)</td>
+<td>$2,700</td>
+</tr>
+<tr>
+<td>Real LOW ($13,500)</td>
+<td>$1,350</td>
+</tr>
+<tr>
+<td>Real MID ($20,000)</td>
+<td>$2,000</td>
+</tr>
+<tr>
+<td>Real HIGH ($250,000)</td>
+<td>$25,000</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="part-6-utilization-sensitivity-and-cost-per-hour-ranges">Part 6
+— Utilization sensitivity and cost-per-hour ranges</h2>
+<p><strong>DERIVED CALCULATION.</strong></p>
+<p><code>Cost/hour (financing+electricity) = (Total capital+financing cost/yr + electricity $/hr × annual hours) ÷ annual hours</code>
+<code>Cost/hour (financing+electricity+maintenance) = (Total capital+financing cost/yr + electricity $/hr × annual hours + maintenance/yr) ÷ annual hours</code></p>
+<p>Shown at both electricity assumptions (flat $0.11/h vs. spec-derived
+$0.0316/h) and four productive-utilization levels (2,000 / 4,000 / 6,000
+/ 8,000 hours/year — themselves SCENARIO ASSUMPTIONS bracketing
+single-shift to near-continuous operation).</p>
+<h3
+id="illustrative-base-case-27000-25000-usd-native-eur-cross-check-in-parentheses">6.1
+Illustrative base case (~$27,000 / €25,000) — USD, native-EUR
+cross-check in parentheses</h3>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Utilization (h/yr)</th>
+<th>Fin+elec (flat)</th>
+<th>Fin+elec+maint (flat)</th>
+<th>Fin+elec (spec)</th>
+<th>Fin+elec+maint (spec)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2,000</td>
+<td>$3.28 (€3.03)</td>
+<td>$4.63 (€4.28)</td>
+<td>$3.20</td>
+<td>$4.55</td>
+</tr>
+<tr>
+<td>4,000</td>
+<td>$1.69 (€1.57)</td>
+<td>$2.37 (€2.19)</td>
+<td>$1.62</td>
+<td>$2.29</td>
+</tr>
+<tr>
+<td>6,000</td>
+<td>$1.17 (€1.08)</td>
+<td>$1.62 (€1.49)</td>
+<td>$1.09</td>
+<td>$1.54</td>
+</tr>
+<tr>
+<td>8,000</td>
+<td>$0.90 (€0.83)</td>
+<td>$1.24 (€1.15)</td>
+<td>$0.82</td>
+<td>$1.16</td>
+</tr>
+</tbody>
+</table>
+<p>(EUR values shown are the exact recomputation in native EUR at
+€0.10/h flat electricity — they match the original worked example,
+confirming internal consistency.)</p>
+<h3 id="real-range-low-13500-unitree-g1">6.2 Real-range LOW ($13,500,
+Unitree G1)</h3>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Utilization (h/yr)</th>
+<th>Fin+elec (flat)</th>
+<th>Fin+elec+maint (flat)</th>
+<th>Fin+elec (spec)</th>
+<th>Fin+elec+maint (spec)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2,000</td>
+<td>$1.69</td>
+<td>$2.37</td>
+<td>$1.62</td>
+<td>$2.29</td>
+</tr>
+<tr>
+<td>4,000</td>
+<td>$0.90</td>
+<td>$1.24</td>
+<td>$0.82</td>
+<td>$1.16</td>
+</tr>
+<tr>
+<td>6,000</td>
+<td>$0.64</td>
+<td>$0.86</td>
+<td>$0.56</td>
+<td>$0.79</td>
+</tr>
+<tr>
+<td>8,000</td>
+<td>$0.51</td>
+<td>$0.68</td>
+<td>$0.43</td>
+<td>$0.60</td>
+</tr>
+</tbody>
+</table>
+<h3 id="real-range-mid-20000-1x-neo-early-access-price">6.3 Real-range
+MID ($20,000, 1X NEO early-access price)</h3>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Utilization (h/yr)</th>
+<th>Fin+elec (flat)</th>
+<th>Fin+elec+maint (flat)</th>
+<th>Fin+elec (spec)</th>
+<th>Fin+elec+maint (spec)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2,000</td>
+<td>$2.46</td>
+<td>$3.46</td>
+<td>$2.38</td>
+<td>$3.38</td>
+</tr>
+<tr>
+<td>4,000</td>
+<td>$1.28</td>
+<td>$1.78</td>
+<td>$1.21</td>
+<td>$1.71</td>
+</tr>
+<tr>
+<td>6,000</td>
+<td>$0.89</td>
+<td>$1.23</td>
+<td>$0.81</td>
+<td>$1.15</td>
+</tr>
+<tr>
+<td>8,000</td>
+<td>$0.70</td>
+<td>$0.95</td>
+<td>$0.62</td>
+<td>$0.87</td>
+</tr>
+</tbody>
+</table>
+<h3 id="real-range-high-250000-agility-digit">6.4 Real-range HIGH
+($250,000, Agility Digit)</h3>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Utilization (h/yr)</th>
+<th>Fin+elec (flat)</th>
+<th>Fin+elec+maint (flat)</th>
+<th>Fin+elec (spec)</th>
+<th>Fin+elec+maint (spec)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2,000</td>
+<td>$29.44</td>
+<td>$41.94</td>
+<td>$29.36</td>
+<td>$41.86</td>
+</tr>
+<tr>
+<td>4,000</td>
+<td>$14.78</td>
+<td>$21.03</td>
+<td>$14.70</td>
+<td>$20.95</td>
+</tr>
+<tr>
+<td>6,000</td>
+<td>$9.89</td>
+<td>$14.05</td>
+<td>$9.81</td>
+<td>$13.98</td>
+</tr>
+<tr>
+<td>8,000</td>
+<td>$7.44</td>
+<td>$10.57</td>
+<td>$7.36</td>
+<td>$10.49</td>
+</tr>
+</tbody>
+</table>
+<h3
+id="summary-cost-per-productive-hour-range-across-the-whole-spread">6.5
+Summary — cost-per-productive-hour range across the whole spread</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Utilization</th>
+<th>Full observed/attributed spread (incl. maintenance, flat
+electricity)</th>
+<th>Illustrative case sits at</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2,000 h/yr</td>
+<td>$2.37 – $41.94</td>
+<td>$4.63</td>
+</tr>
+<tr>
+<td>4,000 h/yr</td>
+<td>$1.24 – $21.03</td>
+<td>$2.37</td>
+</tr>
+<tr>
+<td>6,000 h/yr</td>
+<td>$0.86 – $14.05</td>
+<td>$1.62</td>
+</tr>
+<tr>
+<td>8,000 h/yr</td>
+<td>$0.68 – $10.57</td>
+<td>$1.24</td>
+</tr>
+</tbody>
+</table>
+<p><strong>INTERPRETATION:</strong> utilization dominates the
+cost-per-hour result more than any other single variable in this model —
+moving from 2,000 to 8,000 hours/year cuts the per-hour cost by roughly
+3.5–4x at every price point, because capital and financing costs are
+fixed while the denominator (hours) grows. The illustrative
+€25,000/~$27,000 case tracks closely with the real MID consumer band
+($20,000, 1X NEO) once financing/maintenance assumptions are held
+constant — it is not an outlier relative to real currently-purchasable
+platforms, but it sits far below the ATTRIBUTED enterprise-tier HIGH
+case, whose cost-per-hour is dominated by a purchase price that itself
+rests only on secondary-source corroboration, not a primary Agility
+Robotics price sheet.</p>
+<hr />
+<h2 id="part-7-what-this-model-explicitly-excludes">Part 7 — What this
+model explicitly excludes</h2>
+<p>Per the original scope (unchanged; <strong>SCENARIO
+ASSUMPTION</strong> boundary, not a completeness claim):
+supervision/human-oversight labor cost, robot software/subscription
+fees, insurance, workspace modification, consumables, and
+downtime/unplanned-repair time beyond the flat maintenance reserve. None
+of the four cited platforms publish data allowing these to be estimated
+from a primary source as of 2026-08-12; adding them would only push
+cost-per-hour higher, so all figures above should be read as a
+<strong>floor</strong>, not a full commercial cost.</p>
+<hr />
+<h2
+id="part-8-where-this-connects-to-the-wider-chain-interpretation-only">Part
+8 — Where this connects to the wider chain (interpretation only)</h2>
+<p><strong>INTERPRETATION:</strong> this workbook extends the
+whitepaper’s core chain — Capital + energy + maintenance + utilisation +
+orchestration → humanoid physical working capacity — but stops at
+“capacity,” deliberately not continuing into “work → outcome → value.” A
+robot costing $1/hour to own tells you nothing about whether the work it
+performs is worth $1, $100, or nothing at all; per the whitepaper’s
+value framework, working capacity is not value, and more hours of
+operation are not automatically better. Any use of these cost-per-hour
+figures to argue a specific business case, investment decision, or
+procurement choice would be going beyond what this workbook supports —
+<strong>this is not investment, procurement, tax, legal, or policy
+advice</strong>, and the figures above are illustrative arithmetic on
+stated, editable assumptions, not a forecast of any real deployment’s
+economics.</p>
+<hr />
+<h3 id="full-input-register-for-this-workbook-for-editing">Full input
+register for this workbook (for editing)</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value used</th>
+<th>Class</th>
+<th>Controls</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Illustrative robot price</td>
+<td>€25,000 (~$27,000)</td>
+<td>SCENARIO ASSUMPTION</td>
+<td>Base-case capital layer</td>
+</tr>
+<tr>
+<td>EUR/USD FX rate</td>
+<td>1.08</td>
+<td>SCENARIO ASSUMPTION</td>
+<td>USD conversion of illustrative case only</td>
+</tr>
+<tr>
+<td>Unitree G1 price</td>
+<td>$13,500</td>
+<td>OBSERVED FACT (unitree.com, checked 2026-08-12)</td>
+<td>Real-range LOW</td>
+</tr>
+<tr>
+<td>1X NEO price</td>
+<td>$20,000 / $499/mo</td>
+<td>ATTRIBUTED STATEMENT (Engadget, 2025-10-29)</td>
+<td>Real-range MID</td>
+</tr>
+<tr>
+<td>Agility Digit price</td>
+<td>~$250,000</td>
+<td>ATTRIBUTED STATEMENT (multiple secondary sources)</td>
+<td>Real-range HIGH</td>
+</tr>
+<tr>
+<td>Down payment</td>
+<td>20% (sensitivity: 0%/40%)</td>
+<td>SCENARIO ASSUMPTION</td>
+<td>Capital layer split</td>
+</tr>
+<tr>
+<td>Financing rate</td>
+<td>8% APR</td>
+<td>SCENARIO ASSUMPTION</td>
+<td>Financing layer</td>
+</tr>
+<tr>
+<td>Financing term</td>
+<td>5 yr (sensitivity: 3/4/7 yr)</td>
+<td>SCENARIO ASSUMPTION</td>
+<td>Financing layer</td>
+</tr>
+<tr>
+<td>Flat electricity rate</td>
+<td>$0.11/hr (≈€0.10/hr)</td>
+<td>SCENARIO ASSUMPTION</td>
+<td>Electricity layer (method a)</td>
+</tr>
+<tr>
+<td>Electricity price for spec-derived method</td>
+<td>$0.15/kWh</td>
+<td>SCENARIO ASSUMPTION</td>
+<td>Electricity layer (method b)</td>
+</tr>
+<tr>
+<td>1X NEO average power draw</td>
+<td>0.2105 kW (842 Wh / 4 h)</td>
+<td>OBSERVED FACT (1x.tech, checked 2026-08-12)</td>
+<td>Electricity layer (method b)</td>
+</tr>
+<tr>
+<td>Maintenance reserve</td>
+<td>10% of purchase price/yr</td>
+<td>SCENARIO ASSUMPTION</td>
+<td>Maintenance layer</td>
+</tr>
+<tr>
+<td>Productive utilization</td>
+<td>2,000 / 4,000 / 6,000 / 8,000 h/yr</td>
+<td>SCENARIO ASSUMPTION</td>
+<td>Utilization sensitivity</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>This workbook (Part 1 real-price sourcing, Parts 2–6 arithmetic,
+Parts 7–8 scope/interpretation) is a standalone numeric asset for the
+whitepaper “Why Are They Spending Trillions on AI?” (CC BY 4.0, Valto
+Loikkanen).</p>
+</article>
+<div class="page-footer-nav">
+  <a href="index.html">← Back to home</a>
+  <a href="https://github.com/valto/ai-working-capacity-revolution/blob/main/07-workbook-humanoid-working-capacity.md">View source / edit on GitHub →</a>
+</div>
+</main>
+<footer>
+  <p>© Valto Loikkanen. Licensed under CC BY 4.0 where stated. Educational research and scenario analysis — not investment, legal, tax, procurement, or policy advice.</p>
+  <p><a href="https://github.com/valto/ai-working-capacity-revolution">View repository on GitHub</a></p>
+</footer>
+</body>
+</html>

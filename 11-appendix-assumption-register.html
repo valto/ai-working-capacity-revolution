@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Assumption
+Register — Why Are They Spending Trillions on AI?</title>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header>
+  <h1 style="font-size:1.5rem;"><a href="index.html" style="color:#fff; text-decoration:none;">Why Are They Spending Trillions on AI?</a></h1>
+  <p class="meta">Research foundation and living reference model &nbsp;·&nbsp; CC BY 4.0</p>
+</header>
+<main>
+<nav class="crumbs"><a href="index.html">Home</a> / Assumption Register</nav>
+<article class="doc-body">
+<h1 id="assumption-register-appendix-release-asset-13">Assumption
+Register — Appendix (Release Asset #13)</h1>
+<h3
+id="companion-to-why-are-they-spending-trillions-on-ai-valto-loikkanen-cc-by-4.0">Companion
+to <em>“Why Are They Spending Trillions on AI?”</em> (Valto Loikkanen,
+CC BY 4.0)</h3>
+<p><strong>What this appendix is.</strong> Every cost-curve, per-token,
+per-hour, per-member, and per-rack figure in this paper’s five scenario
+workbooks — Release Asset #7 (Global Baseline), #8 (Localized
+EUR/Finland), #9 (AI Working-Capacity Conversion), #10 (Token-Factory
+Scenarios), and #11 (Humanoid Working-Capacity) — rests on a small set
+of visible, editable inputs. This appendix pulls every one of those
+inputs into a single table so a reader can see, in one place, every
+lever they could change and re-run the model with their own number.
+(Release Asset #12, the Investment-Thesis Notes, is not a separate
+source of new assumptions — it explicitly cites Asset #7’s figures
+rather than re-deriving them, so it is covered here by reference, not
+with duplicate rows.)</p>
+<p><strong>What this appendix is not.</strong> It is not a ranking of
+which assumption is “right,” not a forecast, and not investment, legal,
+tax, procurement, or policy advice. Every row below is labelled
+<strong>SCENARIO ASSUMPTION</strong> per the paper’s five-class evidence
+standard — a visible, editable parameter used to explore a possible
+case, not a market figure — even in the handful of rows (marked ⚠ below)
+where the underlying workbook flags the number as a stand-in for missing
+public data rather than a deliberate “what-if” choice. Both kinds are
+assumptions in the sense that matters here: change the number, change
+every downstream result.</p>
+<h3
+id="evidence-class-legend-for-cross-reference-only-scenario-assumption-rows-appear-in-this-appendix">Evidence-class
+legend (for cross-reference; only SCENARIO ASSUMPTION rows appear in
+this appendix)</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OBSERVED FACT</td>
+<td>Primary documentation/official spec or pricing, independently
+checked against a live/primary source on or immediately before
+2026-08-12.</td>
+</tr>
+<tr>
+<td>ATTRIBUTED STATEMENT</td>
+<td>A named person/org’s on-record claim; not independently proven
+merely because it was said.</td>
+</tr>
+<tr>
+<td>DERIVED CALCULATION</td>
+<td>Transparent arithmetic from cited OBSERVED/ATTRIBUTED inputs;
+formula always shown.</td>
+</tr>
+<tr>
+<td><strong>SCENARIO ASSUMPTION</strong></td>
+<td>A visible, editable parameter, not a market figure. <strong>Every
+row in this register.</strong></td>
+</tr>
+<tr>
+<td>INTERPRETATION</td>
+<td>A labelled explanation of how the above may connect; never presented
+as fact.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="how-to-use-this-table">How to use this table</h2>
+<ol type="1">
+<li>Find the assumption you want to change (by category or by which
+workbook/tier it feeds).</li>
+<li>Look up its current value and the formula context in the cited
+workbook section.</li>
+<li>Re-run that workbook’s formula (every formula is shown explicitly,
+never just a result) with your own number.</li>
+<li>Where a “suggested range to test” is given, it is drawn either from
+a sensitivity table the source workbook already built, or from the
+workbook’s own stated real-world range (e.g., “$0.03–$0.40/kWh exist
+across real global markets” — Asset #7’s own framing) — it is not a
+prediction of where the true value lies.</li>
+</ol>
+<p>⚠ = the source workbook explicitly flags this number as a placeholder
+standing in for a public price/spec that could not be found
+(Professional-tier hardware, hyperscale rack capex, and the illustrative
+humanoid robot price), not a deliberate policy-style “what if” — treat
+these with lower confidence than the other rows, and replace with a real
+quote before using this tier for anything beyond illustration.</p>
+<hr />
+<h2 id="consolidated-assumption-register">Consolidated Assumption
+Register</h2>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>Category</th>
+<th>Assumption</th>
+<th>Value(s) used</th>
+<th>Workbook &amp; location</th>
+<th>What it affects</th>
+<th>Suggested range to test</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Financing</td>
+<td>Down payment %</td>
+<td>20% for Home/Cooperative/Humanoid tiers (sensitivity: 0% / 40%
+tested); <strong>0% (100% financed) for Professional and Hyperscale
+tiers, corrected 2026-08-13</strong> — an earlier version of this
+register incorrectly stated 20% applied to all four tiers, but #7’s
+actual Professional (§4.1) and Hyperscale (§5.4) formulas finance the
+full capital amount with no down payment subtracted</td>
+<td>#7 §2.1 (Home only); #7 §4.1, §5.4 (Professional/Hyperscale, 100%
+financed); #11 Parts 2–3.3; #8 §7a/7c</td>
+<td>Split between financed vs. cash-paid capital → annual
+capital+financing cost on the tiers where a down payment actually
+applies (Home, Cooperative, Humanoid)</td>
+<td>0–50% for Home/Cooperative/Humanoid; 0% is the baseline (not a
+sensitivity test) for Professional/Hyperscale unless a reader chooses to
+model a down payment there</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Financing</td>
+<td>Financing interest rate</td>
+<td>8% APR (flat, illustrative)</td>
+<td>#7 (all four tiers); #8 §1 (explicitly “not a verified Finnish loan
+rate”); #9 (inherited from #7); #10 §1 and §4.1; #11 Part 3; #12
+(inherited)</td>
+<td>Annual loan payment on every hardware/robot capital line, therefore
+every $/M-token and $/hour figure in every workbook</td>
+<td>4–15%; or your actual quoted rate — for Eurozone readers, #8 §2
+suggests (current Euribor reference) + (bank margin, ~1–4pp) instead of
+a flat APR</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Financing</td>
+<td>Financing term</td>
+<td>5 years (sensitivity: 3 / 4 / 7 yr tested)</td>
+<td>#7 §2.1 and §5.4 (Home, Hyperscale sensitivity tables); #10 §4.1
+(industrial sensitivity table); #11 Part 3.2</td>
+<td>Size of the annuity payment — the single biggest capital-side lever
+after utilization; longer terms lower $/M-tokens but increase total
+interest and lock in today’s hardware generation longer</td>
+<td>3–10 years</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Electricity</td>
+<td>Home-tier electricity price (USD baseline)</td>
+<td>Low $0.06 / Mid $0.12 / High $0.25 per kWh</td>
+<td>#7 §2.2, §2.4</td>
+<td>Home-tier electricity cost line and $/M-tokens (though workbook
+notes this is a “rounding error” next to financing at home scale)</td>
+<td>$0.03–$0.40/kWh (Asset #7’s own stated global range)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Electricity</td>
+<td>Cooperative-tier electricity price (USD baseline)</td>
+<td>$0.12/kWh (fixed point, reuses Home-tier mid value)</td>
+<td>#7 §3.4</td>
+<td>Cooperative $/M-tokens and $/member/month</td>
+<td>$0.06–$0.25/kWh</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Electricity</td>
+<td>Cooperative-tier electricity price (alternative recomputation)</td>
+<td>~$0.20/kWh</td>
+<td>#10 §1b</td>
+<td>Same DGX Spark cooperative cost model, different workbook —
+<strong>this differs from row 5’s $0.12/kWh</strong>, a genuine minor
+cross-workbook drift within the <em>same</em> hardware tier (both
+describe DGX Spark cooperatives), unrelated to the now-resolved
+€42-vs-€19.50–25 question (see row 6a and the cross-workbook notes
+below)</td>
+<td>Re-test at $0.12 (Asset #7’s value) to isolate this variable’s own
+effect within the DGX Spark tier</td>
+</tr>
+<tr>
+<td>6a</td>
+<td>Hardware/price placeholder ⚠</td>
+<td>DGX Station-class illustrative capital cost (the €42/member/month
+scenario’s actual basis)</td>
+<td>€100,000 excluding VAT</td>
+<td>#10 §1a; #8 §6</td>
+<td>The DGX Station-class cooperative scenario’s entire cost base —
+financing (§/month), and every downstream €/member/month figure for that
+tier</td>
+<td><strong>RESOLVES the former “€42 vs €19.50–25” entry (see row 19 and
+the cross-workbook notes below):</strong> this was always the real basis
+of the author’s originally published €42/50-members and €21/100-members
+figures — not a DGX Spark price, and not an official NVIDIA price, since
+NVIDIA publishes none for DGX Station (confirmed
+<strong>[FACT]</strong>,
+nvidia.com/en-us/products/workstations/dgx-station/, checked
+2026-08-13). Get a real reseller quote before using this tier beyond
+illustration; test against DGX Spark (row 1/#7 §2.1) as the alternative,
+cheaper hardware tier</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Electricity</td>
+<td>Professional-tier electricity price</td>
+<td>$0.10/kWh (single point; no low/mid/high tested)</td>
+<td>#7 §4.3</td>
+<td>Professional-tier $/M-tokens</td>
+<td>$0.06–$0.25/kWh (Asset #7’s own Home-tier range, not separately
+tested for this tier)</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Electricity</td>
+<td>Hyperscale-tier electricity price</td>
+<td>$0.06 / $0.10 / $0.25 per kWh (electricity-only sensitivity, §5.3);
+$0.10/kWh used as the central value in the main cost-curve table</td>
+<td>#7 §5.3, §5.6; #10 §4 (industrial tier, same $0.10/kWh)</td>
+<td>Hyperscale $/M-tokens — shown to be well under 1¢/M-tokens even at
+the high end, i.e. electricity is not the binding cost at this tier</td>
+<td>$0.06–$0.25/kWh</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Electricity</td>
+<td>Home/prosumer electricity price, Finland/EUR localization</td>
+<td>€0.15/kWh</td>
+<td>#8 §1, §5</td>
+<td>Localized Home-tier €/M-tokens</td>
+<td>Explicitly “not a verified current Finnish retail rate” — reader
+should substitute an actual bill/tariff</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Electricity</td>
+<td>Industrial electricity price, Finland/EUR localization</td>
+<td>€0.09/kWh</td>
+<td>#8 §1, §9</td>
+<td>Localized industrial-tier €/M-tokens</td>
+<td>Same caveat as row 9</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Electricity</td>
+<td>Humanoid-robot flat electricity rate</td>
+<td>$0.11/operating hour (≈€0.10/hr)</td>
+<td>#11 Part 4(a); #8 §7a/7c</td>
+<td>Humanoid cost-per-hour, electricity line, “financing+electricity”
+columns</td>
+<td>Compare against row 12’s spec-derived method — the two differ by
+roughly an order of magnitude</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Electricity</td>
+<td>Humanoid-robot spec-derived electricity price</td>
+<td>$0.15/kWh, applied to 1X NEO’s observed 0.2105 kW average draw</td>
+<td>#11 Part 4(b)</td>
+<td>Humanoid cost-per-hour, “spec” columns</td>
+<td>$0.10–$0.30/kWh; note the workbook applies this rate (verified only
+for 1X NEO’s power draw) as an illustrative anchor for the other three
+robot price points too</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Utilization</td>
+<td>Home-tier utilization</td>
+<td>Low 10% / Mid 40% / High 80%</td>
+<td>#7 §2.4–2.5</td>
+<td>$/M-tokens and $/AI-working-hour — the single biggest lever in the
+Home tier per Asset #7’s own read (≈7x swing from low to high)</td>
+<td>10–80%; test above 80% for near-continuous personal/small-team
+use</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Utilization</td>
+<td>Cooperative-tier utilization</td>
+<td>Low 20% / Mid 50% / High 85%</td>
+<td>#7 §3.4–3.6</td>
+<td>Cooperative $/M-tokens, $/member/month</td>
+<td>20–85%</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Utilization</td>
+<td>Cooperative-tier utilization (alternative)</td>
+<td>70% (“plausible steady-state,” not verified)</td>
+<td>#10 §1b; #8 §6</td>
+<td>Same DGX Spark cooperative cost model, alternative assumption within
+that tier — unrelated to the now-resolved €42/DGX-Station-tier
+question</td>
+<td>Sits inside row 14’s own 20–85% band</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Utilization</td>
+<td>Professional-tier utilization</td>
+<td>Low 25% / Mid 60% / High 90%</td>
+<td>#7 §4.3–4.4</td>
+<td>Professional-tier $/M-tokens</td>
+<td>25–90%</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Utilization</td>
+<td>Hyperscale-tier utilization</td>
+<td>Low 25% / Mid 60% / High 90% (main tables); 90% used in
+facility-power calc</td>
+<td>#7 §5.6, §5.8; #10 §4.1</td>
+<td>Hyperscale $/M-tokens, $/AI-working-hour</td>
+<td>25–90%+</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Utilization</td>
+<td>Humanoid-robot annual productive hours</td>
+<td>2,000 / 4,000 / 6,000 / 8,000 h/yr</td>
+<td>#11 Part 6; #8 §7a/7c</td>
+<td>Cost-per-productive-hour — dominates the result more than any other
+single variable in the humanoid model (≈3.5–4x swing from 2,000→8,000
+h/yr)</td>
+<td>1,000–8,760 h/yr (single-shift to fully continuous)</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Overhead/Admin</td>
+<td>Cooperative admin/overhead (coordination, basic networking/switch
+gear)</td>
+<td>Low $1,000 / Mid $3,000 / High $6,000/yr</td>
+<td>#7 §3.3–3.4</td>
+<td>DGX Spark cooperative $/M-tokens, $/member/month</td>
+<td>$0–$15,000+/yr; note this row no longer needs to “explain” the
+former €42-vs-€19.50–25 gap (see row 6a — that gap was resolved as a
+different-hardware-tier question, not an overhead question)</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Overhead/Admin</td>
+<td>Hyperscale/industrial opex (facility, cooling beyond raw
+electricity, staffing, networking, replacement reserve)</td>
+<td>Low $200,000 / Mid $500,000 / High $1,000,000 per rack/yr</td>
+<td>#7 §5.5–5.6</td>
+<td>Hyperscale $/M-tokens</td>
+<td>$100,000–$2,000,000/rack/yr</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Overhead/Admin</td>
+<td>Humanoid maintenance/repair reserve</td>
+<td>10% of purchase price/yr</td>
+<td>#11 Part 5; #8 §7a/7c</td>
+<td>Humanoid “incl. maintenance” cost-per-hour columns; not a
+manufacturer-quoted service contract for any of the four cited
+platforms</td>
+<td>5–20% of purchase price/yr</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Overhead/Admin</td>
+<td>“Full operating infrastructure” support/software/space overhead</td>
+<td>5%/yr of capital</td>
+<td>#8 §8 (economic-layer illustration, Layer 4)</td>
+<td>The “full operating infrastructure cost” layer in the localized
+Home-tier walk-through</td>
+<td>0–15%/yr of capital</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Hardware/price placeholder ⚠</td>
+<td>Professional-tier (HGX B300 node) capital cost</td>
+<td>Low $250,000 / Mid $350,000 / High $500,000</td>
+<td>#7 §4.1</td>
+<td>Entire Professional-tier $/M-tokens and $/AI-working-hour curve</td>
+<td>No public NVIDIA/reseller price exists for this SKU as of the check
+date — the workbook’s own stated open item is to replace this with a
+real reseller quote before using this tier beyond illustration</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Hardware/price placeholder ⚠</td>
+<td>Professional-tier power draw</td>
+<td>Low 8kW / Mid 11kW / High 15kW</td>
+<td>#7 §4.1</td>
+<td>Professional-tier electricity cost line</td>
+<td>Scaled illustratively from GB300 NVL72’s 135kW/72-GPU ratio; no
+primary source — replace with vendor spec if available</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Hardware/price placeholder ⚠</td>
+<td>Hyperscale rack hardware-only capex</td>
+<td>$4,000,000/rack (→ $16M for the 4-rack/288-GPU cluster used in #10
+and #12’s Tier 4)</td>
+<td>#7 §5.4 (Reference Point B); #10 §4; #12 Tiers 3–4</td>
+<td>Hyperscale/industrial-tier capital+financing line, $/M-tokens,
+$/AI-working-hour</td>
+<td>No official NVIDIA rack price found; test against the implied
+<strong>full-infrastructure</strong> figure of $6.75M–$8.1M/rack derived
+in #7 §5.4 (Reference Point A) from Huang/Fink’s on-air “$50–60B/GW”
+attributed statement, to see the spread between hardware-only and
+full-buildout cost</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Hardware/price placeholder ⚠</td>
+<td>Illustrative humanoid robot price (author’s original worked
+example)</td>
+<td>€25,000 (≈$27,000)</td>
+<td>#11 Part 1; #8 §7a</td>
+<td>Base-case humanoid capital layer, financing, and every downstream
+cost-per-hour figure</td>
+<td>Not a real product price for any named platform — compare against
+the real observed/attributed market range assembled in #11 Part 1/7b:
+$13,500 (Unitree G1, OBSERVED) to ~$250,000 (Agility Digit,
+ATTRIBUTED)</td>
+</tr>
+<tr>
+<td>27</td>
+<td>Currency/FX</td>
+<td>USD→EUR FX rate (three separate, non-identical values used)</td>
+<td>1 USD = 0.92 EUR (#7 §3.5); 1 USD = 0.93 EUR (#8 §1, §3, §9); 1.08
+USD per 1 EUR, i.e. ≈0.926 EUR per USD (#11 Part 1, §7b)</td>
+<td>#7 §3.5; #8 §1/§3/§9; #11 Part 1/§7b</td>
+<td>Every EUR-denominated conversion in the cooperative (§3.5),
+localized (all of #8), and humanoid (#11 Part 1/7b) workbooks</td>
+<td>The three values sit within ~1% of each other (EUR/USD ≈1.075–1.087
+across all three), so this is a minor inconsistency rather than a large
+one — but none is stated as a live-checked rate on a specific date; pick
+one current, dated FX quote and use it consistently across every
+workbook if reconciling EUR figures precisely matters</td>
+</tr>
+<tr>
+<td>28</td>
+<td>Workload</td>
+<td>Usage-intensity ladder (tokens/AI-working-hour)</td>
+<td>Chat/advisor 10K–30K (mid 20K); Active coworker 60K–120K (mid 90K);
+Delegated single agent 200K–600K (mid 400K); Heavy multi-agent
+orchestration 1M–12M+ (mid 5M)</td>
+<td>#7 §6 (ranges only); #9 Part B (adds explicit low/mid/high); #10 §6
+(reuses #7’s ranges); #12 (reuses)</td>
+<td>Every $/AI-working-hour figure in every workbook that has one — the
+conversion from token cost to hourly cost</td>
+<td>Replace with your own organization’s measured token logs (#9 Part
+G’s own top recommendation) rather than the illustrative bands</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Workload</td>
+<td>Retail-API input/output token blend ratio</td>
+<td>30% input / 70% output</td>
+<td>#9 §C.0</td>
+<td>The blended $/M-tokens figure used for each named retail model in
+the Retail-API comparison column (Floor $0.90 / Mid $9.00 / Ceiling
+$38.00)</td>
+<td>Shift toward more input-heavy for chat-style workloads, more
+output-heavy for generation-heavy agentic workloads</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Workload</td>
+<td>Illustrative blended token rates used in the token-cost→working-hour
+bridge</td>
+<td>~$6/M tokens (retail, Sonnet-5-style blended); ~$1/M tokens
+(owned-production blended)</td>
+<td>#10 §6</td>
+<td>The token-cost-to-working-hour example table in #10 §6</td>
+<td>Substitute the actual blended rate of whichever specific model/tier
+you are costing</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Human-labor comparison</td>
+<td>Entry-level/routine labor fully-loaded $/hour</td>
+<td>$15–$35</td>
+<td>#9 §E.2</td>
+<td>Human-vs-AI cost-per-hour comparison table</td>
+<td>Replace with your own local, role-specific fully-loaded cost (wage +
+benefits + overhead) — explicitly not a wage-survey figure</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Human-labor comparison</td>
+<td>Skilled professional fully-loaded $/hour</td>
+<td>$50–$150</td>
+<td>#9 §E.2</td>
+<td>Same comparison table</td>
+<td>Same as row 31</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Human-labor comparison</td>
+<td>Senior specialist/expert consultant fully-loaded $/hour</td>
+<td>$150–$500+</td>
+<td>#9 §E.2</td>
+<td>Same comparison table</td>
+<td>Same as row 31</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Human-labor comparison</td>
+<td>Standard full-time month, for methodology demonstration only</td>
+<td>~160 working-hours/month</td>
+<td>#9 Part F</td>
+<td>The illustrative “≈1,696x” conversion of Altman’s attributed “three
+months of work in seventeen minutes” line — explicitly a methodology
+demo, not a validated productivity multiplier</td>
+<td>Not intended to be re-tested as a market figure; if reused, keep
+Part F’s explicit non-endorsement language attached</td>
+</tr>
+<tr>
+<td>35</td>
+<td>Energy-monetization comparison</td>
+<td>ASIC efficiency bands (Bitcoin mining)</td>
+<td>25–38 J/TH (older fleets); &lt;14 J/TH (efficient current
+fleets)</td>
+<td>#10 §5</td>
+<td>Gross Bitcoin-mining revenue/MWh in the Bitcoin-vs-AI-tokens
+comparison table</td>
+<td>Substitute an actual fleet’s spec sheet; these are illustrative
+generational bands, not a specific verified ASIC checked in this
+project</td>
+</tr>
+<tr>
+<td>36</td>
+<td>Energy-monetization comparison</td>
+<td>AI-token-side hardware assumption for the comparison</td>
+<td>240W continuous draw, 50 tok/s output</td>
+<td>#10 §5</td>
+<td>Tokens-per-MWh figure feeding the “AI tokens sold at $X/M” rows of
+the same comparison table</td>
+<td>Within DGX Spark’s OBSERVED throughput envelope (28.3–51 tok/s, per
+#7 §2.3) — test across that full range</td>
+</tr>
+<tr>
+<td>37</td>
+<td>Energy-monetization comparison</td>
+<td>AI-token retail sale price points used in the comparison</td>
+<td>$1 / $5 / $10 / $25 per million tokens</td>
+<td>#10 §5</td>
+<td>Gross revenue/MWh rows in the same comparison table</td>
+<td>Swap for whichever retail tier (#7 §7 / #9 §C.0) you actually want
+to test — the workbook stresses the whole comparison is sensitive to
+this single input</td>
+</tr>
+<tr>
+<td>38</td>
+<td>Modelling choice</td>
+<td>Per-rack throughput derivation method for GB300 NVL72</td>
+<td>623,578 tok/s (even 4-way split of the 288-GPU/2.49M tok/s aggregate
+benchmark) used as the workbook’s primary number, vs. 707,112 (offline
+per-GPU-derived) or 580,608 (server per-GPU-derived)</td>
+<td>#7 §5.2</td>
+<td>Hyperscale tokens/kWh and $/M-tokens</td>
+<td>Test the full 580,608–707,112 tok/s bracket (~14% spread) rather
+than treating 623,578 as a fixed figure</td>
+</tr>
+<tr>
+<td>39</td>
+<td>Modelling choice</td>
+<td>Down-payment amortization treatment</td>
+<td>Spread evenly across the financing term and added back to the annual
+cost (chosen convention); treating it instead as a one-time year-0 cost
+is flagged as an equally legitimate alternative</td>
+<td>#7 “How to adapt this workbook,” formula note</td>
+<td>Every “capital+financing per year” figure across every tier and
+workbook</td>
+<td>Compare annualized-spread vs. year-0 lump treatment for your own
+cash-flow purposes</td>
+</tr>
+<tr>
+<td>40</td>
+<td>Modelling choice</td>
+<td>Hardware-price localization basis</td>
+<td>US MSRP mechanically FX-converted (e.g., $4,699 → €4,370 “floor
+reference”), explicitly <strong>not</strong> a real EU/Finland reseller
+quote</td>
+<td>#8 §3</td>
+<td>Every EUR-denominated capital figure in the localized workbook (Home
+§5, Cooperative §6, industrial §9)</td>
+<td>Get a real EU reseller quote — the workbook’s own instruction is to
+expect a higher landed price than the FX-converted floor, not an equal
+one, once VAT/import/logistics/margin are added</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="cross-workbook-consistency-notes-interpretation">Cross-workbook
+consistency notes (INTERPRETATION)</h2>
+<ul>
+<li><strong>Most consistent lever: financing rate.</strong> 8% APR is
+used, unchanged, across every tier, every workbook, and both currencies
+(rows 2). This is the one input a reader can compare “apples to apples”
+across the whole paper without adjustment.</li>
+<li><strong>Least consistent lever: electricity price.</strong> Nine
+different electricity-price values are in active use across the five
+workbooks (rows 4–12). This remains true of the DGX Spark cooperative
+figures specifically (rows 5 and 6, both describing that same hardware
+tier) — a reader comparing those two should still reconcile them before
+treating the outputs as directly comparable. It is <strong>not</strong>
+related to the separate, now-resolved DGX-Station-vs-DGX-Spark tier
+question below.</li>
+<li><strong>CORRECTED (2026-08-13) — the former
+“€42-vs-€19.50–25/member/month cooperative discrepancy” is resolved, not
+merely narrowed.</strong> It was never a single measurement disagreement
+to attribute to admin, utilization, or electricity assumptions.
+€42/member/month (50 members) and €21/member/month (100 members) are
+<strong>[CALC]</strong> outputs of an illustrative €100,000
+DGX-Station-class capital base (row 6a) — a real hardware category
+NVIDIA sells but does not publish a price for — while
+€19.50–25/member/month describes a completely different, cheaper
+hardware tier (10× DGX Spark units at the verified $4,699 each). See the
+Token-Factory Scenario Workbook (#10) §1a/§1b and the Localized Scenario
+Workbook (#8) §6 for the full corrected treatment. Rows 14–15
+(utilization) and row 19 (admin/overhead) remain genuine, separate
+levers <em>within</em> the DGX Spark tier — they no longer need to
+explain a cross-tier gap that turned out not to exist.</li>
+<li><strong>The FX-rate near-miss (row 27)</strong> is a minor but real
+inconsistency: three workbooks each picked their own EUR/USD rate
+independently rather than sharing one dated, live-checked figure. The
+values are close enough (within ~1%) that it does not materially change
+any conclusion, but it is exactly the kind of silent drift this register
+exists to surface.</li>
+<li><strong>The five ⚠-flagged rows (23, 24, 25, 26, 6a)</strong> are
+qualitatively different from the rest of this table: they are not “what
+if we tried a different scenario” levers but placeholders for numbers
+that simply could not be found as an official price in any primary
+source as of the 2026-08-13 cut-off (no public HGX B300 price or power
+spec; no official NVIDIA rack price; no official NVIDIA DGX Station
+price, confirmed directly on NVIDIA’s own product page; no confirmed
+market price for the illustrative €25,000 robot). Any reader planning to
+act on the Professional, Hyperscale, or DGX-Station-class cooperative
+tiers, or on a specific humanoid-robot cost claim, should treat these
+five rows as the highest-priority items to replace with a real quote
+before relying on the workbook’s output.</li>
+</ul>
+<hr />
+<p><strong>Boundary note, restated per this project’s methodology
+rule:</strong> nothing in this appendix, or in any of the five workbooks
+it summarizes, is investment, legal, tax, procurement, or policy advice.
+Every row above is an editable illustration built on a stated, visible
+assumption — changing any one of them will change every downstream
+number in the corresponding workbook, which is the entire point of
+publishing this register rather than only the workbooks’ finished output
+tables.</p>
+</article>
+<div class="page-footer-nav">
+  <a href="index.html">← Back to home</a>
+  <a href="https://github.com/valto/ai-working-capacity-revolution/blob/main/11-appendix-assumption-register.md">View source / edit on GitHub →</a>
+</div>
+</main>
+<footer>
+  <p>© Valto Loikkanen. Licensed under CC BY 4.0 where stated. Educational research and scenario analysis — not investment, legal, tax, procurement, or policy advice.</p>
+  <p><a href="https://github.com/valto/ai-working-capacity-revolution">View repository on GitHub</a></p>
+</footer>
+</body>
+</html>
