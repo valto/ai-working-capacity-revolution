@@ -84,7 +84,7 @@
 
 **Slide 13 — From Tokens to $/AI-Working-Hour**
 - Formula: $/AI-working-hour = (tokens/hour ÷ 1,000,000) × ($/M tokens at that tier) [CALC].
-- At delegated-agent band, central case: Hyperscale $0.0252/hr vs. Home $1.268/hr vs. Retail-API $3.60/hr [CALC] — a ~150x spread across tiers at the same usage band.
+- At delegated-agent band, central case: Hyperscale $0.0532/hr vs. Home $1.268/hr vs. Retail-API $3.60/hr [CALC] — a ~68x spread across tiers at the same usage band.
 - Self-hosting is not automatically the cheapest path — its case rests on control and independence, not undercutting retail [INTERP].
 - Speaker note: The spread is arithmetic, not opinion — but which column matters depends entirely on which lens is asking.
 

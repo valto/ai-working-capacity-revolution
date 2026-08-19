@@ -21,6 +21,20 @@ in spirit — a major version bump indicates a change to canonical figures
 or conclusions, not just prose.</p>
 <h2 id="unreleased-targeted-as-v1.0.2">[Unreleased] — targeted as
 v1.0.2</h2>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Fixed an arithmetic error in the delegated-agent band’s Hyperscale
+$/AI-working-hour figure: whitepaper §25 and
+<code><a href="13-slide-deck-outline.html">13-slide-deck-outline.md</a></code> (and the deck built from it,
+before this fix) cited a stale $0.0252/hr figure and a “~150x” spread,
+which contradicted Section 17’s own matrix, the canonical CSV, and the
+correct arithmetic (400,000 tokens/hr × $0.133/M = $0.0532/hr).
+Corrected to the right $0.0532/hr and “~68x” figure in both files;
+<code>19-slide-deck.pptx</code> already had the correct figure on slide
+13 and did not need changing. Caught during the Finnish translation’s
+cross-check against the canonical model — fixed in both languages
+simultaneously.</li>
+</ul>
 <h3 id="added-content">Added — content</h3>
 <ul>
 <li>Split the human-work comparison (whitepaper §19.2;
@@ -193,7 +207,7 @@ lines, so it validates without warnings under both macOS
 <code>shasum -a 256 -c</code> and GNU <code>sha256sum -c</code>; the
 explanatory header moved to <code><a href="README.html">README.md</a></code>.</li>
 </ul>
-<h3 id="fixed">Fixed</h3>
+<h3 id="fixed-1">Fixed</h3>
 <ul>
 <li><code>main</code> had drifted from
 <code>CITATION.cff</code>/<code>CHECKSUMS.sha256</code>/<code><a href="README.html">README.md</a></code>’s
